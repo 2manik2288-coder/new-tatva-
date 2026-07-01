@@ -1,0 +1,463 @@
+{
+  "timestamp": "2026-07-01T17:13:34.773Z",
+  "summary": {
+    "total_questions": 35,
+    "passed": 0,
+    "failed": 35,
+    "grounded_accuracy_score": "0.00%",
+    "fact_recall_score": "25.00%",
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 35,
+      "leakage_failures": 0
+    }
+  },
+  "results": [
+    {
+      "question": "What is Satnam?",
+      "expected_facts": [
+        "Satnam",
+        "true name"
+      ],
+      "forbidden_facts": [
+        "temporary name"
+      ],
+      "response": "Satnam is a highly guarded, two-syllable mantra that holds significant importance in spiritual growth. It is composed of \"Om\" combined with a secret \"Tat\" mantra, making it a powerful tool for unlocking the lower spiritual gates. This unique combination is the key to accessing higher realms of consciousness and spiritual awareness. The Satnam mantra is not just a simple phrase but a potent energy that, when utilized correctly, can facilitate profound spiritual transformation and growth.",
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Satnam",
+            "found": true
+          },
+          {
+            "fact": "true name",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "question": "Who is Kabir Saheb?",
+      "expected_facts": [
+        "Supreme God",
+        "Kashi"
+      ],
+      "forbidden_facts": [
+        "mortal"
+      ],
+      "response": "Kabir Saheb is the Supreme God who appears in every Yuga to impart \"Tatvagyan\" (True Knowledge). According to the Vedas, specifically the Rigveda and Yajurveda, He is referred to as \"Kavir Dev\". Kabir Saheb is not just a poet or a weaver, but the Supreme God who has appeared in different Yugas with different names, such as Sat Sukrat in Satyug, Munindra in Tretayug, and Kabir in Kalyug. He is also acknowledged as the Satguru of Guru Nanak Dev Ji, who praises Him as \"Hakka Kabir\" (The True Kabir) in his Bani.",
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Supreme God",
+            "found": true
+          },
+          {
+            "fact": "Kashi",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "question": "What is the age of Brahm (Kaal)?",
+      "expected_facts": [
+        "one thousand cycles",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "immortal"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "one thousand cycles",
+            "found": false
+          },
+          {
+            "fact": "Kaal",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "question": "What does Gyan Ganga say about salvation?",
+      "expected_facts": [
+        "salvation",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "no need for guru"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "salvation",
+            "found": false
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "question": "Who is the writer of Jeene Ki Raah?",
+      "error": "timeout of 45000ms exceeded",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: timeout of 45000ms exceeded"
+        ]
+      }
+    },
+    {
+      "question": "What is Satlok?",
+      "error": "socket hang up",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: socket hang up"
+        ]
+      }
+    },
+    {
+      "question": "How many creations did God do?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is Saarnam?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the role of a true Guru?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is written in Bhagavad Gita Chapter 4 Verse 34?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is Kshar Purush?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is Akshar Purush?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the origin of souls?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the significance of Aarti in worship?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What does Vedas say about KavirDev?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the real age of soul?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Can we achieve salvation without a Guru?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is the ruler of 21 universes?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What are the three stages of Naam initiation?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is the mother of Brahma, Vishnu, and Shiva?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is the father of Brahma, Vishnu, and Shiva?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the main message of Vedas?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the destination of a true worshipper?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Is smoking allowed in Tatva rules?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is the supreme creator according to Quran?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is the Lord of Satlok?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the three-stage path to salvation?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is Jyoti Niranjan?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What does Kabir Sagar say about Kaal?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is Dharamdas's role in Sant Mat?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the difference between Kshar Purush and Akshar Purush?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is Ajapa Jaap?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is Sada Shiva according to Kabir Sagar?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "What is the status of Durga in the theology?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "question": "Who is Garibdas Ji?",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    }
+  ]
+}

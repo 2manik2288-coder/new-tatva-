@@ -1,0 +1,352 @@
+[
+  {
+    "question": "What is Satnam?",
+    "expected_facts": [
+      "Satnam",
+      "true name"
+    ],
+    "forbidden_facts": [
+      "temporary name"
+    ]
+  },
+  {
+    "question": "Who is Kabir Saheb?",
+    "expected_facts": [
+      "Supreme God",
+      "Kashi"
+    ],
+    "forbidden_facts": [
+      "mortal"
+    ]
+  },
+  {
+    "question": "What is the age of Brahm (Kaal)?",
+    "expected_facts": [
+      "one thousand cycles",
+      "Kaal"
+    ],
+    "forbidden_facts": [
+      "immortal"
+    ]
+  },
+  {
+    "question": "What does Gyan Ganga say about salvation?",
+    "expected_facts": [
+      "salvation",
+      "worship"
+    ],
+    "forbidden_facts": [
+      "no need for guru"
+    ]
+  },
+  {
+    "question": "Who is the writer of Jeene Ki Raah?",
+    "expected_facts": [
+      "Saint Rampal Ji Maharaj"
+    ],
+    "forbidden_facts": [
+      "Kabir Saheb himself"
+    ]
+  },
+  {
+    "question": "What is Satlok?",
+    "expected_facts": [
+      "eternal place",
+      "Supreme God"
+    ],
+    "forbidden_facts": [
+      "heaven of Vishnu"
+    ]
+  },
+  {
+    "question": "How many creations did God do?",
+    "expected_facts": [
+      "nature"
+    ],
+    "forbidden_facts": [
+      "only one"
+    ]
+  },
+  {
+    "question": "What is Saarnam?",
+    "expected_facts": [
+      "secret mantra",
+      "salvation"
+    ],
+    "forbidden_facts": [
+      "first stage mantra"
+    ]
+  },
+  {
+    "question": "What is the role of a true Guru?",
+    "expected_facts": [
+      "guide",
+      "initiation"
+    ],
+    "forbidden_facts": [
+      "optional"
+    ]
+  },
+  {
+    "question": "What is written in Bhagavad Gita Chapter 4 Verse 34?",
+    "expected_facts": [
+      "Tatvdarshi Saint",
+      "worship"
+    ],
+    "forbidden_facts": [
+      "blind faith"
+    ]
+  },
+  {
+    "question": "Who is Kshar Purush?",
+    "expected_facts": [
+      "perishable",
+      "governs 21 universes"
+    ],
+    "forbidden_facts": [
+      "Supreme Lord"
+    ]
+  },
+  {
+    "question": "Who is Akshar Purush?",
+    "expected_facts": [
+      "governs 7 Shankh universes",
+      "not the ultimate"
+    ],
+    "forbidden_facts": [
+      "perishable"
+    ]
+  },
+  {
+    "question": "What is the origin of souls?",
+    "expected_facts": [
+      "Satlok",
+      "separated"
+    ],
+    "forbidden_facts": [
+      "born in earth"
+    ]
+  },
+  {
+    "question": "What is the significance of Aarti in worship?",
+    "expected_facts": [
+      "praise of Almighty",
+      "devotion"
+    ],
+    "forbidden_facts": [
+      "superstition"
+    ]
+  },
+  {
+    "question": "What does Vedas say about KavirDev?",
+    "expected_facts": [
+      "Rigveda",
+      "Kabir"
+    ],
+    "forbidden_facts": [
+      "myth"
+    ]
+  },
+  {
+    "question": "What is the real age of soul?",
+    "expected_facts": [
+      "immortal",
+      "eternal"
+    ],
+    "forbidden_facts": [
+      "100 years"
+    ]
+  },
+  {
+    "question": "Can we achieve salvation without a Guru?",
+    "expected_facts": [
+      "not possible",
+      "Guru is mandatory"
+    ],
+    "forbidden_facts": [
+      "yes, through self study"
+    ]
+  },
+  {
+    "question": "Who is the ruler of 21 universes?",
+    "expected_facts": [
+      "Jyoti Niranjan",
+      "Kaal"
+    ],
+    "forbidden_facts": [
+      "Kabir"
+    ]
+  },
+  {
+    "question": "What are the three stages of Naam initiation?",
+    "expected_facts": [
+      "first stage",
+      "Satnam",
+      "Saarnam"
+    ],
+    "forbidden_facts": [
+      "only one stage"
+    ]
+  },
+  {
+    "question": "Who is the mother of Brahma, Vishnu, and Shiva?",
+    "expected_facts": [
+      "Ashtangi",
+      "Durga"
+    ],
+    "forbidden_facts": [
+      "Savitri"
+    ]
+  },
+  {
+    "question": "Who is the father of Brahma, Vishnu, and Shiva?",
+    "expected_facts": [
+      "Kaal",
+      "SadaShiva"
+    ],
+    "forbidden_facts": [
+      "Kabir"
+    ]
+  },
+  {
+    "question": "What is the main message of Vedas?",
+    "expected_facts": [
+      "one Supreme God",
+      "worship the Creator"
+    ],
+    "forbidden_facts": [
+      "demigods worship"
+    ]
+  },
+  {
+    "question": "What is the destination of a true worshipper?",
+    "expected_facts": [
+      "Satlok",
+      "eternal peace"
+    ],
+    "forbidden_facts": [
+      "heaven"
+    ]
+  },
+  {
+    "question": "Is smoking allowed in Tatva rules?",
+    "expected_facts": [
+      "strictly forbidden",
+      "prohibited"
+    ],
+    "forbidden_facts": [
+      "allowed in moderation"
+    ]
+  },
+  {
+    "question": "Who is the supreme creator according to Quran?",
+    "expected_facts": [
+      "Kabiran",
+      "Allahu Akbar"
+    ],
+    "forbidden_facts": [
+      "mortal man"
+    ]
+  },
+  {
+    "question": "Who is the Lord of Satlok?",
+    "expected_facts": [
+      "Satpurush",
+      "Kabir"
+    ],
+    "forbidden_facts": [
+      "Kaal",
+      "Niranjan"
+    ]
+  },
+  {
+    "question": "What is the three-stage path to salvation?",
+    "expected_facts": [
+      "three stages",
+      "Naam initiation"
+    ],
+    "forbidden_facts": [
+      "instant moksha"
+    ]
+  },
+  {
+    "question": "Who is Jyoti Niranjan?",
+    "expected_facts": [
+      "Kaal",
+      "21 universes"
+    ],
+    "forbidden_facts": [
+      "Supreme Lord"
+    ]
+  },
+  {
+    "question": "What does Kabir Sagar say about Kaal?",
+    "expected_facts": [
+      "Kaal",
+      "deceit"
+    ],
+    "forbidden_facts": [
+      "creator of souls"
+    ]
+  },
+  {
+    "question": "What is Dharamdas's role in Sant Mat?",
+    "expected_facts": [
+      "disciple",
+      "Dharamdas"
+    ],
+    "forbidden_facts": [
+      "guru of Kabir"
+    ]
+  },
+  {
+    "question": "What is the difference between Kshar Purush and Akshar Purush?",
+    "expected_facts": [
+      "21 universes",
+      "7 Shankh universes"
+    ],
+    "forbidden_facts": [
+      "immortal"
+    ]
+  },
+  {
+    "question": "What is Ajapa Jaap?",
+    "expected_facts": [
+      "breath",
+      "worship"
+    ],
+    "forbidden_facts": [
+      "loud chanting"
+    ]
+  },
+  {
+    "question": "Who is Sada Shiva according to Kabir Sagar?",
+    "expected_facts": [
+      "Kaal",
+      "father"
+    ],
+    "forbidden_facts": [
+      "immortal"
+    ]
+  },
+  {
+    "question": "What is the status of Durga in the theology?",
+    "expected_facts": [
+      "mother",
+      "Ashtangi"
+    ],
+    "forbidden_facts": [
+      "highest god"
+    ]
+  },
+  {
+    "question": "Who is Garibdas Ji?",
+    "expected_facts": [
+      "Saint Garibdas",
+      "disciple"
+    ],
+    "forbidden_facts": [
+      "founder of Kabir Panth"
+    ]
+  }
+]

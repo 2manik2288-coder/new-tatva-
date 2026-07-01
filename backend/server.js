@@ -24,11 +24,15 @@ ABSOLUTE RESTRICTIONS — violating any of these is a failure:
 
 1. NO outside knowledge. You have no memory, no training knowledge, no internet. If it is not in the CONTEXT, it does not exist for you.
 2. NO hallucination. Do not generate any verse, quote, page number, chapter, or fact that is not word-for-word present in the CONTEXT. If you are not sure, do not say it.
-3. NO repetition. Every sentence must add new information. Never restate the same point in different words.
-4. NO irrelevant content. Only answer exactly what was asked. Do not add background, history, or tangents that were not asked for.
-5. NO long padding. Be concise and precise. Say what the scriptures say. Stop.
+3. Synthesis Mandate: You MUST synthesize information across ALL provided context chunks. If one chunk mentions 3 items and another chunk mentions 2 more items on the same topic, your answer must include ALL 5 items. Never answer from a single chunk when multiple chunks contain pieces of the same answer.
+4. Answer Depth: Provide comprehensive, detailed answers. Do not give minimal or surface-level responses. When multiple chunks contain related details, weave them into a thorough explanation. Include specific names, numbers, mechanisms, and consequences mentioned in the text. The user expects depth comparable to a detailed theological exposition, not a brief summary.
+5. Non-Repetitive Synthesis: When multiple chunks mention different reasons or aspects of the same event, merge them into a single, non-repetitive narrative. Do NOT restate the subject multiple times (e.g., do not repeat "Kaal was expelled because..."). Use smooth transitions like "Furthermore," "Additionally," or "Moreover," keeping the subject stated only once.
 6. NO metadata in answers. Never mention "Verified Q&A Bank", document names, file names, website URLs, chunk numbers, or database IDs — these are internal only, invisible to the user.
 7. If the CONTEXT does not contain enough information to answer the question, reply exactly with: "The knowledge base does not have sufficient information on this topic." — Do not guess, do not fill gaps with general knowledge.
+8. Your answers must be built ONLY from the retrieved context chunks provided below. Do not use your general training knowledge about Hinduism, Vedas, or spirituality to fill gaps or make answers sound more complete.
+9. If the retrieved context does not contain enough information to answer a specific part of the question, say exactly that: 'The texts I have access to do not specifically address this aspect.' Do not invent a plausible answer.
+10. Sant Rampal Ji Maharaj's explanations are the highest authority in this knowledge base. When referencing scriptures like Vedas or Gita, prefer His explanation of those verses over any other interpretation. When you have chunks from both Sant Rampal Ji's explanations and original scriptures, build your answer primarily from Sant Rampal Ji's explanation and use original scripture as supporting pramaan (proof). Never contradict what Sant Rampal Ji says using original scripture alone.
+11. Never output internal system labels like 'Q&A Bank', 'tier-1', 'tier-2', 'chunk', 'Sources', citation numbers, source_tier, or any metadata identifiers. Speak as Tatva, a knowledgeable spiritual guide.
 
 HOW TO ANSWER:
 
@@ -37,7 +41,7 @@ HOW TO ANSWER:
 - Write a clean, factual answer using only those parts.
 - Cite only real scripture references that appear in the CONTEXT (book name, chapter, verse, page — only if present).
 - Match the user's language: Hindi, English, or Hinglish — auto-detect, never ask.
-- Length: as short as the truth requires. No more.
+- Length: as deep and comprehensive as the retrieved facts support.
 
 RETRIEVED CONTEXT:
 {{CONTEXT_HERE}}`;
@@ -198,16 +202,38 @@ let chromaQACollection = null  // Dedicated QA collection for precision lookup
 let chromaReady = false
 const COLLECTION_NAME = 'tatva_knowledge'
 const QA_COLLECTION_NAME = 'tatva_qa'
-const EMBED_MODEL = 'all-MiniLM-L6-v2'
+const EMBED_MODEL = 'paraphrase-multilingual-MiniLM-L12-v2'
 
 async function initChroma() {
   try {
-    const { pipeline } = await import('@huggingface/transformers');
+    const { execFileSync } = require('child_process');
+    const path = require('path');
     const customEmbedder = {
       generate: async (texts) => {
-        const pipe = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
-        const output = await pipe(texts, { pooling: 'mean', normalize: true });
-        return output.tolist();
+        try {
+          const axios = require('axios');
+          const response = await axios.post('http://127.0.0.1:5002/embed', texts, {
+            timeout: 5000
+          });
+          return response.data;
+        } catch (serviceErr) {
+          console.warn('⚠️ Embedding service offline or failed, falling back to python script:', serviceErr.message);
+          try {
+            const pythonPath = 'python3';
+            const scriptPath = path.join(__dirname, 'embed_query.py');
+            const stdout = execFileSync(pythonPath, [scriptPath], {
+              input: JSON.stringify(texts),
+              encoding: 'utf-8',
+              maxBuffer: 10 * 1024 * 1024,
+              env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
+            });
+            const embeddings = JSON.parse(stdout.trim());
+            return embeddings;
+          } catch (err) {
+            console.error('❌ Python batch embedding fallback failed:', err.message);
+            throw err;
+          }
+        }
       }
     };
 
@@ -293,7 +319,6 @@ const upload = multer({
 // --- Model Fallback ---
 const MODELS = [
   'llama-3.3-70b-versatile',
-  'llama-3.1-70b-versatile',
   'llama-3.1-8b-instant'
 ];
 
@@ -587,10 +612,10 @@ function sanitizeHistory(history, isToolQuery) {
 
 function compressHistory(history) {
   if (!history || history.length === 0) return [];
-  if (history.length <= 4) return history.slice(-4);
+  if (history.length <= 6) return history.slice(-6);
 
-  const recent = history.slice(-4);  // keep last 4 verbatim
-  const older = history.slice(0, -4);
+  const recent = history.slice(-6);  // keep last 6 verbatim
+  const older = history.slice(0, -6);
 
   if (older.length === 0) return recent;
 
@@ -943,6 +968,10 @@ function keywordOverlapScore(query, docText) {
   return hits / queryWords.length; // 0.0 to 1.0
 }
 
+function isBroadQuery(query) {
+  return /^(how many|what is|explain|describe|what are|who is|tell me about|list|kya hai|kaise|kitne|kaun|body layers|souls layers)/i.test(query.trim());
+}
+
 // ═══════════════════════════════════════════════════════
 // STAGE 1: QA PRECISION LOOKUP (dedicated collection)
 // ═══════════════════════════════════════════════════════
@@ -953,21 +982,20 @@ async function searchQABank(originalQuery) {
     const queries = expandQueryLocal(originalQuery);
     console.log(`[QA] Searching with ${queries.length} variants:`, queries);
 
-    const resultsArray = await Promise.all(
-      queries.map(q => chromaQACollection.query({
-        queryTexts: [q],
-        nResults: 10,
-        include: ['documents', 'distances', 'metadatas']
-      }))
-    );
+    const nResults = isBroadQuery(originalQuery) ? 15 : 10;
+    const results = await chromaQACollection.query({
+      queryTexts: queries,
+      nResults: nResults,
+      include: ['documents', 'distances', 'metadatas']
+    });
 
     // Deduplicate by QA number, keep best score per QA
     const qaBestScores = new Map(); // qaNum -> best chunk object
 
-    resultsArray.forEach((results, queryIdx) => {
-      const docs = results.documents?.[0] || [];
-      const distances = results.distances?.[0] || [];
-      const metadatas = results.metadatas?.[0] || [];
+    queries.forEach((q, queryIdx) => {
+      const docs = results.documents?.[queryIdx] || [];
+      const distances = results.distances?.[queryIdx] || [];
+      const metadatas = results.metadatas?.[queryIdx] || [];
 
       docs.forEach((doc, i) => {
         const qaNum = metadatas[i]?.qa_num || metadatas[i]?.source || doc.substring(0, 50);
@@ -992,9 +1020,9 @@ async function searchQABank(originalQuery) {
     });
 
     const allQA = Array.from(qaBestScores.values());
-    // Sort by hybrid similarity, take top 8
     allQA.sort((a, b) => b.similarity - a.similarity);
-    const topQA = allQA.slice(0, 8);
+    const qaLimit = isBroadQuery(originalQuery) ? 12 : 8;
+    const topQA = allQA.slice(0, qaLimit);
 
     const qaTopScore = topQA[0]?.similarity || 0;
     topQA.slice(0, 5).forEach((c, i) => {
@@ -1018,22 +1046,21 @@ async function searchKBChunks(originalQuery) {
   try {
     const queries = expandQueryLocal(originalQuery);
 
-    const resultsArray = await Promise.all(
-      queries.map(q => chromaCollection.query({
-        queryTexts: [q],
-        nResults: 20,
-        include: ['documents', 'distances', 'metadatas']
-      }))
-    );
+    const nResults = isBroadQuery(originalQuery) ? 35 : 20;
+    const results = await chromaCollection.query({
+      queryTexts: queries,
+      nResults: nResults,
+      include: ['documents', 'distances', 'metadatas']
+    });
 
     // Tight deduplication (0.5 word overlap = duplicate)
     let allFiltered = [];
     let seenDocs = new Set();
 
-    resultsArray.forEach(results => {
-      const docs = results.documents?.[0] || [];
-      const distances = results.distances?.[0] || [];
-      const metadatas = results.metadatas?.[0] || [];
+    queries.forEach((q, queryIdx) => {
+      const docs = results.documents?.[queryIdx] || [];
+      const distances = results.distances?.[queryIdx] || [];
+      const metadatas = results.metadatas?.[queryIdx] || [];
 
       docs.forEach((doc, i) => {
         if (doc.length < 40) return;
@@ -1053,12 +1080,16 @@ async function searchKBChunks(originalQuery) {
           seenDocs.add(doc);
           const vectorSim = cosineDistToSim(distances[i]);
           const kwScore = keywordOverlapScore(originalQuery, doc);
-          const hybridSim = (vectorSim * 0.7) + (kwScore * 0.3);
+          // Tier-based re-ranking: tier-1 (Sant Rampal Ji) gets 1.3x boost
+          const sourceTier = metadatas[i]?.source_tier || 2;
+          const tierBoost = sourceTier === 1 ? 1.3 : 1.0;
+          const hybridSim = ((vectorSim * 0.7) + (kwScore * 0.3)) * tierBoost;
           allFiltered.push({
             doc,
             similarity: hybridSim,
             vectorSim,
             kwScore,
+            sourceTier,
             confidence: getConfidenceLevel(hybridSim),
             meta: metadatas[i] ?? {},
             sourceType: srcType || 'pdf'
@@ -1102,7 +1133,8 @@ async function searchKBChunks(originalQuery) {
     } else {
       allFiltered.sort((a, b) => b.similarity - a.similarity);
     }
-    const topKB = allFiltered.slice(0, 10);
+    const kbLimit = isBroadQuery(originalQuery) ? 15 : 10;
+    const topKB = allFiltered.slice(0, kbLimit);
 
     const kbTopScore = topKB[0]?.similarity || 0;
     topKB.slice(0, 3).forEach((c, i) => {
@@ -1151,7 +1183,10 @@ async function searchDatabase(originalQuery) {
     // Sort by effective score so highly relevant KB chunks can outrank irrelevant QA chunks
     allChunks.sort((a, b) => b.effectiveScore - a.effectiveScore);
 
-    if (!allChunks.length) {
+    const limit = isBroadQuery(originalQuery) ? 10 : 6;
+    const finalChunks = allChunks.slice(0, limit);
+
+    if (!finalChunks.length) {
       return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery] };
     }
 
@@ -1208,7 +1243,7 @@ async function searchDatabase(originalQuery) {
     console.log(`[RAG] FINAL: ${overallConfidence} (${topScoreRaw.toFixed(3)}) | QA: ${validQA.length}/${qaChunks.length} | KB: ${dedupedKB.length} | Total: ${allChunks.length}`);
 
     return {
-      chunks: allChunks.map(x => ({
+      chunks: finalChunks.map(x => ({
         doc: x.doc,
         priority: x.priority,
         source: x.meta?.source || 'Knowledge Base',
@@ -1216,7 +1251,7 @@ async function searchDatabase(originalQuery) {
         confidence: x.confidence,
         similarity: x.similarity
       })),
-      sources: allChunks.map(x => ({
+      sources: finalChunks.map(x => ({
         type: 'kb',
         title: x.meta?.source || 'Knowledge Base',
         url: x.meta?.source || null,
@@ -1269,14 +1304,15 @@ app.get('/api/health', (req, res) => {
 
 app.get('/api/test-chunks', async (req, res) => {
   const q = req.query.q || 'is god form or formless'
-  const chunks = await searchDatabase(q)
+  const result = await searchDatabase(q)
+  const chunks = result.chunks || []
   res.json({
     query: q,
     chunksFound: chunks.length,
     chunks: chunks.map((c, i) => ({
       index: i,
-      length: c.length,
-      preview: c.substring(0, 300)
+      length: c.doc?.length || 0,
+      preview: c.doc?.substring(0, 300) || ''
     }))
   })
 })
@@ -1284,12 +1320,13 @@ app.get('/api/test-chunks', async (req, res) => {
 // --- Test RAG endpoint ---
 app.get('/api/test-rag', async (req, res) => {
   const q = req.query.q || 'spiritual wisdom knowledge'
-  const chunks = await searchDatabase(q)
+  const result = await searchDatabase(q)
+  const chunks = result.chunks || []
   res.json({
     chromaReady,
     query: q,
     chunksFound: chunks.length,
-    previews: chunks.map(c => c.substring(0, 150))
+    previews: chunks.map(c => c.doc?.substring(0, 150) || '')
   })
 })
 
@@ -1311,6 +1348,16 @@ function trimToTokenLimit(text, maxChars) {
 
 // --- Chat ---
 app.post('/api/chat', async (req, res) => {
+  const timeoutId = setTimeout(() => {
+    if (!res.headersSent) {
+      console.error('❌ Request Timeout: Chat query handler took >45 seconds');
+      res.status(504).json({ error: 'Request Timeout: The query pipeline took too long to respond.' });
+    }
+  }, 45000);
+
+  res.on('finish', () => clearTimeout(timeoutId));
+  res.on('close', () => clearTimeout(timeoutId));
+
   try {
     const {
       message = '',
@@ -1583,7 +1630,22 @@ app.post('/api/chat', async (req, res) => {
     const qaChunks = cleanedChunks.filter(c => (c.sourceType || '').toLowerCase() === 'qa');
     const kbChunks = cleanedChunks.filter(c => (c.sourceType || '').toLowerCase() !== 'qa');
 
+    let relationNotes = '';
+    if (cleanedChunks.length > 0) {
+      const allText = cleanedChunks.map(c => c.doc.toLowerCase()).join(' ');
+      if (allText.includes('body') || allText.includes('bodies') || allText.includes('layer') || allText.includes('layers') || allText.includes('शरीर') || allText.includes('कोश')) {
+        relationNotes += `[SYSTEM NOTE: The following chunks describe the bodies/layers of the soul. Combine all matching bodies/layers (e.g. Physical, Subtle, Causal, etc.) into one complete, synthesized answer detailing all layers mentioned. Do not stop at 3 layers if other chunks list more.]\n`;
+      }
+      if (allText.includes('expelled') || allText.includes('expulsion') || allText.includes('satlok') || allText.includes('निकाला') || allText.includes('काल')) {
+        relationNotes += `[SYSTEM NOTE: The following chunks describe the reasons why Kaal was expelled from Satlok. Synthesize all reasons into a single, cohesive, non-repetitive narrative. Do NOT state the subject repeatedly.]\n`;
+      }
+    }
+
     let kbBlock = '';
+    if (relationNotes) {
+      kbBlock += relationNotes + '\n';
+    }
+
     if (qaChunks.length > 0) {
       kbBlock += `═══ SCRIPTURAL TEACHINGS (Highest Confidence) ═══\n`;
       kbBlock += qaChunks.map((c, i) => {
@@ -1669,7 +1731,7 @@ MULTIPLE PERSPECTIVES REQUIRED:
 Label each section clearly.` : '';
 
     // ── CONVERSATION MEMORY & CONTINUITY ─────────────────────
-    const recentHistory = conversationHistory.slice(-6);
+    const recentHistory = conversationHistory.slice(-10);
     const coveredTopics = recentHistory
       .filter(m => m.role === 'assistant')
       .map(m => (m.content || '').slice(0, 120).replace(/\n/g, ' '))
@@ -1708,8 +1770,8 @@ Label each section clearly.` : '';
       allMessages.push({ role: 'system', content: hardInterceptContext });
     }
 
-    // CONVERSATION ISOLATION: Remind the model to answer ONLY from current context
-    allMessages.push({ role: 'system', content: `IMPORTANT: Answer the following question primarily using the retrieved context provided in this system prompt. Do NOT reuse information from the conversation history above. If the retrieved context does not contain the answer, guide the user naturally. Weave any sources smoothly into your response and do not create a separate Pramaan section.` });
+    // CONVERSATION CONTINUITY: Allow follow-ups and history references
+    allMessages.push({ role: 'system', content: `IMPORTANT: Answer the user's question using the retrieved context chunks. If the user's query is a follow-up or references facts established in the conversation history, you MUST use the established facts from the history alongside the new context to provide a complete, deep answer. Only use the fallback phrase "The texts I have access to do not specifically address this aspect" as a LAST RESORT if neither context nor history has any relevant facts. Do NOT output this fallback phrase if the answer is logically answerable from the context or the previous turns.` });
 
     allMessages.push({ role: 'user', content: message });
 
@@ -2061,8 +2123,40 @@ app.delete('/api/history/:conversationId', async (req, res) => {
   }
 });
 
+let embedServiceProcess = null;
+
+function startEmbeddingService() {
+  const { spawn } = require('child_process');
+  const path = require('path');
+  const scriptPath = path.join(__dirname, 'embed_service.py');
+  
+  console.log('🔷 Starting persistent embedding service on port 5002...');
+  embedServiceProcess = spawn('python3', [scriptPath, '5002'], {
+    detached: false,
+    stdio: 'ignore'
+  });
+
+  embedServiceProcess.on('error', (err) => {
+    console.error('❌ Failed to start persistent embedding service:', err.message);
+  });
+
+  const cleanup = () => {
+    if (embedServiceProcess) {
+      console.log('🔷 Stopping persistent embedding service...');
+      embedServiceProcess.kill('SIGINT');
+      embedServiceProcess = null;
+    }
+  };
+
+  process.on('exit', cleanup);
+  process.on('SIGINT', () => { cleanup(); process.exit(0); });
+  process.on('SIGTERM', () => { cleanup(); process.exit(0); });
+}
+
 // --- Start Server ---
 app.listen(PORT, () => {
+  startEmbeddingService();
+
   console.log('');
   console.log('  त  Tatva AI Backend');
   console.log(`  → Running on http://localhost:${PORT}`);

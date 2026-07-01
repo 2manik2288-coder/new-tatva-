@@ -13,12 +13,55 @@ Usage:
   python3 ingest_qa.py
 """
 
+import sys
+import os
 import re
 import hashlib
 import chromadb
 from pathlib import Path
 
-CHROMA_PATH = Path(__file__).parent / "chroma_db"
+# ─── macOS SAFETY: set spawn before any torch/model imports ───
+import multiprocessing
+if sys.platform == "darwin":
+    try:
+        multiprocessing.set_start_method("spawn", force=True)
+    except RuntimeError:
+        pass  # already set
+
+# Device auto-detection
+import torch
+if torch.backends.mps.is_available():
+    DEVICE = "mps"
+elif torch.cuda.is_available():
+    DEVICE = "cuda"
+else:
+    DEVICE = "cpu"
+
+from sentence_transformers import SentenceTransformer
+from chromadb.api.types import EmbeddingFunction, Documents, Embeddings
+
+EMBED_MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+embed_model = SentenceTransformer(EMBED_MODEL_NAME, device=DEVICE)
+
+class MultilingualEmbedder(EmbeddingFunction):
+    """ChromaDB-compatible embedding function using the multilingual model."""
+    def __init__(self) -> None:
+        pass
+
+    def __call__(self, input: Documents) -> Embeddings:
+        embeddings = embed_model.encode(
+            input,
+            normalize_embeddings=True,
+            show_progress_bar=False
+        )
+        return embeddings.tolist()
+
+    def name(self) -> str:
+        return "sentence_transformer"
+
+multilingual_embedder = MultilingualEmbedder()
+
+CHROMA_PATH = Path(__file__).parent / "chroma_db.nosync"
 QA_FILE = Path(__file__).parent / "scratch" / "qa_data.txt"
 QA_COLLECTION = "tatva_qa"       # Dedicated QA collection
 KB_COLLECTION = "tatva_knowledge"  # Also add to main KB with type='qa'
@@ -124,18 +167,37 @@ def ingest_qa():
         print(f"   A: {p['answer'][:80]}...")
     
     # Connect to ChromaDB
-    client = chromadb.PersistentClient(path=str(CHROMA_PATH))
+    # Try connecting via HttpClient first if server is running on port 8000
+    try:
+        import requests
+        resp = requests.get("http://localhost:8000/api/v2/heartbeat", timeout=2)
+        if resp.status_code == 200:
+            print("🔗 Connecting to running ChromaDB server via HttpClient (localhost:8000)...")
+            client = chromadb.HttpClient(host="localhost", port=8000)
+        else:
+            raise Exception("Heartbeat failed")
+    except Exception:
+        print(f"📁 Connecting directly to ChromaDB PersistentClient (path: {CHROMA_PATH.resolve()})...")
+        client = chromadb.PersistentClient(path=str(CHROMA_PATH))
     
-    # Create dedicated QA collection
+    # Create dedicated QA collection (delete and recreate to update embedding function schema)
+    try:
+        client.delete_collection(name=QA_COLLECTION)
+        print(f"🗑️  Deleted old '{QA_COLLECTION}' collection to resolve embedding function conflict.")
+    except Exception:
+        pass
+
     qa_col = client.get_or_create_collection(
         name=QA_COLLECTION,
-        metadata={"hnsw:space": "cosine"}
+        metadata={"hnsw:space": "cosine"},
+        embedding_function=multilingual_embedder
     )
     
     # Also get main KB collection
     kb_col = client.get_or_create_collection(
         name=KB_COLLECTION,
-        metadata={"hnsw:space": "cosine"}
+        metadata={"hnsw:space": "cosine"},
+        embedding_function=multilingual_embedder
     )
     
     print(f"\n💾 Ingesting into '{QA_COLLECTION}' (dedicated) and '{KB_COLLECTION}' (main KB)...")
