@@ -33,14 +33,15 @@ export function TypingIndicator() {
    ═══════════════════════════════════════════════ */
 
 const MessageBubble = memo(({ message, previousMessage, isTyping = false, onSendSuggestion }) => {
-  if (!message || message.content === undefined || message.content === null) {
-      return <div className="px-4 py-2 text-sm text-white/40 italic">Message unavailable</div>;
-  }
-  const isUser = message.role === 'user';
   const [copied, setCopied] = useState(false);
   const [showThinking, setShowThinking] = useState(false);
   const [feedback, setFeedback] = useState(null);
   const { addToast } = useToast();
+
+  if (!message || message.content === undefined || message.content === null) {
+      return <div className="px-4 py-2 text-sm text-white/40 italic">Message unavailable</div>;
+  }
+  const isUser = message.role === 'user';
 
   // Strip meta tags and extract TATVA thinking block
   let rawContent = (!isTyping && message.content) ? message.content : (message.content || '');
