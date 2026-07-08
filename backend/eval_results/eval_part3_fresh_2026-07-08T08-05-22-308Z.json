@@ -1,0 +1,1152 @@
+{
+  "timestamp": "2026-07-08T08:05:22.312Z",
+  "tag": "part3_fresh",
+  "test_set": "eval_testset_part3.json",
+  "summary": {
+    "total_questions": 25,
+    "passed": 8,
+    "failed": 17,
+    "grounded_accuracy": "32.00%",
+    "fact_recall": "50.00%",
+    "insufficient_kb_fallbacks": 1,
+    "failure_breakdown": {
+      "hallucination_failures": 2,
+      "missing_facts_failures": 16,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "none — Part 3: factual": {
+      "total": 5,
+      "passed": 1,
+      "insufficient": 1
+    },
+    "none — Part 3: how_mechanism": {
+      "total": 6,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — Part 3: count_or_list": {
+      "total": 5,
+      "passed": 3,
+      "insufficient": 0
+    },
+    "none — Part 3: comparison": {
+      "total": 5,
+      "passed": 3,
+      "insufficient": 0
+    },
+    "none — Part 3: relational": {
+      "total": 4,
+      "passed": 0,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "Who is the mother of Ashtangi?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Durga",
+        "Prakriti"
+      ],
+      "forbidden_facts": [
+        "father"
+      ],
+      "response": "दिए गए संदर्भ में असhtangi की माता के बारे में कोई जानकारी नहीं है। सभी संदर्भ असhtangi को ही त्रिमूर्ति (ब्रह्मा, विष्णु, और शिव) की माता के रूप में वर्णित करते हैं, लेकिन उनकी अपनी माता के बारे में कोई उल्लेख नहीं है।\n\nजैसा कि संत रामपाल जी महाराज ने बताया है, दुर्गा, जिसे असhtangi या प्रकृति भी कहा जाता है, ब्रह्मा, विष्णु, और शिव की माता है। लेकिन दुर्गा की अपनी माता के बारे में कोई जानकारी नहीं दी गई है। \n\nसंदर्भ से पता चलता है कि दुर्गा को प्रकृति, असhtangi, या भवानी के नाम से भी जाना जाता है, और वह त्रिमूर्ति की माता है। लेकिन उनकी अपनी माता के बारे में कोई विवरण नहीं है। \n\nइसलिए, यह कहा जा सकता है कि ज्ञान आधार में इस विषय पर पर्याप्त जानकारी नहीं है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          },
+          {
+            "fact": "Prakriti",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Why does the soul feel trapped in the three worlds?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "Kaal",
+        "trap",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "happy"
+      ],
+      "response": "आत्मा को तीनों लोकों में फंसी हुई महसूस करने के पीछे का कारण समझने के लिए, हमें पहले यह जानना होगा कि ये तीनों लोक क्या हैं और आत्मा का इनसे क्या संबंध है।\n\nआत्मा की यात्रा और उसके विभिन्न शरीरों या परतों के बारे में जानकारी विभिन्न ग्रंथों और शिक्षाओं में दी गई है। जब आत्मा गर्भ में होती है, तो वहाँ उसे बहुत 고통 होता है, जिसे \"गर्भ वास\" कहा जाता है। इस दौरान, आत्मा को माँ के शरीर की एसिडिक तरल पदार्थों में जलन होती है और वह भगवान से मुक्ति की प्रार्थना करती है। \n\nआत्मा के शरीर या परतों के बारे में बात करते समय, हमें यह समझना होगा कि आत्मा के कई शरीर या परतें होती हैं। इनमें से कुछ प्रमुख परतें हैं:\n\n- स्थूल शरीर (Physical Body): यह वह शरीर है जिसे हम अपनी आँखों से देख सकते हैं।\n- सूक्ष्म शरीर (Subtle Body): यह शरीर स्थूल शरीर से अधिक सूक्ष्म होता है और इसमें आत्मा की भावनाएं और विचार शामिल होते हैं।\n- कारण शरीर (Causal Body): यह शरीर सूक्ष्म शरीर से भी अधिक सूक्ष्म होता है और इसमें आत्मा के कर्मों का संग्रह होता है।\n\nआत्मा जब इन तीनों लोकों में फंसी हुई महसूस करती है, तो इसका मुख्य कारण माया का प्रभाव है। माया का अर्थ है भ्रम या मोह, जो आत्मा को सच्चाई से दूर रखता है और उसे तीनों लोकों में फंसाए रखता है। जब आत्मा इन भौतिक सुखों और वासनाओं में फंस जाती है, तो वह अपने असली स्वरूप और उद्देश्य को भूल जाती है और तीनों लोकों में फंसी रह जाती है।\n\nआत्मा को इन तीनों लोकों से मुक्ति पाने के लिए, उसे माया के प्रभाव से मुक्त होना होगा और अपने असली स्वरूप और उद्देश्य को समझना होगा। आत्मा को अपने कर्मों और वासनाओं पर विजय प्राप्त करनी होगी और अपने असली स्वरूप को समझना होगा। \n\nजैसा कि शास्त्रों में वर्णित है, आत्मा को जब \"ग्यारहवें दरवाजे\" को पार करती है, तो उसे एकदम नया दृष्टिकोण मिलता है और वह अपने पिछले जीवन को देखती है। उस समय, आत्मा को बहुत आघात लगता है और वह अपने पिछले जीवन के बारे में सोचती है। \n\nइस प्रकार, आत्मा तीनों लोकों में फंसी हुई महसूस करती है क्योंकि वह माया के प्रभाव में है और अपने असली स्वरूप और उद्देश्य को भूल चुकी है। आत्मा को इन तीनों लोकों से मुक्ति पाने के लिए, उसे माया के प्रभाव से मुक्त होना होगा और अपने असली स्वरूप और उद्देश्य को समझना होगा।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": false
+          },
+          {
+            "fact": "trap",
+            "found": false
+          },
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "What are the rules of taking Naam Diksha?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "initiation",
+        "rules"
+      ],
+      "forbidden_facts": [
+        "no rules"
+      ],
+      "response": "Taking Naam Diksha involves several key rules and guidelines to ensure its effectiveness and success. According to the provided context, the following are the essential rules:\n\n1. **Investigate the Scriptures and Identify a True Satguru**: Before taking Naam Diksha, it is crucial to investigate the scriptures yourself and identify a living Tatvadarshi Satguru. This is emphasized in the final instructions of Mukti Bodh, which advise against blindly following the herd.\n\n2. **Take Naam Daan from a True Satguru**: Naam Diksha, or Naam Daan, must be taken from a true, authorized Satguru. A mantra, which is a spiritual password, only works when activated and transferred by such a Satguru.\n\n3. **Primary Aim of Taking Naam**: The primary aim of taking Naam Diksha should be the liberation of the human soul, or Moksha. If the aim is worldly pleasures or getting rid of a disease, it does not work quickly.\n\n4. **Follow the Rules (Maryada) Strictly**: It is vital to follow the prescribed rules (Maryada) strictly unto your last breath. These rules are provided by the Satguru and are essential for the initiation and worship to be successful.\n\n5. **Gain Knowledge and Develop Faith**: Before taking Naam Diksha, one needs to gain knowledge and develop faith. This preparation is crucial for the benefits of Naam Diksha to be obtained.\n\n6. **Worship and Mantra Chanting**: The true mantras for the worship of the Supreme God, mentioned in code words in scripture (e.g., Gita 17:23), must be provided by the Satguru. Sincere chanting of these mantras, along with living a pure life according to the prescribed rules of worship, helps clear the soul's karmic debts.\n\nIn summary, the rules of taking Naam Diksha include identifying and approaching a true Satguru, aiming for spiritual liberation, adhering strictly to the provided rules, gaining knowledge and faith, and sincerely chanting the given mantras while leading a pure life.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "initiation",
+            "found": true
+          },
+          {
+            "fact": "rules",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 4,
+      "question": "Compare the characteristics of Satlok and Kaal's 21 universes.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Satlok",
+        "Kaal",
+        "destruction"
+      ],
+      "forbidden_facts": [
+        "same"
+      ],
+      "response": "The characteristics of Satlok and Kaal's 21 universes are starkly different. As stated in the scriptural teachings, Satlok is a realm where there are no shadows, no night, and no physical matter. It is inhabited by identical, genderless beings of pure love and consciousness, with divine trees (Kalpavriksh) and oceans of nectar. Everything in Satlok is alive, aware, and vibrating with love.\n\nIn contrast, Kaal's 21 universes are mathematically programmed for destruction (Maha-Pralaya). These universes are characterized by the physical biology of male and female, a design of Maya for reproduction. They are also subject to the cycle of birth, death, and rebirth.\n\nFurthermore, Satlok is home to liberated souls who have escaped the cycle of birth and death. On the other hand, Kaal's 21 universes are inhabited by souls that are bound by karma and are subject to the laws of nature.\n\nThe ultimate fate of Kaal's 21 universes is complete annihilation during the Maha-Pralaya. Every soul, including Brahma, Vishnu, Shiva, and Kaal himself, will be destroyed and reset. Only souls who escape to Satlok survive this cosmic reset.\n\nIn summary, Satlok is a realm of pure consciousness, love, and liberation, while Kaal's 21 universes are characterized by physicality, karma, and destruction. The two realms are fundamentally distinct, with Satlok being the abode of liberated souls and Kaal's universes being the domain of bound souls.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Satlok",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "destruction",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 5,
+      "question": "What are the three stages of spiritual initiation?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "Naam",
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "one stage"
+      ],
+      "response": "The three stages of spiritual initiation, also known as \"Naam Daan\" or \"Naam Diksha,\" are:\n\n1. **First Stage: Brahm Gayatri Mantra** - In this initial stage, the disciple receives the Brahm Gayatri mantra. This stage aims to awaken the primary chakras and help pay off immediate karmic debts.\n\n2. **Second Stage: Satnaam** - After the first stage, the disciple receives the Satnaam. This stage is crucial for the soul to ascend and progress spiritually.\n\n3. **Third Stage: Saarnaam (or Sarnaam)** - The final stage involves receiving the Saarnaam or Sarnaam, which facilitates the soul's ultimate entry into Satlok, the eternal world and native place of all souls.\n\nThese stages are essential for spiritual progression and ultimately attaining Moksha or liberation. A fully authorized Complete Saint, also known as a Tatvdarshi Saint, is required to administer these three stages of initiation. Without this authentic initiation process, meditation and austerities may further bind the soul into Kaal's karmic web, making it difficult to achieve spiritual liberation.\n\nAs stated in the scriptural teachings, \"Moksha is attained through initiation (naam) from a 'Complete Saint' in three stages: Brahm Gayatri mantra in the first stage, Satnaam in the second stage, and Saarnaam in the third stage.\" This process is crucial for crossing the 12th door to enter SachKhand or Satlok, the eternal place.\n\nThe information is derived from the explanations provided by Sant Rampal Ji Maharaj, emphasizing the importance of a true spiritual guide in the journey towards spiritual enlightenment and liberation.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Naam",
+            "found": true
+          },
+          {
+            "fact": "initiation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 6,
+      "question": "How did Kaal obtain the 21 universes from the Supreme Lord?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "tapasya",
+        "universes"
+      ],
+      "forbidden_facts": [
+        "stole"
+      ],
+      "response": "Kaal's acquisition of the 21 universes is described in the scriptural teachings. According to the Rigveda Mandal 10 Sukt 90 Verse 1, Kaal-Brahm, also known as Satan, is considered the god of 21 universes, which includes the one we currently reside in.\n\nThe circumstances under which Kaal obtained these universes are as follows: Kaal performed severe penance in Satlok, standing on one leg for 70 yugas. This rigorous austerity pleased the Supreme Lord, Kabir Saheb. As a reward for his penance, Kaal requested the Supreme Lord for the souls that were attracted to him during his penance. The Supreme Lord, with the consent of these souls, granted Kaal's request.\n\nAs stated in the scriptural teachings, Kaal then became the ruler of the 21 universes, trapping innocent souls in his domains and subjecting them to suffering in 84 lakh life forms. This is how Kaal-Brahm, also referred to as the devil or Satan, came to govern the 21 universes.\n\nIt is worth noting that Kabir Saheb is regarded as the Supreme God and the creator of an infinite number of universes, which includes the 21 universes governed by Kaal-Brahm. This hierarchical structure of the universes and the roles of Kaal-Brahm and Kabir Saheb are supported by scriptural references, including the Rigveda Mandal 10 Sukt 90 Verse 1-5.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "tapasya",
+            "found": false
+          },
+          {
+            "fact": "universes",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "What is the relation between Maya and Ashtangi?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "Durga",
+        "Maya"
+      ],
+      "forbidden_facts": [
+        "unrelated"
+      ],
+      "response": "माया और असhtांगी के बीच संबंध को समझने के लिए, हमें यह जानना होगा कि असhtांगी कौन है और माया क्या है। जैसा कि स्क्रिप्चरल टीचिंग्स में उल्लेख किया गया है, असhtांगी देवी दुर्गा का एक अन्य नाम है, जो कि कंठ कमल (गले का कमल) पर रहती हैं और आत्मा की ऊपर की यात्रा को रोकने के लिए माया का उपयोग करती हैं।\n\nइसके अलावा, सुप्लीमेंट्री टेक्स्ट्स में उल्लेख किया गया है कि असhtांगी देवी दुर्गा ही हैं, जो माया के रूप में जानी जाती हैं और जो आत्माओं को माया के जाल में फंसाती हैं। यहाँ यह स्पष्ट होता है कि असhtांगी और माया एक ही चीज़ के दो नाम हैं, और देवी दुर्गा ही असhtांगी और माया दोनों के रूप में जानी जाती हैं।\n\nइस प्रकार, हम कह सकते हैं कि असhtांगी और माया एक ही चीज़ के दो नाम हैं, और देवी दुर्गा ही असhtांगी और माया दोनों के रूप में जानी जाती है, जो आत्माओं को माया के जाल में फंसाने का काम करती हैं। देवी दुर्गा, जिसे असhtांगी और माया दोनों के नाम से जाना जाता है, तीन गुणों - राजगुण, सतगुण, और तमगुण के माध्यम से आत्माओं को फंसाती है, और कंठ कमल पर बैठकर आत्माओं को माया के जाल में फंसाती है। \n\nजैसा कि स्क्रिप्चरल टीचिंग्स में उल्लेख किया गया है, राजगुण ब्रह्मा के माध्यम से आत्माओं को lust और reproduction में फंसाता है, सतगुण विष्णु के माध्यम से आत्माओं को attachment और preservation में फंसाता है, और तमगुण शिव के माध्यम से आत्माओं को destruction और anger में फंसाता है। \n\nइसलिए, देवी दुर्गा, जो असhtांगी और माया दोनों के रूप में जानी जाती है, आत्माओं को माया के जाल में फंसाने के लिए विभिन्न तरीकों का उपयोग करती है, और कंठ कमल पर बैठकर आत्माओं को माया के जाल में फंसाती है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          },
+          {
+            "fact": "Maya",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is the duration of one day of Brahma?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "years",
+        "yuga"
+      ],
+      "forbidden_facts": [
+        "24 hours"
+      ],
+      "response": "एक दिन ब्रह्मा की अवधि १,००० चतुर्युग के बराबर होती है। यह जानकारी स्पष्ट रूप से दी गई है कि एक दिन ब्रह्मा की अवधि १,००० युग (४.३२ अरब मानव वर्ष) के बराबर होती है। कुछ स्रोतों में उल्लेख है कि यह अवधि १,००८ चतुर्युग के बराबर भी हो सकती है, लेकिन अधिकांश संदर्भों में १,००० चतुर्युग का उल्लेख किया गया है। ब्रह्मा की पूरी आयु १०० \"दिव्य वर्षों\" की होती है, जिसमें प्रत्येक दिन और रात की अवधि समान होती है, जो १,००० चतुर्युग के बराबर होती है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "years",
+            "found": false
+          },
+          {
+            "fact": "yuga",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Why should a devotee avoid visiting places of pilgrimage according to the teachings?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "pilgrimage",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "mandatory"
+      ],
+      "response": "एक भक्त को तीर्थ स्थलों पर जाने से बचना चाहिए, क्योंकि इससे जीव हिंसा होती है और पाप बढ़ते हैं। संत रामपाल जी महाराज और संत गरीब दास जी महाराज के अनुसार, तीर्थ यात्रा करने से और उपवास रखने से कई जन्मों के लिए पाप बढ़ जाते हैं।\n\nजब आप तीर्थ स्थलों पर जाते हैं, तो आपके पैरों के नीचे लाखों माइक्रोस्कोपिक जीव मर जाते हैं, जिससे आपको पाप मिलते हैं, न कि आशीर्वाद। यह बात संत रामपाल जी महाराज ने स्पष्ट की है कि तीर्थ स्थल खाली मोर्टार और पेस्टल की तरह हैं। \n\nइसके अलावा, गुरु कबीर जी के शब्दों में, \"गुरु बिन माला फेरते, गुरु बिन देते दान\" - गुरु के बिना माला फेरना और दान देना दोनों ही निष्फल हैं। वेद पुराण के अनुसार, गुरु के बिना मोक्ष प्राप्त करना असंभव है। \n\nइसलिए, एक भक्त को तीर्थ स्थलों पर जाने से बचना चाहिए और इसके बजाय एक सच्चे गुरु की शरण में जाना चाहिए और उनके मार्गदर्शन में सच्ची पूजा करनी चाहिए।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "pilgrimage",
+            "found": false
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "question": "What are the five main sins mentioned in the holy scriptures?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "sins",
+        "paap"
+      ],
+      "forbidden_facts": [
+        "no sins"
+      ],
+      "response": "The holy scriptures do not explicitly mention the five main sins. However, it is mentioned that without the true mantras and the refuge of the Supreme God (Kabir), it is absolutely impossible to conquer the five vices (lust, anger, greed, attachment, ego). These five vices are also referred to as the five main sins.\n\nAs stated in the scriptures, the five vices are:\n1. Lust\n2. Anger\n3. Greed\n4. Attachment\n5. Ego\n\nIt is also mentioned that invoking the True Name of God, as guided by a True Guru (Satguru), can aid in the eradication of past sins. The Constitution of Supreme God Kabir (Waheguru) states that if you worship as per Him and abide by the rules given by Him, He will forgive all your sins in this life only and will grant you with salvation.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "sins",
+            "found": true
+          },
+          {
+            "fact": "paap",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Compare the status of Akshar Purush and KavirDev.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Akshar",
+        "KavirDev",
+        "supreme"
+      ],
+      "forbidden_facts": [
+        "equal"
+      ],
+      "response": "अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने के लिए, हमें सबसे पहले यह समझना होगा कि वे कौन हैं और उनके क्या गुण और विशेषताएं हैं। \n\nअक्षर पुरुष, जिसे परब्रह्म भी कहा जाता है, एक उच्च देवता है जो ७ संख (एक खगोलीय रूप से विशाल संख्या) ब्रह्मांडों पर शासन करता है। उसका क्षेत्र काल के क्षेत्र से बहुत अधिक सुंदर और लंबे समय तक चलने वाला है, लेकिन यह अभी भी नाशवान है। \n\nकविरदेव, जिन्हें परम अक्षर पुरुष या पूर्ण ब्रह्म भी कहा जाता है, अमर हैं और अक्षर पुरुष से भी उच्च हैं। वह सर्वोच्च भगवान हैं जिन्होंने क्षर पुरुष और अक्षर पुरुष की रचना की और उन्हें उनके कार्य सौंपे। \n\nजैसा कि बताया गया है, कविरदेव ने मंसरोवर झील से अमृत लिया और एक अंडा बनाया ताकि अक्षर पुरुष को उसकी नींद से जगाया जा सके। जब अक्षर पुरुष ने क्रोध में उस अंडे को देखा, तो वह दो टुकड़ों में टूट गया, और कshar पुरुष (जिसका वास्तविक नाम कएल था) उसी से उत्पन्न हुआ। \n\nइस प्रकार, अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने पर, यह स्पष्ट होता है कि कविरदेव सर्वोच्च हैं और अक्षर पुरुष उनके नीचे हैं। अक्षर पुरुष का क्षेत्र नाशवान है, जबकि कविरदेव अमर हैं और उनका क्षेत्र सत्यलोक है, जो सबसे उच्च और स्थायी क्षेत्र है। \n\nयह भी उल्लेख किया गया है कि कshar पुरुष (कaal) को उसके दुष्कर्मों के कारण सत्यलोक से निकाल दिया गया था। कविरदेव की तुलना में अक्षर पुरुष की स्थिति कम है, लेकिन वह अभी भी एक उच्च देवता है। \n\nइस प्रकार, अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने से हमें यह समझने में मदद मिलती है कि वे कौन हैं और उनके क्या गुण और विशेषताएं हैं। यह हमें यह भी समझने में मदद करता है कि कविरदेव सर्वोच्च हैं और अक्षर पुरुष उनके नीचे हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Akshar",
+            "found": false
+          },
+          {
+            "fact": "KavirDev",
+            "found": false
+          },
+          {
+            "fact": "supreme",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "What happens to a soul that does not find a true Satguru?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "Satguru",
+        "reborn"
+      ],
+      "forbidden_facts": [
+        "salvation"
+      ],
+      "response": "एक आत्मा जो सच्चे सतगुरु को नहीं ढूंढ पाती है, उसके साथ बहुत ही दुखद परिणाम होते हैं। सतगुरु की अनुपस्थिति में, आत्मा को मोक्ष प्राप्त करने में कठिनाई होती है, और वह गहरे नरक में गिरने का सामना कर सकती है।\n\nजैसा कि संत रामपाल जी महाराज के अनुसार, \"सतगुरु बिन न पावे पैंदा, होथ हाथ गढ़ लीजे काइदा\" - सतगुरु के बिना, आत्मा को सही रास्ता नहीं मिलता है, और वह अपने पापों के कारण नरक में गिर जाती है।\n\nइसके अलावा, सतगुरु की शरण में आने से ही आत्मा को काल के जाल से मुक्ति मिलती है। सतगुरु के मार्गदर्शन में, आत्मा को परमात्मा के साथ जुड़ने का अवसर मिलता है, और वह मोक्ष प्राप्त कर सकती है।\n\nइसलिए, एक आत्मा जो सच्चे सतगुरु को नहीं ढूंढ पाती है, उसे मोक्ष प्राप्त करने में असफलता का सामना करना पड़ सकता है, और वह गहरे नरक में गिरने का सामना कर सकती है। सतगुरु की खोज और उनके मार्गदर्शन का पालन करना आत्मा के लिए बहुत महत्वपूर्ण है।\n\nजैसा कि कहा गया है, \"सतगुरु माता पिता हमारे, भाऊ सागर के\" - सतगुरु माता-पिता की तरह हमारे लिए होते हैं, और हमें उनके मार्गदर्शन का पालन करना चाहिए।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Satguru",
+            "found": false
+          },
+          {
+            "fact": "reborn",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "question": "Who is the writer of the book 'Gyan Ganga'?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Rampal"
+      ],
+      "forbidden_facts": [
+        "Kabir"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Rampal",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "What is the relation between Kaal and the three qualities (Brahma, Vishnu, Shiva)?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "father",
+        "sons"
+      ],
+      "forbidden_facts": [
+        "unrelated"
+      ],
+      "response": "काल और तीन गुणों (ब्रह्मा, विष्णु, शिव) के बीच संबंध को समझने के लिए, हमें यह जानना होगा कि काल ने इन तीनों गुणों को कैसे उत्पन्न किया। \n\nजैसा कि स्क्रिप्चरल टीचिंग्स में बताया गया है, काल (ज्योति निरंजन) ने अपने सदाशिव रूप में दुर्गा से बलपूर्वक विवाह किया, और उनके संयोग से तीन पुत्रों का जन्म हुआ: ब्रह्मा (रजोगुण), विष्णु (सतोगुण), और शिव (तमोगुण)। \n\nइन तीनों पुत्रों ने क्रमशः सृष्टि, पालन, और विनाश के कार्यों को संभाला। ब्रह्मा रजोगुण के साथ सृष्टि का कार्य करते हैं, विष्णु सतोगुण के साथ पालन का कार्य करते हैं, और शिव तमोगुण के साथ विनाश का कार्य करते हैं।\n\nइसके अलावा, सप्लिमेंट्री टेक्स्ट्स में बताया गया है कि ब्रह्मा, विष्णु, और शिव तीनों ही प्राकृति (दुर्गा देवी) और ब्रह्म (काल, शैतान) के संयोग से उत्पन्न हुए हैं और वे सभी नाशवान हैं। यह भी बताया गया है कि भगवान शिव (ब्रह्म-काल) गुणों से परे हैं।\n\nइस प्रकार, काल और तीन गुणों के बीच संबंध यह है कि काल ने दुर्गा से विवाह किया और उनके संयोग से तीन पुत्रों का जन्म हुआ, जो तीन गुणों से सम्पन्न थे। काल, ब्रह्मा, विष्णु, और शिव के पिता के रूप में जाना जाता है, और उनकी उत्पत्ति का वर्णन कई शास्त्रों में किया गया है, जिनमें श्रीमद्भागवत गीता और शिव पुराण शामिल हैं। \n\nयह जानकारी विभिन्न स्रोतों से प्राप्त हुई है, जिनमें स्क्रिप्चरल टीचिंग्स और सप्लिमेंट्री टेक्स्ट्स शामिल हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "father",
+            "found": false
+          },
+          {
+            "fact": "sons",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Why is it forbidden to perform shradh or ancestors worship?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "shradh",
+        "ancestors",
+        "Gita"
+      ],
+      "forbidden_facts": [
+        "necessary"
+      ],
+      "response": "नमस्कार! आपके प्रश्न का उत्तर देने के लिए मैं तैयार हूँ।\n\nश्राद्ध और पितृ पूजा को क्यों वर्जित माना जाता है, इसके कई कारण हैं:\n\nपहले, गीता और मार्कंडेय पुराण जैसे शास्त्रों के अनुसार, पितृ पूजा करना गलत है। इससे पूजा करने वाला पितर बन जाता है और पितर लोक में जाना पड़ता है, जो एक दुखदायी स्थिति है।\n\nदूसरे, श्राद्ध करना एक ऐसी पूजा है जो शास्त्रों के विरुद्ध है। इससे न तो कोई कार्य सिद्ध होता है, न ही कोई उच्चतम मोक्ष या सुख प्राप्त होता है।\n\nतीसरे, जो लोग श्राद्ध करते हैं और प्राप्त करते हैं, वे अक्सर कुत्ते, कौए या गधे जैसे जानवरों के रूप में पुनर्जन्म लेते हैं और कोई आध्यात्मिक गुण नहीं प्राप्त करते हैं।\n\nअंत में, श्राद्ध करना एक ऐसा कार्य है जो आत्मा को पितर लोक में फंसा देता है और उसे दुखों का सामना करना पड़ता है।\n\nआइए देखें कि हमारे ज्ञान आधार में क्या कहा गया है:\n\nगीता अध्याय 9, श्लोक 25 में कहा गया है कि जो लोग पितरों की पूजा करते हैं, वे पितर बन जाते हैं।\n\nमार्कंडेय पुराण में भी कहा गया है कि पितृ पूजा करना गलत है और इससे पितर लोक में जाना पड़ता है।\n\nइसलिए, श्राद्ध और पितृ पूजा को वर्जित माना जाता है क्योंकि इससे आत्मा को दुखों का सामना करना पड़ता है और वह पितर लोक में फंस जाती है।\n\nउम्मीद है, आपके प्रश्न का उत्तर संतोषजनक होगा। यदि आपके पास और कोई प्रश्न है, तो मुझे पूछने में संकोच न करें।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "shradh",
+            "found": false
+          },
+          {
+            "fact": "ancestors",
+            "found": false
+          },
+          {
+            "fact": "Gita",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "question": "Compare the method of worship in Vedas with Gita.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Vedas",
+        "Gita",
+        "Om"
+      ],
+      "forbidden_facts": [
+        "completely identical"
+      ],
+      "response": "The methods of worship in Vedas and Gita are centered around the Supreme God and are considered to be in harmony with each other. According to the Shrimad Bhagavad Gita, Chapter 4, Verse 25-30, different types of acts of worship have been described. The Gita emphasizes worshiping the Supreme God according to scriptures and recommends taking refuge in the Supreme God and following the guidance of an enlightened saint.\n\nAs stated in the Gita, Chapter 16, Verse 24, one should follow the practices worth doing (Kartavya Karma) and give up those not worth doing (Akartavya Karma), with the holy scriptures (Vedas) being the evidence. This implies that the method of worship in Gita aligns with that described in the Vedas.\n\nIn fact, the Gita Chapter 4, Verse 34, and Yajurved Chapter 40, Verse 10, mention that one should approach a Tatvadarshi Saint to learn the correct method of worship and gain knowledge about the Supreme God. This suggests that both Vedas and Gita advocate for a similar approach to worship, which involves seeking guidance from a qualified spiritual leader.\n\nAdditionally, it is mentioned that the purport of God Brahm's worship is more beneficial than that of god-goddesses and other deities like Brahma, Vishnu, Shiva, and Mother Durga. This indicates that the method of worship in Vedas and Gita is focused on the Supreme God and is aimed at attaining Satlok or complete salvation.\n\nIn Jainism, another spiritual tradition, it is believed that there can be multiple ways to worship God, and the approach may vary. However, the core objective of worship remains the same, which is to attain spiritual growth and liberation.\n\nOverall, the methods of worship in Vedas and Gita share a common thread, which is the emphasis on worshiping the Supreme God according to scriptures and seeking guidance from a qualified spiritual leader.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Vedas",
+            "found": true
+          },
+          {
+            "fact": "Gita",
+            "found": true
+          },
+          {
+            "fact": "Om",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 17,
+      "question": "What is the role of the Trikuti Kamal in the subtle body?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "lotus",
+        "Trikuti"
+      ],
+      "forbidden_facts": [
+        "physical"
+      ],
+      "response": "The Trikuti Kamal, also known as the Third Eye Lotus, plays a crucial role in the subtle human body. Located between the eyebrows, it has 2 petals and serves as the control room of the mind. As stated in the scriptural teachings, Kaal (Brahm) operates from this location, manipulating the soul through infinite thoughts and desires.\n\nThe Trikuti Kamal is also described as the junction of the three subtle nerves in the forehead, namely the Ida, Pingala, and Sushumna nerves. This confluence is referred to as the Tribeni internally. Furthermore, it is the confluence of the mind and breath, governed by the Satguru (Purna Purush).\n\nIn the subtle body, the Trikuti Kamal acts as a critical center that regulates the mind and its functions. It is also connected to the spiritual growth of an individual, as a true disciple bathes in the subtle spiritual energy of the Tribeni.\n\nAdditionally, the Trikuti Kamal serves as a gateway to higher spiritual realms. From this location, there is a way towards a locked door known as the \"10th Door\". The lock on this door can only be opened by the recitation of \"Satnaam\", a True Mantra given by a Complete Saint.\n\nIn summary, the Trikuti Kamal plays a vital role in the subtle body, serving as the control room of the mind, the confluence of mind and breath, and a gateway to higher spiritual realms.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "lotus",
+            "found": true
+          },
+          {
+            "fact": "Trikuti",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 18,
+      "question": "How can a soul cross the 10th door and enter the 11th door?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "door",
+        "Satguru",
+        "mantra"
+      ],
+      "forbidden_facts": [
+        "automatically"
+      ],
+      "response": "To cross the 10th door and enter the 11th door, the soul must possess specific spiritual knowledge and practices. As stated in the scriptural teachings, for a disciple with the Sarnaam, the soul withdraws from the feet upwards, gathers at the Trikuti, shoots entirely past the Tenth Door, breaks through the Brahmarandhra, and exits through the hidden Eleventh Door into the tunnel to Satlok.\n\nThe journey begins after death, where the soul needs Satnam to move ahead towards Trikuti. Without Satnam, the 10th door, Brahmrandr, and the 11th door of ParBrahm will not open. The 10th door, also known as Brahmrandr, can be opened with the recitation of Satyanaam, as shared by Supreme God guised as Jinda to Sant Garibdas ji.\n\nFurthermore, the Eleventh Door can be opened with the indicative mantras 'Tat' and 'Sat'. The locks on these doors cannot be opened by any other mantra. The 12th door of Purna Brahm, which leads to Satlok, opens with Sarshabd.\n\nIn essence, a soul can cross the 10th door and enter the 11th door by possessing Sarnaam, Satnam, and through the recitation of specific mantras like Satyanaam, 'Tat', and 'Sat', ultimately leading to the attainment of complete salvation in Satlok.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 66.66666666666666,
+        "expected_results": [
+          {
+            "fact": "door",
+            "found": true
+          },
+          {
+            "fact": "Satguru",
+            "found": false
+          },
+          {
+            "fact": "mantra",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "question": "List the names of the five elements of the human body.",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "elements",
+        "tatva"
+      ],
+      "forbidden_facts": [
+        "three elements"
+      ],
+      "response": "The human body is composed of five elements, as mentioned in the scriptural teachings. These elements are: पृथ्वी (Prithvi - Earth), जल (Jal - Water), तेजस्‌ (Tejas - Fire), वायु (Vayu - Air), and आकाश (Akash - Ether or Sky).\n\nAs stated in the supplementary texts, Caraka mentions eight essential ingredients of the body: त्वचा (Tvacha - Skin), रक्त (Rakta - Blood), मांस (Mamsa - Muscle), मेद (Meda - Fat), अस्थि (Asthi - Bone), मज्जा (Majja - Marrow), धीय (Dhi - Intellect or Mind), and सत्व (Satva - Consciousness or Essence).\n\nHowever, the five primary elements of the human body, as per the scriptural teachings, are पृथ्वी, जल, तेजस्‌, वायु, and आकाश.\n\nIn the context of the human body, these five elements manifest as three humours: वात (Vata - Air), पित्त (Pitta - Fire), and कफ (Kapha - Phlegm or Water-Earth).\n\nThe knowledge base confirms that our physical bodies are made of these five perishable elements of Kaal’s realm. \n\nThe five elements are also related to the 8 dhatus (or tissues) and 3 humours (or doshas) mentioned in Ayurveda. \n\nThese elements form the basis of our physical body, which is distinct from the body made of light in Satlok, which requires zero sustenance.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "elements",
+            "found": true
+          },
+          {
+            "fact": "tatva",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the difference between a true saint and a fake guru?",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Guru",
+        "saint",
+        "scriptures"
+      ],
+      "forbidden_facts": [
+        "no difference"
+      ],
+      "response": "A true saint, or Satguru, can be distinguished from a fake guru based on several key characteristics. According to the scriptures, a genuine Satguru possesses profound knowledge of scriptures, decodes the secrets of spiritual paths, grants true salvation mantras, and guides seekers towards the path of liberation.\n\nOne of the primary differences is that a true saint does not ask for wealth and does not show off miracles. Instead, he strictly teaches from the holy scriptures, such as the Vedas, Gita, Quran, and Guru Granth Sahib, and proves the path. This emphasis on scripture-based teachings and the avoidance of unnecessary displays of power are hallmarks of a true spiritual leader.\n\nIn contrast, fake gurus often prioritize self-aggrandizement and material gain over spiritual guidance. Saint Rampal Ji Maharaj, recognized as the living Satguru or enlightened saint presently on earth, fulfills the characteristics mentioned in holy scriptures and is authorized to grant true salvation mantras. He provides true spiritual knowledge and a complete way of worship, as given by God Kabir Ji, and sings the glory of the eternal abode and the path to attain salvation.\n\nUltimately, the difference between a true saint and a fake guru lies in their adherence to scripture, their motivations, and their methods of guiding seekers towards spiritual liberation. A true saint like Saint Rampal Ji Maharaj leads followers towards salvation, as outlined in various scriptures, by providing genuine spiritual guidance and support.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          },
+          {
+            "fact": "saint",
+            "found": true
+          },
+          {
+            "fact": "scriptures",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 21,
+      "question": "Who is the father of Brahma, Vishnu, and Mahesh?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Kaal",
+        "KavirDev"
+      ],
+      "forbidden_facts": [
+        "Vishnu"
+      ],
+      "response": "The father of Brahma, Vishnu, and Mahesh (Shiva) is Kaal Brahm, also known as Jyoti Niranjan or Sadashiva. As stated in the scriptural teachings, Kaal Brahm is the hidden father of the trinity. His wife, Durga, also known as Prakriti, Ashtangi, or Bhavani, is their mother. According to the teachings, Kaal Brahm, in his Sadashiv form, forcefully married Durga, and from their union, the three sons Brahma, Vishnu, and Shiva were born. Brahma is associated with Rajgun, Vishnu with Satgun, and Shiva with Tamgun. Kaal Brahm's family tree is considered critical in understanding the creation, and it is revealed that even gods do not know his origin, as stated in Gita 10:2.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "KavirDev",
+            "found": false
+          }
+        ],
+        "forbidden_found": [
+          "Vishnu"
+        ],
+        "has_hallucination": true,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Contains forbidden hallucination facts"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "question": "What are the qualifications of a Tatvdarshi Saint according to Gita Chapter 4 Verse 34?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "Tatvdarshi",
+        "Saint",
+        "Gita"
+      ],
+      "forbidden_facts": [
+        "Vedas"
+      ],
+      "response": "A Tatvdarshi Saint, as mentioned in Gita Chapter 4 Verse 34, is a saint who possesses comprehensive knowledge of all holy scriptures and is authorized to bestow the true Mantra of worship accordingly. This saint is well-versed with the essence of God and can explain the birth of the Trinity and the mystery of the \"inverted world tree\". Furthermore, according to Gita Chapter 15 Verses 1 to 4, a Tatvdarshi Saint has the knowledge of Tatvgyan (true spiritual knowledge) and can guide others to the Supreme State/place of the Supreme God, from where devotees do not return to the world.\n\nAs stated in the scriptures, one should approach a Tatvdarshi Saint with respect, ask questions politely without deceit, and seek guidance in Tatvgyan. The Tatvdarshi Saint is authorized to impart this true spiritual knowledge, which holds the potential to grant both materialistic and spiritual benefits.\n\nSant Rampal Ji Maharaj is identified as a Tatvdarshi Saint, possessing the true spiritual knowledge, and is authorized to guide others on the path to spiritual enlightenment.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Tatvdarshi",
+            "found": true
+          },
+          {
+            "fact": "Saint",
+            "found": true
+          },
+          {
+            "fact": "Gita",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 23,
+      "question": "Why does Kaal consume one lakh human souls daily?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "souls",
+        "curse"
+      ],
+      "forbidden_facts": [
+        "love"
+      ],
+      "response": "Kaal consumes one lakh human souls daily due to a curse placed upon him by the Supreme God. As stated in the scriptural teachings, when Kaal rebelled in Satlok and swallowed innocent souls out of greed to be their sole master, the Supreme God expelled him and cursed him. The curse states that Kaal's existence in the lower universes would only be sustained by consuming the subtle emotional and karmic energy of 100,000 souls daily.\n\nFurthermore, it is mentioned that Kaal extracts the subtle bodies of one lakh human beings, cooks them on an automatically heated rock called Taptshila in the 21st universe, and eats the \"dirt\" or karma/mel melting off them. This results in unbearable agony for the souls, though they do not die.\n\nAdditionally, Kaal is also said to produce one lakh and a quarter (125,000) humans daily, forever trapping him and the souls in a vicious cycle of birth and death. This curse was a consequence of his actions in Satlok, where he rebelled against the Supreme God.\n\nThe consumption of souls by Kaal is also linked to significant events, such as the Mahabharat war. It is stated that all soldiers slain in the Mahabharata war became his food, highlighting the extent of his curse.\n\nIn summary, Kaal consumes one lakh human souls daily as a result of the curse placed upon him by the Supreme God, which sustains his existence in the lower universes and traps him and the souls in a cycle of birth and death.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "souls",
+            "found": true
+          },
+          {
+            "fact": "curse",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 24,
+      "question": "Compare the life duration of Brahma and Vishnu.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Brahma",
+        "Vishnu",
+        "duration"
+      ],
+      "forbidden_facts": [
+        "equal"
+      ],
+      "response": "The lifespan of Brahma and Vishnu can be compared based on the provided context. According to the scriptural teachings, the lifespan of Vishnu is seven times the lifespan of Brahma.\n\nTo understand this better, let's break it down further. As stated, one day of Brahma equals one thousand Chaturyuga (4 Yugas). This duration is also equal to his night. \n\nThe lifespan of Vishnu is seven times that of Brahma. If we calculate this in terms of Chaturyuga, we get: Brahma Ji’s one day equals one thousand Chaturyuga. Therefore, the age of Vishnu is 7 * 504000000 Chaturyuga (as 72000000 × 7 = 504000000).\n\nIn simple terms, Vishnu's lifespan is significantly longer than Brahma's, being seven times that of Brahma's lifespan. \n\nIt is also important to note that both Brahma, Vishnu, and Shiva are not immortal. As mentioned in the Devi Mahapuran, Vishnu admits to Durga that they have birth and death and are mortal, with only Durga being eternal.\n\nAdditionally, as per Sant Garibdas Ji, even Shiva and Parvati Ji will die and go through 84 lacs life forms, which is a fixed rule in the 21 universes of Brahm Kaal, as this realm is mortal and everything will come to an end one day.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          },
+          {
+            "fact": "duration",
+            "found": true
+          }
+        ],
+        "forbidden_found": [
+          "equal"
+        ],
+        "has_hallucination": true,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Contains forbidden hallucination facts"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "What is the relationship between the soul and KavirDev?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "child",
+        "father"
+      ],
+      "forbidden_facts": [
+        "enemies"
+      ],
+      "response": "The relationship between the soul and KavirDev, also referred to as God Kabir, is deeply rooted in spiritual teachings. According to the scriptural teachings, KavirDev is the original Creator who authored all souls. This implies that KavirDev is the supreme source of all souls, making Him the creator and the souls His creations.\n\nAs stated in the scriptural teachings, the soul is an immortal particle of God. However, by putting on the \"dirty clothes\" of the physical, subtle, and causal bodies, it has forgotten its royal lineage. This suggests that the soul, being a part of KavirDev, has become entangled in the material world, losing its true nature.\n\nThe knowledge of God Kabir awakens the lost soul, leading to the attainment of true spiritual knowledge, compassion, and love. When the soul gains this knowledge, it becomes pure. This indicates that KavirDev plays a crucial role in the soul's journey towards self-realization and liberation.\n\nIn the context of salvation, when the soul understands the decisive concept of KavirDev and becomes firm in devotion, it does not suffer torture in the world of Yam and attains salvation after its true worship is complete. This highlights the significance of KavirDev in the soul's path to salvation.\n\nIn summary, the relationship between the soul and KavirDev is that of the creator and the created. KavirDev is the supreme source of all souls, and the soul, being an immortal particle of God, has a deep connection with Him. Through the knowledge of God Kabir, the soul can awaken, attain spiritual growth, and ultimately achieve liberation.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "child",
+            "found": false
+          },
+          {
+            "fact": "father",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    }
+  ]
+}

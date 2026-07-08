@@ -13,60 +13,89 @@ const { createClient } = require('@supabase/supabase-js');
 
 require('dotenv').config();
 
+// ─── BM25 SPARSE SEARCH MODULE ──────────────────────────
+const { BM25Index, STOPWORDS } = require('./bm25_index');
+const bm25KB = new BM25Index();
+const bm25QA = new BM25Index();
+
 // In-memory session store (use Redis for production)
 const sessionMemory = new Map();
 
-// --- SYSTEM PROMPT ---
-const SYSTEM_PROMPT = `You are Tatva, a spiritual knowledge assistant. You have been given a CONTEXT block below that contains retrieved excerpts from your knowledge base of sacred scriptures and verified teachings.
-THE ONLY LAW: You may ONLY use information that is explicitly present in the CONTEXT block below. Nothing else.
+/// --- SYSTEM PROMPT (v2 — contradiction fixed, interpretive synthesis explicitly authorized) ---
+const SYSTEM_PROMPT = `You are Tatva, a spiritual knowledge assistant. You have been given a CONTEXT block below containing retrieved excerpts from a knowledge base of sacred scriptures and verified teachings.
+
+THE ONLY LAW: Every fact, name, event, number, or claim in your answer must be traceable to something explicitly stated in the CONTEXT block. You may reason about and connect those stated details to build an answer — you may never introduce a detail, name, event, or meaning that isn't stated anywhere in the CONTEXT.
 
 ABSOLUTE RESTRICTIONS — violating any of these is a failure:
 
-1. NO outside knowledge. You have no memory, no training knowledge, no internet. If it is not in the CONTEXT, it does not exist for you.
-2. NO hallucination. Do not generate any verse, quote, page number, chapter, or fact that is not word-for-word present in the CONTEXT. If you are not sure, do not say it.
-3. Synthesis Mandate: You MUST synthesize information across ALL provided context chunks. If one chunk mentions 3 items and another chunk mentions 2 more items on the same topic, your answer must include ALL 5 items. Never answer from a single chunk when multiple chunks contain pieces of the same answer.
-4. Answer Depth: Provide comprehensive, detailed answers. Do not give minimal or surface-level responses. When multiple chunks contain related details, weave them into a thorough explanation. Include specific names, numbers, mechanisms, and consequences mentioned in the text. The user expects depth comparable to a detailed theological exposition, not a brief summary.
-5. Non-Repetitive Synthesis: When multiple chunks mention different reasons or aspects of the same event, merge them into a single, non-repetitive narrative. Do NOT restate the subject multiple times (e.g., do not repeat "Kaal was expelled because..."). Use smooth transitions like "Furthermore," "Additionally," or "Moreover," keeping the subject stated only once.
-6. NO metadata in answers. Never mention "Verified Q&A Bank", document names, file names, website URLs, chunk numbers, or database IDs — these are internal only, invisible to the user.
-7. If the CONTEXT does not contain enough information to answer the question, reply exactly with: "The knowledge base does not have sufficient information on this topic." — Do not guess, do not fill gaps with general knowledge.
-8. Your answers must be built ONLY from the retrieved context chunks provided below. Do not use your general training knowledge about Hinduism, Vedas, or spirituality to fill gaps or make answers sound more complete.
-9. If the retrieved context does not contain enough information to answer a specific part of the question, say exactly that: 'The texts I have access to do not specifically address this aspect.' Do not invent a plausible answer.
-10. Sant Rampal Ji Maharaj's explanations are the highest authority in this knowledge base. When referencing scriptures like Vedas or Gita, prefer His explanation of those verses over any other interpretation. When you have chunks from both Sant Rampal Ji's explanations and original scriptures, build your answer primarily from Sant Rampal Ji's explanation and use original scripture as supporting pramaan (proof). Never contradict what Sant Rampal Ji says using original scripture alone.
-11. Never output internal system labels like 'Q&A Bank', 'tier-1', 'tier-2', 'chunk', 'Sources', citation numbers, source_tier, or any metadata identifiers. Speak as Tatva, a knowledgeable spiritual guide.
+1. Answers should be logical and make sense based on the context provided
+2. NO hallucination. Never generate a verse, quote, name, number, or event that is not word-for-word present in the CONTEXT.
+3. Synthesis Mandate. Combine information across ALL relevant context chunks before answering. If one chunk has 3 items and another has 2 more on the same topic, your answer includes all 5. Never answer from a single chunk when other chunks contain more of the same answer.
+4. Interpretive Questions Are Allowed. Many questions have no single sentence that directly answers them — e.g. "what is the moral of this story," "summarize this," "why did this happen." For these: read every relevant chunk, identify the events, characters, and statements that ARE present in the CONTEXT, and connect them into a coherent answer (a summary, a moral, a cause-and-effect explanation). This is synthesis, not invention. Every element you connect must itself come from the CONTEXT — do not add a character, event, or detail that never appears in any chunk, and do not import a moral or meaning from outside knowledge of similar stories you may know.
+5. Entity Precision. Before merging details from two chunks into one answer, confirm they refer to the same person, entity, or story. Similar or related-sounding names are not automatically the same entity — never merge across entities unless the CONTEXT itself confirms they're the same.
+6. Answer Depth. Give comprehensive, detailed answers. When multiple chunks add related details, weave them into a full explanation with specific names, numbers, and mechanisms — but only ones present in the CONTEXT. Depth comes from thorough use of what's retrieved, not from padding.
+7. Non-Repetitive Synthesis. State the subject once and merge multiple reasons or aspects into one flowing narrative using transitions like "Furthermore" or "Additionally" — don't restate the subject each time.
+8. NO metadata in answers. Never mention "Verified Q&A Bank," document/file names, URLs, chunk numbers, tier labels, or database IDs — these are internal only, invisible to the user.
+9. Genuine Gaps Only. If, after reading all context chunks, the SPECIFIC fact or answer the user asked for is not stated in ANY chunk, reply exactly: "The knowledge base does not have sufficient information on this topic." This applies even when chunks discuss the same entity or topic but do NOT contain the particular fact being asked — do NOT substitute a topically-adjacent fact as if it answers the question. Rule 4 (synthesis) only applies when the answer IS present across chunks but requires connecting stated details — it does NOT apply when the specific requested fact simply isn't there.
+10. Source Hierarchy. Sant Rampal Ji Maharaj's explanations are the highest authority in this knowledge base. When you have chunks from both His explanation and an original scripture (Vedas, Gita, etc.), build the answer primarily from His explanation and use the original scripture as supporting pramaan. Never contradict His explanation using original scripture alone.
 
 HOW TO ANSWER:
-
-- Read the question carefully.
-- Find only the parts of CONTEXT that directly answer it.
-- Write a clean, factual answer using only those parts.
-- Cite only real scripture references that appear in the CONTEXT (book name, chapter, verse, page — only if present).
-- Match the user's language: Hindi, English, or Hinglish — auto-detect, never ask.
-- Length: as deep and comprehensive as the retrieved facts support.
+- Read the question and decide: is this a direct-fact question, or an interpretive one (summary, moral, reasoning across events)?
+- Pull every chunk relevant to the question — for interpretive questions this may mean an entire story or passage, not just one line.
+- Build the answer only from what's stated across those chunks, connecting details into a clear, logical narrative where the question calls for it.
+- Cite real scripture references only if they appear in the CONTEXT (book name, chapter, verse, page).
+- Match the user's language — Hindi, English, or Hinglish — automatically, never ask.
+- Length: as deep and comprehensive as the retrieved material supports.
 
 RETRIEVED CONTEXT:
 {{CONTEXT_HERE}}`;
 
 // When falling back to the small 8B model, use this simpler prompt it can actually follow
-const SYSTEM_PROMPT_8B = `You are Tatva, a deeply knowledgeable spiritual AI assistant.
-Answer questions with depth, accuracy, and reverence based on authentic scriptures.
+const SYSTEM_PROMPT_8B = `You are Tatva, a spiritual knowledge assistant. Answer ONLY using the CONTEXT below — you have no other knowledge to draw on.
 
 RULES:
-1. NEVER mention "Verified Q&A Bank", document IDs, URLs, or "according to context".
-2. Cite real scriptures (book, chapter, verse, page) naturally in your response.
-3. Stay on topic. Do not add tangents or promotional language.
-4. Provide thorough, scripture-based answers.
-5. Sound like a scholar, write naturally. Do NOT sound like a search engine.
-6. Ignore garbage metadata.
+1. Every name, fact, event, or number in your answer must come from the CONTEXT. Never add anything that isn't stated there.
+2. For questions with no single direct answer — a story's moral, a summary, "why did this happen" — read the relevant chunks and connect the stated events and details into a clear answer. This connecting is allowed and expected. Do not add outside facts, and do not add a meaning or moral that isn't grounded in what's actually in the CONTEXT.
+3. Never mention "Verified Q&A Bank," document IDs, URLs, or "according to context."
+4. Cite real scriptures (book, chapter, verse, page) only if present in the CONTEXT.
+5. If the CONTEXT has nothing relevant to the question at all, say exactly: "The knowledge base does not have sufficient information on this topic."
+6. Stay on topic — no tangents, no promotional language. Sound like a knowledgeable scholar, not a search engine.
 7. Match the user's language (Hindi, English, Hinglish).
 
 RETRIEVED CONTEXT:
 {{CONTEXT_HERE}}`;
 
-
 // --- SEMANTIC CACHE ---
 // Caches answers for similar questions to avoid redundant API calls (kills 429 rate limits)
+const CACHE_FILE = path.join(__dirname, 'semantic_cache.json');
 const semanticCache = new Map();
-const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours for persistent cache
+
+// Load cache on startup
+try {
+  if (fs.existsSync(CACHE_FILE)) {
+    const raw = fs.readFileSync(CACHE_FILE, 'utf8');
+    const data = JSON.parse(raw);
+    for (const [key, val] of Object.entries(data)) {
+      semanticCache.set(key, val);
+    }
+    console.log(`[Cache] Loaded ${semanticCache.size} entries from persistent store`);
+  }
+} catch (err) {
+  console.warn(`[Cache] Failed to load persistent cache: ${err.message}`);
+}
+
+function saveCacheToDisk() {
+  try {
+    const data = {};
+    for (const [key, val] of semanticCache.entries()) {
+      data[key] = val;
+    }
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(data, null, 2), 'utf8');
+  } catch (err) {
+    console.warn(`[Cache] Failed to save persistent cache: ${err.message}`);
+  }
+}
 
 function normalizeQuery(q) {
   return q.toLowerCase().trim()
@@ -82,19 +111,23 @@ function getCachedAnswer(query) {
     console.log(`[Cache] HIT for: "${query.substring(0, 50)}..."`);
     return cached;
   }
-  if (cached) semanticCache.delete(key); // expired
+  if (cached) {
+    semanticCache.delete(key); // expired
+    saveCacheToDisk();
+  }
   return null;
 }
 
 function setCachedAnswer(query, answer, sources) {
   const key = normalizeQuery(query);
   semanticCache.set(key, { answer, sources, timestamp: Date.now() });
-  // Cap cache size at 200 entries
-  if (semanticCache.size > 200) {
+  // Cap cache size at 500 entries
+  if (semanticCache.size > 500) {
     const oldestKey = semanticCache.keys().next().value;
     semanticCache.delete(oldestKey);
   }
   console.log(`[Cache] STORED for: "${query.substring(0, 50)}..." (${semanticCache.size} cached)`);
+  saveCacheToDisk();
 }
 
 // --- CONTEXT CLEANING (strip URLs/source tags before injecting into prompt) ---
@@ -259,11 +292,25 @@ async function initChroma() {
     console.log(`[Chroma] "${name}" has ${count} chunks`)
     chromaReady = count > 0
 
+    // Build BM25 index for KB asynchronously
+    if (chromaReady && !bm25KB.ready) {
+      bm25KB.buildFromChroma(chromaCollection, name).catch(err => {
+        console.error('[BM25] KB building failed:', err);
+      });
+    }
+
     // Load dedicated QA collection
     if (collectionNames.includes(QA_COLLECTION_NAME)) {
       chromaQACollection = await client.getCollection({ name: QA_COLLECTION_NAME, embeddingFunction: customEmbedder })
       const qaCount = await chromaQACollection.count()
       console.log(`[Chroma] "${QA_COLLECTION_NAME}" has ${qaCount} verified Q&A pairs`)
+      
+      // Build BM25 index for QA asynchronously
+      if (qaCount > 0 && !bm25QA.ready) {
+        bm25QA.buildFromChroma(chromaQACollection, QA_COLLECTION_NAME).catch(err => {
+          console.error('[BM25] QA building failed:', err);
+        });
+      }
     } else {
       console.warn('[Chroma] No QA collection found — run ingest_qa.py')
     }
@@ -319,6 +366,8 @@ const upload = multer({
 // --- Model Fallback ---
 const MODELS = [
   'llama-3.3-70b-versatile',
+  'meta-llama/llama-4-scout-17b-16e-instruct',
+  'openai/gpt-oss-20b',
   'llama-3.1-8b-instant'
 ];
 
@@ -338,7 +387,7 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
 
   let lastError;
   let retryCount = 0;
-  const maxRetries = 5;
+  const maxRetries = 2;
 
   while (retryCount <= maxRetries) {
     for (const model of MODELS) {
@@ -365,7 +414,7 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
           if (status === 429) {
             console.log(`[Groq] Key ${i} rate limited on ${model}. Switching keys...`);
             // Throttle delay: Gives the 70B model a breather so we don't instantly failover to 8B
-            await new Promise(r => setTimeout(r, 1500));
+            await new Promise(r => setTimeout(r, 4000));
             continue;
           }
           if (status === 413) {
@@ -373,7 +422,7 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
             if (messages[0]?.role === 'system') {
               const sysLen = messages[0].content.length;
               if (sysLen > 8000) {
-                messages[0].content = messages[0].content.substring(0, 8000) + '\\n[Context trimmed]';
+                messages[0].content = messages[0].content.substring(0, 8000) + '\n[Context trimmed]';
               }
             }
             if (messages.length > 2) messages.splice(1, 1);
@@ -387,7 +436,7 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
     const finalStatus = lastError?.response?.status || lastError?.status || lastError?.statusCode;
     if (finalStatus === 429 && retryCount < maxRetries) {
       retryCount++;
-      const delay = Math.pow(2, retryCount) * 1500; // 3s, 6s, 12s
+      const delay = Math.pow(2, retryCount) * 3000; // 6s, 12s, 24s, 48s
       console.log(`[Groq] All models rate-limited. Retrying in ${delay}ms... (Attempt ${retryCount}/${maxRetries})`);
       await new Promise(r => setTimeout(r, delay));
       continue;
@@ -442,11 +491,11 @@ function classifyQuery(message, conversationHistory = []) {
     const isGibberish = (msg) => {
       const clean = msg.toLowerCase();
       if (clean.length < 12) {
-        const words = clean.split(/\\s+/);
+        const words = clean.split(/\s+/);
         const hasRealWord = words.some(w => w.length > 3 && /[aeiouy]/i.test(w));
         if (!hasRealWord) return true;
       }
-      if (/^[^aeiou\\s]{3,}$/i.test(clean.replace(/[^a-z]/g, ''))) return true;
+      if (/^[^aeiou\s]{3,}$/i.test(clean.replace(/[^a-z]/g, ''))) return true;
       return false;
     };
     if (isGibberish(query)) return { type: 'CASUAL_GIBBERISH' };
@@ -474,9 +523,9 @@ function classifyQuery(message, conversationHistory = []) {
     }
 
     // ── TIER 0 — FOLLOW-UP DETECTION ──
-    const wordsCount = query.split(/\\s+/).length;
-    const hasPronoun = /\\b(it|this|that|they|him|her|those)\\b/i.test(queryLower);
-    const startsWithFollowupWord = /^(and|but|also|what about|tell me more|explain|why|how|elaborate|go deeper|give me more|what else)\\b/i.test(queryLower);
+    const wordsCount = query.split(/\s+/).length;
+    const hasPronoun = /\b(it|this|that|they|him|her|those)\b/i.test(queryLower);
+    const startsWithFollowupWord = /^(and|but|also|what about|tell me more|explain|why|how|elaborate|go deeper|give me more|what else)\b/i.test(queryLower);
 
     if ((wordsCount < 20 && hasPronoun) || startsWithFollowupWord) {
       let fallbackTarget = 'KB_FIRST';
@@ -484,7 +533,7 @@ function classifyQuery(message, conversationHistory = []) {
         const lastAssistantMsg = [...conversationHistory].reverse().find(m => m.role === 'assistant');
         if (lastAssistantMsg) {
           const prevContent = lastAssistantMsg.content.toLowerCase();
-          if (/\\b(restaurant|weather|score|price|news|recipe|python|javascript|react)\\b/i.test(prevContent)) {
+          if (/\b(restaurant|weather|score|price|news|recipe|python|javascript|react)\b/i.test(prevContent)) {
             fallbackTarget = 'WEB_ONLY';
           } else {
             fallbackTarget = 'KB_ONLY';
@@ -495,7 +544,7 @@ function classifyQuery(message, conversationHistory = []) {
     }
 
     // ── TIER 3 — LOCATION SEARCH ──
-    if (/\\b(near me|nearby|in my area|around me|close to me|mere paas|aas paas|local|closest)\\b/i.test(queryLower)) {
+    if (/\b(near me|nearby|in my area|around me|close to me|mere paas|aas paas|local|closest)\b/i.test(queryLower)) {
       return { type: 'WEB_ONLY', isLocationSearch: true, reason: 'Location search detected' };
     }
 
@@ -503,7 +552,7 @@ function classifyQuery(message, conversationHistory = []) {
     const webTerms = [
       'latest', 'recently', 'now', 'current', 'today', 'news', '2024', '2025', '2026',
       'price', 'score', 'match', 'update', 'trending', 'who won', 'what happened',
-      'new release', 'just launched', 'stock', 'weather', '\\bvs\\b'
+      'new release', 'just launched', 'stock', 'weather', '\bvs\b'
     ];
     if (webTerms.some(term => new RegExp(term, 'i').test(queryLower))) {
       return { type: 'WEB_ONLY', reason: 'Time-sensitive or dynamic web search term detected' };
@@ -515,7 +564,7 @@ function classifyQuery(message, conversationHistory = []) {
       'jeene ki raah', 'mukti bodh', 'quran sharif', 'bible', 'vedas', 'bhagavad gita',
       'upanishad', 'moksha', 'karma', 'salvation', 'spiritual', 'satlok'
     ];
-    if (kbTerms.some(term => new RegExp('\\\\b' + term + '\\\\b', 'i').test(queryLower))) {
+    if (kbTerms.some(term => new RegExp('\\b' + term + '\\b', 'i').test(queryLower))) {
       return { type: 'KB_ONLY', reason: 'Explicit KB theology term detected' };
     }
 
@@ -818,7 +867,7 @@ function expandQueryLocal(originalQuery) {
     'naamdev': 'namdev', 'namdeo': 'namdev',
     'ravidas': 'ravidas', 'ravidaas': 'ravidas',
     'dadu': 'dadu', 'dadoo': 'dadu',
-    'pipa': 'pipa', 'pepa': 'pipa',
+    'pipa': 'pipa', 'pepa': 'pipa', 'peepa': 'pipa',
     'ajamil': 'ajamil', 'ajaamal': 'ajamil',
   };
   let correctedQ = q;
@@ -925,6 +974,9 @@ function expandQueryLocal(originalQuery) {
     { match: /kundalini|kundlini|serpent.*power/i, add: 'kundalini serpent power danger guru madness illness' },
     { match: /swarg|heaven|narak|hell/i, add: 'heaven hell temporary not permanent kaal trap rebirth' },
     { match: /bhoot|ghost|pitra|ancestor/i, add: 'ghost pitra ancestor worship shradh liberation satguru' },
+    { match: /jeene\s+ki\s+raah|jeene\s+ki\s+rah|way\s+of\s+living|jeene-ki-rah/i, add: 'jeene ki raah जीने की राह लेखक संत रामपाल जी महाराज book writer author thus dh jkg ys[kd lar jkeiky' },
+    { match: /peepa|pipa|king\s+pipa|raja\s+pipa/i, add: 'peepa pipa bhagat पीपा राजा पीपा वाणी पीपा जी की' },
+    { match: /gita.*4:34|gita.*4\s+verse\s+34|gita.*chapter\s+4\s+verse\s+34/i, add: 'Who is the Tatvadarshi Sant mentioned in Gita 4:34? Tatvadarshi' }
   ];
   for (const hb of hindiBridges) {
     if (hb.match.test(workQ)) {
@@ -945,42 +997,202 @@ function expandQueryLocal(originalQuery) {
   return [...new Set(queries)].slice(0, 8);
 }
 
+function isBroadQuery(query) {
+  return /^(how many|what is|explain|describe|what are|who is|tell me about|list|kya hai|kaise|kitne|kaun|body layers|souls layers)/i.test(query.trim());
+}
+
+// ═══════════════════════════════════════════════════════
+// GENERAL DEVANAGARI ↔ ROMAN TRANSLITERATION & FUZZY MATCHING
+// Works for ANY entity name — no hardcoded lookup tables.
+// ═══════════════════════════════════════════════════════
+
+// Complete Devanagari → Latin phonetic mapping (full Unicode block U+0900-U+097F)
+const DEVANAGARI_TO_LATIN = {
+  // Vowels
+  'अ': 'a', 'आ': 'aa', 'इ': 'i', 'ई': 'ee', 'उ': 'u', 'ऊ': 'oo',
+  'ऋ': 'ri', 'ए': 'e', 'ऐ': 'ai', 'ओ': 'o', 'औ': 'au',
+  // Vowel matras
+  'ा': 'aa', 'ि': 'i', 'ी': 'ee', 'ु': 'u', 'ू': 'oo', 'ृ': 'ri',
+  'े': 'e', 'ै': 'ai', 'ो': 'o', 'ौ': 'au', 'ं': 'n', 'ः': 'h',
+  'ँ': 'n', '्': '',
+  // Consonants
+  'क': 'k', 'ख': 'kh', 'ग': 'g', 'घ': 'gh', 'ङ': 'ng',
+  'च': 'ch', 'छ': 'chh', 'ज': 'j', 'झ': 'jh', 'ञ': 'ny',
+  'ट': 't', 'ठ': 'th', 'ड': 'd', 'ढ': 'dh', 'ण': 'n',
+  'त': 't', 'थ': 'th', 'द': 'd', 'ध': 'dh', 'न': 'n',
+  'प': 'p', 'फ': 'ph', 'ब': 'b', 'भ': 'bh', 'म': 'm',
+  'य': 'y', 'र': 'r', 'ल': 'l', 'व': 'v', 'श': 'sh',
+  'ष': 'sh', 'स': 's', 'ह': 'h',
+  // Nukta variants
+  'क़': 'q', 'ख़': 'kh', 'ग़': 'gh', 'ज़': 'z', 'ड़': 'r', 'ढ़': 'rh',
+  'फ़': 'f',
+  // Digits
+  '०': '0', '१': '1', '२': '2', '३': '3', '४': '4',
+  '५': '5', '६': '6', '७': '7', '८': '8', '९': '9'
+};
+
+/**
+ * Transliterate Devanagari text to Latin phonetic form.
+ * General: covers the full Devanagari Unicode block, not a lookup table.
+ */
+function transliterateToLatin(text) {
+  if (!text) return '';
+  let result = '';
+  const chars = [...text]; // proper Unicode iteration
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
+    if (DEVANAGARI_TO_LATIN[ch] !== undefined) {
+      result += DEVANAGARI_TO_LATIN[ch];
+    } else if (ch === '्') {
+      continue; // halant: suppress inherent vowel
+    } else {
+      result += ch;
+    }
+  }
+  return result.toLowerCase();
+}
+
+/**
+ * Normalize Indic/Hinglish spelling variants to a canonical form.
+ * General rules only — no entity-specific entries.
+ */
+function normalizeIndic(word) {
+  if (!word) return '';
+  return word.toLowerCase()
+    .replace(/ee/g, 'i')
+    .replace(/oo/g, 'u')
+    .replace(/aa/g, 'a')
+    .replace(/th/g, 't')
+    .replace(/ksh/g, 'ks')
+    .replace(/(.)\1+/g, '$1')
+    .replace(/[aeiou]$/g, '');
+}
+
+/**
+ * Jaro-Winkler string similarity — general algorithm, no lookup tables.
+ * Returns 0.0 (no match) to 1.0 (exact match).
+ */
+function jaroWinkler(s1, s2) {
+  if (s1 === s2) return 1.0;
+  if (!s1.length || !s2.length) return 0.0;
+
+  const maxDist = Math.floor(Math.max(s1.length, s2.length) / 2) - 1;
+  if (maxDist < 0) return s1 === s2 ? 1.0 : 0.0;
+
+  const s1Matches = new Array(s1.length).fill(false);
+  const s2Matches = new Array(s2.length).fill(false);
+  let matches = 0;
+  let transpositions = 0;
+
+  for (let i = 0; i < s1.length; i++) {
+    const start = Math.max(0, i - maxDist);
+    const end = Math.min(i + maxDist + 1, s2.length);
+    for (let j = start; j < end; j++) {
+      if (s2Matches[j] || s1[i] !== s2[j]) continue;
+      s1Matches[i] = true;
+      s2Matches[j] = true;
+      matches++;
+      break;
+    }
+  }
+  if (matches === 0) return 0.0;
+
+  let k = 0;
+  for (let i = 0; i < s1.length; i++) {
+    if (!s1Matches[i]) continue;
+    while (!s2Matches[k]) k++;
+    if (s1[i] !== s2[k]) transpositions++;
+    k++;
+  }
+
+  const jaro = (matches / s1.length + matches / s2.length + (matches - transpositions / 2) / matches) / 3;
+  let prefix = 0;
+  for (let i = 0; i < Math.min(4, Math.min(s1.length, s2.length)); i++) {
+    if (s1[i] === s2[i]) prefix++;
+    else break;
+  }
+  return jaro + prefix * 0.1 * (1 - jaro);
+}
+
+/**
+ * General fuzzy entity matching: works for ANY Indic entity name.
+ * Pipeline: exact substring → transliteration → normalization → Jaro-Winkler (≥0.85)
+ */
+function indicFuzzyMatch(queryEntity, chunkText) {
+  const cleanQ = queryEntity.toLowerCase().trim();
+  const cleanDoc = chunkText.toLowerCase();
+
+  // 1. Exact substring match
+  if (cleanDoc.includes(cleanQ)) return true;
+  // 2. Word-boundary regex match
+  try { if (new RegExp(`\\b${cleanQ}`, 'i').test(chunkText)) return true; } catch(e) {}
+  // 3. Transliterate Devanagari in both sides, then check inclusion
+  const transQ = transliterateToLatin(cleanQ);
+  const transDoc = transliterateToLatin(cleanDoc);
+  if (transQ.length >= 3 && transDoc.includes(transQ)) return true;
+  // 4. Normalize Hinglish variants, then check inclusion
+  const normQ = normalizeIndic(transQ || cleanQ);
+  if (normQ.length < 3) return false;
+  const normDoc = normalizeIndic(transDoc || cleanDoc);
+  if (normDoc.includes(normQ)) return true;
+  // 5. Jaro-Winkler on individual words (≥0.85 threshold)
+  const docWords = cleanDoc.split(/\s+/);
+  for (const word of docWords) {
+    const normWord = normalizeIndic(transliterateToLatin(word));
+    if (normWord.length < 3) continue;
+    if (jaroWinkler(normQ, normWord) >= 0.85) return true;
+  }
+  return false;
+}
+
+/**
+ * Extract key entities from a query using the shared STOPWORDS set.
+ */
+function extractQueryEntities(query) {
+  return query.toLowerCase()
+    .replace(/[?.,!\"']/g, '')
+    .split(/\s+/)
+    .filter(w => w.length > 2 && !STOPWORDS.has(w));
+}
+
 // ═══════════════════════════════════════════════════════
 // COSINE SIMILARITY HELPER (ChromaDB cosine distance → similarity)
 // ChromaDB cosine distance = 1 - cos_sim, ranges 0 (identical) to 2 (opposite)
 // ═══════════════════════════════════════════════════════
 function cosineDistToSim(distance) {
   if (distance == null || distance >= 999) return 0;
-  // ChromaDB cosine distance: 0 = identical, 2 = opposite
   return Math.max(0, 1 - (distance / 2));
 }
 
+// RECIPROCAL RANK FUSION (RRF) — merge dense + sparse rankings
+// score = Σ 1/(k + rank_i) across all ranking lists
 // ═══════════════════════════════════════════════════════
-// KEYWORD OVERLAP SCORE — hybrid signal alongside vector similarity
-// Gives a boost when the user's key terms appear verbatim in the chunk
-// ═══════════════════════════════════════════════════════
-function keywordOverlapScore(query, docText) {
-  const stopWords = new Set(['what','who','how','why','when','where','which','is','are','was','were','did','does','do','can','tell','me','about','the','a','an','of','in','from','for','to','and','or','by','with','this','that','it','those','these','many','much','full','story','detail','kahani','kya','kaun','kaise','kyun','kab','kahan','batao','bolo','ki','ke','ka','mein','hai','hain','se','ko','ne','par','jo','ye','wo','vo','ek','aur','ya','thi','tha','sab','koi','bahut','konsa','konse','kaunsa']);
-  const queryWords = query.toLowerCase().replace(/[?.,!"']/g, '').split(/\s+/).filter(w => w.length > 2 && !stopWords.has(w));
-  if (queryWords.length === 0) return 0;
-  const docLower = docText.toLowerCase();
-  const hits = queryWords.filter(w => docLower.includes(w)).length;
-  return hits / queryWords.length; // 0.0 to 1.0
+function reciprocalRankFusion(rankings, k = 60) {
+  const scores = new Map(); // docKey -> { score, data }
+  for (const ranking of rankings) {
+    ranking.forEach((item, rank) => {
+      const key = item.docKey || item.doc.substring(0, 120);
+      const existing = scores.get(key);
+      const rrfScore = 1 / (k + rank);
+      if (existing) {
+        existing.score += rrfScore;
+      } else {
+        scores.set(key, { score: rrfScore, ...item });
+      }
+    });
+  }
+  return Array.from(scores.values()).sort((a, b) => b.score - a.score);
 }
 
-function isBroadQuery(query) {
-  return /^(how many|what is|explain|describe|what are|who is|tell me about|list|kya hai|kaise|kitne|kaun|body layers|souls layers)/i.test(query.trim());
-}
-
 // ═══════════════════════════════════════════════════════
-// STAGE 1: QA PRECISION LOOKUP (dedicated collection)
+// STAGE 1: QA PRECISION LOOKUP (dedicated collection + BM25)
 // ═══════════════════════════════════════════════════════
 async function searchQABank(originalQuery) {
   if (!chromaQACollection) return { qaChunks: [], qaTopScore: 0 };
 
   try {
     const queries = expandQueryLocal(originalQuery);
-    console.log(`[QA] Searching with ${queries.length} variants:`, queries);
+    console.log(`[QA] Searching with ${queries.length} variants`);
 
     const nResults = isBroadQuery(originalQuery) ? 15 : 10;
     const results = await chromaQACollection.query({
@@ -989,48 +1201,60 @@ async function searchQABank(originalQuery) {
       include: ['documents', 'distances', 'metadatas']
     });
 
-    // Deduplicate by QA number, keep best score per QA
-    const qaBestScores = new Map(); // qaNum -> best chunk object
-
+    // Build dense ranking from vector results
+    const denseMap = new Map();
     queries.forEach((q, queryIdx) => {
       const docs = results.documents?.[queryIdx] || [];
       const distances = results.distances?.[queryIdx] || [];
       const metadatas = results.metadatas?.[queryIdx] || [];
-
       docs.forEach((doc, i) => {
         const qaNum = metadatas[i]?.qa_num || metadatas[i]?.source || doc.substring(0, 50);
         const vectorSim = cosineDistToSim(distances[i]);
-        // Hybrid score: 70% vector similarity + 30% keyword overlap
-        const kwScore = keywordOverlapScore(originalQuery, doc);
-        const hybridSim = (vectorSim * 0.7) + (kwScore * 0.3);
-
-        const existing = qaBestScores.get(qaNum);
-        if (!existing || hybridSim > existing.similarity) {
-          qaBestScores.set(qaNum, {
-            doc,
-            similarity: hybridSim,
-            vectorSim,
-            kwScore,
-            confidence: getConfidenceLevel(hybridSim),
-            meta: metadatas[i] ?? {},
-            sourceType: 'qa'
+        const existing = denseMap.get(qaNum);
+        if (!existing || vectorSim > existing.vectorSim) {
+          denseMap.set(qaNum, {
+            doc, vectorSim, meta: metadatas[i] ?? {}, sourceType: 'qa', docKey: qaNum
           });
         }
       });
     });
+    const denseRanking = Array.from(denseMap.values()).sort((a, b) => b.vectorSim - a.vectorSim);
 
-    const allQA = Array.from(qaBestScores.values());
-    allQA.sort((a, b) => b.similarity - a.similarity);
-    const qaLimit = isBroadQuery(originalQuery) ? 12 : 8;
-    const topQA = allQA.slice(0, qaLimit);
+    // Build sparse ranking from BM25
+    let sparseRanking = [];
+    if (bm25QA.ready) {
+      const bm25Results = bm25QA.search(originalQuery, 20);
+      sparseRanking = bm25Results.map(r => ({
+        doc: r.text, bm25Score: r.bm25Score, meta: r.meta || {}, sourceType: 'qa',
+        docKey: r.meta?.qa_num || r.meta?.source || r.text.substring(0, 50)
+      }));
+    }
 
-    const qaTopScore = topQA[0]?.similarity || 0;
-    topQA.slice(0, 5).forEach((c, i) => {
-      console.log(`[QA] #${i+1} | Hybrid: ${c.similarity.toFixed(3)} (vec: ${c.vectorSim.toFixed(3)}, kw: ${c.kwScore.toFixed(2)}) | Q: ${(c.meta?.question || c.doc).substring(0, 80)}...`);
+    // Fuse with RRF
+    const fused = reciprocalRankFusion([denseRanking, sparseRanking]);
+
+    // Enrich with vector similarity for downstream scoring
+    const qaChunks = fused.slice(0, isBroadQuery(originalQuery) ? 8 : 6).map(item => {
+      const denseData = denseMap.get(item.docKey);
+      const vectorSim = denseData?.vectorSim || item.vectorSim || 0;
+      return {
+        doc: item.doc,
+        similarity: item.score, // RRF score
+        vectorSim,
+        rrfScore: item.score,
+        confidence: getConfidenceLevel(vectorSim),
+        meta: item.meta || {},
+        sourceType: 'qa'
+      };
     });
-    console.log(`[QA] Found ${topQA.length} Q&A candidates (top hybrid: ${qaTopScore.toFixed(3)})`);
 
-    return { qaChunks: topQA, qaTopScore };
+    const qaTopScore = qaChunks[0]?.vectorSim || 0;
+    qaChunks.slice(0, 3).forEach((c, i) => {
+      console.log(`[QA] #${i + 1} | RRF: ${c.rrfScore.toFixed(4)} vec: ${c.vectorSim.toFixed(3)} | Q: ${(c.meta?.question || c.doc).substring(0, 80)}...`);
+    });
+    console.log(`[QA] Found ${qaChunks.length} Q&A candidates (top vec: ${qaTopScore.toFixed(3)})`);
+
+    return { qaChunks, qaTopScore };
   } catch (e) {
     console.error('[QA] Search error:', e.message);
     return { qaChunks: [], qaTopScore: 0 };
@@ -1038,7 +1262,7 @@ async function searchQABank(originalQuery) {
 }
 
 // ═══════════════════════════════════════════════════════
-// STAGE 2: KB VECTOR SEARCH (main collection)
+// STAGE 2: KB VECTOR + BM25 HYBRID SEARCH
 // ═══════════════════════════════════════════════════════
 async function searchKBChunks(originalQuery) {
   if (!chromaReady || !chromaCollection) return { kbChunks: [], kbTopScore: 0 };
@@ -1053,96 +1277,78 @@ async function searchKBChunks(originalQuery) {
       include: ['documents', 'distances', 'metadatas']
     });
 
-    // Tight deduplication (0.5 word overlap = duplicate)
-    let allFiltered = [];
+    // Build dense ranking with deduplication
     let seenDocs = new Set();
+    const denseRanking = [];
 
     queries.forEach((q, queryIdx) => {
       const docs = results.documents?.[queryIdx] || [];
       const distances = results.distances?.[queryIdx] || [];
       const metadatas = results.metadatas?.[queryIdx] || [];
-
       docs.forEach((doc, i) => {
         if (doc.length < 40) return;
-        // Allow QA-type chunks as fallback (Stage 1 handles dedicated QA collection,
-        // but if QA collection is down, we still want QA data from main KB)
-        const srcType = metadatas[i]?.type || '';
-
         const docWords = new Set(doc.toLowerCase().split(/\s+/).filter(w => w.length > 3));
         let isDuplicate = false;
         for (const seen of seenDocs) {
           const seenWords = new Set(seen.toLowerCase().split(/\s+/).filter(w => w.length > 3));
           const overlap = [...docWords].filter(w => seenWords.has(w)).length;
-          const similarity = overlap / Math.max(docWords.size, 1);
-          if (similarity > 0.50) { isDuplicate = true; break; }
+          if (overlap / Math.max(docWords.size, 1) > 0.50) { isDuplicate = true; break; }
         }
         if (!isDuplicate) {
           seenDocs.add(doc);
           const vectorSim = cosineDistToSim(distances[i]);
-          const kwScore = keywordOverlapScore(originalQuery, doc);
-          // Tier-based re-ranking: tier-1 (Sant Rampal Ji) gets 1.3x boost
           const sourceTier = metadatas[i]?.source_tier || 2;
-          const tierBoost = sourceTier === 1 ? 1.3 : 1.0;
-          const hybridSim = ((vectorSim * 0.7) + (kwScore * 0.3)) * tierBoost;
-          allFiltered.push({
-            doc,
-            similarity: hybridSim,
-            vectorSim,
-            kwScore,
-            sourceTier,
-            confidence: getConfidenceLevel(hybridSim),
-            meta: metadatas[i] ?? {},
-            sourceType: srcType || 'pdf'
+          const tierBoost = sourceTier === 1 ? 1.1 : 1.0; // Reduced from 1.3 — reranker handles relevance now
+          denseRanking.push({
+            doc, vectorSim: vectorSim * tierBoost, sourceTier,
+            meta: metadatas[i] ?? {}, sourceType: metadatas[i]?.type || 'pdf',
+            docKey: doc.substring(0, 120)
           });
         }
       });
     });
+    denseRanking.sort((a, b) => b.vectorSim - a.vectorSim);
 
-    // Entity-boosted reranking: chunks containing user's key entities rank higher
-    const corrections = {
-      'guns': 'gunas', 'gun': 'guna', 'mahakala': 'mahakal', 'mahakalas': 'mahakal',
-      'moksh': 'moksha', 'moks': 'moksha', 'satlog': 'satlok', 'sachkand': 'sachkhand',
-      'kabeer': 'kabir', 'kabirr': 'kabir', 'kundlini': 'kundalini', 'kundalani': 'kundalini',
-      'bhagwat': 'bhagavad', 'geeta': 'gita', 'shiv': 'shiva', 'vishu': 'vishnu', 'vishno': 'vishnu',
-      'bramha': 'brahma', 'bramh': 'brahm', 'triydev': 'tridev', 'trimurti': 'trinity',
-      'sakti': 'shakti', 'shakthi': 'shakti', 'sev': 'seu', 'saman': 'samman',
-      'garibdas': 'garibdas', 'gareebdas': 'garibdas', 'ramanand': 'ramanand', 'ramanad': 'ramanand',
-      'dharamdas': 'dharamdas', 'dharmdas': 'dharamdas', 'prahlad': 'prahlad', 'prahalad': 'prahlad',
-      'naamdev': 'namdev', 'namdeo': 'namdev', 'ravidas': 'ravidas', 'ravidaas': 'ravidas',
-      'dadu': 'dadu', 'dadoo': 'dadu', 'pipa': 'pipa', 'pepa': 'pipa', 'ajamil': 'ajamil', 'ajaamal': 'ajamil'
-    };
-    let correctedKbQuery = originalQuery.toLowerCase().trim();
-    for (const [wrong, right] of Object.entries(corrections)) {
-      if (correctedKbQuery.includes(wrong)) {
-        correctedKbQuery = correctedKbQuery.replace(new RegExp(`\\b${wrong}\\b`, 'gi'), right);
+    // Build sparse ranking from BM25
+    let sparseRanking = [];
+    if (bm25KB.ready) {
+      const bm25Results = bm25KB.search(originalQuery, 30);
+      sparseRanking = bm25Results.map(r => ({
+        doc: r.text, bm25Score: r.bm25Score, meta: r.meta || {},
+        sourceType: r.meta?.type || 'pdf', docKey: r.text.substring(0, 120)
+      }));
+    }
+
+    // Fuse with RRF
+    const fused = reciprocalRankFusion([denseRanking, sparseRanking]);
+
+    // Entity boosting using general fuzzy match (no corrections map needed)
+    const queryEntities = extractQueryEntities(originalQuery);
+    const kbChunks = fused.slice(0, isBroadQuery(originalQuery) ? 12 : 8).map(item => {
+      const denseData = denseRanking.find(d => d.docKey === item.docKey);
+      const vectorSim = denseData?.vectorSim || item.vectorSim || 0;
+      // Entity boost: if chunk contains query entities (via fuzzy match), boost
+      let entityBoost = 0;
+      if (queryEntities.length > 0) {
+        const hits = queryEntities.filter(e => indicFuzzyMatch(e, item.doc)).length;
+        entityBoost = (hits / queryEntities.length) * 0.005; // Small RRF-scale boost
       }
-    }
-
-    const kbStopWords = new Set(['what','who','how','why','when','where','which','is','are','was','were','did','does','do','can','tell','me','about','the','a','an','of','in','from','for','to','and','or','by','with','this','that','it','those','these','many','much','full','story','detail','kahani','kya','kaun','kaise','kyun','kab','kahan','batao','bolo','ki','ke','ka','mein','hai','hain','se','ko','ne','par','jo','ye','wo','vo','ek','aur','ya','thi','tha','sab','koi','bahut','konsa','konse','kaunsa']);
-    const kbQueryEntities = correctedKbQuery.replace(/[?.,!]/g, '').split(/\s+/).filter(w => w.length > 2 && !kbStopWords.has(w));
-
-    if (kbQueryEntities.length > 0) {
-      allFiltered.forEach(c => {
-        const docLower = c.doc.toLowerCase();
-        // Boost if chunk contains the entity (using word boundary)
-        const hits = kbQueryEntities.filter(e => new RegExp(`\\b${e}\\b`, 'i').test(docLower)).length;
-        const boost = (hits / kbQueryEntities.length) * 0.12; // Up to 12% boost
-        c.boostedSim = c.similarity + boost;
-      });
-      allFiltered.sort((a, b) => (b.boostedSim || b.similarity) - (a.boostedSim || a.similarity));
-    } else {
-      allFiltered.sort((a, b) => b.similarity - a.similarity);
-    }
-    const kbLimit = isBroadQuery(originalQuery) ? 15 : 10;
-    const topKB = allFiltered.slice(0, kbLimit);
-
-    const kbTopScore = topKB[0]?.similarity || 0;
-    topKB.slice(0, 3).forEach((c, i) => {
-      console.log(`[KB] #${i+1} | Hybrid: ${c.similarity.toFixed(3)} (vec: ${c.vectorSim?.toFixed(3)}, kw: ${c.kwScore?.toFixed(2)}) | Src: ${(c.meta?.source || 'KB').substring(0, 50)} | "${c.doc.substring(0, 80)}..."`);
+      return {
+        doc: item.doc, similarity: vectorSim, rrfScore: item.score + entityBoost,
+        vectorSim, sourceTier: denseData?.sourceTier || 2,
+        confidence: getConfidenceLevel(vectorSim),
+        meta: item.meta || {}, sourceType: item.sourceType || 'pdf'
+      };
     });
-    console.log(`[KB] Found ${topKB.length} KB chunks (top hybrid: ${kbTopScore.toFixed(3)})`);
+    kbChunks.sort((a, b) => b.rrfScore - a.rrfScore);
 
-    return { kbChunks: topKB, kbTopScore };
+    const kbTopScore = kbChunks[0]?.vectorSim || 0;
+    kbChunks.slice(0, 3).forEach((c, i) => {
+      console.log(`[KB] #${i + 1} | RRF: ${c.rrfScore.toFixed(4)} vec: ${c.vectorSim.toFixed(3)} | Src: ${(c.meta?.source || 'KB').substring(0, 50)} | "${c.doc.substring(0, 80)}..."`);
+    });
+    console.log(`[KB] Found ${kbChunks.length} KB chunks (top vec: ${kbTopScore.toFixed(3)})`);
+
+    return { kbChunks, kbTopScore };
   } catch (e) {
     console.error('[KB] Search error:', e.message);
     return { kbChunks: [], kbTopScore: 0 };
@@ -1150,100 +1356,244 @@ async function searchKBChunks(originalQuery) {
 }
 
 // ═══════════════════════════════════════════════════════
-// MASTER RETRIEVAL: QA FIRST → KB SECOND
+// QUERY INTENT ANALYZER (Groq llama-3.1-8b-instant)
+// Classifies query type, extracts key requirements, and decomposes if needed.
+// ═══════════════════════════════════════════════════════
+async function analyzeQueryIntent(query, conversationHistory = []) {
+  if (!apiKeys.length) {
+    return {
+      question_type: "factual",
+      answer_requirements: query,
+      needs_decomposition: false,
+      sub_queries: []
+    };
+  }
+
+  try {
+    const prompt = `Analyze the user query and output a JSON object representing the query intent.
+Query: "${query}"
+
+Return JSON matching this schema:
+{
+  "question_type": "factual" | "how_mechanism" | "comparison" | "count_or_list" | "relational" | "opinion_or_interpretation",
+  "answer_requirements": "short description of what a complete answer needs to cover",
+  "needs_decomposition": boolean,
+  "sub_queries": ["sub query 1", "sub query 2"] // up to 3 sub-queries, only if needs_decomposition is true, otherwise empty array
+}
+
+JSON object only:`;
+
+    const groq = new Groq({ apiKey: apiKeys[Math.floor(Math.random() * apiKeys.length)] });
+    const startTime = Date.now();
+    const res = await groq.chat.completions.create({
+      model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 250,
+      temperature: 0.0,
+      response_format: { type: "json_object" }
+    });
+    const latency = Date.now() - startTime;
+    console.log(`[Intent] Analyzed intent in ${latency}ms`);
+
+    const raw = res.choices[0]?.message?.content?.trim() || '{}';
+    return JSON.parse(raw);
+  } catch (err) {
+    console.warn(`[Intent] Analysis failed: ${err.message}`);
+    return {
+      question_type: "factual",
+      answer_requirements: query,
+      needs_decomposition: false,
+      sub_queries: []
+    };
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// LIGHTWEIGHT LLM RERANK (Groq llama-3.1-8b-instant)
+// Scores top ~20 candidates for relevance, keeps top 6-10.
+// Graceful degradation: if Groq fails, skip rerank.
+// ═══════════════════════════════════════════════════════
+async function rerankWithLLM(query, candidates, topK = 8, intent = null) {
+  if (!candidates.length || !apiKeys.length) return { reranked: candidates.slice(0, topK), sufficiencyScore: 1.0 };
+
+  try {
+    // Truncate passages to keep prompt small
+    const passages = candidates.slice(0, 25).map((c, i) =>
+      `[${i + 1}] ${c.doc.substring(0, 200).replace(/\n/g, ' ')}`
+    ).join('\n');
+
+    const reqs = intent?.answer_requirements || query;
+    const prompt = `You are a precision search validator. Rate how well each retrieved passage answers the specific question requirements.
+Question: "${query}"
+Specific Answer Requirements: "${reqs}"
+
+Passages to rate:
+${passages}
+
+Rating Rules:
+- Rate from 0 to 10.
+- A passage that directly and fully contains the answer or critical fact requested should score 8-10.
+- A passage that is topically adjacent (talks about the entities or related context) but does NOT answer the specific question asked should score 0-3.
+- If a passage is completely irrelevant, score it 0.
+
+Return JSON in this format:
+{
+  "scores": [number, number, ...] // one rating integer (0-10) per passage
+}
+
+JSON object only:`;
+
+    const groq = new Groq({ apiKey: apiKeys[Math.floor(Math.random() * apiKeys.length)] });
+    const startTime = Date.now();
+    const res = await groq.chat.completions.create({
+      model: 'meta-llama/llama-4-scout-17b-16e-instruct',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 250,
+      temperature: 0.0,
+      response_format: { type: "json_object" }
+    });
+    const latency = Date.now() - startTime;
+    console.log(`[Rerank] Scored passages in ${latency}ms`);
+
+    const raw = res.choices[0]?.message?.content?.trim() || '{}';
+    const parsed = JSON.parse(raw);
+    const scores = parsed.scores || [];
+
+    const reranked = candidates.slice(0, 25).map((c, i) => ({
+      ...c,
+      rerankScore: (scores[i] || 0) / 10, // normalize to 0-1
+      finalScore: (c.rrfScore || c.similarity || 0) * 0.4 + ((scores[i] || 0) / 10) * 0.6
+    }));
+
+    reranked.sort((a, b) => b.finalScore - a.finalScore);
+    const maxScore = Math.max(...(scores.length ? scores : [0])) / 10;
+    console.log(`[Rerank] LLM scored ${scores.length} passages. Top: ${reranked[0]?.finalScore?.toFixed(3)} | Sufficiency Score: ${maxScore}`);
+
+    return {
+      reranked: reranked.slice(0, topK),
+      sufficiencyScore: maxScore
+    };
+
+  } catch (err) {
+    console.warn(`[Rerank] Groq call failed (${err.message}), using hybrid scores as fallback`);
+    return {
+      reranked: candidates.slice(0, topK),
+      sufficiencyScore: 1.0
+    };
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+// MASTER RETRIEVAL: QA + KB + BM25 + RERANK + SOFT ENTITY VERIFICATION
 // ═══════════════════════════════════════════════════════
 async function searchDatabase(originalQuery) {
   if (!chromaReady || !chromaCollection) {
     console.log('[RAG] ChromaDB not ready');
-    return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery] };
+    return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery], intent: null };
   }
 
   try {
-    // STAGE 1: Precision QA lookup
-    const { qaChunks, qaTopScore } = await searchQABank(originalQuery);
+    // Intent & Answer Requirement Analysis
+    const intent = await analyzeQueryIntent(originalQuery);
+    console.log(`[Intent] Intent analyzed: type=${intent.question_type}, needs_decomp=${intent.needs_decomposition}`);
 
-    // STAGE 2: General KB search
-    const { kbChunks, kbTopScore } = await searchKBChunks(originalQuery);
+    let qaChunks = [];
+    let kbChunks = [];
+    let qaTopScore = 0;
+    let kbTopScore = 0;
 
-    // MERGE: QA chunks above threshold get priority boost; KB chunks fill in context
-    // Threshold lowered from 0.68 → 0.40 because correct cosine formula now gives proper scores
+    if (intent.needs_decomposition && intent.sub_queries && intent.sub_queries.length > 0) {
+      console.log(`[RAG] Decomposing query into: ${intent.sub_queries.join(', ')}`);
+      const subQueries = intent.sub_queries.slice(0, 3);
+      const qaResults = await Promise.all(subQueries.map(q => searchQABank(q)));
+      const kbResults = await Promise.all(subQueries.map(q => searchKBChunks(q)));
+
+      const seenQA = new Set();
+      for (const res of qaResults) {
+        qaTopScore = Math.max(qaTopScore, res.qaTopScore);
+        for (const chunk of res.qaChunks) {
+          const fp = chunk.doc.substring(0, 100).toLowerCase();
+          if (!seenQA.has(fp)) {
+            seenQA.add(fp);
+            qaChunks.push(chunk);
+          }
+        }
+      }
+
+      const seenKB = new Set();
+      for (const res of kbResults) {
+        kbTopScore = Math.max(kbTopScore, res.kbTopScore);
+        for (const chunk of res.kbChunks) {
+          const fp = chunk.doc.substring(0, 100).toLowerCase();
+          if (!seenKB.has(fp)) {
+            seenKB.add(fp);
+            kbChunks.push(chunk);
+          }
+        }
+      }
+    } else {
+      // Normal retrieval
+      const qaRes = await searchQABank(originalQuery);
+      qaChunks = qaRes.qaChunks;
+      qaTopScore = qaRes.qaTopScore;
+
+      const kbRes = await searchKBChunks(originalQuery);
+      kbChunks = kbRes.kbChunks;
+      kbTopScore = kbRes.kbTopScore;
+    }
+
+    // MERGE: QA chunks get a small priority boost
     const QA_THRESHOLD = 0.40;
-    const validQA = qaChunks.filter(c => c.similarity >= QA_THRESHOLD);
-    
-    // Deduplicate: if a QA chunk is also in KB results, prefer the QA version
+    const validQA = qaChunks.filter(c => c.vectorSim >= QA_THRESHOLD);
     const qaDocFingerprints = new Set(validQA.map(c => c.doc.substring(0, 100).toLowerCase()));
     const dedupedKB = kbChunks.filter(c => !qaDocFingerprints.has(c.doc.substring(0, 100).toLowerCase()));
 
-    const allChunks = [
-      // QA chunks get +0.10 boost to always rank above loosely matched KB chunks
-      ...validQA.map(c => ({ ...c, priority: 0, effectiveScore: (c.boostedSim || c.similarity) + 0.10 })),
-      ...dedupedKB.map(c => ({ ...c, priority: 1, effectiveScore: c.boostedSim || c.similarity }))
+    const allCandidates = [
+      ...validQA.map(c => ({ ...c, priority: 0, rrfScore: (c.rrfScore || 0) + 0.005 })),
+      ...dedupedKB.map(c => ({ ...c, priority: 1 }))
     ];
+    allCandidates.sort((a, b) => (b.rrfScore || 0) - (a.rrfScore || 0));
 
-    // Sort by effective score so highly relevant KB chunks can outrank irrelevant QA chunks
-    allChunks.sort((a, b) => b.effectiveScore - a.effectiveScore);
-
-    const limit = isBroadQuery(originalQuery) ? 10 : 6;
-    const finalChunks = allChunks.slice(0, limit);
-
-    if (!finalChunks.length) {
-      return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery] };
+    if (!allCandidates.length) {
+      return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery], intent };
     }
 
-    const topScoreRaw = Math.max(validQA[0]?.similarity || 0, dedupedKB[0]?.similarity || 0);
+    // STAGE 3: LLM Rerank
+    const rerankLimit = isBroadQuery(originalQuery) ? 6 : 5;
+    const { reranked, sufficiencyScore } = await rerankWithLLM(originalQuery, allCandidates, rerankLimit, intent);
+
+    const topScoreRaw = Math.max(qaTopScore, kbTopScore);
     let overallConfidence = getConfidenceLevel(topScoreRaw);
 
-    // ── ENTITY VERIFICATION (relaxed for Hindi/Hinglish) ──
-    // Only downgrade if ZERO key entities match, not just <30%
-    const corrections = {
-      'guns': 'gunas', 'gun': 'guna', 'mahakala': 'mahakal', 'mahakalas': 'mahakal',
-      'moksh': 'moksha', 'moks': 'moksha', 'satlog': 'satlok', 'sachkand': 'sachkhand',
-      'kabeer': 'kabir', 'kabirr': 'kabir', 'kundlini': 'kundalini', 'kundalani': 'kundalini',
-      'bhagwat': 'bhagavad', 'geeta': 'gita', 'shiv': 'shiva', 'vishu': 'vishnu', 'vishno': 'vishnu',
-      'bramha': 'brahma', 'bramh': 'brahm', 'triydev': 'tridev', 'trimurti': 'trinity',
-      'sakti': 'shakti', 'shakthi': 'shakti', 'sev': 'seu', 'saman': 'samman',
-      'garibdas': 'garibdas', 'gareebdas': 'garibdas', 'ramanand': 'ramanand', 'ramanad': 'ramanand',
-      'dharamdas': 'dharamdas', 'dharmdas': 'dharamdas', 'prahlad': 'prahlad', 'prahalad': 'prahlad',
-      'naamdev': 'namdev', 'namdeo': 'namdev', 'ravidas': 'ravidas', 'ravidaas': 'ravidas',
-      'dadu': 'dadu', 'dadoo': 'dadu', 'pipa': 'pipa', 'pepa': 'pipa', 'ajamil': 'ajamil', 'ajaamal': 'ajamil'
-    };
-    let correctedQuery = originalQuery.toLowerCase().trim();
-    for (const [wrong, right] of Object.entries(corrections)) {
-      if (correctedQuery.includes(wrong)) {
-        correctedQuery = correctedQuery.replace(new RegExp(`\\b${wrong}\\b`, 'gi'), right);
-      }
+    // ── SOFT ENTITY VERIFICATION & SUFFICIENCY COMBINATIONS ──
+    const queryEntities = extractQueryEntities(originalQuery);
+    let entityHitRatio = 1.0;
+    if (queryEntities.length > 0 && reranked.length > 0) {
+      const allChunkText = reranked.map(c => c.doc).join(' ');
+      const entityHits = queryEntities.filter(e => indicFuzzyMatch(e, allChunkText));
+      entityHitRatio = entityHits.length / queryEntities.length;
     }
 
-    const stopWords = new Set(['what','who','how','why','when','where','which','is','are','was','were','did','does','do','can','tell','me','about','the','a','an','of','in','from','for','to','and','or','by','with','this','that','it','those','these','many','much','full','story','detail','kahani','kya','kaun','kaise','kyun','kab','kahan','batao','bolo','ki','ke','ka','mein','hai','hain','se','ko','ne','par','jo','ye','wo','vo','ek','aur','ya','thi','tha','sab','koi','bahut','konsa','konse','kaunsa','btao','bta','samjhao','samjho']);
-    const queryEntities = correctedQuery
-      .replace(/[?.,!]/g, '')
-      .split(/\s+/)
-      .filter(w => w.length > 2 && !stopWords.has(w));
+    const isLowSufficiency = sufficiencyScore < 0.3;
+    const isNoEntityMatch = (queryEntities.length >= 2 && entityHitRatio === 0);
 
-    if (queryEntities.length > 0 && allChunks.length > 0) {
-      const allChunkText = allChunks.map(c => c.doc.toLowerCase()).join(' ');
-      const entityHits = queryEntities.filter(e => {
-        // Check both exact match and substring match (for Hindi inflections)
-        return allChunkText.includes(e) || new RegExp(`\\b${e}`, 'i').test(allChunkText);
-      });
-      const hitRatio = entityHits.length / queryEntities.length;
-
-      if (hitRatio === 0 && queryEntities.length >= 2) {
-        // ZERO entities found AND query has real substance → downgrade
-        console.log(`[RAG] ENTITY CHECK FAILED: 0/${queryEntities.length} entities found. Entities: [${queryEntities.join(', ')}]`);
-        overallConfidence = "NONE";
-      } else if (hitRatio < 0.2 && overallConfidence === "HIGH") {
-        console.log(`[RAG] ENTITY CHECK WEAK: ${entityHits.length}/${queryEntities.length} entities found. Downgrading HIGH → MEDIUM.`);
-        overallConfidence = "MEDIUM";
-      } else {
-        console.log(`[RAG] ENTITY CHECK OK: ${entityHits.length}/${queryEntities.length} entities found: [${entityHits.join(', ')}]`);
-      }
+    if (isLowSufficiency && isNoEntityMatch) {
+      console.log(`[RAG] DOUBLE FAIL: Low sufficiency (${sufficiencyScore}) AND no entity matches → NONE`);
+      overallConfidence = "NONE";
+    } else if (isLowSufficiency || isNoEntityMatch) {
+      const downgrade = { HIGH: 'MEDIUM', MEDIUM: 'LOW', LOW: 'NONE', NONE: 'NONE' };
+      const oldConf = overallConfidence;
+      overallConfidence = downgrade[overallConfidence] || overallConfidence;
+      console.log(`[RAG] SOFT DOWNGRADE: lowSuff=${isLowSufficiency} noEntity=${isNoEntityMatch} → ${oldConf}→${overallConfidence}`);
+    } else if (entityHitRatio < 0.3 && overallConfidence === "HIGH") {
+      console.log(`[RAG] WEAK ENTITY: HIGH→MEDIUM`);
+      overallConfidence = "MEDIUM";
     }
 
-    console.log(`[RAG] FINAL: ${overallConfidence} (${topScoreRaw.toFixed(3)}) | QA: ${validQA.length}/${qaChunks.length} | KB: ${dedupedKB.length} | Total: ${allChunks.length}`);
+    console.log(`[RAG] FINAL: ${overallConfidence} (${topScoreRaw.toFixed(3)}) | QA: ${validQA.length}/${qaChunks.length} | KB: ${dedupedKB.length} | Reranked: ${reranked.length}`);
 
     return {
-      chunks: finalChunks.map(x => ({
+      chunks: reranked.map(x => ({
         doc: x.doc,
         priority: x.priority,
         source: x.meta?.source || 'Knowledge Base',
@@ -1251,7 +1601,7 @@ async function searchDatabase(originalQuery) {
         confidence: x.confidence,
         similarity: x.similarity
       })),
-      sources: finalChunks.map(x => ({
+      sources: reranked.map(x => ({
         type: 'kb',
         title: x.meta?.source || 'Knowledge Base',
         url: x.meta?.source || null,
@@ -1259,12 +1609,13 @@ async function searchDatabase(originalQuery) {
       })),
       overallConfidence,
       topScore: topScoreRaw.toFixed(3),
-      queriesUsed: expandQueryLocal(originalQuery)
+      queriesUsed: intent.needs_decomposition && intent.sub_queries && intent.sub_queries.length > 0 ? intent.sub_queries : [originalQuery],
+      intent
     };
 
   } catch (e) {
     console.error('[RAG] Search error:', e.message);
-    return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery] };
+    return { chunks: [], sources: [], overallConfidence: "NONE", topScore: "0.000", queriesUsed: [originalQuery], intent: null };
   }
 }
 
@@ -1574,6 +1925,7 @@ app.post('/api/chat', async (req, res) => {
     let dbOverallConfidence = "NONE";
     let dbTopScore = "0.000";
     let dbQueriesUsed = [];
+    let dbIntent = null;
 
     // ══════════════════════════════════════════════════════
     // IRON WALL ROUTING — strict isolation (Module 3)
@@ -1603,8 +1955,9 @@ app.post('/api/chat', async (req, res) => {
       dbOverallConfidence = result.overallConfidence;
       dbTopScore = result.topScore;
       dbQueriesUsed = result.queriesUsed;
+      dbIntent = result.intent;
       sourceLabel = dbChunks.length > 0 ? 'DB' : 'DIRECT';
-      
+
       console.log(`[RAG] Retrieval confidence: ${dbOverallConfidence} (${dbTopScore})`);
       console.log(`[RAG] Queries used: ${dbQueriesUsed.join(" | ")}`);
     }
@@ -1707,7 +2060,23 @@ ANSWER DEPTH: INFORMATIVE & STRUCTURED (Real-Time Context)
       Relevant context found. STILL: Verify the user's specific question topic is actually covered in the chunks before answering. If the chunks are about a DIFFERENT topic, reply exactly with: "The knowledge base does not have sufficient information on this topic." Answer DIRECTLY from context. Weave source metadata naturally into the explanation.`;
       }
 
+      let intentInstruction = "";
+      if (dbIntent) {
+        if (dbIntent.question_type === 'how_mechanism' || dbIntent.question_type === 'relational') {
+          intentInstruction = `
+      QUESTION TYPE: ${dbIntent.question_type.toUpperCase()}
+      ▸ Synthesize a step-by-step causal/process explanation strictly from the retrieved chunks.
+      ▸ Avoid making assumptions or inventing logical bridges between events — only state connections explicitly written in the chunks.`;
+        } else if (dbIntent.question_type === 'factual' || dbIntent.question_type === 'count_or_list') {
+          intentInstruction = `
+      QUESTION TYPE: ${dbIntent.question_type.toUpperCase()}
+      ▸ Keep the answer extremely direct, concise, and focused on the specific fact or list requested.
+      ▸ Do not add extra narrative padding.`;
+        }
+      }
+
       answerInstructions = `${confidenceInstruction}
+      ${intentInstruction}
       
 DEPTH: Write a NATURAL, DETAILED, and HUMAN-FRIENDLY answer. Explain concepts deeply if asked. Weave the source metadata naturally into your text (e.g., "As stated in [Source Name]..."). Do NOT add a separate "Pramaan" or "Sources" section at the end.`;
 
@@ -1771,7 +2140,7 @@ Label each section clearly.` : '';
     }
 
     // CONVERSATION CONTINUITY: Allow follow-ups and history references
-    allMessages.push({ role: 'system', content: `IMPORTANT: Answer the user's question using the retrieved context chunks. If the user's query is a follow-up or references facts established in the conversation history, you MUST use the established facts from the history alongside the new context to provide a complete, deep answer. Only use the fallback phrase "The texts I have access to do not specifically address this aspect" as a LAST RESORT if neither context nor history has any relevant facts. Do NOT output this fallback phrase if the answer is logically answerable from the context or the previous turns.` });
+    allMessages.push({ role: 'system', content: `IMPORTANT: Answer the user's question using the retrieved context chunks. If the user's query is a follow-up or references facts established in the conversation history, you MUST use the established facts from the history alongside the new context to provide a complete, deep answer. Only use the fallback phrase "The knowledge base does not have sufficient information on this topic." as a LAST RESORT if neither context nor history has any relevant facts. Do NOT output this fallback phrase if the answer is logically answerable from the context or the previous turns.` });
 
     allMessages.push({ role: 'user', content: message });
 
@@ -1791,29 +2160,14 @@ Label each section clearly.` : '';
       // Instead of returning it instantly, we feed it back into the AI to IMPROVE it
       // This satisfies the user's request: "still ai have to improve those answers to that much highest level"
       console.log(`[Cache] Injecting previous liked answer for refinement...`);
-      allMessages.push({ 
-        role: 'system', 
-        content: `[CONTINUOUS IMPROVEMENT PROTOCOL]\nThe user previously "liked" the following answer for this question:\n"${cached.answer}"\n\nYOUR TASK: Use this previous answer as a baseline. DO NOT just copy it. Improve it, refine it, and make it absolutely 100% accurate, informative, and perfectly concise based on the KB chunks. Elevate it to the highest possible quality.` 
+      allMessages.push({
+        role: 'system',
+        content: `[CONTINUOUS IMPROVEMENT PROTOCOL]\nThe user previously "liked" the following answer for this question:\n"${cached.answer}"\n\nYOUR TASK: Use this previous answer as a baseline. DO NOT just copy it. Improve it, refine it, and make it absolutely 100% accurate, informative, and perfectly concise based on the KB chunks. Elevate it to the highest possible quality.`
       });
     }
 
     const { response, model, is8B } = await callGroqWithFallback(finalMessages);
-
-    // If we got the 8B model, rebuild messages with simpler prompt
     let activeResponse = response;
-    if (is8B) {
-      console.log('[Groq] 8B model detected — switching to degraded prompt');
-      const simplifiedMessages = [
-        { role: 'system', content: buildSystemPrompt(true) },
-        { role: 'user', content: message }
-      ];
-      try {
-        const retry = await callGroqWithFallback(simplifiedMessages);
-        activeResponse = retry.response;
-      } catch (e) {
-        console.warn('[Groq] 8B retry with simple prompt failed, using original response');
-      }
-    }
 
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
@@ -1930,24 +2284,24 @@ app.delete('/api/memory/:userId', (req, res) => {
 app.post('/api/feedback', (req, res) => {
   const { query, answer, feedback } = req.body;
   if (!query || feedback === undefined) return res.status(400).json({ error: 'Missing data' });
-  
+
   const key = normalizeQuery(query);
-  
+
   if (feedback === -1) {
     // User downvoted: Delete from semantic cache so it answers differently next time
     if (semanticCache.has(key)) {
       semanticCache.delete(key);
-      console.log(`[Feedback] Thumbs DOWN for "${query.substring(0,30)}..." - Removed from cache.`);
+      console.log(`[Feedback] Thumbs DOWN for "${query.substring(0, 30)}..." - Removed from cache.`);
     }
   } else if (feedback === 1) {
     // User upvoted: Ensure it's in cache and extend TTL to effectively 'remember' it
-    console.log(`[Feedback] Thumbs UP for "${query.substring(0,30)}..." - Answer remembered!`);
+    console.log(`[Feedback] Thumbs UP for "${query.substring(0, 30)}..." - Answer remembered!`);
     if (semanticCache.has(key)) {
       const cached = semanticCache.get(key);
       cached.timestamp = Date.now() + 1000 * 60 * 60 * 24 * 365; // 1 year TTL
     }
   }
-  
+
   // Log to a file
   const fs = require('fs');
   const path = require('path');
@@ -1958,7 +2312,7 @@ app.post('/api/feedback', (req, res) => {
     answer,
     feedback
   }) + '\n';
-  
+
   fs.appendFile(feedbackFile, entry, (err) => {
     if (err) console.error('[Feedback] Failed to write feedback:', err.message);
   });
@@ -2129,7 +2483,7 @@ function startEmbeddingService() {
   const { spawn } = require('child_process');
   const path = require('path');
   const scriptPath = path.join(__dirname, 'embed_service.py');
-  
+
   console.log('🔷 Starting persistent embedding service on port 5002...');
   embedServiceProcess = spawn('python3', [scriptPath, '5002'], {
     detached: false,

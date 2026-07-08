@@ -1,0 +1,668 @@
+{
+  "timestamp": "2026-07-07T18:20:39.823Z",
+  "tag": "phase_a",
+  "test_set": "eval_testset_regression.json",
+  "summary": {
+    "total_questions": 15,
+    "passed": 5,
+    "failed": 10,
+    "grounded_accuracy": "33.33%",
+    "fact_recall": "42.86%",
+    "insufficient_kb_fallbacks": 1,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 10,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "rewrites: mahakal/16 kalas": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 1
+    },
+    "rewrites: tridev/trinity trap": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: srishti rachana/creation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garbh vaas/womb": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: bhanwar gufa": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: dasam dwaar": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: chaurasi/84 lakh": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: seu/samman/nekee": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garibdas+kabir": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: ranka banka": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: sadna kasai": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: ajamil": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: biggest sin": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: human birth": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: true guru": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What are the 16 kalas of Vishnu?",
+      "covers_map_entry": "rewrites: mahakal/16 kalas",
+      "expected_facts": [
+        "kala",
+        "Vishnu"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "According to the retrieved context, the power difference between Vishnu and Kaal is described, with Vishnu possessing 16 \"Kalas\" (arts/energies) and Kaal possessing 1,000 Kalas. However, the specific 16 Kalas of Vishnu are not explicitly mentioned in the provided context. \n\nThe knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 4,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kala",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": [
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Tridev ka jaal kya hai?",
+      "covers_map_entry": "rewrites: tridev/trinity trap",
+      "expected_facts": [
+        "Brahma",
+        "Vishnu",
+        "Shiva",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Tridev ka jaal kya hai? Is prashn ka uttar Sant Rampal Ji Maharaj ke shabdon mein hai. Unhone kaha hai ki Tridev Brahma, Vishnu aur Mahesh hain, aur unka pitaa Brahm Kaal hai. Brahm Kaal ka parivaar ka avlokan mahatvapoorn hai, kyunki Gita 10:2 mein vah kehta hai, \"Hariyon ko bhi meri utpann ki jaankari nahin hai kyunki sabhi mere se utpann hain\".\n\nIs prakaar, Tridev ka jaal yeh hai ki ve apne aap ke pitaa ki jaankari se avagunth hain. Yeh jaal unke manovigyan ko prabhavit karta hai aur unhein apne aap ke liye jaankari ki khoj karne mein madad karta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 75,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          },
+          {
+            "fact": "Shiva",
+            "found": false
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "Srishti ki rachana kaise hui?",
+      "covers_map_entry": "rewrites: srishti rachana/creation",
+      "expected_facts": [
+        "creation"
+      ],
+      "forbidden_facts": [
+        "big bang only"
+      ],
+      "response": "Srishti ki rachana ki baat karte hue, hum Rigveda Mandal 10 Sukta 90 mein batayi gayi baat ka jikr karte hain. Is Sukta mein kaha gaya hai ki Param Shri (Supreme Creator) ne universe ki fabric ko weave kiya hai, apni shakti se prithvi par aakar ek mukhya manav roop mein utar aaya hai, aur Kavirgirbhih (poet/weaver) ke roop mein satya spiritual gyan utarta hai.\n\nIs prakaar, Srishti ki rachana Param Shri ki shakti aur kriya ke parinaam se hui hai. Unhone apni shakti se universe ki fabric ko banaya, aur apni shakti se prithvi par aakar mukhya manav roop mein utar aaya, jisse humein satya spiritual gyan mila.\n\nSatguru Rampal Ji Maharaj ne bhi is vishay par kai baar bataya hai ki Srishti ki rachana Param Shri ki shakti aur kriya ke parinaam se hui hai. Unhone kaha hai ki Param Shri ne apni shakti se universe ki fabric ko banaya, aur apni shakti se prithvi par aakar mukhya manav roop mein utar aaya, jisse humein satya spiritual gyan mila.\n\nIs prakaar, Srishti ki rachana ki baat karte hue, hum Rigveda Mandal 10 Sukta 90 aur Satguru Rampal Ji Maharaj ki baton ka jikr karte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "creation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+      "covers_map_entry": "rewrites: garbh vaas/womb",
+      "expected_facts": [
+        "womb",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "comfortable"
+      ],
+      "response": "Garbh vaas mein aatma ko bahut hi adhik dukh hota hai. Yeh dukh uske liye ek aatmakaandh (localized hell) ka roop le leta hai, jahan uska aatma 9 mahino ke liye ek acidic fluid mein hawa ke neeche laga hua hota hai. Is prakaar, aatma kaatil dard ka anubhav karta hai aur uska purane jeevan ki yaad aati hai. Iske baad, aatma Paramatma se moksha ke liye apeksha karta hai aur iske liye Bhakti ki ichchha karta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "womb",
+            "found": false
+          },
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "What is Bhanwar Gufa?",
+      "covers_map_entry": "rewrites: bhanwar gufa",
+      "expected_facts": [
+        "whirlpool"
+      ],
+      "forbidden_facts": [
+        "physical cave"
+      ],
+      "response": "The Bhanwar Gufa, also known as the Whirling Cave, is a colossal, rotating spiritual wormhole between ParBrahm and Satlok. It is a multi-dimensional vortex that separates the realm of ParBrahm from Satlok, the Eternal Place. This vortex is guarded by highly advanced spiritual mechanisms, making it a challenging and perilous passage for souls to traverse.\n\nAccording to the teachings, the Bhanwar Gufa is the path that leads to the 12th Door, which opens into Satlok. However, without the final Sarnaam, a soul is violently shredded and cast downward. To successfully navigate this vortex, a soul must carry the final, ultimate password, known as the Sar Shabd, which allows it to command the vortex to open.\n\nFurthermore, the Bhanwar Gufa is also associated with the 11th Door, which leads to the universes of ParBrahm. The Gayatri mantra is given to open the lotuses of the deities, and the Satnaam is given in two mantras, one of which is coded and only told to a worshipper. This is to clear the debt of Kaal and to pay for the expense of crossing the Bhanwar Gufa in ParBrahm's lok.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 4,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "whirlpool",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "question": "Dasam Dwaar kya hai?",
+      "covers_map_entry": "rewrites: dasam dwaar",
+      "expected_facts": [
+        "tenth",
+        "door"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Dasam Dwaar ka arth hai soft spot ya sukhad bimbu, jo sir ke oopar sthit hai. Yah yogiyon ke liye Brahmaloka ke liye nikaas sthan hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "tenth",
+            "found": false
+          },
+          {
+            "fact": "door",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "Chaurasi lakh yoni ka chakra kya hai?",
+      "covers_map_entry": "rewrites: chaurasi/84 lakh",
+      "expected_facts": [
+        "84",
+        "species"
+      ],
+      "forbidden_facts": [
+        "only humans"
+      ],
+      "response": "Chaurasi lakh yoni ka chakra hai jo Sukshma Veda mein varnan kiya gaya hai. Yeh chakra bahut bada aur shaktishali hai, jismein 64 lakh jeevon ki sankhya hai. Is chakra mein, jinhone galat kaam kiya hai, unhein Draupadi ne apne shakti se nuksaan pahunchaya hai. \n\nYeh chakra isliye bhi mahatvapoorn hai kyunki yahaan par God Kavir Dev ne Draupadi ki raksha ki aur Brahm Kaal ki lekhon ko mitha diya hai. Isse humein pata chalta hai ki yeh chakra kaisa kaam karta hai aur kaise yeh jeevon ko prabhavit karta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "84",
+            "found": false
+          },
+          {
+            "fact": "species",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "Seu Samman aur Nekee ki kahani batao",
+      "covers_map_entry": "rewrites: seu/samman/nekee",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Seu Samman aur Nekee ki kahani ek prabhavshali kathaa hai jo Sant Rampal Ji Maharaj ke dwara prasaarit ki gayi hai. Yeh kathaa unke Sat Bhakti Sandesh mein payi ja sakti hai.\n\nYeh kahani Seu Samman aur Nekee ke baare mein hai, jo dono Guru Ji ke bhakt the. Unhone ek din Guru Ji ke liye khana tayyar karne ke liye atta chuna, lekin koi bhi unhe atta nahi diya kyunki unke paas paise nahi the. Iske baad, Seu Samman aur Nekee ne naye atta chuna aur usse chura liya, taaki ve Guru Ji ke liye khana tayyar kar sakein.\n\nLekin, jab Seu Samman ne atta chura liya, to usne galti se apne beta S Samman ko bhi sath le gaya. Jab merchant ne Seu Samman ko pakad liya, to usne kaha ki woh use kal subah public mein pradarshit karega. Iske baad, Seu Samman ne atta lekar apne ghar chala gaya aur apne beta ko chhod gaya.\n\nYeh kahani humein batati hai ki devotement kya hai. Devotement sirf aapke shir ko katne se nahi, balki aapke dil aur man ko apne Guru Ji ke liye pranaam karna hai. Yeh kathaa humein batati hai ki jab hum apne Guru Ji ke liye devotement karte hain, to humein apne parivaar aur duniya ke saath sambandh tootne ka bhay nahin hota.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+      "covers_map_entry": "rewrites: garibdas+kabir",
+      "expected_facts": [
+        "Garibdas"
+      ],
+      "forbidden_facts": [
+        "founder of Kabir Panth"
+      ],
+      "response": "Garibdas ji ne Kabir Saheb se mulakat karne ke liye ek anokha tareeka se. Jab Garibdas ji ek 10 varsh ke gopaldar the, to Kabir Saheb ne unki atma ko unke shareer se nikal kar unhein Satlok tak le gaye aur unhein tatvagyan pradaan kiya. Iske baad unhein wapas aakar unki atma ko unke shareer mein wapas kar diya.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Garibdas",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 10,
+      "question": "Ranka aur Banka ki katha sunao",
+      "covers_map_entry": "rewrites: ranka banka",
+      "expected_facts": [
+        "devotee"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Ranka aur Banka ki katha ek prasiddh Katha hai jo Sant Rampal Ji Maharaj ne apne shabdkosh mein vistrit roop se vistrit kiya hai. Yeh katha unke shabdkosh mein \"Ranka aur Banka\" ke naam se prasiddh hai.\n\nRanka aur Banka do bahut hi shradhali jodhe the. Ve ek dusre ke liye bahut pyar karte the aur apne jeevan ko sadguru ki seva mein samarpit karne ke liye taiyar the. Ek din, unhein ek bahut hi bada daan mila, jismein unhein bahut se suvarn ko mila. Lekin Ranka ne socha ki yadi unhein ye suvarn mil gaya hai, to unki patni Banka isse prabhavit ho sakti hai aur isse apne jeevan mein kuchh galat kar sakti hai.\n\nIsliye, Ranka ne socha ki woh kuchh kar sakte hain jo Banka ko is suvarn se prabhavit nahin hone dega. To, unhone socha ki woh suvarn ko dhool par daal denge, taaki Banka isse nahin dekh sake. Lekin Banka ne Ranka ko puchha, \"Tum kyun dhool par suvarn daal rahe ho? Ye dhool aur dhool hai.\"\n\nIs kathna mein, Ranka aur Banka ki pativrata aur vairagya ki kathna aayi hai. Ranka ne socha ki woh apne jeevan ko sadguru ki seva mein samarpit karne ke liye taiyar hai aur woh kisi bhi cheez ko apne jeevan mein nahin lena chahta hai, jisse woh apne jeevan mein kuchh galat kar sake. Isliye, unhone suvarn ko dhool par daal diya aur Banka ko pata nahin chala ki unhein kya mila hai.\n\nIs kathna se humein seekh milti hai ki pativrata aur vairagya ki kathna bahut hi mahatvapoorn hai. Hum apne jeevan mein kisi bhi cheez ko apne jeevan mein nahin lena chahte hain, jisse hum apne jeevan mein kuchh galat kar sake. Hum apne jeevan ko sadguru ki seva mein samarpit karne ke liye taiyar hote hain aur hum kisi bhi cheez ko apne jeevan mein nahin lena chahte hain, jisse hum apne jeevan mein kuchh galat kar sake.\n\nIs kathna ko Sant Rampal Ji Maharaj ne apne shabdkosh mein vistrit roop se vistrit kiya hai aur yeh kathna unke shabdkosh mein \"Ranka aur Banka\" ke naam se prasiddh hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "devotee",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Sadna kasai ki kahani kya hai?",
+      "covers_map_entry": "rewrites: sadna kasai",
+      "expected_facts": [
+        "butcher"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Sadna Kasai ki kahani ek aisi hai jismein ek Sadna Kasai (Butcher) ka kahaani hai. Ek raat, usko ek bhaangar (goat) kaatne ke liye order mila. Jab usne apna knife uthaya, to Supreme God ne bhaangar ko baat karne ki shakti di. Bhaangar ne kaha, \"Sadna! Aaj tum mere gale ko kat rahe ho; kaljeva, main tumhare gale ko katunga. Hum dono is tarah se ek dusre ke saath karne ke liye karodon janmon se kar rahe hain.\"\n\nIs absolute, brutal reality ki pehchaan karke, Sadna ne knife utha diya aur God Kabir ki sharan li. Is tarah, usne karmik rishiya ka cycle tod diya.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "butcher",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 12,
+      "question": "Ajamil ki katha mein kya hua tha?",
+      "covers_map_entry": "rewrites: ajamil",
+      "expected_facts": [
+        "Ajamil"
+      ],
+      "forbidden_facts": [
+        "righteous man"
+      ],
+      "response": "Ajamil ki katha mein, ek Ajamil ne apne pitaji ke liye tapasya ki thi. Usne apne pitaji ke liye swarg ke liye tapasya ki thi, lekin jab usne apne pitaji ke liye swarg ke liye tapasya ki, to uske pitaji ne usse kaha, \"Tere liye swarg nahin hai, tere liye nirgun hai.\" Isse Ajamil ko pata chala ki swarg nahin nirgun hai, aur nirgun hi sabse bada swarg hai.\n\nIs katha ko Lomas Rishi ne Kakbhushundi se suna tha, aur Kakbhushundi ne is katha ko Garud Dev ko sunaya tha. Is katha mein, Ajamil ki tapasya aur uske pitaji ke nirgun ki baat ki gayi hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Ajamil",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 13,
+      "question": "Sabse bada paap kya hai?",
+      "covers_map_entry": "hindiBridges: biggest sin",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "Manushya janam ka mahatva kya hai?",
+      "covers_map_entry": "hindiBridges: human birth",
+      "expected_facts": [
+        "human"
+      ],
+      "forbidden_facts": [
+        "unimportant"
+      ],
+      "response": "Manushya janam ka mahatva bahut hi mahatvapurn hai. Bhagavad Gita mein Krishan Ji ke dwara di gayi shiksha ke anusaar, manushya janam ek moksh ki raah par chalne ka avsar hai. Yeh janam humein apne bhav ko sudharne aur apne aatma ko viksit karne ka avsar pradaan karta hai.\n\nKrishan Ji kehte hain ki jis-jis manushya antkaal mein mere smaran mein hote hain, ve mere hi prapt ho jate hain. Ismein koi sanshay nahin hai. Yeh shiksha humein yeh samajhne mein madad karti hai ki manushya janam ka mahatva hai apne bhav ko sudharne aur apne aatma ko viksit karne ka.\n\nAntkaal mein mere smaran mein rahna ek bahut hi mahatvapurn cheez hai. Yeh humein yeh samajhne mein madad karta hai ki jeevan ke ant mein humein apne bhav ko sudharne aur apne aatma ko viksit karne ka avsar hai. Isse humein yeh samajhne mein madad milti hai ki manushya janam ka mahatva hai apne aatma ko viksit karne aur apne bhav ko sudharne ka.\n\nIsliye, manushya janam ka mahatva hai apne aatma ko viksit karne aur apne bhav ko sudharne ka. Yeh humein yeh samajhne mein madad karta hai ki jeevan ke ant mein humein apne bhav ko sudharne aur apne aatma ko viksit karne ka avsar hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "human",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Sachcha Guru ki pehchaan kaise karein?",
+      "covers_map_entry": "hindiBridges: true guru",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "not needed"
+      ],
+      "response": "Sachcha Guru ki pehchaan karne ke liye, humein apne andar ki sachchai aur bhavnaon ko samajhna hoga. Ek sachcha Guru apne shishy ko apne andar ki sachchai aur bhavnaon ko darshata hai, aur unhein apne andar ki shuddhi aur samriddhi pradaan karta hai.\n\nJaise ki Guru Nanak Ji ne kaha hai, \"Satnam\" mantra ko prapt karke, unhone ise apne shishy ko prakat kiya aur iska arth yeh tha ki sachcha naam hi sabse bada naam hai. Isse humein samajh aata hai ki sachcha Guru apne shishy ko apne andar ki sachchai aur bhavnaon ko darshata hai.\n\nEk sachcha Guru apne shishy ko apne andar ki shuddhi aur samriddhi pradaan karta hai, aur unhein apne andar ki sachchai aur bhavnaon ko samajhne mein madad karta hai. Iske liye, humein apne andar ki sachchai aur bhavnaon ko samajhna hoga aur apne andar ki shuddhi aur samriddhi pradaan karne ke liye koshish karni hogi.\n\nAise mein, humein apne andar ki sachchai aur bhavnaon ko samajhne ke liye, humein apne andar ki shuddhi aur samriddhi pradaan karne ke liye koshish karni hogi. Iske liye, humein apne andar ki sachchai aur bhavnaon ko samajhne ke liye, humein apne andar ki shuddhi aur samriddhi pradaan karne ke liye koshish karni hogi.\n\nIske liye, humein apne andar ki sachchai aur bhavnaon ko samajhne ke liye, humein apne andar ki shuddhi aur samriddhi pradaan karne ke liye koshish karni hogi. Isse humein samajh aata hai ki sachcha Guru apne shishy ko apne andar ki sachchai aur bhavnaon ko darshata hai aur unhein apne andar ki shuddhi aur samriddhi pradaan karta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 3,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    }
+  ]
+}

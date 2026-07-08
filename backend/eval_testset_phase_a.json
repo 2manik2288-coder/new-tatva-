@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "question": "What are the 16 kalas of Vishnu?",
+    "covers_map_entry": "rewrites: mahakal/16 kalas",
+    "expected_facts": ["kala", "Vishnu"],
+    "forbidden_facts": ["myth"]
+  },
+  {
+    "id": 2,
+    "question": "Tridev ka jaal kya hai?",
+    "covers_map_entry": "rewrites: tridev/trinity trap",
+    "expected_facts": ["Brahma", "Vishnu", "Shiva", "Kaal"],
+    "forbidden_facts": ["Supreme God"]
+  },
+  {
+    "id": 3,
+    "question": "Srishti ki rachana kaise hui?",
+    "covers_map_entry": "rewrites: srishti rachana/creation",
+    "expected_facts": ["creation"],
+    "forbidden_facts": ["big bang only"]
+  },
+  {
+    "id": 4,
+    "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+    "covers_map_entry": "rewrites: garbh vaas/womb",
+    "expected_facts": ["womb", "soul"],
+    "forbidden_facts": ["comfortable"]
+  },
+  {
+    "id": 5,
+    "question": "What is Bhanwar Gufa?",
+    "covers_map_entry": "rewrites: bhanwar gufa",
+    "expected_facts": ["whirlpool"],
+    "forbidden_facts": ["physical cave"]
+  },
+  {
+    "id": 6,
+    "question": "Dasam Dwaar kya hai?",
+    "covers_map_entry": "rewrites: dasam dwaar",
+    "expected_facts": ["tenth", "door"],
+    "forbidden_facts": ["myth"]
+  },
+  {
+    "id": 7,
+    "question": "Chaurasi lakh yoni ka chakra kya hai?",
+    "covers_map_entry": "rewrites: chaurasi/84 lakh",
+    "expected_facts": ["84", "species"],
+    "forbidden_facts": ["only humans"]
+  },
+  {
+    "id": 8,
+    "question": "Seu Samman aur Nekee ki kahani batao",
+    "covers_map_entry": "rewrites: seu/samman/nekee",
+    "expected_facts": ["Kabir"],
+    "forbidden_facts": ["fictional"]
+  },
+  {
+    "id": 9,
+    "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+    "covers_map_entry": "rewrites: garibdas+kabir",
+    "expected_facts": ["Garibdas"],
+    "forbidden_facts": ["founder of Kabir Panth"]
+  },
+  {
+    "id": 10,
+    "question": "Ranka aur Banka ki katha sunao",
+    "covers_map_entry": "rewrites: ranka banka",
+    "expected_facts": ["devotee"],
+    "forbidden_facts": ["fictional"]
+  },
+  {
+    "id": 11,
+    "question": "Sadna kasai ki kahani kya hai?",
+    "covers_map_entry": "rewrites: sadna kasai",
+    "expected_facts": ["butcher"],
+    "forbidden_facts": ["fictional"]
+  },
+  {
+    "id": 12,
+    "question": "Ajamil ki katha mein kya hua tha?",
+    "covers_map_entry": "rewrites: ajamil",
+    "expected_facts": ["Ajamil"],
+    "forbidden_facts": ["righteous man"]
+  },
+  {
+    "id": 13,
+    "question": "Sabse bada paap kya hai?",
+    "covers_map_entry": "hindiBridges: biggest sin",
+    "expected_facts": ["sin"],
+    "forbidden_facts": ["no sin exists"]
+  },
+  {
+    "id": 14,
+    "question": "Manushya janam ka mahatva kya hai?",
+    "covers_map_entry": "hindiBridges: human birth",
+    "expected_facts": ["human"],
+    "forbidden_facts": ["unimportant"]
+  },
+  {
+    "id": 15,
+    "question": "Sachcha Guru ki pehchaan kaise karein?",
+    "covers_map_entry": "hindiBridges: true guru",
+    "expected_facts": ["Guru"],
+    "forbidden_facts": ["not needed"]
+  },
+  {
+    "id": 16,
+    "question": "Mrityu ke baad kya hota hai?",
+    "covers_map_entry": "hindiBridges: death",
+    "expected_facts": ["soul"],
+    "forbidden_facts": ["nothing happens"]
+  },
+  {
+    "id": 17,
+    "question": "Karma ka siddhant kya hai?",
+    "covers_map_entry": "hindiBridges: paap karma",
+    "expected_facts": ["karma"],
+    "forbidden_facts": ["karma does not exist"]
+  },
+  {
+    "id": 18,
+    "question": "Who is the Supreme God according to all scriptures?",
+    "covers_map_entry": "hindiBridges: param akshar/supreme god",
+    "expected_facts": ["Kabir"],
+    "forbidden_facts": ["no supreme god"]
+  },
+  {
+    "id": 19,
+    "question": "Bhagwan sakar hai ya nirakar?",
+    "covers_map_entry": "hindiBridges: roop/form of god",
+    "expected_facts": ["form"],
+    "forbidden_facts": ["cannot be known"]
+  },
+  {
+    "id": 20,
+    "question": "Kaal kaun hai aur uska kya kaam hai?",
+    "covers_map_entry": "hindiBridges: kaal kaun",
+    "expected_facts": ["Kaal", "universe"],
+    "forbidden_facts": ["Supreme God"]
+  },
+  {
+    "id": 21,
+    "question": "Durga Mata kaun hai?",
+    "covers_map_entry": "hindiBridges: durga kaun",
+    "expected_facts": ["Durga"],
+    "forbidden_facts": ["highest god"]
+  },
+  {
+    "id": 22,
+    "question": "Satlok kya hai aur wahan kaise jaayein?",
+    "covers_map_entry": "hindiBridges: satlok kya",
+    "expected_facts": ["Satlok", "eternal"],
+    "forbidden_facts": ["imaginary"]
+  },
+  {
+    "id": 23,
+    "question": "Moksha kaise milti hai?",
+    "covers_map_entry": "hindiBridges: mukti/liberation",
+    "expected_facts": ["salvation"],
+    "forbidden_facts": ["impossible"]
+  },
+  {
+    "id": 24,
+    "question": "Naam diksha ka kya mahatva hai?",
+    "covers_map_entry": "hindiBridges: naam daan",
+    "expected_facts": ["initiation"],
+    "forbidden_facts": ["unnecessary"]
+  },
+  {
+    "id": 25,
+    "question": "Bhagavad Gita mein Kaal Brahm ne kya kaha?",
+    "covers_map_entry": "hindiBridges: bhagavad gita",
+    "expected_facts": ["Gita"],
+    "forbidden_facts": ["Krishna is Supreme"]
+  },
+  {
+    "id": 26,
+    "question": "Quran mein Kabir ka zikr kahan hai?",
+    "covers_map_entry": "hindiBridges: quran/islam",
+    "expected_facts": ["Quran"],
+    "forbidden_facts": ["not mentioned"]
+  },
+  {
+    "id": 27,
+    "question": "Bible mein Supreme God ka kya pramaan hai?",
+    "covers_map_entry": "hindiBridges: bible/jesus",
+    "expected_facts": ["Bible"],
+    "forbidden_facts": ["no evidence"]
+  },
+  {
+    "id": 28,
+    "question": "Vedas mein KavirDev ka kya pramaan hai?",
+    "covers_map_entry": "hindiBridges: vedas",
+    "expected_facts": ["Veda", "Kabir"],
+    "forbidden_facts": ["myth"]
+  },
+  {
+    "id": 29,
+    "question": "Guru Granth Sahib mein Kabir ji ka kya sandesh hai?",
+    "covers_map_entry": "hindiBridges: guru granth/sikh",
+    "expected_facts": ["Guru Granth Sahib"],
+    "forbidden_facts": ["not present"]
+  },
+  {
+    "id": 30,
+    "question": "Sharab peene se kya nuksan hota hai aatma ko?",
+    "covers_map_entry": "hindiBridges: alcohol",
+    "expected_facts": ["alcohol"],
+    "forbidden_facts": ["allowed"]
+  },
+  {
+    "id": 31,
+    "question": "Maas khana paap hai ya nahi?",
+    "covers_map_entry": "hindiBridges: meat",
+    "expected_facts": ["meat", "sin"],
+    "forbidden_facts": ["allowed"]
+  },
+  {
+    "id": 32,
+    "question": "Panch chor kaun se hain?",
+    "covers_map_entry": "hindiBridges: five thieves",
+    "expected_facts": ["kaam", "krodh"],
+    "forbidden_facts": ["physical thieves"]
+  },
+  {
+    "id": 33,
+    "question": "Kundalini jagran karna chahiye ya nahi?",
+    "covers_map_entry": "hindiBridges: kundalini",
+    "expected_facts": ["kundalini"],
+    "forbidden_facts": ["always safe"]
+  },
+  {
+    "id": 34,
+    "question": "Swarg aur narak mein kya farak hai?",
+    "covers_map_entry": "hindiBridges: heaven/hell",
+    "expected_facts": ["heaven", "hell"],
+    "forbidden_facts": ["permanent abode"]
+  },
+  {
+    "id": 35,
+    "question": "Pitra puja karna chahiye ya nahi?",
+    "covers_map_entry": "hindiBridges: ghost/pitra",
+    "expected_facts": ["pitra"],
+    "forbidden_facts": ["absolutely necessary"]
+  },
+  {
+    "id": 36,
+    "question": "Pativrata bhakt ka kya arth hai?",
+    "covers_map_entry": "rewrites: pativrata",
+    "expected_facts": ["devot"],
+    "forbidden_facts": ["fictional concept"]
+  },
+  {
+    "id": 37,
+    "question": "What are the five bodies of the soul?",
+    "covers_map_entry": "none — broad corpus: soul bodies",
+    "expected_facts": ["body"],
+    "forbidden_facts": ["only one body"]
+  },
+  {
+    "id": 38,
+    "question": "Why was Kaal expelled from Satlok?",
+    "covers_map_entry": "none — broad corpus: kaal expulsion",
+    "expected_facts": ["Kaal", "Satlok"],
+    "forbidden_facts": ["Kaal was never expelled"]
+  },
+  {
+    "id": 39,
+    "question": "What is the significance of Bandichhor?",
+    "covers_map_entry": "none — broad corpus: Bandichhor",
+    "expected_facts": ["liberation"],
+    "forbidden_facts": ["myth"]
+  },
+  {
+    "id": 40,
+    "question": "Yajurveda chapter 5 verse 32 mein kya likha hai?",
+    "covers_map_entry": "none — broad corpus: specific verse",
+    "expected_facts": ["Yajurved"],
+    "forbidden_facts": ["no such verse"]
+  },
+  {
+    "id": 41,
+    "question": "Sant Rampal Ji Maharaj ke vichar naari shakti par kya hain?",
+    "covers_map_entry": "none — broad corpus: women empowerment",
+    "expected_facts": ["Sant Rampal Ji"],
+    "forbidden_facts": ["anti-women"]
+  },
+  {
+    "id": 42,
+    "question": "What is the story of Dhruv Bhagat?",
+    "covers_map_entry": "none — broad corpus: saint story",
+    "expected_facts": ["Dhruv"],
+    "forbidden_facts": ["fictional"]
+  },
+  {
+    "id": 43,
+    "question": "Dowry system ke baare mein kya kaha gaya hai?",
+    "covers_map_entry": "none — broad corpus: social evil",
+    "expected_facts": ["dowry"],
+    "forbidden_facts": ["encouraged"]
+  },
+  {
+    "id": 44,
+    "question": "How many realms or lok exist in total?",
+    "covers_map_entry": "none — broad corpus: cosmology",
+    "expected_facts": ["lok"],
+    "forbidden_facts": ["only earth"]
+  },
+  {
+    "id": 45,
+    "question": "Sukshma Ved kya hai?",
+    "covers_map_entry": "none — broad corpus: Sukshma Ved",
+    "expected_facts": ["Kabir"],
+    "forbidden_facts": ["not real"]
+  },
+  {
+    "id": 46,
+    "question": "What role does Narad Ji play in creation?",
+    "covers_map_entry": "none — broad corpus: creation story",
+    "expected_facts": ["Narad"],
+    "forbidden_facts": ["creator"]
+  },
+  {
+    "id": 47,
+    "question": "Satguru ke lakshan kya hain?",
+    "covers_map_entry": "none — broad corpus: guru identification",
+    "expected_facts": ["Guru"],
+    "forbidden_facts": ["no criteria"]
+  },
+  {
+    "id": 48,
+    "question": "What is the significance of Kabir Prakat Diwas?",
+    "covers_map_entry": "none — broad corpus: Kabir Prakat Diwas",
+    "expected_facts": ["Kabir"],
+    "forbidden_facts": ["myth"]
+  },
+  {
+    "id": 49,
+    "question": "तत्वदर्शी संत की क्या पहचान है?",
+    "covers_map_entry": "none — pure Hindi query: Tatvdarshi",
+    "expected_facts": ["संत"],
+    "forbidden_facts": ["कोई पहचान नहीं"]
+  },
+  {
+    "id": 50,
+    "question": "परमात्मा कबीर साहेब ने कौन कौन से रूप धारण किये?",
+    "covers_map_entry": "none — pure Hindi query: God's incarnations",
+    "expected_facts": ["कबीर"],
+    "forbidden_facts": ["कभी प्रकट नहीं हुए"]
+  }
+]

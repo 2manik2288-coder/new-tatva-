@@ -1,0 +1,928 @@
+{
+  "timestamp": "2026-07-08T07:52:52.506Z",
+  "tag": "part3_fresh",
+  "test_set": "eval_testset_part3.json",
+  "summary": {
+    "total_questions": 25,
+    "passed": 1,
+    "failed": 24,
+    "grounded_accuracy": "4.00%",
+    "fact_recall": "19.51%",
+    "insufficient_kb_fallbacks": 0,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 24,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "none — Part 3: factual": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: how_mechanism": {
+      "total": 6,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — Part 3: count_or_list": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: comparison": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: relational": {
+      "total": 4,
+      "passed": 0,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "Who is the mother of Ashtangi?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Durga",
+        "Prakriti"
+      ],
+      "forbidden_facts": [
+        "father"
+      ],
+      "response": "दिए गए संदर्भ में असhtangi की माता के बारे में कोई जानकारी नहीं है। सभी संदर्भ असhtangi को ही त्रिमूर्ति (ब्रह्मा, विष्णु, और शिव) की माता के रूप में वर्णित करते हैं, लेकिन उनकी अपनी माता के बारे में कोई उल्लेख नहीं है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          },
+          {
+            "fact": "Prakriti",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Why does the soul feel trapped in the three worlds?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "Kaal",
+        "trap",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "happy"
+      ],
+      "response": "आत्मा तीनों लोकों में क्यों फंसी हुई महसूस करती है? इस प्रश्न का उत्तर देने के लिए, हमें पहले यह समझना होगा कि आत्मा को फंसाने वाली यह तीनों लोकें क्या हैं और उनका स्वरूप कैसा है। \n\nजैसा कि गुरु ग्रंथ साहिब में वर्णित है, सिख धर्म के मूलभूत विश्वासों में कर्म, धर्म, माया, और मुक्ति जैसे सामान्य दार्शनिक अवधारणाएं शामिल हैं। माया का अर्थ है भ्रम या मोह, जो आत्मा को सच्चाई से दूर रखता है और उसे तीनों लोकों में फंसाए रखता है। \n\nइन तीनों लोकों में आत्मा को फंसाने का मुख्य कारण माया का प्रभाव है, जो आत्मा को भौतिक सुखों और वासनाओं की ओर आकर्षित करता है। जब आत्मा इन भौतिक सुखों और वासनाओं में फंस जाती है, तो वह अपने असली स्वरूप और उद्देश्य को भूल जाती है और तीनों लोकों में फंसी रह जाती है। \n\nइस प्रकार, आत्मा तीनों लोकों में फंसी हुई महसूस करती है क्योंकि वह माया के प्रभाव में है और अपने असली स्वरूप और उद्देश्य को भूल चुकी है। आत्मा को इन तीनों लोकों से मुक्ति पाने के लिए, उसे माया के प्रभाव से मुक्त होना होगा और अपने असली स्वरूप और उद्देश्य को समझना होगा। \n\nजैसा कि एक अन्य संदर्भ में वर्णित है, निर्वाण प्राप्त करने का अर्थ है जन्म और मृत्यु के चक्र से मुक्ति पाना, जो कि जैन धर्म में भी एक महत्वपूर्ण अवधारणा है। निर्वाण प्राप्त करने के लिए, आत्मा को अपने कर्मों और वासनाओं पर विजय प्राप्त करनी होती है और अपने असली स्वरूप को समझना होता है। \n\nइस प्रकार, आत्मा को तीनों लोकों से मुक्ति पाने के लिए, उसे माया के प्रभाव से मुक्त होना होगा, अपने असली स्वरूप और उद्देश्य को समझना होगा, और अपने कर्मों और वासनाओं पर विजय प्राप्त करनी होगी।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": false
+          },
+          {
+            "fact": "trap",
+            "found": false
+          },
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "What are the rules of taking Naam Diksha?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "initiation",
+        "rules"
+      ],
+      "forbidden_facts": [
+        "no rules"
+      ],
+      "response": "नाम दीक्षा लेने के नियमों के बारे में जानने के लिए, हमें मुक्ति बोध के अंतिम निर्देशों को समझना होगा। जैसा कि कहा गया है, नाम दीक्षा लेने से पहले हमें स्वयं शास्त्रों की जांच करनी चाहिए, जीवित तत्वदर्शी सतगुरु की पहचान करनी चाहिए, और तत्काल नाम दान लेना चाहिए। इसके अलावा, हमें नियमों (मार्यादा) का सख्ती से पालन करना चाहिए, अपने अंतिम सांस तक।\n\nनाम दीक्षा लेने के लिए, हमें एक तत्वदर्शी संत से नाम दीक्षा लेनी चाहिए, जो कि संत रामपाल जी महाराज हैं। नाम दीक्षा लेने से पहले, हमें ज्ञान प्राप्त करना चाहिए और विश्वास विकसित करना चाहिए। नाम दीक्षा लेने का मुख्य उद्देश्य मोक्ष प्राप्त करना चाहिए, न कि दुनियावी सुख या किसी बीमारी से मुक्ति पाना।\n\nनाम दीक्षा लेने के बाद, हमें सतगुरु द्वारा बताए गए नियमों का पालन करना चाहिए, जैसे कि मन्त्रों का उच्चारण करना, जो कि बहुत ही सूक्ष्म होते हैं और जिन्हें स्वांसों के माध्यम से या पूरी तरह से मन से उच्चारित किया जाना चाहिए, जीब या होंठों को हिलाए बिना।\n\nइस प्रकार, नाम दीक्षा लेने के नियमों में शास्त्रों की जांच करना, जीवित तत्वदर्शी सतगुरु की पहचान करना, नाम दान लेना, और नियमों का सख्ती से पालन करना शामिल है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "initiation",
+            "found": false
+          },
+          {
+            "fact": "rules",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "Compare the characteristics of Satlok and Kaal's 21 universes.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Satlok",
+        "Kaal",
+        "destruction"
+      ],
+      "forbidden_facts": [
+        "same"
+      ],
+      "response": "Satlok और Kaal के 21 ब्रह्मांडों की विशेषताओं की तुलना करने पर, हमें पता चलता है कि वे दोनों बहुत अलग हैं। जैसा कि Sant Rampal Ji Maharaj के द्वारा समझाया गया है, Satlok में मुक्त आत्माएं रहती हैं जो जन्म और मृत्यु के चक्र से मुक्त हो गई हैं। वे Kaal के 21 ब्रह्मांडों को देख सकती हैं जो कर्म की आग में जल रहे हैं और वे सतगुरु को धन्यवाद देती हैं जिन्होंने उन्हें जन्म और मृत्यु के चक्र से बाहर निकाला।\n\nदूसरी ओर, Kaal के 21 ब्रह्मांडों में राजोगुण के साथ Lord Brahma है, जो Brahm Kaal के पुत्र हैं और 21 ब्रह्मांडों के रचयिता हैं। ये ब्रह्मांड गणितीय रूप से विनाश (Maha-Pralaya) के लिए प्रोग्राम किए गए हैं और केवल वे आत्माएं जो Satlok में पहुंचती हैं वे इस विनाश से बच सकती हैं।\n\nइसके अलावा, Satlok में Almighty Kabir हैं, जो整个 ब्रह्मांडों के रचयिता हैं और जिन्होंने Brahm Kaal को Satlok में बनाया था। यह तथ्य पुराणों में वर्णित हिरण्यगर्भ के सिद्धांत से अलग है, जो अज्ञान के कारण है। वास्तव में, Almighty Kabir ने Brahm Kaal को Satlok में बनाया और वह एक अंडे से बाहर निकला था।\n\nइस प्रकार, हम देखते हैं कि Satlok और Kaal के 21 ब्रह्मांडों में बहुत अंतर है। Satlok में मुक्त आत्माएं और Almighty Kabir हैं, जबकि Kaal के 21 ब्रह्मांडों में Lord Brahma और विनाश की प्रक्रिया है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 66.66666666666666,
+        "expected_results": [
+          {
+            "fact": "Satlok",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "destruction",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "What are the three stages of spiritual initiation?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "Naam",
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "one stage"
+      ],
+      "response": "तीन चरणों की आध्यात्मिक दीक्षा क्या है? \nआध्यात्मिक दीक्षा के तीन चरण हैं: पहले चरण में ब्रह्म गायत्री मंत्र, दूसरे चरण में सतनाम, और तीसरे चरण में सारनाम। जैसा कि प्रश्न के उत्तर में कहा गया है, एक सच्चे संत से तीन चरणों की दीक्षा के बिना, आत्मा सतलोक तक नहीं पहुंच सकती। पहले चरण में, शिष्य को मूल मंत्र प्राप्त होते हैं जो प्राथमिक चakras को जागृत करते हैं और तत्काल कarmic ऋणों का भुगतान करते हैं। दूसरे चरण में, वे सतनाम प्राप्त करते हैं जो उन्हें ऊपर उठने में मदद करता है। अंतिम चरण में, वे सारनाम प्राप्त करते हैं जो उन्हें सतलोक में प्रवेश करने में मदद करता है। यह जानकारी संत रामपाल जी महाराज की व्याख्या से मिलती है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Naam",
+            "found": false
+          },
+          {
+            "fact": "initiation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "question": "How did Kaal obtain the 21 universes from the Supreme Lord?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "tapasya",
+        "universes"
+      ],
+      "forbidden_facts": [
+        "stole"
+      ],
+      "response": "काल ने अपने 21 ब्रह्मांड कैसे प्राप्त किए? इसका उत्तर स्क्रिप्चरल टीचिंग्स में दिया गया है, जिसमें कहा गया है कि काल ने एक पैर पर खड़े होकर 70 युगों तक घोर तपस्या की। इससे सुप्रीम गॉड कबीर प्रसन्न हुए और उन्होंने काल को 21 ब्रह्मांड दिए। यह जानकारी स्क्रिप्चरल टीचिंग्स के एक्सेर्प्ट में दी गई है, जिसमें कहा गया है कि काल ने अपनी तपस्या से 21 ब्रह्मांड प्राप्त किए। इसके अलावा, अन्य एक्सेर्प्ट में भी कहा गया है कि काल 21 ब्रह्मांडों का स्वामी है, लेकिन यह नहीं बताया गया है कि उसने उन्हें कैसे प्राप्त किया। लेकिन स्क्रिप्चरल टीचिंग्स के पहले एक्सेर्प्ट में यह जानकारी दी गई है कि काल ने तपस्या से 21 ब्रह्मांड प्राप्त किए।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "tapasya",
+            "found": false
+          },
+          {
+            "fact": "universes",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "What is the relation between Maya and Ashtangi?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "Durga",
+        "Maya"
+      ],
+      "forbidden_facts": [
+        "unrelated"
+      ],
+      "response": "माया और असhtांगी के बीच संबंध को समझने के लिए, हमें यह जानना होगा कि असhtांगी कौन है और माया क्या है। जैसा कि स्क्रिप्चरल टीचिंग्स में उल्लेख किया गया है, असhtांगी देवी दुर्गा का एक अन्य नाम है, जो कि कंठ कमल (गले का कमल) पर रहती हैं और आत्मा की ऊपर की यात्रा को रोकने के लिए माया का उपयोग करती हैं।\n\nइसके अलावा, सुप्लीमेंट्री टेक्स्ट्स में उल्लेख किया गया है कि असhtांगी देवी दुर्गा ही हैं, जो माया के रूप में जानी जाती हैं और जो आत्माओं को माया के जाल में फंसाती हैं। यहाँ यह स्पष्ट होता है कि असhtांगी और माया एक ही चीज़ हैं, और देवी दुर्गा ही असhtांगी और माया दोनों के रूप में जानी जाती हैं।\n\nइस प्रकार, हम कह सकते हैं कि असhtांगी और माया एक ही चीज़ हैं, और देवी दुर्गा ही असhtांगी और माया दोनों के रूप में जानी जाती है, जो आत्माओं को माया के जाल में फंसाने का काम करती हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          },
+          {
+            "fact": "Maya",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is the duration of one day of Brahma?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "years",
+        "yuga"
+      ],
+      "forbidden_facts": [
+        "24 hours"
+      ],
+      "response": "एक दिन ब्रह्मा की अवधि १,००० चतुर्युग के बराबर होती है। यह जानकारी स्पष्ट रूप से दी गई है कि एक दिन ब्रह्मा की अवधि १,००० युग (४.३२ अरब मानव वर्ष) के बराबर होती है। इसके अलावा, यह भी उल्लेख किया गया है कि एक दिन ब्रह्मा की अवधि १,००८ चतुर्युग के बराबर होती है, लेकिन अधिकांश संदर्भों में १,००० चतुर्युग का उल्लेख किया गया है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "years",
+            "found": false
+          },
+          {
+            "fact": "yuga",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Why should a devotee avoid visiting places of pilgrimage according to the teachings?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "pilgrimage",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "mandatory"
+      ],
+      "response": "एक भक्त को तीर्थ स्थलों पर जाने से क्यों बचना चाहिए, इसे समझने के लिए हमें संत रामपाल जी महाराज की शिक्षाओं और गीता के उपदेशों को देखना होगा। गीता में स्पष्ट रूप से नहीं कहा गया है कि तीर्थ स्थलों पर जाने से मोक्ष प्राप्त होता है। इसके अलावा, तीर्थ स्थलों पर जाने से जीव हिंसा होती है, जिसका अर्थ है कि आप अनजाने में微scopic जीवों की हत्या करते हैं, जिससे आपको पाप मिलते हैं, न कि आशीर्वाद।\n\nसंत रामपाल जी महाराज के अनुसार, तीर्थ स्थल खाली मोर्टार और पेस्टल की तरह हैं। एक पिछले संत ने वहां अपनी आध्यात्मिक संपदा अर्जित की और छोड़ दी, लेकिन केवल उस स्थान पर जाने से कुछ नहीं मिलता है अगर आप सच्ची पूजा नहीं करते हैं। इसके अलावा, संत गरीब दास जी महाराज ने भी कहा है कि तीर्थ यात्रा करने से और उपवास रखने से जीवों की हत्या होती है और कई जन्मों के लिए पाप बढ़ जाते हैं।\n\nगुरु कबीर जी के शब्दों में, \"गुरु बिन माला फेरते, गुरु बिन देते दान\" - गुरु के बिना माला फेरना और दान देना दोनों ही निष्फल हैं। वेद पुराण के अनुसार, गुरु के बिना मोक्ष प्राप्त करना असंभव है। इसलिए, एक भक्त को तीर्थ स्थलों पर जाने से बचना चाहिए और इसके बजाय एक सच्चे गुरु की शरण में जाना चाहिए और उनके मार्गदर्शन में सच्ची पूजा करनी चाहिए।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "pilgrimage",
+            "found": false
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "question": "What are the five main sins mentioned in the holy scriptures?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "expected_facts": [
+        "sins",
+        "paap"
+      ],
+      "forbidden_facts": [
+        "no sins"
+      ],
+      "response": "पवित्र शास्त्रों में पांच मुख्य पापों का उल्लेख नहीं किया गया है जो आपके प्रश्न से मेल खाता है। हालांकि, यह उल्लेख किया गया है कि भगवान कबीर ही पूर्ण रूप से पापों को नष्ट कर सकते हैं। संत रामपाल जी महाराज के अनुसार, भगवान कबीर की पूजा करने और उनके नियमों का पालन करने से ही पापों की माफी मिल सकती है। लोकवेद, जो कि पवित्र शास्त्रों के विरुद्ध लोककथाएं और अफवाहें हैं, को छोड़कर पवित्र शास्त्रों में वर्णित सत्यनाम का जाप और सच्चे गुरु की शरण में रहना पापों को दूर करने में मदद कर सकता है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "sins",
+            "found": false
+          },
+          {
+            "fact": "paap",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Compare the status of Akshar Purush and KavirDev.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Akshar",
+        "KavirDev",
+        "supreme"
+      ],
+      "forbidden_facts": [
+        "equal"
+      ],
+      "response": "अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने के लिए, हमें सबसे पहले यह समझना होगा कि वे कौन हैं और उनके क्या गुण और विशेषताएं हैं। \n\nअक्षर पुरुष, जिसे परब्रह्म भी कहा जाता है, एक उच्च देवता है जो ७ संख (एक खगोलीय रूप से विशाल संख्या) ब्रह्मांडों पर शासन करता है। उसका क्षेत्र काल के क्षेत्र से बहुत अधिक सुंदर और लंबे समय तक चलने वाला है, लेकिन यह अभी भी नाशवान है। \n\nदूसरी ओर, कविरदेव, जिन्हें परम अक्षर पुरुष या पूर्ण ब्रह्म भी कहा जाता है, अमर हैं और अक्षर पुरुष से भी उच्च हैं। वह सर्वोच्च भगवान हैं जिन्होंने क्षर पुरुष और अक्षर पुरुष की रचना की और उन्हें उनके कार्य सौंपे। \n\nइस प्रकार, अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने पर, यह स्पष्ट होता है कि कविरदेव सर्वोच्च हैं और अक्षर पुरुष उनके नीचे हैं। अक्षर पुरुष का क्षेत्र नाशवान है, जबकि कविरदेव अमर हैं और उनका क्षेत्र सत्यलोक है, जो सबसे उच्च और स्थायी क्षेत्र है। \n\nइसे संत रामपाल जी महाराज के शब्दों में कहें तो, अक्षर पुरुष और कविरदेव दोनों ही महत्वपूर्ण हैं, लेकिन कविरदेव सर्वोच्च हैं और अक्षर पुरुष उनके नीचे हैं। अक्षर पुरुष का क्षेत्र नाशवान है, जबकि कविरदेव का क्षेत्र अमर है। \n\nइस प्रकार, अक्षर पुरुष और कविरदेव की स्थिति की तुलना करने से हमें यह समझने में मदद मिलती है कि वे कौन हैं और उनके क्या गुण और विशेषताएं हैं। यह हमें यह भी समझने में मदद करता है कि कविरदेव सर्वोच्च हैं और अक्षर पुरुष उनके नीचे हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Akshar",
+            "found": false
+          },
+          {
+            "fact": "KavirDev",
+            "found": false
+          },
+          {
+            "fact": "supreme",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "What happens to a soul that does not find a true Satguru?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "Satguru",
+        "reborn"
+      ],
+      "forbidden_facts": [
+        "salvation"
+      ],
+      "response": "एक आत्मा जो सच्चे सतगुरु को नहीं ढूंढ पाती है, उसके साथ क्या होता है? इस प्रश्न का उत्तर देने के लिए, हमें सतगुरु के महत्व और उनकी अनुपस्थिति में आत्मा के भविष्य को समझना होगा। \n\nसच्चे सतगुरु की अनुपस्थिति में, आत्मा को \"नुगुरा\" (गुरु से वंचित) कहा जाता है, जैसा कि एक उद्धरण में उल्लेख किया गया है। यह स्थिति आत्मा के लिए बहुत हानिकारक है, क्योंकि गुरु की सुरक्षात्मक छतरी के बिना, पूर्व के पाप फिर से सामने आ जाते हैं और आत्मा गहरे नरक में गिर जाती है। \n\nइसके अलावा, सतगुरु के मार्गदर्शन के बिना, आत्मा को मोक्ष प्राप्त करने में कठिनाई होती है। जैसा कि एक अन्य उद्धरण में कहा गया है, सतलोक तक पहुंचने के लिए सतगुरु का मार्गदर्शन आवश्यक है, और इसके बिना, आत्मा को मोक्ष प्राप्त करने में असफलता का सामना करना पड़ सकता है। \n\nइस प्रकार, एक आत्मा जो सच्चे सतगुरु को नहीं ढूंढ पाती है, उसे गहरे नरक में गिरने और मोक्ष प्राप्त करने में असफलता का सामना करना पड़ सकता है। इसलिए, सतगुरु की खोज और उनके मार्गदर्शन का पालन करना आत्मा के लिए बहुत महत्वपूर्ण है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Satguru",
+            "found": false
+          },
+          {
+            "fact": "reborn",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "question": "Who is the writer of the book 'Gyan Ganga'?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Rampal"
+      ],
+      "forbidden_facts": [
+        "Kabir"
+      ],
+      "response": "संदर्भ में दी गई जानकारी के अनुसार, यह स्पष्ट नहीं है कि 'ग्यान गंगा' पुस्तक के लेखक कौन हैं। संदर्भ में केवल यह उल्लेख किया गया है कि संत रामपाल जी महाराज के आध्यात्मिक प्रवचन और 'ग्यान गंगा' पुस्तक पढ़ने की सलाह दी गई है, लेकिन लेखक का नाम नहीं दिया गया है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Rampal",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "What is the relation between Kaal and the three qualities (Brahma, Vishnu, Shiva)?",
+      "covers_map_entry": "none — Part 3: relational",
+      "expected_facts": [
+        "father",
+        "sons"
+      ],
+      "forbidden_facts": [
+        "unrelated"
+      ],
+      "response": "काल और तीन गुणों (ब्रह्मा, विष्णु, शिव) के बीच संबंध जानने के लिए, हमें यह समझना होगा कि काल ने तीन गुणों को कैसे उत्पन्न किया। जैसा कि स्क्रिप्चरल टीचिंग्स में बताया गया है, काल ने सतलोक से निकाले जाने के बाद, दुर्गा से बलपूर्वक विवाह किया और उनके संयोग से तीन पुत्रों का जन्म हुआ, जो तीन गुणों से सम्पन्न थे: ब्रह्मा (रजोगुण), विष्णु (सतोगुण), और शिव (तमोगुण)।\n\nइसके अलावा, सप्लिमेंट्री टेक्स्ट्स में बताया गया है कि ब्रह्मा, विष्णु, और शिव तीनों ही प्राकृति (दुर्गा देवी) और ब्रह्म (काल, शैतान) के संयोग से उत्पन्न हुए हैं और वे सभी नाशवान हैं। यह भी बताया गया है कि भगवान शिव (ब्रह्म-काल) गुणों से परे हैं।\n\nइस प्रकार, काल और तीन गुणों के बीच संबंध यह है कि काल ने दुर्गा से विवाह किया और उनके संयोग से तीन पुत्रों का जन्म हुआ, जो तीन गुणों से सम्पन्न थे। काल ने ब्रह्मा, विष्णु, और शिव को अपने साथी बनाया और उन्हें सृष्टि के विभिन्न कार्यों के लिए जिम्मेदार बनाया, जैसे कि ब्रह्मा को सृष्टि का कार्य, विष्णु को पालन का कार्य, और शिव को विनाश का कार्य।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "father",
+            "found": false
+          },
+          {
+            "fact": "sons",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Why is it forbidden to perform shradh or ancestors worship?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "shradh",
+        "ancestors",
+        "Gita"
+      ],
+      "forbidden_facts": [
+        "necessary"
+      ],
+      "response": "Shradh aur Pitri Puja (ancestors worship) ka karna kyon hai bandh? \n\nYeh karna kyon hai bandh, yeh kuchh pramukh karan hain:\n\nPitri Puja ka karna Gita aur Markandeya Purana ke anusaar galat hai. Yeh karna Pitra Lok mein ghatna ki sambhavana hai, jahan par aap apne pitron ke saath hi ghatna hoga. \n\nYeh karna kisi bhi aarthik labh ya bhavishya ki uplabdhi ke liye nahin hai, balki yeh aapko Pitra Lok mein ghatna ki sambhavana hai. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai, jahan par aapko apne pitron ke saath hi ghatna hoga. \n\nYeh karna aapko apne pitron ke saath hi ghatna ki sambhavana hai",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "shradh",
+            "found": true
+          },
+          {
+            "fact": "ancestors",
+            "found": true
+          },
+          {
+            "fact": "Gita",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 16,
+      "question": "Compare the method of worship in Vedas with Gita.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "expected_facts": [
+        "Vedas",
+        "Gita",
+        "Om"
+      ],
+      "forbidden_facts": [
+        "completely identical"
+      ],
+      "response": "Vedas aur Gita mein bhakti ka tareeka ekjut hai. Yeh sab kuchh Gita Chapter 4 Verse 34 aur Yajurved Chapter 40 Verse 10 mein likha hai. Ismein kaha gaya hai ki jo Tatvadarshi Saint ko poochho, vah aapko Supreme God ke bare mein sahi gyaan aur bhakti ka tareeka batayega.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 66.66666666666666,
+        "expected_results": [
+          {
+            "fact": "Vedas",
+            "found": true
+          },
+          {
+            "fact": "Gita",
+            "found": true
+          },
+          {
+            "fact": "Om",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "question": "What is the role of the Trikuti Kamal in the subtle body?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "lotus",
+        "Trikuti"
+      ],
+      "forbidden_facts": [
+        "physical"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "lotus",
+            "found": false
+          },
+          {
+            "fact": "Trikuti",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "question": "How can a soul cross the 10th door and enter the 11th door?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "expected_facts": [
+        "door",
+        "Satguru",
+        "mantra"
+      ],
+      "forbidden_facts": [
+        "automatically"
+      ],
+      "response": "To cross the 10th door and enter the 11th door, the soul must first progress through various Kamals/Chakras after death. The journey begins from the \"Mool Kamal / Chakra\" and progresses to \"Swaad Kamal / Chakra\", then to \"Naabhi Kamal / Chakra\", then to \"Hriday Kamal / Chakra\", then to \"Kanth Kamal / Chakra\" and finally to the \"Trikuti Kamal / Chakra\". However, the specific details about crossing the 10th door and entering the 11th door are not explicitly mentioned in the provided context.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 33.33333333333333,
+        "expected_results": [
+          {
+            "fact": "door",
+            "found": true
+          },
+          {
+            "fact": "Satguru",
+            "found": false
+          },
+          {
+            "fact": "mantra",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "question": "List the names of the five elements of the human body.",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the difference between a true saint and a fake guru?",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "question": "Who is the father of Brahma, Vishnu, and Mahesh?",
+      "covers_map_entry": "none — Part 3: factual",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "question": "What are the qualifications of a Tatvdarshi Saint according to Gita Chapter 4 Verse 34?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "question": "Why does Kaal consume one lakh human souls daily?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Compare the life duration of Brahma and Vishnu.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "What is the relationship between the soul and KavirDev?",
+      "covers_map_entry": "none — Part 3: relational",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "timestamp": "2026-07-08T07:38:28.674Z",
+  "tag": "part3_fresh",
+  "test_set": "eval_testset_part3.json",
+  "summary": {
+    "total_questions": 25,
+    "passed": 0,
+    "failed": 25,
+    "grounded_accuracy": "0.00%",
+    "fact_recall": "0.00%",
+    "insufficient_kb_fallbacks": 0,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 25,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "none — Part 3: factual": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: how_mechanism": {
+      "total": 6,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: count_or_list": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: comparison": {
+      "total": 5,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — Part 3: relational": {
+      "total": 4,
+      "passed": 0,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "Who is the mother of Ashtangi?",
+      "covers_map_entry": "none — Part 3: factual",
+      "expected_facts": [
+        "Durga",
+        "Prakriti"
+      ],
+      "forbidden_facts": [
+        "father"
+      ],
+      "response": "दी गई संदर्भ सामग्री में असhtangi की माँ के बारे में कोई जानकारी नहीं है। सभी संदर्भ खंडों में असhtangi को दुर्गा के रूप में वर्णित किया गया है, जो ब्रह्मा, विष्णु और शिव की माँ है, लेकिन उनकी अपनी माँ के बारे में कोई उल्लेख नहीं है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          },
+          {
+            "fact": "Prakriti",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Why does the soul feel trapped in the three worlds?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "What are the rules of taking Naam Diksha?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "Compare the characteristics of Satlok and Kaal's 21 universes.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "What are the three stages of spiritual initiation?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "question": "How did Kaal obtain the 21 universes from the Supreme Lord?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "What is the relation between Maya and Ashtangi?",
+      "covers_map_entry": "none — Part 3: relational",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is the duration of one day of Brahma?",
+      "covers_map_entry": "none — Part 3: factual",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Why should a devotee avoid visiting places of pilgrimage according to the teachings?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "question": "What are the five main sins mentioned in the holy scriptures?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Compare the status of Akshar Purush and KavirDev.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "What happens to a soul that does not find a true Satguru?",
+      "covers_map_entry": "none — Part 3: relational",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "question": "Who is the writer of the book 'Gyan Ganga'?",
+      "covers_map_entry": "none — Part 3: factual",
+      "error": "socket hang up",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: socket hang up"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "What is the relation between Kaal and the three qualities (Brahma, Vishnu, Shiva)?",
+      "covers_map_entry": "none — Part 3: relational",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Why is it forbidden to perform shradh or ancestors worship?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "question": "Compare the method of worship in Vedas with Gita.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "question": "What is the role of the Trikuti Kamal in the subtle body?",
+      "covers_map_entry": "none — Part 3: factual",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "question": "How can a soul cross the 10th door and enter the 11th door?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "question": "List the names of the five elements of the human body.",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the difference between a true saint and a fake guru?",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "question": "Who is the father of Brahma, Vishnu, and Mahesh?",
+      "covers_map_entry": "none — Part 3: factual",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "question": "What are the qualifications of a Tatvdarshi Saint according to Gita Chapter 4 Verse 34?",
+      "covers_map_entry": "none — Part 3: count_or_list",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "question": "Why does Kaal consume one lakh human souls daily?",
+      "covers_map_entry": "none — Part 3: how_mechanism",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Compare the life duration of Brahma and Vishnu.",
+      "covers_map_entry": "none — Part 3: comparison",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "What is the relationship between the soul and KavirDev?",
+      "covers_map_entry": "none — Part 3: relational",
+      "error": "",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: "
+        ]
+      }
+    }
+  ]
+}

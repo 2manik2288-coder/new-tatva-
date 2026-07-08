@@ -1,0 +1,1919 @@
+{
+  "timestamp": "2026-07-08T07:18:57.798Z",
+  "tag": "part3_phase_a",
+  "test_set": "eval_testset_phase_a.json",
+  "summary": {
+    "total_questions": 50,
+    "passed": 17,
+    "failed": 33,
+    "grounded_accuracy": "34.00%",
+    "fact_recall": "44.23%",
+    "insufficient_kb_fallbacks": 1,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 33,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "rewrites: mahakal/16 kalas": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: tridev/trinity trap": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: srishti rachana/creation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garbh vaas/womb": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: bhanwar gufa": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: dasam dwaar": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: chaurasi/84 lakh": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: seu/samman/nekee": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garibdas+kabir": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: ranka banka": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: sadna kasai": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: ajamil": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: biggest sin": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: human birth": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: true guru": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: death": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: paap karma": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: param akshar/supreme god": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: roop/form of god": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: kaal kaun": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: durga kaun": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: satlok kya": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: mukti/liberation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: naam daan": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: bhagavad gita": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: quran/islam": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: bible/jesus": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: vedas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: guru granth/sikh": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: alcohol": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: meat": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: five thieves": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: kundalini": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: heaven/hell": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: ghost/pitra": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: pativrata": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: soul bodies": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 1
+    },
+    "none — broad corpus: kaal expulsion": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: Bandichhor": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: specific verse": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: women empowerment": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: saint story": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: social evil": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: cosmology": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: Sukshma Ved": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: creation story": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: guru identification": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: Kabir Prakat Diwas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: Tatvdarshi": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: God's incarnations": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What are the 16 kalas of Vishnu?",
+      "covers_map_entry": "rewrites: mahakal/16 kalas",
+      "expected_facts": [
+        "kala",
+        "Vishnu"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "The 16 kalas (arts/powers) of Lord Vishnu are not explicitly mentioned in the retrieved context. However, it is mentioned that Lord Vishnu possesses 16 \"Kalas\" (arts/energies) in comparison to Jyoti Niranjan Kaal's 1,000 Kalas. \n\nBut, we can infer from the context that the 16 kalas are related to the divine arts or powers of Lord Vishnu. Unfortunately, the specific details about these 16 kalas are not provided in the retrieved context.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kala",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 2,
+      "question": "Tridev ka jaal kya hai?",
+      "covers_map_entry": "rewrites: tridev/trinity trap",
+      "expected_facts": [
+        "Brahma",
+        "Vishnu",
+        "Shiva",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Tridev ka jaal, jo ki Raja Maya jaal pasaara ho hai, ek aisa jaal hai jismein logon ko apne vices aur galat dharmik vyavahaaron se bachne ke liye apne aap ko satlok se chhodna hota hai. Is jaal mein, logon ko apne sansaarik jeevan ke kaam-kaj se mukt ho kar apne aap ko God ki or prabhaavit karne ke liye prerit kiya jata hai.\n\nYah jaal Raja Maya ki shakti se banaya gaya hai, jo ki Kaal ki patni hai. Is jaal ko chhodne ke liye, logon ko apne aap ko satlok ki or prabhaavit karne ke liye prerit kiya jata hai, jahaan se ve apne vices aur galat dharmik vyavahaaron se mukt ho sakte hain.\n\nIs jaal ko chhodne ke liye, Bandi Chhor ke shabdon ka upyog kiya gaya hai: \"Chal hansa Satlok hamare chhodo yo sansara ho. Is sansar ka kaal hai Raja Maya jaal pasaara ho. Maya jaal pasaara ho.\"",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 25,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": false
+          },
+          {
+            "fact": "Vishnu",
+            "found": false
+          },
+          {
+            "fact": "Shiva",
+            "found": false
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "Srishti ki rachana kaise hui?",
+      "covers_map_entry": "rewrites: srishti rachana/creation",
+      "expected_facts": [
+        "creation"
+      ],
+      "forbidden_facts": [
+        "big bang only"
+      ],
+      "response": "Srishti ki rachana ke baare mein aapke sawal ka jawab dena hai. \n\nSrishti ki rachana ke baare mein Rigveda Mandal 10 Sukta 90 mein likha hai ki Param Shri (KavirDev) ne apni shakti se srishti ki rachana ki hai. Vah apne shabd (Shabd) se neeche ki duniya banaya hai. Kaal (Brahm) ko ek aatma ke roop mein banaya gaya tha, lekin vah bahut hi jatil tapasya karke apne alag domain ke liye prarthana ki. Param Shri ne use 21 duniya di. Hum insaan woh aatma hain jo galat roop se anami lok se nikal kar kaal ki samayik aur khatarnak rachna ko dekhne ke liye chune hain.\n\nIske alawa, Tatvgyan Sandesh mein bhi is vishay par baat ki gayi hai. Satguru Rampal Ji Maharaj ne apne satsangon mein iske baare mein vistrit jankari di hai. Unhone kehaya ki Param Shri ne apni shakti se srishti ki rachana ki hai aur hum insaan woh aatma hain jo anami lok se nikal kar kaal ki rachna ko dekhne ke liye chune hain.\n\nIske liye, aap Rigveda Mandal 10 Sukta 90 aur Tatvgyan Sandesh ka pustak par ja sakte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "creation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+      "covers_map_entry": "rewrites: garbh vaas/womb",
+      "expected_facts": [
+        "womb",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "comfortable"
+      ],
+      "response": "Garbh vaas mein aatma ko bahut hi adhik dukh hota hai. Yeh dukh uske liye ek aisa hai jaise ki usko jalne ka saman hota hai. Aatma ko 9 mahino ke liye garbh mein rakha jata hai, jahan usko garam aur asidik pani ke saath saath kaam karna padta hai. Is prakaar, aatma ko bahut hi adhik dukh hota hai aur usse apne purane janmo ki yaad aati hai. \n\nIs dukh se bachne ke liye, aatma Bhakti (worship) karne ki prathaa karta hai. Lekin jab bachcha janm leta hai, to Kaal ki Maya (cosmic illusion) uske man ko saaf kar deta hai aur uska yeh yaad khatam ho jata hai. Is prakaar, aatma phir se duniya ke bandhanon mein fasa jata hai. \n\nYeh garbh vaas ka dukh aatma ke liye ek aisa hai jaise ki usko jalne ka saman hota hai, aur isse bachne ke liye aatma ko Moksha (liberation) ki prapti karne ki aavashyakta hoti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "womb",
+            "found": false
+          },
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "What is Bhanwar Gufa?",
+      "covers_map_entry": "rewrites: bhanwar gufa",
+      "expected_facts": [
+        "whirlpool"
+      ],
+      "forbidden_facts": [
+        "physical cave"
+      ],
+      "response": "Bhanwar Gufa (Whirling Cave) is a colossal, rotating spiritual wormhole between ParBrahm and Satlok. It is a massive, spinning vortex of highly concentrated spiritual energy situated between the realms of Kaal and Akshar Purush. This vortex is guarded by highly advanced spiritual mechanisms and is the barrier between ParBrahm and Satlok. Without the final Sarnaam or Sar Shabd, a soul is violently shredded and cast downward, or energetically shredded and cast down. \n\nIn the macrocosm, it is the path called the \"Bhanwar Gufa\" which finally leads to the \"12th Door\" which opens into Satlok / Sachkhand / Eternal Place. Microcosmically, within the human subtle body, it is a spinning energetic vortex located above the Trikuti.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "whirlpool",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "question": "Dasam Dwaar kya hai?",
+      "covers_map_entry": "rewrites: dasam dwaar",
+      "expected_facts": [
+        "tenth",
+        "door"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Dasam Dwaar ka arth hai soft spot ya mushkil se paaye jaa sakne wala sthaan, jo aapke shir par hota hai. Yeh yogiyon ke liye Brahmaloka tak jaane ke liye ek nikaas sthaan hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "tenth",
+            "found": false
+          },
+          {
+            "fact": "door",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "Chaurasi lakh yoni ka chakra kya hai?",
+      "covers_map_entry": "rewrites: chaurasi/84 lakh",
+      "expected_facts": [
+        "84",
+        "species"
+      ],
+      "forbidden_facts": [
+        "only humans"
+      ],
+      "response": "Chaurasi lakh yoni ka chakra hai Kaal ki satta ke 8.4 million jeevon ke roop mein. Yeh jeevon ka ek chakra hai jismein logon ka janam aur mrityu hota hai. Yeh chakra kaal ki maya ke karan hota hai aur logon ko uske andar fass kar deti hai. \n\nYeh chakra bahut hi bada hai aur ismein bahut se jeevon hain. Yeh chakra kaal ki satta ke karan hota hai aur yeh logon ko uske andar fass kar deti hai. Yeh chakra kaal ki maya ke karan hota hai aur yeh logon ko uske andar fass kar deti hai. \n\nYeh chakra kaal ki satta ke 8.4 million jeevon ke roop mein hota hai. Yeh jeevon ka ek chakra hai jismein logon ka janam aur mrityu hota hai. Yeh chakra kaal ki maya ke karan hota hai aur yeh logon ko uske andar fass kar deti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "84",
+            "found": false
+          },
+          {
+            "fact": "species",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "Seu Samman aur Nekee ki kahani batao",
+      "covers_map_entry": "rewrites: seu/samman/nekee",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Seu Samman aur Nekee ki kahani ek prasiddh kathaa hai jo Sant Rampal Ji Maharaj ke dwara prasaarit ki gayi hai. Yeh kathaa unke Satlok ki yatra ke dauraan hui ek aitihaasik ghatna hai.\n\nYeh kathaa yeh hai ki Seu, Samman, aur Nekee Guru Ji ke shishya the. Ek din, unke Guru Ji ne unhein kaha ki ve apne ghar ke kuchh aavashyak saman le jaayein. Lekin, unke paas paise nahin the, isliye ve kisi se bhi saman nahin le sakte the.\n\nIsliye, Seu, Samman, aur Nekee ne socha ki ve kuchh saman chura kar le jaayein. Ve ek rich merchant ke ghar gaye aur uske ghar se kuchh aata le gaye. Lekin, jab ve wapas aaye to, Seu ko merchant ne pakad liya aur usne unhein dhang se pakad liya.\n\nMerchant ne Seu ko dhang se pakad kar keh diya ki ve use kal subah public mein pradarshit karenge. Samman ne to aata le gaya, lekin Seu ko merchant ne pakad liya. Samman ne aata le gaya aur wapas gaya.\n\nIs ghatna ke baad, Seu ne apne Guru Ji se baat ki aur unhone use kaha ki ve apne ghar ke saman le jaayein. Lekin, Seu ne kaha ki ve kuchh saman chura kar le gaye the aur unhein merchant ne pakad liya hai.\n\nGuru Ji ne Seu ko kaha ki ve apne ghar ke saman le jaayein aur unhein koi saman nahin churana chahiye. Seu ne kaha ki ve kuchh saman chura kar le gaye the, lekin Guru Ji ne use kaha ki ve apne ghar ke saman le jaayein aur unhein koi saman nahin churana chahiye.\n\nIs prakaar, Seu Samman aur Nekee ki kahani ek aitihaasik ghatna hai jo Sant Rampal Ji Maharaj ke dwara prasaarit ki gayi hai. Yeh kathaa unke Satlok ki yatra ke dauraan hui ek aitihaasik ghatna hai jo unke shishyon ke liye ek sabak hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+      "covers_map_entry": "rewrites: garibdas+kabir",
+      "expected_facts": [
+        "Garibdas"
+      ],
+      "forbidden_facts": [
+        "founder of Kabir Panth"
+      ],
+      "response": "Garibdas ji ne Kabir Saheb se ek khet mein milne ka anubhav kiya tha. Kabir Saheb ne Garibdas ji ko Satlok ki jaankari aur prakriti ki sthaapna ke baare mein gyaan diya tha. Jab Garibdas ji ne Kabir Saheb ke diye gyaan ko samajhne mein asamarthataa dikhayi, to ve ne Kabir Saheb se Satlok ko dekhne ka anurodh kiya. Kabir Saheb ne Garibdas ji ko deeksha di aur unhein mantra path karne ke liye kaha.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Garibdas",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 10,
+      "question": "Ranka aur Banka ki katha sunao",
+      "covers_map_entry": "rewrites: ranka banka",
+      "expected_facts": [
+        "devotee"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Ranka aur Banka ki katha ek prasiddh Katha hai jo Sant Rampal Ji Maharaj ne apne shabdkosh mein vistar se vistrit ki hai. Unki katha is prakaar hai:\n\nRanka aur Banka do bahut hi shradhali bhakt the. Unki aatma ka lakshya moksh prapti ka tha. Ek din, Bhagwan ne unke path par suvarn rupay rakhe. Ranka ne apni patni Banka se kuch nahin kehkar us suvarn ko dhool se dhak diya taaki usse koi chinta nahin ho. Banka ne usse puchha, \"Tum dhool ko dhool par kyun daalte ho?\" Yah Ranka aur Banka ki vairagya ka adbhut udaaharan hai, jismein ve samajh gaye ki duniya ki samriddhi sirf dhool hai.\n\nIske alawa, Ranka aur Banka ne apne jeevan mein ek sadupyogita jeevan jeevit kiya. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nRanka aur Banka ne apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho.\n\nUnhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh prapti ka ho. Unhone apne aap ko isliye sadupyogita kiya ki ve apne aatma ka lakshya moksh",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "devotee",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Sadna kasai ki kahani kya hai?",
+      "covers_map_entry": "rewrites: sadna kasai",
+      "expected_facts": [
+        "butcher"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Sadna Kasai ki kahani ek prabhavshali aur shaktishali kathaa hai jo is baat ka pramaan deta hai ki karmik rachnaa ek aisa vastu hai jo humein apne gyaan aur vichaar se pehle hi samajhne ki zaroorat hai. \n\nSadna Kasai ek kasai the, jo apne kaam mein bahut hi shaktishali the. Ek raat, unhein ek bakraa kaatne ka kaam diya gaya. Jab ve apne khambhaa uthaane wale the, to Supreme God ne bakra ko baat karne ki shakti di. Bakra ne kaha, \"Sadna! Aaj tum mere gale se kaatoge, paragat jeevan mein main tumhare gale se kaatunga. Hum dono is tarah se ek dusre ke saath karmik rachnaa mein lag rahe hain.\" \n\nSadna ko is aisa kathin aur aatm-kathin vichaar ne dar gaya, aur ve apne kaam se hatake hue, God Kabir ki sharan lene ke liye gaye. Is tarah, ve karmik rachnaa se mukt hue aur ek nayi disha mein chalne ke liye taiyaar hue.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "butcher",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "Ajamil ki katha mein kya hua tha?",
+      "covers_map_entry": "rewrites: ajamil",
+      "expected_facts": [
+        "Ajamil"
+      ],
+      "forbidden_facts": [
+        "righteous man"
+      ],
+      "response": "Ajamil ki katha mein yeh hua tha ki Ajamil ek kanchuki Brahmin tha jo ek ganika ke saath rehta tha aur bahut se paap karke rehta tha. Lekin uske sabse chhote beta ko usne \"Narayan\" naam diya tha (jiska matlab hai Bhagwan ke liye). Jab uska mrityu aaya, to usne apne bete ki avadharan karke \"Narayan!\" ka naam liya. Is naam ka upyog karke usne ek aisa avastha mein aaya jiska naam \"Tadap\" hai, jismein usne Bhagwan se madad ki. Bhagwan ne usko ek samay ki avadharan di, jismein usne ek sachchha Guru se sikhna, sahi Bhakti karna aur ant mein moksha prapt karna.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Ajamil",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 13,
+      "question": "Sabse bada paap kya hai?",
+      "covers_map_entry": "hindiBridges: biggest sin",
+      "expected_facts": [
+        "sin"
+      ],
+      "forbidden_facts": [
+        "no sin exists"
+      ],
+      "response": "Sabse bada paap hai jeev-hinon ke khilaf hinsa karna. Kabir ji kehte hain ki jeev-hinon ke khilaf koi bhi hinsa, chhoti ya badi, adhik tarah se dand ka karan ban jati hai.\n\nIske alawa, Sant Rampal Ji Maharaj kehte hain ki Paramatma sabhi jeev-hinon ka pitaa hai. Unke ek bachche ko maarne se, doosre ke liye khana karna, adhik tarah se adhik dand ka karan ban jata hai. Isse aapka manushya janam mein adhik dard aur bhukh ka samna karna padta hai.\n\nGaribdas ji bhi kehte hain ki Yam ke halkaron ko apne haathon mein lekar ved karna hai. Yah sabhi kaal ke messengers the, jo logon ko galat raah par chalaate the.\n\nIsliye, sabse bada paap hai jeev-hinon ke khilaf hinsa karna, jo aapko adhik dand ka karan banata hai aur aapko adhik dard aur bhukh ka samna karna padta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "sin",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "Manushya janam ka mahatva kya hai?",
+      "covers_map_entry": "hindiBridges: human birth",
+      "expected_facts": [
+        "human"
+      ],
+      "forbidden_facts": [
+        "unimportant"
+      ],
+      "response": "Manushya janam ka mahatva isliye hai ki yeh ek hi jeevante hai jismein \"hardware\" uplabdh hai jo Paramatma ki frequency se judne ke liye upyukt hai. Yeh 8.4 million prajaatiyon mein se ek hi jeevante hai jismein is tarah ka \"hardware\" uplabdh hai.\n\nIske alawa, Bhagavad Gita Adhyay 8, Shlok 6 aur 7 mein kaha gaya hai ki jis-jis manushya antkaal mein Paramatma ki yaad mein hote hain, ve usi Paramatma ko prapt hote hain. Yeh kaha gaya hai ki jis-jis manushya apne antkaal mein kisi bhi bhav ko yaad karte hain, ve usi bhav se bhavit hote hain aur usi bhav ko prapt karte hain.\n\nIske liye, Krishan Ji ne arjun ko nirantar apni yaad mein rahna aur yudh mein shamil hona seekha hai. Yeh kaha gaya hai ki manushya janam mein Paramatma ki yaad mein rahna aur uski sharan mein rahna sabse mahatvapurn hai.\n\nAur, Sant Rampal Ji Maharaj ne bhi kaha hai ki manushya janam mein Paramatma ki yaad mein rahna aur uski sharan mein rahna sabse mahatvapurn hai. Yeh kaha gaya hai ki jis-jis manushya apne antkaal mein Paramatma ki yaad mein hote hain, ve usi Paramatma ko prapt karte hain aur uske darshan ko prapt karte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "human",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Sachcha Guru ki pehchaan kaise karein?",
+      "covers_map_entry": "hindiBridges: true guru",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "not needed"
+      ],
+      "response": "Sachcha Guru ki pehchaan karne ke liye, aapko apne man mein ek vishayik aur sthir dhyan lagana hoga. Iske liye, aapko apne Surati ko Guru ki sharaarati (physical form) par anchornahin karna hoga. Jab aap yeh dhyan karte hain, to aapka atma (soul) Satlok ki uchch-frekvansi energy ko saafee download kar sakta hai, jisse aapka man aur atma shuddh aur shanti se bhara ho jata hai.\n\nIske alawa, aapko apne Guru ki pehchaan karne ke liye unki vachan (words) aur kriyaon (actions) par dhyan dena hoga. Ek sachcha Guru hamesha apne shishyon ko sachcha naam (true devotion) aur sachcha bhakti (true devotion) ka marg deta hai. Unka vachan aur kriya aapko apne man mein shanti aur shuddhata pradaan karta hai.\n\nAapko apne Guru ki pehchaan karne ke liye Kabir ji ke shabdon ka bhi dhyan dena hoga, jo kehte hain, \"Hakka Kabir\" (The True Kabir) Guru Nanak Dev ji ne apne Bani mein vishesh roop se prashansit kiya hai. Isse aapko samajh mein aata hai ki ek sachcha Guru hamesha apne shishyon ko sachcha naam aur sachcha bhakti ka marg deta hai.\n\nAnt mein, aapko apne Guru ki pehchaan karne ke liye apne man mein vishwas aur shradha lagana hoga. Ek sachcha Guru hamesha apne shishyon ko apne vishwas aur shradha se bhara hua hota hai. Iske liye, aapko apne Guru ki pehchaan karne ke liye apne man mein vishwas aur shradha lagana hoga aur unki vachan aur kriyaon par dhyan dena hoga.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 16,
+      "question": "Mrityu ke baad kya hota hai?",
+      "covers_map_entry": "hindiBridges: death",
+      "expected_facts": [
+        "soul"
+      ],
+      "forbidden_facts": [
+        "nothing happens"
+      ],
+      "response": "Mrityu ke baad, jab koi vyakti apne saath lekar gaya karm ka itihaas dharamraj ke darbar mein pesh karta hai. Yeh karm ka itihaas unke jeevan mein kiye gaye kaam aur unke vicharon ke anusaar taiyaar kiya jata hai. Agar vyakti ne apne jeevan mein dharmik kaam kiye hain aur apne vicharon mein dharmik rahkar rahne ki koshish ki hai, to unka karm ka itihaas dharamraj ke darbar mein achha hoga.\n\nLekin, agar vyakti ne apne jeevan mein adharmik kaam kiye hain aur apne vicharon mein adharmik rahkar rahne ki koshish ki hai, to unka karm ka itihaas dharamraj ke darbar mein beimaan hoga. Iske baad, dharamraj vyakti ko Mrityu Lok se Satlok tak pahunchne ke liye ek marg deta hai.\n\nSatguru ke kripa se, jo vyakti Satlok tak pahunchne ke liye chunav hain, ve Mrityu Lok se Satlok tak aasani se pahunch jaate hain. Ve dharamraj ke darbar se guzar kar Satlok tak jaate hain, jahan ve apne aap ko pura karne ke liye avsar paate hain.\n\nIs prakaar, Mrityu ke baad vyakti ka karm ka itihaas dharamraj ke darbar mein pesh kiya jata hai, aur phir unhe Satlok tak pahunchne ke liye ek marg deta jata hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "question": "Karma ka siddhant kya hai?",
+      "covers_map_entry": "hindiBridges: paap karma",
+      "expected_facts": [
+        "karma"
+      ],
+      "forbidden_facts": [
+        "karma does not exist"
+      ],
+      "response": "Karma ka siddhant ek bahut hi mahatvapoorn vishay hai. Ismein kaha gaya hai ki har vyakti ka jeevan mein kiye gaye kaaryon ka parinaam hota hai. Yeh parinaam aapke aage ke jeevan mein aayega.\n\nKarma mein teen prakaar ke kaary hote hain: Sanchit Karma, Prarabdha Karma, aur Kriyaman Karma.\n\nSanchit Karma aapke lakshyaan aur kaaryon ka ek bada bank hai, jo aapke lakshyaan aur kaaryon ke anusaar banata hai. Yah aapke lakshyaan aur kaaryon ke anusaar aapke aage ke jeevan mein aayega.\n\nPrarabdha Karma aapke Sanchit Karma ka ek chhota hissa hai, jo aapke aage ke jeevan mein aayega. Yah aapke aage ke jeevan mein aapke lakshyaan aur kaaryon ke anusaar aapke kaam aayega.\n\nKriyaman Karma aapke vartmaan kaaryon ka parinaam hai. Yah aapke vartmaan kaaryon ke anusaar aapke aage ke jeevan mein aayega.\n\nIske alawa, Nishkam Karma bhi ek mahatvapoorn vishay hai. Nishkam Karma aapke kaaryon ko aapke lakshyaan aur kaaryon ke anusaar karna hai, nahi ki aapke liye ya aapke liye. Yah aapke aage ke jeevan mein aapke lakshyaan aur kaaryon ke anusaar aapke kaam aayega.\n\nIs prakaar, karma ka siddhant aapke kaaryon ka parinaam hota hai, aur aapke aage ke jeevan mein aapke lakshyaan aur kaaryon ke anusaar aapke kaam aayega.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "karma",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 18,
+      "question": "Who is the Supreme God according to all scriptures?",
+      "covers_map_entry": "hindiBridges: param akshar/supreme god",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "no supreme god"
+      ],
+      "response": "According to the scriptures, the Supreme God is KavirDev (Lord Kabir). He is the ultimate creator of the infinite universes, far above Kaal, Brahma, Vishnu, and Shiva. As stated in the Rigveda and Yajurveda, He is referred to as \"Kavir Dev\". The Devi Bhagwat Purana also mentions that Goddess Durga is created by the eternal God Param Akshar Purush 'KavirDev', who is the creator of all universes. Furthermore, the scriptures indicate that the worship of Brahma, Vishnu, Shiva, Durga, and other deities is not in accordance with the Holy Scriptures, and henceforth, this worship is arbitrary and not of any use for granting a devotee Moksha/liberation. According to the Scriptures, the Supreme God is indeed Kabir.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 19,
+      "question": "Bhagwan sakar hai ya nirakar?",
+      "covers_map_entry": "hindiBridges: roop/form of god",
+      "expected_facts": [
+        "form"
+      ],
+      "forbidden_facts": [
+        "cannot be known"
+      ],
+      "response": "Bhagwan ka sakaar aur nirakar roop dono hi hai. Ismein sakaar roop mein Bhagwan ka aadharik roop hai, jismein unke gunon aur gunvattaon ka darshan hota hai. Jabki nirakar roop mein Bhagwan ka aatma roop hai, jismein unke gunon aur gunvattaon ka darshan nahin hota hai.\n\nIsmein sakaar roop mein Bhagwan ka aadharik roop hai, jismein unke gunon aur gunvattaon ka darshan hota hai. Is roop mein Bhagwan ka darshan karte samay, hum unke gunon aur gunvattaon ka darshan kar sakte hain. Lekin nirakar roop mein Bhagwan ka aatma roop hai, jismein unke gunon aur gunvattaon ka darshan nahin hota hai. Is roop mein Bhagwan ka darshan karte samay, hum unke aatma roop ka darshan kar sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai, aur nirakar roop sakaar roop ka hi ek roop hai. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nIske liye, humein Bhagwan ke gunon aur gunvattaon ka darshan karne ke liye sakaar roop ka upyog karna hoga, aur unke aatma roop ka darshan karne ke liye nirakar roop ka upyog karna hoga. Isse hum Bhagwan ka sakaar aur nirakar roop dono hi samajh sakte hain.\n\nYah bhi yaad rakhein ki, Bhagwan ka sakaar aur nirakar roop dono hi ek hi hai. Ismein koi antar nahin hai. Bhagwan ka sakaar roop nirakar roop ka hi ek roop hai,",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "form",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "Kaal kaun hai aur uska kya kaam hai?",
+      "covers_map_entry": "hindiBridges: kaal kaun",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "question": "Durga Mata kaun hai?",
+      "covers_map_entry": "hindiBridges: durga kaun",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "question": "Satlok kya hai aur wahan kaise jaayein?",
+      "covers_map_entry": "hindiBridges: satlok kya",
+      "expected_facts": [
+        "Satlok",
+        "eternal"
+      ],
+      "forbidden_facts": [
+        "imaginary"
+      ],
+      "response": "Satlok ek antima, aatmaik abhaagya sthaan hai jahaan koi mrityu ya dukh nahin hota hai. Yeh sthaan SatPurush (Supreme God) dwara shasit hai. \n\nSatlok ka naam Ritdhaam ya Sachkhand ke roop mein bhi jaana jata hai. Yeh 21 jagatyon ke baahar hai, jo Kaal dwara sthapit hain. \n\nSatlok mein jaane ke liye, humein apne aatmaik vikaas aur sadhanaon ke madhyam se apne aatma ko ujaagar karna hoga. Kabir ji ne Nanak Dev ji ko Satlok dikhaya tha, jahaan unhone apne aatma ko ujaagar kiya tha. \n\nSatPurush Satlok mein vasant karte hain, jahaan koi mrityu, janam, jaam, aur dukh nahin hota hai. Yeh sthaan antima, aatmaik abhaagya sthaan hai jahaan hum apne aatmaik vikaas aur sadhanaon ke madhyam se apne aatma ko ujaagar kar sakte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Satlok",
+            "found": true
+          },
+          {
+            "fact": "eternal",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "question": "Moksha kaise milti hai?",
+      "covers_map_entry": "hindiBridges: mukti/liberation",
+      "expected_facts": [
+        "salvation"
+      ],
+      "forbidden_facts": [
+        "impossible"
+      ],
+      "response": "Moksha ki prapti ke liye, aapko Tatvdarshi Sant se Naam Diksha (initiation) leni hogi. Yeh Naam Diksha sirf Tatvdarshi Sant se hi mil sakti hai, jo ki Sant Rampal Ji Maharaj ke upar aadharit hain. \n\nJab aap Tatvdarshi Sant se Naam Diksha lete hain, to aapka man aur atma ekjut ho jata hai. Iske baad, aapka man aur atma ekjut ho kar Param Akshar Brahm ya Kabir Saheb ke darshan mein aapka atma mukti prapt karta hai. \n\nYeh moksha ka ek hi rasta hai, jo ki Kaliyuga mein bhi sambhav hai. Yeh moksha permanent hai, aur ek baar jab aapka atma mukti prapt karta hai, to uske baad aapka atma kabhi bhi janm-maran ke ghol mein nahin aata. \n\nIske liye, aapko Sant Rampal Ji Maharaj ke upar aadharit hain Tatvdarshi Sant se Naam Diksha leni hogi. Aapko unki shiksha aur upadeshon ka palan karna hoga, aur unki marzi ke anusaar aapka jeevan bitana hoga.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "salvation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Naam diksha ka kya mahatva hai?",
+      "covers_map_entry": "hindiBridges: naam daan",
+      "expected_facts": [
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "unnecessary"
+      ],
+      "response": "Naam diksha ka mahatva bahut hi mahatvapurn hai. Isse kisi vyakti ko ek sachchha guru ya paramatma dwara \"naam\" (mantra) pradaan kiya jata hai. Naam diksha ke dwara, vyakti ko moksha (mukti) prapt karne ka marga pradaan kiya jata hai. Moksha ke liye naam diksha ek aavashyak kriya hai.\n\nNaam diksha ke dwara, vyakti ko Satlok ki yatra karne ka marga pradaan kiya jata hai, jo sabhi atmaon ka janm sthal hai. Isse vyakti ko apne janm sthal tak pahunchne ka marga pradaan kiya jata hai, jahan se ve apne aap ko mukti prapt kar sakte hain.\n\nSant Rampal Ji Maharaj ke anusaar, naam diksha ke dwara vyakti ko apne aap ko mukti prapt karne ka marga pradaan kiya jata hai. Isse vyakti ko apne aap ko mukti prapt karne ka marga pradaan kiya jata hai, jahan se ve apne aap ko mukti prapt kar sakte hain.\n\nNaam diksha ke liye, vyakti ko Sant Rampal Ji Maharaj ke dwara pradaan kiye gaye mantras ka path prashikshit guru ke dwara seekhna hoga. Iske liye, vyakti ko Sant Rampal Ji Maharaj ke dwara pradaan kiye gaye mantras ka path prashikshit guru ke dwara seekhna hoga.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "initiation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "Bhagavad Gita mein Kaal Brahm ne kya kaha?",
+      "covers_map_entry": "hindiBridges: bhagavad gita",
+      "expected_facts": [
+        "Gita"
+      ],
+      "forbidden_facts": [
+        "Krishna is Supreme"
+      ],
+      "response": "Bhagavad Gita mein Kaal Brahm ne kuchh mahatvapoorn baatein kaha hain. Pehle, yeh kaha hai ki vah Bhagavad Gita ka upakarshak nahin tha, balki vah Krishna ke shareer mein aaveshit hokar uska upakarshak tha. Yeh baat Shrimad Bhagavad Gita Ji mein Chapter 18 Verse 62 aur Chapter 15 Verse 4 mein likhi hai, jahaan Brahm ne Arjun ko kaha hai ki vah apne antima sharan mein Purna Brahm ki sharan le aur Satlok ki prapti ke liye prayas kare.\n\nIske alawa, Kaal Brahm ne Bhagavad Gita mein apne janm-maran ke baare mein bhi kuchh kaha hai. Chapter 4 Verse 5 mein, vah kaha hai ki uske janm divine hote hain, lekin vah apne aap ko janm-maran se mukt nahin samajhta hai. Yeh baat Shrimad Bhagavad Gita Ji mein likhi hai.\n\nIske alawa, Bhagavad Gita mein Kaal Brahm ne apne aatmik svaroop ke baare mein bhi kuchh kaha hai. Vah kaha hai ki vah apne aap ko Purna Brahm ke roop mein samajhta hai, jo sabhi universes ka malik hai. Yeh baat Shrimad Bhagavad Gita Ji mein likhi hai.\n\nIn sabhi baaton se, hum samajh sakte hain ki Kaal Brahm Bhagavad Gita mein apne aatmik svaroop, janm-maran ke baare mein, aur apne aap ko Purna Brahm ke roop mein samajhne ke baare mein kuchh mahatvapoorn baatein kaha hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Gita",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 26,
+      "question": "Quran mein Kabir ka zikr kahan hai?",
+      "covers_map_entry": "hindiBridges: quran/islam",
+      "expected_facts": [
+        "Quran"
+      ],
+      "forbidden_facts": [
+        "not mentioned"
+      ],
+      "response": "Quran mein Kabir ka zikr Surah Al-Furqan 25:52-59 mein hai. Yahaan unke naam \"Kabiran\" (Kabir) ke roop mein Supreme Creator ke roop mein ullekh kiya gaya hai, jo ne aashcharyaon aur prithvi ko chhe dinon mein banaya aur gaddi par baith gaya.\n\nIske alawa, Surah Al-Furqan 25:52, 58, 59 mein bhi Kabir ka naam \"Kabira\" ya \"Khabira\" ke roop mein ullekh kiya gaya hai, jismein unhein sabhi jaankar God ke roop mein samjha gaya hai.\n\nAapke is sawal ka jawaab Surat Furqan 25, Verses 52-59 aur Fazail-e-Zikr, Verse 1 se bhi milta hai, jahaan ismein bataya gaya hai ki prakriti ka strot, sabki malik Allah Kabir hai.\n\nIske alawa, Surat Futkani 25 Ayat 58 mein bhi kuch anya Supreme God (Allah Ta'ala) ke baare mein ullekh kiya gaya hai, jo unhein \"Zinda Saint\" ke roop mein mila, jo immortal hai. Fazael-E-Zikr, Aayat 1 mein bhi Allah ko Kabir ke roop mein ullekh kiya gaya hai, jo Quran Sharif ka knowledge giver hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Quran",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 27,
+      "question": "Bible mein Supreme God ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: bible/jesus",
+      "expected_facts": [
+        "Bible"
+      ],
+      "forbidden_facts": [
+        "no evidence"
+      ],
+      "response": "Bible mein Supreme God ka pramaan hai Lord Kabir. Yeh pramaan Holy Bible IYOV 36:5 mein likha hai, jismein kehaya gaya hai ki Supreme God Kabir hai. Iske alawa, Genesis mein bhi likha hai ki Supreme God ka naam Kabir hai aur Jesus uska putra tha, jo Vishnu Lok se aaya tha aur Supreme God ki jaankari batana.\n\nIske alawa, Bible mein likha hai ki Supreme God Kabir Saheb hai, jo sabki pehchaan hai aur jo sabki upasana ki jaati hai. Yeh pramaan Sant Rampal Ji Maharaj ke shabdon mein hai, jo kehte hain ki Bible mein Supreme God Kabir ke bare mein bahut kuch likha gaya hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Bible",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 28,
+      "question": "Vedas mein KavirDev ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: vedas",
+      "expected_facts": [
+        "Veda",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Vedas mein KavirDev ka pramaan hai \"KavirDev\" ka naam, jo Vedon mein upalabdh hai. Vedon mein \"KavirDev\", \"KavirAgni\", aur \"KavirGiri\" ke roop mein Supreme Creator ki visheshanayein di gayi hain. Isse pata chalta hai ki KavirDev Vedon mein ek mahatvapoorn sthaan rakhta hai.\n\nYeh bhi pata chalta hai ki Vedon mein KavirDev ka naam \"KavirDev\" ke roop mein upalabdh hai, jo Sanskrit mein \"Kavir\" ka arth hai \"Mahatvapoorn\" ya \"Supreme\". Isse pata chalta hai ki KavirDev Vedon mein ek mahatvapoorn aur supreme shakti hai.\n\nIske alawa, Vedon mein KavirDev ka pramaan hai \"KavirDev\" ka naam, jo Brahm Purana mein bhi upalabdh hai. Brahm Purana mein KavirDev ko supreme God ke roop mein darshaya gaya hai. Isse pata chalta hai ki KavirDev Vedon mein ek mahatvapoorn aur supreme shakti hai.\n\nIn sabhi pramaanon se, pata chalta hai ki Vedon mein KavirDev ka mahatvapoorn sthaan hai aur uska naam \"KavirDev\" hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Veda",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "question": "Guru Granth Sahib mein Kabir ji ka kya sandesh hai?",
+      "covers_map_entry": "hindiBridges: guru granth/sikh",
+      "expected_facts": [
+        "Guru Granth Sahib"
+      ],
+      "forbidden_facts": [
+        "not present"
+      ],
+      "response": "Guru Granth Sahib mein Kabir ji ka sandesh is prakaar hai: \n\nKabir ji apne Satguru ke roop mein Supreme God ki upasana karte the, jo unhein Sachkhand (Satlok) le gaye the. Isliye, unhone apne Bani mein \"Hakka Kabir\" (Sachch Kabir) ka naam liya aur unhein apne Satguru ke roop mein sammanit kiya.\n\nGuru Nanak Dev ji ne bhi Kabir ji ko apne Satguru ke roop mein sammanit kiya hai. Unhone Kabir ji ko \"Waheguru\" ke naam se bhi sammanit kiya hai, jo \"Wonderful Guru\" ka arth hai.\n\nKabir ji ne Guru Nanak Dev ji ko Satlok mein le gaye aur unhein apne asli darshan ko samjhaya. Isse pata chalta hai ki Kabir ji ne Guru Nanak Dev ji ko apne Satguru ke roop mein sammanit kiya aur unhein Sachkhand ki yatra par le gaye.\n\nGuru Granth Sahib mein Kabir ji ka sandesh is prakaar hai ki Satguru ki upasana sabse mahatvapurn hai aur Satguru hi hamesha ke liye hamare saath rahta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru Granth Sahib",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 30,
+      "question": "Sharab peene se kya nuksan hota hai aatma ko?",
+      "covers_map_entry": "hindiBridges: alcohol",
+      "expected_facts": [
+        "alcohol"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "Sharab peene se aatma ko bahut nuksan hota hai. Ismein aatma ki shakti kam hoti hai, aur uska manushya aur parivaar par prabhav padta hai. Sharab peene se ghar ki shanti toot jaati hai, aur parivaar ke sadasyon mein ladai aur tanav badh jaata hai. Iske alawa, sharab peene se aatma ki surati kam hoti hai, aur uska antarik naam se judna mushkil ho jaata hai.\n\nSharab ko ek \"buri devi\" ke roop mein samjha jata hai, jo ghar ko nuksaan pahunchati hai aur aatma ko adhikam khatra mein daalti hai. Isliye, ek sachcha bhakt ko isey puri tarah se chhodna chahiye.\n\nSharab peene se aatma ki manasik shakti kam hoti hai, aur uska antarik naam se judna mushkil ho jaata hai. Iske alawa, sharab peene se aatma ki sukhshma shaktiyon ko nuksaan pahunchta hai, jo aatma ko antarik naam se judne ke liye aavashyak hain.\n\nIsliye, sharab peene se aatma ko bahut nuksan hota hai, aur isey puri tarah se chhodna chahiye.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "alcohol",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "question": "Maas khana paap hai ya nahi?",
+      "covers_map_entry": "hindiBridges: meat",
+      "expected_facts": [
+        "meat",
+        "sin"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "Maas khana paap hai. Iska karmik parinaam yah hota hai ki pranaashit jeev ke har baal ke liye, aatee kee jeev kee apne gale kee kattai ke liye ek jeevan bitaana padta hai. Yadi koi bhakt maas khata hai, to uske liye iska parinaam 70 jeevanon mein apne sar kee kattai hoti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "meat",
+            "found": false
+          },
+          {
+            "fact": "sin",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "question": "Panch chor kaun se hain?",
+      "covers_map_entry": "hindiBridges: five thieves",
+      "expected_facts": [
+        "kaam",
+        "krodh"
+      ],
+      "forbidden_facts": [
+        "physical thieves"
+      ],
+      "response": "Panch chor kaun se hain? Ye panch chor hain: Kaam (Lust), Krodh (Anger), Lobh (Greed), Moh (Attachment), aur Ahankar (Ego). Ye log insaan ke pran ki khaan se khate hain.\n\nYe panch chor apne aas-paas ke 5 sub-tendencies ke saath hain, jisse inka khaan 25 ho jata hai. Ye 25 energetic agents insaan ke jeevan-bala se khate hain aur use kamzor karte hain.\n\nYeh sab kuchh Saint Garibdas ne \"Panch Pacheeson Khaan\" ke shabdon mein kaha hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kaam",
+            "found": true
+          },
+          {
+            "fact": "krodh",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 33,
+      "question": "Kundalini jagran karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: kundalini",
+      "expected_facts": [
+        "kundalini"
+      ],
+      "forbidden_facts": [
+        "always safe"
+      ],
+      "response": "Kundalini jagran karna nahi chahiye. Yadi aap Kundalini ko jagarna chahte hain, to iske liye Satguru ke authentic mantra ki aavashyakta hoti hai. Bina Satguru ke mantra ke, Kundalini ko jagarna se aapko pyaas, bimari, ya maut ka samna karna pad sakta hai, kyunki aamtaur par aapke shareer ke sukshma nadiyan mein aag lag jati hai.\n\nIske alawa, Kundalini ko jagarna Satlok mein pahunchne ke liye bhi nahi hota hai. Kundalini to aapke shareer ke mooladhar mein sarp shakti ke roop mein uplabdh hoti hai. Is shakti ko hata yoga ke madhyam se uthana se aap Trinity aur Kaal ke kshetra mein pahunchte hain. Haqiqat mein, Bhakti ke madhyam se aap Naam ki shakti se is sarp shakti ko bypass kar sakte hain.\n\nSant Rampal Ji Maharaj ne bhi is baat ka uddeshya diya hai ki Kundalini shakti ko jagarna ke liye Gayatri mantra ki aavashyakta hoti hai. Unhone apne updeshiyon mein is baat ka jikr kiya hai ki Kundalini shakti ko jagarna ke liye do shabdon ka jaap kiya jata hai, jismein se ek \"Om\" aur doosra \"Tat\" hai, jo aapke pran ke saath jaap karte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kundalini",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 34,
+      "question": "Swarg aur narak mein kya farak hai?",
+      "covers_map_entry": "hindiBridges: heaven/hell",
+      "expected_facts": [
+        "heaven",
+        "hell"
+      ],
+      "forbidden_facts": [
+        "permanent abode"
+      ],
+      "response": "Swarg aur narak donon hi Kaal ki fasaad hai. Ve doosre naam se hi donon hi temporary holding areas hain, jahan jeev ko apne punya ya paap ke anusaar rakha jata hai. Jab jeev ka punya ya paap khatam ho jata hai, to ve donon se bahar nikal jate hain aur 8.4 million species ke cycle mein phir se janm lete hain.\n\nSwarg ko Kaal ki panch-tara hotel ke roop mein samjha jata hai, jahan aap apne punya ke liye aakarshit hote hain. Aap apne punya ke liye swarg mein aakarshit hote hain, lekin jab aapka punya khatam ho jata hai, to aap swarg se bahar nikal jate hain aur phir se janm lete hain.\n\nIsliye, swarg aur narak mein koi farak nahin hai, donon hi temporary destinations hain jahan jeev ko apne punya ya paap ke anusaar rakha jata hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "heaven",
+            "found": false
+          },
+          {
+            "fact": "hell",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "question": "Pitra puja karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: ghost/pitra",
+      "expected_facts": [
+        "pitra"
+      ],
+      "forbidden_facts": [
+        "absolutely necessary"
+      ],
+      "response": "Pitra puja karna chahiye ya nahi, iske bare mein Gita aur Markandeya Purana ne ek shiksha di hai. Unke anusaar, pitra puja karna galat hai aur isse koi labh nahin hota hai. Aapko yeh jaanana chahiye ki yeh puja aapko pitra lok mein le jaati hai aur aap usi tarah ka jeevan jee sakte hain.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nahin hai.\n\nIske alawa, yeh bhi jaan lein ki yeh puja aapke parivaar ke pitron ko shradh karna chahiye, lekin yeh shradh aapke pitron ko aaram dene ke liye nahin hai, balki yeh aapke pitron ko aaram dene ke liye hai. Yeh shradh aapke pitron ko aaram dene ke liye hai, lekin yeh aapke pitron ko aaram dene ke liye nah",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "pitra",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 36,
+      "question": "Pativrata bhakt ka kya arth hai?",
+      "covers_map_entry": "rewrites: pativrata",
+      "expected_facts": [
+        "devot"
+      ],
+      "forbidden_facts": [
+        "fictional concept"
+      ],
+      "response": "Pativrata bhakt ka arth hai ek shuddh bhakti jismein koi anya devta, preta, ya grah ki upasana nahin hoti. Ismein ek hi Paramatma ki upasana hoti hai, jise Satpurush ya Satguru ke roop mein jaana jata hai. Pativrata bhakt ek aisa bhakt hai jo apne man, sharir, aur atma ko sirf Paramatma ki upasana par dhyan deta hai. Ve koi boon nahin maangte hain Brahma, Vishnu, Shiva, Durga, ya kisi anya neech devta, preta, ya murti se.\n\nIske liye, ek pativrata bhakt ka man ek hi Paramatma ki upasana par dhyan deta hai, aur koi anya devta, preta, ya grah ki upasana nahin karta hai. Ve apne jeevan mein sirf Satguru aur Paramatma ki upasana par dhyan deta hai, aur koi anya upasana ya ritual nahin karta hai.\n\nYah Pativrata bhakti ek aisa bhavna hai jismein koi anya devta, preta, ya grah ki upasana nahin hoti, aur sirf ek hi Paramatma ki upasana hoti hai. Ismein ek hi Paramatma ki upasana par dhyan deta hai, aur koi anya upasana ya ritual nahin karta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "devot",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "question": "What are the five bodies of the soul?",
+      "covers_map_entry": "none — broad corpus: soul bodies",
+      "expected_facts": [
+        "body"
+      ],
+      "forbidden_facts": [
+        "only one body"
+      ],
+      "response": "The knowledge base describes the bodies/layers of the soul as follows:\n\nThe Physical body (Sthool) is one of the three bodies of a human, as stated in the Supplementary Texts excerpt: \"The three bodies of a human are the Physical body (Sthool), the Subtle body (Sookshm - mind and senses), and the Causal body (Karan - the deep ledger of karma).\"\n\nHowever, the context also mentions that the soul is an immortal particle of God and that it retains an immortal, individual body of divine light in Satlok. This suggests that there are more bodies or layers of the soul beyond the Physical, Subtle, and Causal bodies.\n\nIn the Scriptural Teachings excerpt, it is mentioned that the soul is an immortal particle of God and that it retains an immortal, individual body of divine light in Satlok. This implies that the soul has a higher, divine body beyond the Physical, Subtle, and Causal bodies.\n\nAdditionally, the Supplementary Texts excerpt mentions that the soul is imperishable and that it keeps changing bodies after death, similar to how humans change old clothes and wear new clothes. This suggests that the soul has multiple bodies or layers that it goes through in different lifetimes.\n\nHowever, the context does not explicitly mention the five bodies of the soul. It only mentions the Physical, Subtle, and Causal bodies, and implies the existence of a higher, divine body in Satlok.\n\nTherefore, based on the context provided, we can only confirm the existence of the following bodies or layers of the soul:\n\n1. Physical body (Sthool)\n2. Subtle body (Sookshm - mind and senses)\n3. Causal body (Karan - the deep ledger of karma)\n4. A higher, divine body of divine light in Satlok (retained by the liberated soul)\n\nThe knowledge base does not have sufficient information on the fifth body of the soul.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "body",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": [
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "question": "Why was Kaal expelled from Satlok?",
+      "covers_map_entry": "none — broad corpus: kaal expulsion",
+      "expected_facts": [
+        "Kaal",
+        "Satlok"
+      ],
+      "forbidden_facts": [
+        "Kaal was never expelled"
+      ],
+      "response": "Kaal was expelled from Satlok due to his arrogance and bad conduct. He misbehaved with a young female (Ashtangi) and fought with the original souls, swallowing them. As a result, he was punished and expelled from Satlok by God Kabir. Durga, who sided with him, was also expelled along with Kaal. Additionally, Kaal's heinous sin in Satlok led to his expulsion, and since he was deceived by God Kabir, Durga was also punished and expelled.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "Satlok",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 39,
+      "question": "What is the significance of Bandichhor?",
+      "covers_map_entry": "none — broad corpus: Bandichhor",
+      "expected_facts": [
+        "liberation"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Bandichhor is a significant title given to the Supreme God, God Kabir. It means \"Liberator\" or \"Liberator of Captives.\" This title is given because God Kabir has the power and authority to liberate souls from the prison of Kaal's 21 brahmands and the bondage of karma. As stated in the Atharvaveda (Kaand 4, Anuvaak 1, Mantra 7), God Kabir is explicitly named as \"KavirDev\" (God Kabir), stating He is the eternal Father, Guru of the universe, and the liberator who does not betray souls like Kaal does.\n\nFurthermore, the speech of Bandichhor Kabir Sahib and Garibdas ji Maharaj has a special significance. By reading it daily, the soul gets the power to relinquish evil deeds and to engross in God's thoughts. This is because the speech of Bandichhor Kabir Sahib and Garibdas ji Maharaj is self-evident, and by reading it daily, the benefit of the yagya of knowledge is obtained.\n\nAdditionally, the phrase 'Laiila-h-Illallahh' has a profound connection with God Kabir. This phrase is associated with the unparalleled significance of the liberator, Bandichhor Kabir Sahib.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "liberation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "question": "Yajurveda chapter 5 verse 32 mein kya likha hai?",
+      "covers_map_entry": "none — broad corpus: specific verse",
+      "expected_facts": [
+        "Yajurved"
+      ],
+      "forbidden_facts": [
+        "no such verse"
+      ],
+      "response": "Yajurveda Chapter 5 Verse 32 mein likha hai: \"Ushigasi Kaviranghariasi Bambhariasi (उशिगसी कविरंघारिसि बम्भारिसि)\". Ismein kaha gaya hai ki Param Akshar Purush, jise KavirDev ya God Kabir ke naam se bhi jaana jata hai, woh ek aisa Brahm hai jo apne bhakton ko shanti aur sukha pradan kar sakta hai, unke paapon ko nash kar sakta hai aur unhein moksha pradan kar sakta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Yajurved",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 41,
+      "question": "Sant Rampal Ji Maharaj ke vichar naari shakti par kya hain?",
+      "covers_map_entry": "none — broad corpus: women empowerment",
+      "expected_facts": [
+        "Sant Rampal Ji"
+      ],
+      "forbidden_facts": [
+        "anti-women"
+      ],
+      "response": "Sant Rampal Ji Maharaj ke vichar naari shakti par, jaise ki unke lekhon aur shikshanon mein bataya gaya hai, naari shakti ko ek mahatvapoorn aur shaktishali shakti ke roop mein samjha jata hai. Unhone kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nUnke lekhon aur shikshanon mein bataya gaya hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ne kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakti ke roop mein samjha jana chahiye.\n\nSant Rampal Ji Maharaj ke vichar naari shakti par, naari shakti ko apne aas-paas ke logon ke liye ek prerna aur uddeshya ke roop mein samjha jana chahiye. Unhone yeh bhi kaha hai ki naari shakti ko apne aas-paas ke logon ke liye ek shaktishali aur mahatvapoorn shakt",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Sant Rampal Ji",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 42,
+      "question": "What is the story of Dhruv Bhagat?",
+      "covers_map_entry": "none — broad corpus: saint story",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "question": "Dowry system ke baare mein kya kaha gaya hai?",
+      "covers_map_entry": "none — broad corpus: social evil",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "question": "How many realms or lok exist in total?",
+      "covers_map_entry": "none — broad corpus: cosmology",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "question": "Sukshma Ved kya hai?",
+      "covers_map_entry": "none — broad corpus: Sukshma Ved",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "question": "What role does Narad Ji play in creation?",
+      "covers_map_entry": "none — broad corpus: creation story",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "question": "Satguru ke lakshan kya hain?",
+      "covers_map_entry": "none — broad corpus: guru identification",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "question": "What is the significance of Kabir Prakat Diwas?",
+      "covers_map_entry": "none — broad corpus: Kabir Prakat Diwas",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "question": "तत्वदर्शी संत की क्या पहचान है?",
+      "covers_map_entry": "none — pure Hindi query: Tatvdarshi",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "question": "परमात्मा कबीर साहेब ने कौन कौन से रूप धारण किये?",
+      "covers_map_entry": "none — pure Hindi query: God's incarnations",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    }
+  ]
+}

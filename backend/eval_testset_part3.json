@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "question": "Who is the mother of Ashtangi?",
+    "covers_map_entry": "none — Part 3: factual",
+    "expected_facts": ["Durga", "Prakriti"],
+    "forbidden_facts": ["father"]
+  },
+  {
+    "id": 2,
+    "question": "Why does the soul feel trapped in the three worlds?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["Kaal", "trap", "soul"],
+    "forbidden_facts": ["happy"]
+  },
+  {
+    "id": 3,
+    "question": "What are the rules of taking Naam Diksha?",
+    "covers_map_entry": "none — Part 3: count_or_list",
+    "expected_facts": ["initiation", "rules"],
+    "forbidden_facts": ["no rules"]
+  },
+  {
+    "id": 4,
+    "question": "Compare the characteristics of Satlok and Kaal's 21 universes.",
+    "covers_map_entry": "none — Part 3: comparison",
+    "expected_facts": ["Satlok", "Kaal", "destruction"],
+    "forbidden_facts": ["same"]
+  },
+  {
+    "id": 5,
+    "question": "What are the three stages of spiritual initiation?",
+    "covers_map_entry": "none — Part 3: count_or_list",
+    "expected_facts": ["Naam", "initiation"],
+    "forbidden_facts": ["one stage"]
+  },
+  {
+    "id": 6,
+    "question": "How did Kaal obtain the 21 universes from the Supreme Lord?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["tapasya", "universes"],
+    "forbidden_facts": ["stole"]
+  },
+  {
+    "id": 7,
+    "question": "What is the relation between Maya and Ashtangi?",
+    "covers_map_entry": "none — Part 3: relational",
+    "expected_facts": ["Durga", "Maya"],
+    "forbidden_facts": ["unrelated"]
+  },
+  {
+    "id": 8,
+    "question": "What is the duration of one day of Brahma?",
+    "covers_map_entry": "none — Part 3: factual",
+    "expected_facts": ["years", "yuga"],
+    "forbidden_facts": ["24 hours"]
+  },
+  {
+    "id": 9,
+    "question": "Why should a devotee avoid visiting places of pilgrimage according to the teachings?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["pilgrimage", "worship"],
+    "forbidden_facts": ["mandatory"]
+  },
+  {
+    "id": 10,
+    "question": "What are the five main sins mentioned in the holy scriptures?",
+    "covers_map_entry": "none — Part 3: count_or_list",
+    "expected_facts": ["sins", "paap"],
+    "forbidden_facts": ["no sins"]
+  },
+  {
+    "id": 11,
+    "question": "Compare the status of Akshar Purush and KavirDev.",
+    "covers_map_entry": "none — Part 3: comparison",
+    "expected_facts": ["Akshar", "KavirDev", "supreme"],
+    "forbidden_facts": ["equal"]
+  },
+  {
+    "id": 12,
+    "question": "What happens to a soul that does not find a true Satguru?",
+    "covers_map_entry": "none — Part 3: relational",
+    "expected_facts": ["Satguru", "reborn"],
+    "forbidden_facts": ["salvation"]
+  },
+  {
+    "id": 13,
+    "question": "Who is the writer of the book 'Gyan Ganga'?",
+    "covers_map_entry": "none — Part 3: factual",
+    "expected_facts": ["Rampal"],
+    "forbidden_facts": ["Kabir"]
+  },
+  {
+    "id": 14,
+    "question": "What is the relation between Kaal and the three qualities (Brahma, Vishnu, Shiva)?",
+    "covers_map_entry": "none — Part 3: relational",
+    "expected_facts": ["father", "sons"],
+    "forbidden_facts": ["unrelated"]
+  },
+  {
+    "id": 15,
+    "question": "Why is it forbidden to perform shradh or ancestors worship?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["shradh", "ancestors", "Gita"],
+    "forbidden_facts": ["necessary"]
+  },
+  {
+    "id": 16,
+    "question": "Compare the method of worship in Vedas with Gita.",
+    "covers_map_entry": "none — Part 3: comparison",
+    "expected_facts": ["Vedas", "Gita", "Om"],
+    "forbidden_facts": ["completely identical"]
+  },
+  {
+    "id": 17,
+    "question": "What is the role of the Trikuti Kamal in the subtle body?",
+    "covers_map_entry": "none — Part 3: factual",
+    "expected_facts": ["lotus", "Trikuti"],
+    "forbidden_facts": ["physical"]
+  },
+  {
+    "id": 18,
+    "question": "How can a soul cross the 10th door and enter the 11th door?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["door", "Satguru", "mantra"],
+    "forbidden_facts": ["automatically"]
+  },
+  {
+    "id": 19,
+    "question": "List the names of the five elements of the human body.",
+    "covers_map_entry": "none — Part 3: count_or_list",
+    "expected_facts": ["elements", "tatva"],
+    "forbidden_facts": ["three elements"]
+  },
+  {
+    "id": 20,
+    "question": "What is the difference between a true saint and a fake guru?",
+    "covers_map_entry": "none — Part 3: comparison",
+    "expected_facts": ["Guru", "saint", "scriptures"],
+    "forbidden_facts": ["no difference"]
+  },
+  {
+    "id": 21,
+    "question": "Who is the father of Brahma, Vishnu, and Mahesh?",
+    "covers_map_entry": "none — Part 3: factual",
+    "expected_facts": ["Kaal", "KavirDev"],
+    "forbidden_facts": ["Vishnu"]
+  },
+  {
+    "id": 22,
+    "question": "What are the qualifications of a Tatvdarshi Saint according to Gita Chapter 4 Verse 34?",
+    "covers_map_entry": "none — Part 3: count_or_list",
+    "expected_facts": ["Tatvdarshi", "Saint", "Gita"],
+    "forbidden_facts": ["Vedas"]
+  },
+  {
+    "id": 23,
+    "question": "Why does Kaal consume one lakh human souls daily?",
+    "covers_map_entry": "none — Part 3: how_mechanism",
+    "expected_facts": ["souls", "curse"],
+    "forbidden_facts": ["love"]
+  },
+  {
+    "id": 24,
+    "question": "Compare the life duration of Brahma and Vishnu.",
+    "covers_map_entry": "none — Part 3: comparison",
+    "expected_facts": ["Brahma", "Vishnu", "duration"],
+    "forbidden_facts": ["equal"]
+  },
+  {
+    "id": 25,
+    "question": "What is the relationship between the soul and KavirDev?",
+    "covers_map_entry": "none — Part 3: relational",
+    "expected_facts": ["child", "father"],
+    "forbidden_facts": ["enemies"]
+  }
+]

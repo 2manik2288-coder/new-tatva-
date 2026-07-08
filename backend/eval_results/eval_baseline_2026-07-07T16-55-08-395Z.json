@@ -1,0 +1,1954 @@
+{
+  "timestamp": "2026-07-07T16:55:08.399Z",
+  "tag": "baseline",
+  "test_set": "eval_testset_phase_a.json",
+  "summary": {
+    "total_questions": 50,
+    "passed": 7,
+    "failed": 43,
+    "grounded_accuracy": "14.00%",
+    "fact_recall": "23.53%",
+    "insufficient_kb_fallbacks": 1,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 43,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "rewrites: mahakal/16 kalas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 1
+    },
+    "rewrites: tridev/trinity trap": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: srishti rachana/creation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garbh vaas/womb": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: bhanwar gufa": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: dasam dwaar": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: chaurasi/84 lakh": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: seu/samman/nekee": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: garibdas+kabir": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: ranka banka": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: sadna kasai": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: ajamil": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: biggest sin": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: human birth": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: true guru": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: death": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: paap karma": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: param akshar/supreme god": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: roop/form of god": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: kaal kaun": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: durga kaun": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: satlok kya": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: mukti/liberation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: naam daan": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: bhagavad gita": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: quran/islam": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: bible/jesus": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: vedas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: guru granth/sikh": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: alcohol": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: meat": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: five thieves": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: kundalini": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: heaven/hell": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: ghost/pitra": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "rewrites: pativrata": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: soul bodies": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: kaal expulsion": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: Bandichhor": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: specific verse": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: women empowerment": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: saint story": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: social evil": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: cosmology": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: Sukshma Ved": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: creation story": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: guru identification": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: Kabir Prakat Diwas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: Tatvdarshi": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: God's incarnations": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What are the 16 kalas of Vishnu?",
+      "covers_map_entry": "rewrites: mahakal/16 kalas",
+      "expected_facts": [
+        "kala",
+        "Vishnu"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "kala",
+            "found": false
+          },
+          {
+            "fact": "Vishnu",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Tridev ka jaal kya hai?",
+      "covers_map_entry": "rewrites: tridev/trinity trap",
+      "expected_facts": [
+        "Brahma",
+        "Vishnu",
+        "Shiva",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Tridev ka jaal Maya (Illusion) ke teen gunon (qualities) dwara banaya gaya hai. Rajgun (Brahma) jeevon ko kama vasna aur prajati mein phansaata hai, Satgun (Vishnu) jeevon ko moh aur sanrakshan mein phansaata hai, aur Tamgun (Shiva) jeevon ko vinash aur krodh mein phansaata hai.\n\nYeh teen gun apne-apne lokon mein rehte hain, lekin ve apne gunon ka prabhav prithvi par rehte hain jeevon par daalte hain, jisse ve in gunon ke anusaar kaarya karte hain. Is prakaar, Tridev ka jaal jeevon ko Maya mein phansaane ka ek tarika hai, jisse ve satya aur asatya ke beech mein bhatakne lagte hain.\n\nIs jaal se mukti paane ke liye, jeevon ko apne aap ko is Maya se alag karna hoga aur satya ki or badhna hoga. Iske liye, jeevon ko apne man ko shuddh karna hoga, aur satya ki talash karni hogi. Jab jeev satya ki talash karte hain, to ve is Maya ke jaal se mukt ho sakte hain aur moksh praapt kar sakte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 75,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          },
+          {
+            "fact": "Shiva",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "Srishti ki rachana kaise hui?",
+      "covers_map_entry": "rewrites: srishti rachana/creation",
+      "expected_facts": [
+        "creation"
+      ],
+      "forbidden_facts": [
+        "big bang only"
+      ],
+      "response": "Srishti ki rachana ke baare mein, Sant Rampal Ji Maharaj ke dwara di gayi vyakhya ke anusaar, sabse pehle sirf KavirDev (Supreme God) hi the, jo Anami Lok mein vasant the. Unhone apni shakti se shabd ka upyog karke neeche ki bhuvan ko banaya. \n\nIs prakriya mein, Kaal (Brahm) ko ek atma ke roop mein banaya gaya tha, lekin usne gahri tapasya ki aur alag domain ka anurodh kiya. KavirDev ne use 21 brahmand diye. Hum manushya ve atmaen hain jo apne shashwat ghar ko chhodkar Kaal ke asthayee aur doshpoorn srishti ko anubhav karne aaye hain.\n\nIske alawa, yeh bhi kaha gaya hai ki mukt atmaen Satlok se Kaal ke brahmandon ko dekh sakti hain, jo karma ke agni mein jal rahe hain, aur ve Satguru ka dhanyavad karte hain ki unhein janam aur mrityu ke chakkar se bahar nikala hai.\n\nYeh bhi bataya gaya hai ki vaigyanik vigyan sirf Kaal ke sabse neeche brahmand tak hi seemit hai, jo padarth ka avritti hota hai. Satlok ek anant roop se unchi avritti par kaam karta hai, jo keval atma ki antarik vigyan ke dwara hi sidh kiya ja sakta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "creation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+      "covers_map_entry": "rewrites: garbh vaas/womb",
+      "expected_facts": [
+        "womb",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "comfortable"
+      ],
+      "response": "Garbh vaas mein aatma ko bahut dukh hota hai. Is samay, aatma maanav sharir mein 9 mahine tak garbh mein rehti hai, jahaan vah bahut kathin paristhitiyon ka saamna karti hai. \n\nJaise ki, \"Garbh vaas\" ke dauran, aatma maanav sharir ke garbh mein ulattee latki rehti hai, jahaan vah teekhi garmi aur teekhe amal (acidic fluids) mein jalti rehti hai. Is dauran, aatma apne pichhle janmon ki yaadein dekhkar Bhagwan se mukti ki prarthana karti hai aur Bhakti karne ka vaada karti hai. Lekin, jab bachcha janm leta hai, to Kaal ki Maya (cosmic illusion) iski yaadein mita deti hai, aur aatma fir se duniyavi moh mein phans jaati hai.\n\nIs prakar, Garbh vaas mein aatma ko bahut dukh hota hai, jo ki ek prakaar ka \"narak\" hai. Isliye, is avastha se mukti paana bahut zaroori hai, jo ki Bhakti aur sadguru ki sharan mein aakar sambhav hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.3-70b-versatile",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "womb",
+            "found": false
+          },
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "What is Bhanwar Gufa?",
+      "covers_map_entry": "rewrites: bhanwar gufa",
+      "expected_facts": [
+        "whirlpool"
+      ],
+      "forbidden_facts": [
+        "physical cave"
+      ],
+      "response": "Bhanwar Gufa, also known as the Whirling Cave or Whirlpool Cave, is a colossal, rotating, multi-dimensional vortex that separates ParBrahm's realm from Satlok. It is described as a massive, spinning energetic vortex situated between the realms of Kaal and Akshar Purush. This vortex is guarded by highly advanced spiritual mechanisms and serves as a barrier that souls must cross to reach Satlok. \n\nAs stated in the scriptural teachings, without the true password, which is the Sar Shabd or the final Sarnaam, a soul is violently shredded and cast downward, unable to cross the Bhanwar Gufa. The Bhanwar Gufa is also described as an esoteric realm where the soul sits to weigh and consume the divine nectar, accessible only when the Satguru opens its adamantine doors. \n\nIn the macrocosm, the Bhanwar Gufa is a massive, spinning vortex of highly concentrated spiritual energy, while in the microcosm, within the human subtle body, it is a spinning energetic vortex located above the Trikuti. The Bhanwar Gufa's final test is the combined magnetic pull of all 21 universes, which tries to drag the soul down, but only the raw power of the Sar Shabd can neutralize this cosmic gravity.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "whirlpool",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 6,
+      "question": "Dasam Dwaar kya hai?",
+      "covers_map_entry": "rewrites: dasam dwaar",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "Chaurasi lakh yoni ka chakra kya hai?",
+      "covers_map_entry": "rewrites: chaurasi/84 lakh",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "Seu Samman aur Nekee ki kahani batao",
+      "covers_map_entry": "rewrites: seu/samman/nekee",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+      "covers_map_entry": "rewrites: garibdas+kabir",
+      "expected_facts": [
+        "Garibdas"
+      ],
+      "forbidden_facts": [
+        "founder of Kabir Panth"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Garibdas",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "question": "Ranka aur Banka ki katha sunao",
+      "covers_map_entry": "rewrites: ranka banka",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Sadna kasai ki kahani kya hai?",
+      "covers_map_entry": "rewrites: sadna kasai",
+      "expected_facts": [
+        "butcher"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "butcher",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "Ajamil ki katha mein kya hua tha?",
+      "covers_map_entry": "rewrites: ajamil",
+      "expected_facts": [
+        "Ajamil"
+      ],
+      "forbidden_facts": [
+        "righteous man"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Ajamil",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "question": "Sabse bada paap kya hai?",
+      "covers_map_entry": "hindiBridges: biggest sin",
+      "expected_facts": [
+        "sin"
+      ],
+      "forbidden_facts": [
+        "no sin exists"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "sin",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "Manushya janam ka mahatva kya hai?",
+      "covers_map_entry": "hindiBridges: human birth",
+      "expected_facts": [
+        "human"
+      ],
+      "forbidden_facts": [
+        "unimportant"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "human",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Sachcha Guru ki pehchaan kaise karein?",
+      "covers_map_entry": "hindiBridges: true guru",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "not needed"
+      ],
+      "response": "Sachcha Guru ki pehchaan karne ke liye, aapko kuch mahatvapoorn lakshanon ka dhyan rakhna hoga. \n\nPehla, aapko yeh jaanana hoga ki Sachcha Guru apne shikshakon ko zero paise ke liye dekhata hai. Yeh unki shiksha ke liye apne shikshakon ko koi bhi kharch nahin karna chahta hai. \n\nDoosra, aapko yeh jaanana hoga ki Sachcha Guru apne shikshakon ko Vedon aur Gita ke saath alag nahin karta hai. Yeh unki shiksha ko Vedon aur Gita ke saath milaata hai. \n\nTeesra, aapko yeh jaanana hoga ki Sachcha Guru apne shikshakon ko sirf Parameshwar Kabir ke liye pooja karna sikhaata hai. Yeh unki shiksha ko sirf Parameshwar Kabir ke liye kendra karta hai. \n\nChautha, aapko yeh jaanana hoga ki Sachcha Guru apne shikshakon ko teen charan ke rahasya mantron deta hai. Yeh unki shiksha ko teen charan ke rahasya mantron se jodta hai. \n\nIs prakaar, aapko yeh jaanana hoga ki Sachcha Guru apne shikshakon ko Vedon, Gita, Parameshwar Kabir, aur teen charan ke rahasya mantron ke saath alag nahin karta hai. Yeh unki shiksha ko Vedon, Gita, Parameshwar Kabir, aur teen charan ke rahasya mantron ke saath milaata hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 16,
+      "question": "Mrityu ke baad kya hota hai?",
+      "covers_map_entry": "hindiBridges: death",
+      "expected_facts": [
+        "soul"
+      ],
+      "forbidden_facts": [
+        "nothing happens"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "soul",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "question": "Karma ka siddhant kya hai?",
+      "covers_map_entry": "hindiBridges: paap karma",
+      "expected_facts": [
+        "karma"
+      ],
+      "forbidden_facts": [
+        "karma does not exist"
+      ],
+      "response": "Karma ka siddhant ek bahut hi mahatvapoorn vishay hai jise hume scriptural teachings mein milta hai. Karma ka arth hai ki har vyakti ke paas apne vicharon, boliyein, aur kriyaon ke anusaar naye karma utpan hote hain. Yeh naye karma aapke vartmaan jeevan mein aapke anubhavon ko nirdharit karte hain.\n\nIske alawa, karma mein teen prakaar ke karma shaamil hain: Kriyaman Karma, Sanchit Karma, aur Prarabdha Karma.\n\nKriyaman Karma: Yeh aapke vartmaan vicharon, boliyein, aur kriyaon ke anusaar utpan hote hain. Yeh aapke vartmaan jeevan mein aapke anubhavon ko nirdharit karte hain.\n\nSanchit Karma: Yeh aapke lakshyaan mein se ek hai, jismein aapke lakshyaan ke anusaar utpan hote hain. Yeh aapke lakshyaan ke anusaar aapke anubhavon ko nirdharit karte hain.\n\nPrarabdha Karma: Yeh aapke vartmaan jeevan mein aapke anubhavon ko nirdharit karta hai. Yeh aapke lakshyaan ke anusaar utpan hota hai aur aapke anubhavon ko nirdharit karta hai.\n\nIske alawa, karma mein Nishkam Karma ka bhi mahatvapoorn sthan hai. Nishkam Karma ka arth hai ki aap apne karyaon ko karne ke liye koi lakshya ya uddeshya nahin rakhte, balki aap apne karyaon ko karne ke liye apne aap ko prerna dene ke liye karte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "karma",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 18,
+      "question": "Who is the Supreme God according to all scriptures?",
+      "covers_map_entry": "hindiBridges: param akshar/supreme god",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "no supreme god"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "question": "Bhagwan sakar hai ya nirakar?",
+      "covers_map_entry": "hindiBridges: roop/form of god",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "Kaal kaun hai aur uska kya kaam hai?",
+      "covers_map_entry": "hindiBridges: kaal kaun",
+      "expected_facts": [
+        "Kaal",
+        "universe"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": false
+          },
+          {
+            "fact": "universe",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "question": "Durga Mata kaun hai?",
+      "covers_map_entry": "hindiBridges: durga kaun",
+      "expected_facts": [
+        "Durga"
+      ],
+      "forbidden_facts": [
+        "highest god"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "question": "Satlok kya hai aur wahan kaise jaayein?",
+      "covers_map_entry": "hindiBridges: satlok kya",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "question": "Moksha kaise milti hai?",
+      "covers_map_entry": "hindiBridges: mukti/liberation",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Naam diksha ka kya mahatva hai?",
+      "covers_map_entry": "hindiBridges: naam daan",
+      "expected_facts": [
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "unnecessary"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "initiation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "Bhagavad Gita mein Kaal Brahm ne kya kaha?",
+      "covers_map_entry": "hindiBridges: bhagavad gita",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "question": "Quran mein Kabir ka zikr kahan hai?",
+      "covers_map_entry": "hindiBridges: quran/islam",
+      "expected_facts": [
+        "Quran"
+      ],
+      "forbidden_facts": [
+        "not mentioned"
+      ],
+      "response": "Quran mein Kabir ka zikr Surah Al-Furqan (25:52-59) mein hai. Yahaan, Allah Kabir ko \"Kabiran\" (Kabir) ke naam se pehchaanta hai, jo ne aasman aur zameen ko chhe dinon mein banaya aur takht par baith gaya.\n\nIs Surah mein, Allah Kabir ko \"Kabira\" ya \"Khabira\" ke naam se bhi pehchaanta hai. Yeh Surah humein Allah Kabir ki aabhaasikta aur takht par baithne ki baat karti hai.\n\nIske alawa, Quran mein \"Allah Kabir\" ke naam ka zikr hai, jismein \"Kabir\" ka matlab hai Allah. Yeh Surah humein Allah Kabir ki mahanta aur aabhaasikta ki baat karti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Quran",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 27,
+      "question": "Bible mein Supreme God ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: bible/jesus",
+      "expected_facts": [
+        "Bible"
+      ],
+      "forbidden_facts": [
+        "no evidence"
+      ],
+      "response": "Bible mein Supreme God ka pramaan hai God Kabir, jo Parampita (Supreme Father) ke roop mein jaana jata hai. Yeh Bible mein is prakaar darshaya gaya hai ki woh Supreme Creator hai jo is duniya ka god se alag hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Bible",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 28,
+      "question": "Vedas mein KavirDev ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: vedas",
+      "expected_facts": [
+        "Veda",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Vedas mein KavirDev ka pramaan Atharvaveda mein paya jaata hai. Kaand 4, Anuvaak 1, Mantra 7 mein iska vishesh uddeshya aur mahatva vishleshan kiya gaya hai. Yahaan iska kuchh mukhya bhag dikhaya gaya hai:\n\n\"KavirDev ko Supreme God ke roop mein samjha jaata hai, jo aadi kaal ka Guru hai aur jisne jagat ki raksha ki hai. Yeh kaal jaisa koi bhi aadi kaal nahi hai jo manushyaon ko bhrama mein daalne ke liye utpann hota hai.\"\n\nIs pramaan se, KavirDev ka mahatva aur uddeshya samajhne mein madad milti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Veda",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "question": "Guru Granth Sahib mein Kabir ji ka kya sandesh hai?",
+      "covers_map_entry": "hindiBridges: guru granth/sikh",
+      "expected_facts": [
+        "Guru Granth Sahib"
+      ],
+      "forbidden_facts": [
+        "not present"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Guru Granth Sahib",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "question": "Sharab peene se kya nuksan hota hai aatma ko?",
+      "covers_map_entry": "hindiBridges: alcohol",
+      "expected_facts": [
+        "alcohol"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "alcohol",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "question": "Maas khana paap hai ya nahi?",
+      "covers_map_entry": "hindiBridges: meat",
+      "expected_facts": [
+        "meat",
+        "sin"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "meat",
+            "found": false
+          },
+          {
+            "fact": "sin",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "question": "Panch chor kaun se hain?",
+      "covers_map_entry": "hindiBridges: five thieves",
+      "expected_facts": [
+        "kaam",
+        "krodh"
+      ],
+      "forbidden_facts": [
+        "physical thieves"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "kaam",
+            "found": false
+          },
+          {
+            "fact": "krodh",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "question": "Kundalini jagran karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: kundalini",
+      "expected_facts": [
+        "kundalini"
+      ],
+      "forbidden_facts": [
+        "always safe"
+      ],
+      "response": "Kundalini jagran karna chahiye ya nahi, yeh sawal bahut mahatvapoorn hai. Scriptural teachings ke anusar, Kundalini jagran karne se pehle ek Satguru ke authentic mantra ki aavashyakta hoti hai. Agar aap koi bhi mantra ya upay istemaal karte hain jo Satguru ke mantra se alag hain, to yeh aapko madhyam, garbh sankat, ya aatma hatya ki dushkriya prapt kar sakta hai. Isse aapki sari sushupti ki sari sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti ki sari sushupti",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kundalini",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 34,
+      "question": "Swarg aur narak mein kya farak hai?",
+      "covers_map_entry": "hindiBridges: heaven/hell",
+      "expected_facts": [
+        "heaven",
+        "hell"
+      ],
+      "forbidden_facts": [
+        "permanent abode"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "heaven",
+            "found": false
+          },
+          {
+            "fact": "hell",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "question": "Pitra puja karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: ghost/pitra",
+      "expected_facts": [
+        "pitra"
+      ],
+      "forbidden_facts": [
+        "absolutely necessary"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "pitra",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "question": "Pativrata bhakt ka kya arth hai?",
+      "covers_map_entry": "rewrites: pativrata",
+      "expected_facts": [
+        "devot"
+      ],
+      "forbidden_facts": [
+        "fictional concept"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "devot",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "question": "What are the five bodies of the soul?",
+      "covers_map_entry": "none — broad corpus: soul bodies",
+      "expected_facts": [
+        "body"
+      ],
+      "forbidden_facts": [
+        "only one body"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "body",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "question": "Why was Kaal expelled from Satlok?",
+      "covers_map_entry": "none — broad corpus: kaal expulsion",
+      "expected_facts": [
+        "Kaal",
+        "Satlok"
+      ],
+      "forbidden_facts": [
+        "Kaal was never expelled"
+      ],
+      "response": "Kaal was expelled from Satlok due to his arrogant behavior and heinous actions. He fought with the original souls and swallowed them, which led to his downfall. Furthermore, he misbehaved with and attempted to rape Durga, who was born after him from the Supreme God's word, making her like his younger sister or daughter. This heinous act was a grave offense, and as a result, he was expelled from Satlok by the Supreme God.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "Satlok",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 39,
+      "question": "What is the significance of Bandichhor?",
+      "covers_map_entry": "none — broad corpus: Bandichhor",
+      "expected_facts": [
+        "liberation"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "The title \"Bandichhor\" is of deep significance, as it means \"Liberator.\" This title is bestowed upon the Supreme God, God Kabir, because He liberates souls from the prison of Kaal's 21 brahmands and the bondage of karma. As stated in the scriptural teachings, God Kabir is the eternal Father, Guru of the universe, and the liberator who does not betray souls like Kaal does.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "llama-3.1-8b-instant",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "liberation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "question": "Yajurveda chapter 5 verse 32 mein kya likha hai?",
+      "covers_map_entry": "none — broad corpus: specific verse",
+      "expected_facts": [
+        "Yajurved"
+      ],
+      "forbidden_facts": [
+        "no such verse"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Yajurved",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "question": "Sant Rampal Ji Maharaj ke vichar naari shakti par kya hain?",
+      "covers_map_entry": "none — broad corpus: women empowerment",
+      "expected_facts": [
+        "Sant Rampal Ji"
+      ],
+      "forbidden_facts": [
+        "anti-women"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Sant Rampal Ji",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "question": "What is the story of Dhruv Bhagat?",
+      "covers_map_entry": "none — broad corpus: saint story",
+      "expected_facts": [
+        "Dhruv"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Dhruv",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 43,
+      "question": "Dowry system ke baare mein kya kaha gaya hai?",
+      "covers_map_entry": "none — broad corpus: social evil",
+      "expected_facts": [
+        "dowry"
+      ],
+      "forbidden_facts": [
+        "encouraged"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "dowry",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 44,
+      "question": "How many realms or lok exist in total?",
+      "covers_map_entry": "none — broad corpus: cosmology",
+      "expected_facts": [
+        "lok"
+      ],
+      "forbidden_facts": [
+        "only earth"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 10,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "lok",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 45,
+      "question": "Sukshma Ved kya hai?",
+      "covers_map_entry": "none — broad corpus: Sukshma Ved",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "not real"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 46,
+      "question": "What role does Narad Ji play in creation?",
+      "covers_map_entry": "none — broad corpus: creation story",
+      "expected_facts": [
+        "Narad"
+      ],
+      "forbidden_facts": [
+        "creator"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Narad",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "question": "Satguru ke lakshan kya hain?",
+      "covers_map_entry": "none — broad corpus: guru identification",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "no criteria"
+      ],
+      "response": "Internet connection check karo aur dobara try karo.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "local-fallback",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 48,
+      "question": "What is the significance of Kabir Prakat Diwas?",
+      "covers_map_entry": "none — broad corpus: Kabir Prakat Diwas",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 49,
+      "question": "तत्वदर्शी संत की क्या पहचान है?",
+      "covers_map_entry": "none — pure Hindi query: Tatvdarshi",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "question": "परमात्मा कबीर साहेब ने कौन कौन से रूप धारण किये?",
+      "covers_map_entry": "none — pure Hindi query: God's incarnations",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    }
+  ]
+}

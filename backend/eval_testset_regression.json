@@ -1,0 +1,174 @@
+[
+  {
+    "id": 1,
+    "question": "What are the 16 kalas of Vishnu?",
+    "covers_map_entry": "rewrites: mahakal/16 kalas",
+    "expected_facts": [
+      "kala",
+      "Vishnu"
+    ],
+    "forbidden_facts": [
+      "myth"
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Tridev ka jaal kya hai?",
+    "covers_map_entry": "rewrites: tridev/trinity trap",
+    "expected_facts": [
+      "Brahma",
+      "Vishnu",
+      "Shiva",
+      "Kaal"
+    ],
+    "forbidden_facts": [
+      "Supreme God"
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Srishti ki rachana kaise hui?",
+    "covers_map_entry": "rewrites: srishti rachana/creation",
+    "expected_facts": [
+      "creation"
+    ],
+    "forbidden_facts": [
+      "big bang only"
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+    "covers_map_entry": "rewrites: garbh vaas/womb",
+    "expected_facts": [
+      "womb",
+      "soul"
+    ],
+    "forbidden_facts": [
+      "comfortable"
+    ]
+  },
+  {
+    "id": 5,
+    "question": "What is Bhanwar Gufa?",
+    "covers_map_entry": "rewrites: bhanwar gufa",
+    "expected_facts": [
+      "whirlpool"
+    ],
+    "forbidden_facts": [
+      "physical cave"
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Dasam Dwaar kya hai?",
+    "covers_map_entry": "rewrites: dasam dwaar",
+    "expected_facts": [
+      "tenth",
+      "door"
+    ],
+    "forbidden_facts": [
+      "myth"
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Chaurasi lakh yoni ka chakra kya hai?",
+    "covers_map_entry": "rewrites: chaurasi/84 lakh",
+    "expected_facts": [
+      "84",
+      "species"
+    ],
+    "forbidden_facts": [
+      "only humans"
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Seu Samman aur Nekee ki kahani batao",
+    "covers_map_entry": "rewrites: seu/samman/nekee",
+    "expected_facts": [
+      "Kabir"
+    ],
+    "forbidden_facts": [
+      "fictional"
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+    "covers_map_entry": "rewrites: garibdas+kabir",
+    "expected_facts": [
+      "Garibdas"
+    ],
+    "forbidden_facts": [
+      "founder of Kabir Panth"
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Ranka aur Banka ki katha sunao",
+    "covers_map_entry": "rewrites: ranka banka",
+    "expected_facts": [
+      "devotee"
+    ],
+    "forbidden_facts": [
+      "fictional"
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Sadna kasai ki kahani kya hai?",
+    "covers_map_entry": "rewrites: sadna kasai",
+    "expected_facts": [
+      "butcher"
+    ],
+    "forbidden_facts": [
+      "fictional"
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Ajamil ki katha mein kya hua tha?",
+    "covers_map_entry": "rewrites: ajamil",
+    "expected_facts": [
+      "Ajamil"
+    ],
+    "forbidden_facts": [
+      "righteous man"
+    ]
+  },
+  {
+    "id": 13,
+    "question": "Sabse bada paap kya hai?",
+    "covers_map_entry": "hindiBridges: biggest sin",
+    "expected_facts": [
+      "sin"
+    ],
+    "forbidden_facts": [
+      "no sin exists"
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Manushya janam ka mahatva kya hai?",
+    "covers_map_entry": "hindiBridges: human birth",
+    "expected_facts": [
+      "human"
+    ],
+    "forbidden_facts": [
+      "unimportant"
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Sachcha Guru ki pehchaan kaise karein?",
+    "covers_map_entry": "hindiBridges: true guru",
+    "expected_facts": [
+      "Guru"
+    ],
+    "forbidden_facts": [
+      "not needed"
+    ]
+  }
+]
