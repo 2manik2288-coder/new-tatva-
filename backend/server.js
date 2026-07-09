@@ -1820,10 +1820,10 @@ function trimToTokenLimit(text, maxChars) {
 app.post('/api/chat', async (req, res) => {
   const timeoutId = setTimeout(() => {
     if (!res.headersSent) {
-      console.error('❌ Request Timeout: Chat query handler took >90 seconds');
+      console.error('❌ Request Timeout: Chat query handler took >45 seconds');
       res.status(504).json({ error: 'Request Timeout: The query pipeline took too long to respond.' });
     }
-  }, 90000);
+  }, 45000);
 
   res.on('finish', () => clearTimeout(timeoutId));
   res.on('close', () => clearTimeout(timeoutId));

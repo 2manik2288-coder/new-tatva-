@@ -304,7 +304,7 @@ function getChatResponse(question) {
           userId: 'eval-harness-user'
         },
         responseType: 'stream',
-        timeout: 120000
+        timeout: 60000
       });
 
       let fullText = '';
