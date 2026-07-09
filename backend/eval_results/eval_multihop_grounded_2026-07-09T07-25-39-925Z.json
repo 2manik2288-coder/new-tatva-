@@ -1,0 +1,1028 @@
+{
+  "timestamp": "2026-07-09T07:25:39.929Z",
+  "tag": "multihop_grounded",
+  "test_set": "eval_testset_multihop.json",
+  "summary": {
+    "total_questions": 20,
+    "passed": 10,
+    "failed": 10,
+    "grounded_accuracy": "50.00%",
+    "fact_recall": "82.61%",
+    "insufficient_kb_fallbacks": 1,
+    "failure_breakdown": {
+      "hallucination_failures": 1,
+      "missing_facts_failures": 10,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "multihop: trinity lifecycles": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 1
+    },
+    "multihop: cheer haran": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: kamali resurrection": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: ramanand swami staged": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: namdev temple": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: trikuti tenth door": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: inverted tree": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: kashi karot": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: sukdev rishi": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: mansur ali": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: kashi bhandara": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: brahma stem lie": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: om mantra limitation": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: supreme god descent": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: heaven hell temporary": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: gunas trinity": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: ajapa jaap maryada": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "multihop: brahma yugas lifespan": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: gita gods hierarchy": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "multihop: mind kaal agent": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "Compare the lifecycles of Brahma and Shiva to determine how many Brahmas must die before one Shiva dies.",
+      "covers_map_entry": "multihop: trinity lifecycles",
+      "expected_facts": [
+        "Brahma",
+        "Shiva",
+        "Vishnu",
+        "7"
+      ],
+      "forbidden_facts": [
+        "immortal"
+      ],
+      "response": "To compare the lifecycles of Brahma and Shiva, let's first understand their lifespans as mentioned in the context.\n\nBrahma lives for 100 years according to his own timeline. On the other hand, Shiva's lifespan is seven times the lifespan of Vishnu, and it is stated that after seven Vishnus die, one Shiva dies.\n\nHowever, the context does not directly provide Vishnu's lifespan. But we can still analyze the relationship between Brahma and Shiva's lifespans based on the information given about Shiva.\n\nSince we do not have Vishnu's lifespan or a direct comparison between Brahma and Shiva's lifespans, we cannot accurately calculate how many Brahmas must die before one Shiva dies based solely on the information provided.\n\nThe knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "Shiva",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          },
+          {
+            "fact": "7",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": [
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Who really saved Draupadi during her Cheer Haran, and how does this relate to Krishna?",
+      "covers_map_entry": "multihop: cheer haran",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "question": "How did Sheikh Taqi's daughter Kamali get her name, and who revived her from the grave?",
+      "covers_map_entry": "multihop: kamali resurrection",
+      "expected_facts": [
+        "Sheikh Taqi",
+        "Kamali",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "jesus"
+      ],
+      "response": "Kamali, Sheikh Taqi's daughter, got her name from God Kabir. As stated in the scriptural teachings, after Kabir Ji revived her from the dead, God named the girl 'Kamali' and adopted her as a daughter. \n\nAccording to the supplementary texts, Sheikh Taqi had buried Kamali in a grave. However, when Sheikh Taqi challenged God Kabir, Kabir Ji called out to the dead girl, and she resurrected by the command of the Creator of life and death. Specifically, Lord Kabir uttered the words, \"bir’s command, wherever you are, get inside this body and come out of this grave.\" As soon as Lord Kabir said this, the dead body started shivering, and the girl’s life was revived. She came out from the grave and prostrated to Lord Kabir. \n\nTherefore, it was God Kabir who revived Kamali from the grave and gave her the name Kamali.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Sheikh Taqi",
+            "found": true
+          },
+          {
+            "fact": "Kamali",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 4,
+      "question": "Why did Ramanand Swami become the Guru of Kabir if Kabir is considered the Supreme God?",
+      "covers_map_entry": "multihop: ramanand swami staged",
+      "expected_facts": [
+        "Ramanand",
+        "Guru",
+        "staged",
+        "tradition"
+      ],
+      "forbidden_facts": [
+        "ignorant"
+      ],
+      "response": "यह एक बहुत ही रोचक प्रश्न है! आइए इसे विस्तार से समझने की कोशिश करें।\n\nकबीर साहिब को सर्वोच्च ईश्वर माना जाता है, लेकिन उन्होंने स्वामी रामानंद जी को अपना गुरु बनाया। इसके पीछे एक विशेष कारण था। कबीर साहिब ने स्वामी रामानंद जी को अपना गुरु बनाने का निर्णय एक दिव्य दृष्टिकोण के तहत लिया था, जिससे लोगों को गुरु के महत्व को समझने में मदद मिल सके।\n\nजैसा कि कहा गया है, \"Kabir also did not make anyone His Guru therefore, there is no need to acquire a Guru. Keeping this viewpoint, God Kabir made Swami Ramanand Ji his guru.\" यहाँ यह स्पष्ट किया गया है कि कबीर साहिब ने स्वयं किसी को अपना गुरु नहीं बनाया था, लेकिन उन्होंने स्वामी रामानंद जी को अपना गुरु बनाने का फैसला किया ताकि लोगों को यह समझने में मदद मिल सके कि गुरु का महत्व क्या है।\n\nइसके अलावा, यह भी कहा गया है कि \"God Kabir Ji's Guru was Swami Ramanand Ji, a learned person deeply versed in the Vedas and the Shrimad Bhagavad Gita.\" यहाँ यह बताया गया है कि स्वामी रामानंद जी वेदों और श्रीमद्भागवत गीता में पारंगत एक विद्वान व्यक्ति थे, जो कबीर साहिब के गुरु बने।\n\nअब, यदि हम पूछते हैं कि कबीर साहिब को सर्वोच्च ईश्वर माना जाता है, तो उन्होंने स्वामी रामानंद जी को अपना गुरु क्यों बनाया? तो इसका उत्तर यह है कि कबीर साहिब ने यह निर्णय एक दिव्य दृष्टिकोण के तहत लिया था, जिससे लोगों को गुरु के महत्व को समझने में मदद मिल सके।\n\nजैसा कि कहा गया है, \"Although Kabir Sahib accepted Swami Ramanand Ji as his spiritual guru in a divine spectacle for the people of the world, in reality, Kabir Sahib was the guru of Ramanand Ji.\" यहाँ यह स्पष्ट किया गया है कि कबीर साहिब ने स्वामी रामानंद जी को अपना गुरु बनाने का निर्णय एक दिव्य दृष्टिकोण के तहत लिया था, लेकिन वास्तव में कबीर साहिब ही रामानंद जी के गुरु थे।\n\nइस प्रकार, यह कहा जा सकता है कि कबीर साहिब ने स्वामी रामानंद जी को अपना गुरु बनाने का निर्णय एक विशेष कारण से लिया था, जो गुरु के महत्व को समझने में मदद करने के लिए था।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Ramanand",
+            "found": true
+          },
+          {
+            "fact": "Guru",
+            "found": true
+          },
+          {
+            "fact": "staged",
+            "found": false
+          },
+          {
+            "fact": "tradition",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "How did Namdev rotate the temple, and why was he kicked out in the first place?",
+      "covers_map_entry": "multihop: namdev temple",
+      "expected_facts": [
+        "Namdev",
+        "temple",
+        "caste",
+        "priests"
+      ],
+      "forbidden_facts": [
+        "ram"
+      ],
+      "response": "Namdev was kicked out of the Lord Vitthal temple because he was a \"low-caste\" tailor. The orthodox, caste-proud priests forcibly removed him from the front of the temple. \n\nWhen kicked out, Namdev went to the back wall of the temple and wept, calling out to the Supreme Creator. In response, God literally rotated the entire stone structure of the temple so the main door directly faced Namdev, thereby humiliating the arrogant priests.\n\nIt is also stated that Kabir Sahib, also known as Bhagat vachal Kabir, was the one who turned the temple's face towards Namdev Ji and turned its back towards the Pandits.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Namdev",
+            "found": true
+          },
+          {
+            "fact": "temple",
+            "found": true
+          },
+          {
+            "fact": "caste",
+            "found": true
+          },
+          {
+            "fact": "priests",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 6,
+      "question": "What is the relation between Trikuti, the Tenth Door, and Sarnaam in reaching Satlok?",
+      "covers_map_entry": "multihop: trikuti tenth door",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "How does the symbol of the Inverted Cosmic Tree describe the hierarchy between Kabir, Akshar Purush, and the Trinity?",
+      "covers_map_entry": "multihop: inverted tree",
+      "expected_facts": [
+        "roots",
+        "Kabir",
+        "Akshar Purush",
+        "branches",
+        "Trinity"
+      ],
+      "forbidden_facts": [
+        "normal tree"
+      ],
+      "response": "The Inverted Cosmic Tree symbolizes a hierarchical structure with the Supreme God, Kabir, at the top as the roots. The main trunk of the tree represents Akshar Purush. Extending from the trunk, there are three main branches which signify the Trinity: Brahma, Vishnu, and Shiva, associated with the qualities Rajguna, Satguna, and Tamguna respectively. The leaves of the tree symbolize the living beings, indicating their connection to and derivation from the higher entities in the cosmic structure.\n\nThis symbolism is further supported by the Bhagavad Gita, Chapter 15, Verse 1-4, which describes the inverted cosmic tree and emphasizes the importance of finding a Tatvadarshi Saint who understands its structure, including the root and the branches. Such a saint can guide others to the supreme state from which souls do not return to the cycle of birth.\n\nThe Vedas and other scriptures, as referenced in the provided excerpts, also elaborate on this cosmic structure. For instance, the eternal abode, Satlok, mentioned in Gita 18:66, and the everlasting world called ‘Ritdhama', 16 Sankh Kose away from the 21 universes of Brahm Kaal, highlight the vast and intricate nature of this cosmic hierarchy.\n\nSant Rampal Ji Maharaj's explanations provide insight into this symbolism, describing the Inverted Cosmic Tree as a representation of the originator of entire universes and the nurturer of beings across all realms. His teachings decode the mystery of this inverted world, explaining the roles of Kabir, Akshar Purush, and the Trinity within the cosmic framework.\n\nIn summary, the Inverted Cosmic Tree illustrates a clear hierarchy with Kabir as the Supreme God at the top, followed by Akshar Purush as the main trunk, and then the Trinity as the three primary branches, with all living beings represented as the leaves. This structure is supported by various scriptural references, including the Bhagavad Gita and the Vedas.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 5,
+        "expected_facts_total": 5,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "roots",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": true
+          },
+          {
+            "fact": "Akshar Purush",
+            "found": true
+          },
+          {
+            "fact": "branches",
+            "found": true
+          },
+          {
+            "fact": "Trinity",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 8,
+      "question": "Why was Kashi Karot considered a deception, and what is the true way to erase cosmic debt?",
+      "covers_map_entry": "multihop: kashi karot",
+      "expected_facts": [
+        "Kashi Karot",
+        "saw",
+        "debt",
+        "Guru",
+        "Satnam"
+      ],
+      "forbidden_facts": [
+        "suicide"
+      ],
+      "response": "Kashi Karot, also known as the Saw of Kashi, was a demonic deception engineered by Kaal through corrupt priests. They falsely claimed that having one's head cut off by a specific saw in Kashi granted immediate entry to heaven. However, this was a mass-suicide trap designed by Kaal to prematurely harvest human souls.\n\nAccording to the scriptural teachings, corrupt priests spread a rumor that cutting off one's head with a specific saw in Kashi would guarantee Heaven. This rumor led thousands of ignorant souls directly to Hell. The true nature of this deception was that it was Kaal's trap to harvest souls prematurely. Millions committed this ritual suicide, but in reality, it led to a direct plunge into Hell.\n\nThe true way to erase cosmic debt and achieve salvation is through the continuous internal chanting of the Naam. Specifically, the Satnam mantra, a two-word mantra, is designed to pay off the debt of the 21 universes of Kaal. To escape Kaal's cosmic prison, one must take the true Naam, or Initiation, from an authorized Complete Saint, or Tatvadarshi, and strictly follow the moral boundaries, or Maryada, of devotion until death.\n\nAs stated in the scriptural teachings, true salvation only comes from the continuous internal chanting of the Naam, and not through suicidal acts like the Kashi Karot ritual. By following the true path of devotion and chanting the Naam, one can achieve spiritual liberation and erase their cosmic debt.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 5,
+        "expected_facts_percentage": 80,
+        "expected_results": [
+          {
+            "fact": "Kashi Karot",
+            "found": true
+          },
+          {
+            "fact": "saw",
+            "found": true
+          },
+          {
+            "fact": "debt",
+            "found": true
+          },
+          {
+            "fact": "Guru",
+            "found": false
+          },
+          {
+            "fact": "Satnam",
+            "found": true
+          }
+        ],
+        "forbidden_found": [
+          "suicide"
+        ],
+        "has_hallucination": true,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Contains forbidden hallucination facts"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "question": "Explain how Sukdev Rishi's birth and his search for a Guru relate to escaping the mother's womb.",
+      "covers_map_entry": "multihop: sukdev rishi",
+      "expected_facts": [
+        "Sukdev",
+        "womb",
+        "Janak",
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "marriage"
+      ],
+      "response": "\"Sukdev Rishi's birth and his search for a Guru are deeply connected to the concept of escaping the mother's womb, both physically and spiritually. As stated in the scriptural teachings, Sukdev Rishi was a highly elevated soul from a past life. Knowing that a baby forgets its spiritual vows the moment it breathes worldly air, he refused to exit his mother's womb for 12 years. This prolonged stay in the womb was an attempt to delay his entry into the worldly life, which is often associated with spiritual forgetfulness.\n\nSukdev Rishi's decision to stay in the womb for 12 years was a strategic attempt to preserve his spiritual awareness. When he finally emerged, he possessed a 12-year-old's body and flew straight to the forest, indicating his desire to maintain a connection with his spiritual nature. However, despite his elevated state and ascetic powers, he was denied heaven because he lacked a Guru. This highlights the importance of a Satguru in spiritual growth, as without one, no amount of ascetic power works.\n\nThe significance of Sukdev Rishi's search for a Guru, and eventually taking King Janak as his Guru, lies in its role in stabilizing and furthering his spiritual growth. A Guru provides the necessary guidance to help the soul navigate through the complexities of worldly life without getting entangled in its attachments. In Sukdev Rishi's case, his search for a Guru was crucial in solidifying his spiritual progress and ensuring that his ascetic powers were directed positively.\n\nIn essence, Sukdev Rishi's birth, his prolonged stay in the womb, and his subsequent search for a Guru are all interconnected aspects of his spiritual journey. They underscore the challenges of maintaining spiritual awareness in the face of worldly attachments and the pivotal role of a Guru in achieving spiritual liberation.\"\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Sukdev",
+            "found": true
+          },
+          {
+            "fact": "womb",
+            "found": true
+          },
+          {
+            "fact": "Janak",
+            "found": true
+          },
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 10,
+      "question": "Why did Mansur Ali proclaim Anal Haq, and how does this state compare to being a servant in Satlok?",
+      "covers_map_entry": "multihop: mansur ali",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "How did God Kabir arrange the Bhandara in Kashi when he had no money to feed the people?",
+      "covers_map_entry": "multihop: kashi bhandara",
+      "expected_facts": [
+        "Bhandara",
+        "Kashi",
+        "merchant",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "tax"
+      ],
+      "response": "According to the scriptural teachings, God Kabir arranged a grand Bhandara in Kashi to counter a fake feast invitation sent by hypocrites. \n\nAs stated in the supplementary texts, God Kabir hosted the Bhandara for 18 lakh people in Kashi. \n\nIt is written that no matter how much people ate, there was no restriction on the food, and heaps of food were available. During the Bhandara, Sant Ravidas Ji and King Sikandar Lodi also arrived, and the people present were astonished to see Kabir Seth organizing such a big religious Bhandara.\n\nThe scripture mentions that God Kabir's divine spectacle was demonstrated through this Bhandara. \n\nEven today, a three-day continuous amazing Bhandara is being organized under the guidance of Sant Rampal Ji Maharaj in remembrance of this divine play by Kabir Saheb Ji.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Bhandara",
+            "found": true
+          },
+          {
+            "fact": "Kashi",
+            "found": true
+          },
+          {
+            "fact": "merchant",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 12,
+      "question": "Why did Brahma lie about the lotus stem, and what curse did his mother Durga give him?",
+      "covers_map_entry": "multihop: brahma stem lie",
+      "expected_facts": [
+        "Brahma",
+        "lotus",
+        "lie",
+        "curse",
+        "Durga"
+      ],
+      "forbidden_facts": [
+        "killed"
+      ],
+      "response": "Brahma lied about finding the end of the lotus stem. According to the context, Goddess Durga, also known as Prakriti, had given Brahma a curse because he lied about this. The curse was that he would never be widely worshipped as a primary deity on Earth.\n\nAdditionally, it is stated that Brahma had traveled down the lotus stalk to find his origin and his father. His actions and the subsequent lie led to the curse from his mother, Durga. \n\nIt is also mentioned that Durga had been commanded by Kaal to keep his existence a secret from their three sons, which further explains the context of the curse.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 5,
+        "expected_facts_total": 5,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "lotus",
+            "found": true
+          },
+          {
+            "fact": "lie",
+            "found": true
+          },
+          {
+            "fact": "curse",
+            "found": true
+          },
+          {
+            "fact": "Durga",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 13,
+      "question": "Explain why chanting Om is not sufficient to reach Satlok, and which higher mantras are required.",
+      "covers_map_entry": "multihop: om mantra limitation",
+      "expected_facts": [
+        "Om",
+        "Kaal",
+        "Satnam",
+        "Sarnaam",
+        "Satlok"
+      ],
+      "forbidden_facts": [
+        "heaven"
+      ],
+      "response": "Chanting \"Om\" is not sufficient to reach Satlok because it only takes a soul to Brahmlok, which is Kaal's realm. From Brahmlok, the soul must eventually return to the cycle of 84 lakh species of birth and death. \n\nTo attain Moksha or Liberation and reach Satlok, one needs to receive initiation from a \"Complete Saint\" in three stages: \n1. Brahm Gayatri mantra in the first stage, \n2. Satnaam in the second stage, and \n3. Saarnaam in the third stage.\n\nThese stages serve specific purposes in spiritual progression. The true spiritual master or enlightened saint provides true spiritual knowledge and salvation mantras, chanting which souls attain emancipation and reach Satlok. \n\nIn essence, while chanting \"Om\" has its limitations, chanting higher mantras like Brahm Gayatri, Satnaam, and Saarnaam, received through initiation from a Complete Saint, are required to cross the 12th door and enter SachKhand or Satlok, the Eternal Place.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 3,
+        "expected_facts_total": 5,
+        "expected_facts_percentage": 60,
+        "expected_results": [
+          {
+            "fact": "Om",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "Satnam",
+            "found": false
+          },
+          {
+            "fact": "Sarnaam",
+            "found": false
+          },
+          {
+            "fact": "Satlok",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "How does the Supreme God descend to Earth, and where did Ramanand Swami first find Him?",
+      "covers_map_entry": "multihop: supreme god descent",
+      "expected_facts": [
+        "descent",
+        "infant",
+        "lotus",
+        "Ramanand"
+      ],
+      "forbidden_facts": [
+        "womb"
+      ],
+      "response": "\"The Supreme God Kabir descends to Earth in a tiny form, either Himself or through a specially blessed being. According to the Kabir Sagar, Supreme God Kabir stated that He would Himself descend on Earth when 5505 years of Kalyug would have passed. This incarnation of Supreme God Kabir is believed to be Jagatguru Tatvdarshi Sant Rampal Ji Maharaj.\n\nAs for where Ramanand Swami first found Him, it is mentioned that Swami Ramanand Ji found Him in the Northern Part of India.\n\nIt is also mentioned that Swami Ramanand Ji got offended and rebuked Him, asking Him some questions. God Kabir Ji, acting like an ideal disciple, calmly and humbly replied.\n\nThe meaning of \"Incarnation (Avtaar)\" is \"to descend from a higher place to a lower place,\" and it refers to those supreme souls who perform remarkable activities on Earth and are considered to be sent by God or the arrival of God Himself, as described in Shrimad Bhagavad Gita Adhyay 15 Shlok 1 to 4 and 16-17.\"\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 25,
+        "expected_results": [
+          {
+            "fact": "descent",
+            "found": false
+          },
+          {
+            "fact": "infant",
+            "found": false
+          },
+          {
+            "fact": "lotus",
+            "found": false
+          },
+          {
+            "fact": "Ramanand",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "Why are Heaven and Hell temporary, and how does reaching Sachkhand differ in terms of lifespan?",
+      "covers_map_entry": "multihop: heaven hell temporary",
+      "expected_facts": [
+        "temporary",
+        "Sachkhand",
+        "immortal",
+        "karma"
+      ],
+      "forbidden_facts": [
+        "eternal hell"
+      ],
+      "response": "Heaven and Hell are temporary destinations within Kaal's trap. According to the scriptural teachings, once a soul's merit or demerit is exhausted, they are forced back into the cycle of 8.4 million species. This indicates that Heaven and Hell are not permanent abodes, but rather temporary holding areas.\n\nAs stated in the supplementary texts, souls who reside in Heaven for a specified duration eventually have to suffer in Hell and 84 lakh life forms, and then return to earth. This cycle of birth and rebirth continues, and even demi-gods like Indra Dev admit to being part of this cycle. Indra Dev's tenure eventually ends, and he becomes a donkey, illustrating the impermanence of Heaven and the cycle of rebirth.\n\nIn contrast, reaching Sachkhand, also referred to as Satlok, is a different experience altogether. It is stated that those who attain Satlok never come back to this deceased world and achieve complete salvation. This implies that Satlok is a permanent abode, free from the cycle of birth and rebirth.\n\nThe key difference between Heaven and Hell, and Satlok, lies in their nature and the soul's experience. Heaven and Hell are temporary, perishable, and part of the cycle of rebirth, whereas Satlok is a permanent and ultimate abode where the soul achieves complete salvation and does not return to the cycle of birth and rebirth.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "temporary",
+            "found": true
+          },
+          {
+            "fact": "Sachkhand",
+            "found": true
+          },
+          {
+            "fact": "immortal",
+            "found": false
+          },
+          {
+            "fact": "karma",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "question": "How do the three Gunas correspond to the sons of Goddess Durga, and what are their specific spiritual roles?",
+      "covers_map_entry": "multihop: gunas trinity",
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "question": "What is the connection between continuous Ajapa Jaap and maintaining the Maryada of the Guru?",
+      "covers_map_entry": "multihop: ajapa jaap maryada",
+      "expected_facts": [
+        "Ajapa Jaap",
+        "Maryada",
+        "mantras",
+        "power"
+      ],
+      "forbidden_facts": [
+        "book"
+      ],
+      "response": "\"The connection between continuous Ajapa Jaap and maintaining the Maryada of the Guru can be understood through the life and actions of God Kabir, as described in the provided context.\n\nAs stated, when God Kabir turned five in His leelamay body, He performed a divine act to maintain Guru Maryada, the custom of acquiring a Guru. He disguised Himself as a 2½-year-old child and laid down on the steps of Panch-Ganga Ghaat- Kashi, where Swami Ramanand Ji used to go daily to bathe.\n\nAlthough the context does not explicitly state a direct connection between continuous Ajapa Jaap and maintaining the Maryada of the Guru, it does provide an example of God Kabir's actions in maintaining Guru Maryada. \n\nAdditionally, as per the provided context, Garibdas Ji has mentioned \"diya taunk janjeer gal, Shah Sikander aap | Garibdas pad leen hai, taari ajapa jaap\" which indicates that Garibdas Ji attained the state of Ajapa Jaap.\n\nIn the absence of a direct statement connecting Ajapa Jaap and Guru Maryada, it can be inferred that following the path of spiritual growth, as exemplified by God Kabir, is essential to maintaining the customs and traditions of the Guru. \n\nThe context also explains that the recitation of the initiation-mantra given by the Tatvdarshi Saint is called ‘Jap’, which includes Jaap and Ajapa. It is done to achieve spiritual growth and is beneficial when done with a ‘Naam’ (mantra) certified by the scriptures.\n\nTherefore, it can be understood that continuous Ajapa Jaap is a part of the spiritual growth process, which, when followed under the guidance of a Guru, helps in maintaining the Maryada of the Guru.\"\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Ajapa Jaap",
+            "found": true
+          },
+          {
+            "fact": "Maryada",
+            "found": true
+          },
+          {
+            "fact": "mantras",
+            "found": false
+          },
+          {
+            "fact": "power",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "question": "How does the lifespan of Lord Brahma relate to Yugas and his ultimate mortality?",
+      "covers_map_entry": "multihop: brahma yugas lifespan",
+      "expected_facts": [
+        "lifespan",
+        "Yugas",
+        "mortality",
+        "100"
+      ],
+      "forbidden_facts": [
+        "eternal"
+      ],
+      "response": "The lifespan of Lord Brahma is intricately connected to Yugas. According to the scriptural teachings, one day of Brahma is equivalent to 1,000 Yugas, which translates to 4.32 billion human years. Furthermore, it is stated that Brahma lives for 100 \"divine years\" or simply 100 years according to his own timeline.\n\nTo understand his ultimate mortality, we must consider that his lifespan is finite, measured in his own time scale. A day of Brahma consists of 1,000 Yugas, and his entire lifespan is 100 years, with no indication of immortality.\n\nAdditionally, it is worth noting that other deities, like Vishnu, have lifespans related to Brahma's. For instance, Vishnu's lifespan is seven times that of Brahma.\n\nThe scriptural teachings provide a clear understanding of Brahma's lifespan and its relation to Yugas, emphasizing that his life, though long by human standards, is still bounded by time.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "lifespan",
+            "found": true
+          },
+          {
+            "fact": "Yugas",
+            "found": true
+          },
+          {
+            "fact": "mortality",
+            "found": true
+          },
+          {
+            "fact": "100",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 19,
+      "question": "How do Gita 15:16-17 describe three separate Gods, and how do they correspond to Kaal and Akshar Purush?",
+      "covers_map_entry": "multihop: gita gods hierarchy",
+      "expected_facts": [
+        "Gita",
+        "three",
+        "Kshar",
+        "Akshar",
+        "Param",
+        "Purush"
+      ],
+      "forbidden_facts": [
+        "one god"
+      ],
+      "response": "As stated in the Srimad Bhagavad Gita Chapter 15, Verse 16-17, there are descriptions of three types of Gods. According to Brahm Kaal, in this world, there are two types of Gods - one is perishable and the other is imperishable. \n\nThe three Gods described are Kshar Purush (Brahm-Kaal), Akshar Purush (ParBrahm), and Param Akshar Purush (Purna Brahm / Supreme God Kabir). Kshar Purush (Brahm-Kaal) is the master of 21 brahmands and is mortal. Akshar Purush (ParBrahm) is the master of 700 quadrillion (7 sankh) universes and is also mortal. Param Akshar Purush (Purna Brahm / Supreme God Kabir) is the immortal master of infinite universes.\n\nIn correspondence to Kaal and Akshar Purush, Kshar Purush is also known as Brahm-Kaal, which is the same entity. Akshar Purush is also referred to as ParBrahm. Therefore, the three Gods described in Gita 15:16-17 correspond to Kaal (Kshar Purush or Brahm-Kaal) and Akshar Purush (Akshar Purush or ParBrahm), with the third being Param Akshar Purush (Purna Brahm / Supreme God Kabir).\n\nThe Rigveda Mandal 10 Sukta 90 Mantra 5 also describes the creation of Kshar and Akshar Purush by the Supreme God Kabir. As mentioned in Gita Chapter 17 Verse 23, only the supreme God (Param Akshar Brahm) is worshipable, as He has created other Gods.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 6,
+        "expected_facts_total": 6,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Gita",
+            "found": true
+          },
+          {
+            "fact": "three",
+            "found": true
+          },
+          {
+            "fact": "Kshar",
+            "found": true
+          },
+          {
+            "fact": "Akshar",
+            "found": true
+          },
+          {
+            "fact": "Param",
+            "found": true
+          },
+          {
+            "fact": "Purush",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 20,
+      "question": "Why is the mind considered an agent of Kaal, and where does Kaal reside to control it?",
+      "covers_map_entry": "multihop: mind kaal agent",
+      "expected_facts": [
+        "mind",
+        "agent",
+        "Kaal",
+        "Trikuti"
+      ],
+      "forbidden_facts": [
+        "friend"
+      ],
+      "response": "The mind is considered an agent of Kaal because it acts as a cosmic virus installed in every human to distract them from true worship through endless desires. As stated in the scriptural teachings, \"The mind is an agent of Kaal. It is the cosmic virus installed in every human to distract them from true worship through endless desires.\"\n\nKaal resides in the Trikuti, which is the junction of the three subtle nerves in the forehead, to control the mind. According to the teachings, \"He sits hidden in the Trikuti (the junction of the three subtle nerves in the forehead) and controls the mind.\" This location allows Kaal to exert influence over the mind, thereby guiding human thoughts and actions.\n\nIt is also worth noting that Kaal's role is significant in the context of creation and control. As mentioned, Kaal took over earth's affairs and gave duties to his three sons - Brahma, Vishnu, and Shiva - to manage earth's affairs. Additionally, Kaal is referred to as a form of God, with various forms including 'manifested' and 'unmanifested' forms.\n\nThe significance of Kaal's role is further emphasized in the Gita, where Kaal explicitly stated, \"I am Kaal, now arisen to destroy the worlds.\" This highlights Kaal's powerful position in the cosmic order.\n\nIn summary, the mind is considered an agent of Kaal because it distracts humans from true worship, and Kaal resides in the Trikuti to control the mind and influence human thoughts and actions.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "mind",
+            "found": true
+          },
+          {
+            "fact": "agent",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "Trikuti",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    }
+  ]
+}

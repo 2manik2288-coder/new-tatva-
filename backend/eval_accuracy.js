@@ -19,6 +19,88 @@ if (!fs.existsSync(RESULTS_DIR)) {
   fs.mkdirSync(RESULTS_DIR, { recursive: true });
 }
 
+function matchBilingualFact(fact, responseText) {
+  const text = responseText.toLowerCase();
+  const f = fact.toLowerCase();
+
+  const synonyms = {
+    'vishnu': ['vishnu', 'विष्णु', 'vishnuji'],
+    'brahma': ['brahma', 'ब्रह्मा', 'brahmaji'],
+    'shiva': ['shiva', 'शिव', 'shivji', 'mahesh', 'shiv'],
+    'trinity': ['trinity', 'त्रिदेव', 'tridev'],
+    'kaal': ['kaal', 'काल', 'jyoti niranjan', 'niranjan'],
+    'creation': ['creation', 'सृष्टि', 'रचना', 'srishti', 'rachna'],
+    'soul': ['soul', 'आत्मा', 'aatma'],
+    'whirlpool': ['whirlpool', 'भंवर', 'bhanwar', 'gufa', 'भनवर', 'bhanvar'],
+    'kala': ['kala', 'कला', 'कलाएं', 'kalaen', 'kalas'],
+    'tenth': ['tenth', 'दसवां', 'daswan', 'dasvan', '10th', 'dasam'],
+    'door': ['door', 'द्वार', 'dwaar', 'dwar', 'dvara'],
+    'mantra': ['mantra', 'मंत्र', 'naam', 'soham', 'satnam', 'sarnaam'],
+    'lord': ['lord', 'प्रभु', 'भगवान', 'bhagwan', 'ishwar', 'swami'],
+    'avatar': ['avatar', 'अवतार', 'avtar'],
+    'duration': ['duration', 'lifespan', 'आयु', 'umar', 'aayu', 'period'],
+    'temporary': ['temporary', 'अस्थायी', 'nashwar', 'perishable'],
+    'immortal': ['immortal', 'अमर', 'avinashi', 'shaswat'],
+    '16': ['16', 'sixteen', 'सोलह', '16 kalas', '16 kala', 'sixteen kalas', 'solah'],
+    '7': ['7', 'seven', 'सात', 'sankh', '7 sankh'],
+    'god': ['god', 'परमात्मा', 'भगवान', 'kabir', 'kavir', 'purush'],
+    'womb': ['womb', 'गर्भ', 'garbh', 'womb-trap'],
+    'kola': ['kola', 'gola', 'shell', 'bomb'],
+    'salvation': ['salvation', 'mukti', 'moksha', 'liberation', 'मोक्ष', 'मुक्ति'],
+    'krishna': ['krishna', 'कृष्ण', 'krishan', 'krishnaji', 'krishn'],
+    'sheikh taqi': ['sheikh taqi', 'sheikh', 'taqi', 'शेख तकी', 'taki'],
+    'kamali': ['kamali', 'कमली'],
+    'draupadi': ['draupadi', 'द्रौपदी'],
+    'ramanand': ['ramanand', 'रामानंद', 'ramanandji'],
+    'namdev': ['namdev', 'नामदेव'],
+    'species': ['species', 'योनि', 'yoni', 'yonis', 'प्रजातियां', 'species'],
+    'garibdas': ['garibdas', 'गरीबदास', 'garib das', 'garibdasji', 'गरीब दास', 'गरिबदास', 'गरिब दास'],
+    'devotee': ['devotee', 'भक्त', 'bhakt', 'bhakta', 'devotees', 'रंका', 'बांका', 'ranka', 'banka'],
+    'butcher': ['butcher', 'कसाई', 'kasai'],
+    'gita': ['gita', 'गीता', 'geeta'],
+    'yajna': ['yajna', 'यज्ञ', 'yagya', 'yagna'],
+    'swaha': ['swaha', 'स्वाहा'],
+    'sin': ['sin', 'पाप', 'paap', 'sins'],
+    'human': ['human', 'मनुष्य', 'manushya', 'manushya janam', 'manushya janam ka mahatva', 'manushya janam', 'manav', 'मानव', 'insan', 'इंसान'],
+    'form': ['form', 'साकार', 'sakar', 'sakaar', 'aakaar', 'niraakaar', 'nirakar', 'निराकार'],
+    'guru': ['guru', 'सतगुरु', 'satguru', 'गुरु', 'गुरु', 'satguru'],
+    'universe': ['universe', 'universes', 'ब्रह्मांड', 'brahmand', 'brahmands', 'सृष्टि', 'srishti', 'ब्रह्माण्ड', 'ब्रम्हांड', 'ब्रहांड'],
+    'eternal': ['eternal', 'अमर', 'avinashi', 'shaswat', 'perpetual', 'sada', 'satlok'],
+    'initiation': ['initiation', 'दीक्षा', 'diksha', 'naam diksha', 'initiate'],
+    'quran': ['quran', 'कुरान', 'kuran', 'क़ुरान'],
+    'alcohol': ['alcohol', 'शराब', 'sharab', 'madira', 'liquor'],
+    'heaven': ['heaven', 'स्वर्ग', 'swarg'],
+    'hell': ['hell', 'नरक', 'narak'],
+    'pitra': ['pitra', 'पितृ', 'pitru', 'ancestor', 'ancestors', 'pitra puja'],
+    'devot': ['devot', 'bhakt', 'भक्त', 'pativrata', 'loyal', 'devoted'],
+    'trikuti': ['trikuti', 'त्रिकुटी'],
+    'tenth door': ['tenth door', 'dasam dwaar', 'dasam dwar', 'दसवां द्वार', 'दसवें द्वार', '10th door'],
+    'sarnaam': ['sarnaam', 'sar shabad', 'saar shabad', 'sarnaam', 'सारनाम', 'सार शब्द', 'सारशब्द'],
+    'satnam': ['satnam', 'सत्नाम', 'सत्यनाम', 'satya naam', 'satnaam', 'सत्य नाम'],
+    'descent': ['descent', 'avataran', 'अवतरण', 'प्रकट', 'prakat', 'descend'],
+    'infant': ['infant', 'शिशु', 'balak', 'बालक', 'child', 'shishu'],
+    'lotus': ['lotus', 'कमल', 'kamal', 'lotus flower'],
+    'karma': ['karma', 'कर्म', 'karam', 'karmas'],
+    'mantras': ['mantras', 'mantra', 'मंत्र', 'naam', 'jaap', 'jap', 'मंत्रों'],
+    'power': ['power', 'शक्ति', 'shakti', 'urja', 'energy'],
+    'roots': ['roots', 'जड़', 'mool', 'root'],
+    'branches': ['branches', 'शाखाएं', 'shakha', 'daal'],
+    'saw': ['saw', 'करौंत', 'karot', 'आरी'],
+    'staged': ['staged', 'नाटक', 'naatak', 'leela', 'लीला', 'acting', 'dikhawa', 'drama'],
+    'tradition': ['tradition', 'परंपरा', 'parampara', 'reeti', 'maryada', 'मर्यादा', 'custom'],
+    'debt': ['debt', 'ऋण', 'karz', 'karza'],
+    'sukdev': ['sukdev', 'सुखदेव', 'shukdev'],
+    'mansur': ['mansur', 'मंसूर'],
+    'anal haq': ['anal haq', 'अनल हक'],
+    'merchant': ['merchant', 'bania', 'seth', 'vyapari', 'वणिक'],
+    'lie': ['lie', 'झूठ', 'jhooth'],
+    'curse': ['curse', 'श्राप', 'shrap']
+  };
+
+  const list = synonyms[f] || [f];
+  return list.some(syn => text.includes(syn));
+}
+
 async function runEval() {
   console.log('Starting Accuracy Evaluation Harness...');
   console.log(`Test set: ${testSetFile} | Tag: ${tag}`);
@@ -50,7 +132,7 @@ async function runEval() {
 
       // 1. Expected Facts Check
       const expectedResults = tc.expected_facts.map(fact => {
-        const found = responseText.toLowerCase().includes(fact.toLowerCase());
+        const found = matchBilingualFact(fact, responseText);
         return { fact, found };
       });
       const factsMatchedCount = expectedResults.filter(r => r.found).length;

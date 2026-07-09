@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "question": "Compare the lifecycles of Brahma and Shiva to determine how many Brahmas must die before one Shiva dies.",
+    "covers_map_entry": "multihop: trinity lifecycles",
+    "expected_facts": ["Brahma", "Shiva", "Vishnu", "7"],
+    "forbidden_facts": ["immortal"]
+  },
+  {
+    "id": 2,
+    "question": "Who really saved Draupadi during her Cheer Haran, and how does this relate to Krishna?",
+    "covers_map_entry": "multihop: cheer haran",
+    "expected_facts": ["Kabir", "Draupadi", "Krishna"],
+    "forbidden_facts": ["arjuna"]
+  },
+  {
+    "id": 3,
+    "question": "How did Sheikh Taqi's daughter Kamali get her name, and who revived her from the grave?",
+    "covers_map_entry": "multihop: kamali resurrection",
+    "expected_facts": ["Sheikh Taqi", "Kamali", "Kabir"],
+    "forbidden_facts": ["jesus"]
+  },
+  {
+    "id": 4,
+    "question": "Why did Ramanand Swami become the Guru of Kabir if Kabir is considered the Supreme God?",
+    "covers_map_entry": "multihop: ramanand swami staged",
+    "expected_facts": ["Ramanand", "Guru", "staged", "tradition"],
+    "forbidden_facts": ["ignorant"]
+  },
+  {
+    "id": 5,
+    "question": "How did Namdev rotate the temple, and why was he kicked out in the first place?",
+    "covers_map_entry": "multihop: namdev temple",
+    "expected_facts": ["Namdev", "temple", "caste", "priests"],
+    "forbidden_facts": ["ram"]
+  },
+  {
+    "id": 6,
+    "question": "What is the relation between Trikuti, the Tenth Door, and Sarnaam in reaching Satlok?",
+    "covers_map_entry": "multihop: trikuti tenth door",
+    "expected_facts": ["Trikuti", "Tenth Door", "Sarnaam", "Satlok"],
+    "forbidden_facts": ["kaal heaven"]
+  },
+  {
+    "id": 7,
+    "question": "How does the symbol of the Inverted Cosmic Tree describe the hierarchy between Kabir, Akshar Purush, and the Trinity?",
+    "covers_map_entry": "multihop: inverted tree",
+    "expected_facts": ["roots", "Kabir", "Akshar Purush", "branches", "Trinity"],
+    "forbidden_facts": ["normal tree"]
+  },
+  {
+    "id": 8,
+    "question": "Why was Kashi Karot considered a deception, and what is the true way to erase cosmic debt?",
+    "covers_map_entry": "multihop: kashi karot",
+    "expected_facts": ["Kashi Karot", "saw", "debt", "Guru", "Satnam"],
+    "forbidden_facts": ["suicide"]
+  },
+  {
+    "id": 9,
+    "question": "Explain how Sukdev Rishi's birth and his search for a Guru relate to escaping the mother's womb.",
+    "covers_map_entry": "multihop: sukdev rishi",
+    "expected_facts": ["Sukdev", "womb", "Janak", "Guru"],
+    "forbidden_facts": ["marriage"]
+  },
+  {
+    "id": 10,
+    "question": "Why did Mansur Ali proclaim Anal Haq, and how does this state compare to being a servant in Satlok?",
+    "covers_map_entry": "multihop: mansur ali",
+    "expected_facts": ["Mansur", "Anal Haq", "servant", "Satlok"],
+    "forbidden_facts": ["punishment"]
+  },
+  {
+    "id": 11,
+    "question": "How did God Kabir arrange the Bhandara in Kashi when he had no money to feed the people?",
+    "covers_map_entry": "multihop: kashi bhandara",
+    "expected_facts": ["Bhandara", "Kashi", "merchant", "Kabir"],
+    "forbidden_facts": ["tax"]
+  },
+  {
+    "id": 12,
+    "question": "Why did Brahma lie about the lotus stem, and what curse did his mother Durga give him?",
+    "covers_map_entry": "multihop: brahma stem lie",
+    "expected_facts": ["Brahma", "lotus", "lie", "curse", "Durga"],
+    "forbidden_facts": ["killed"]
+  },
+  {
+    "id": 13,
+    "question": "Explain why chanting Om is not sufficient to reach Satlok, and which higher mantras are required.",
+    "covers_map_entry": "multihop: om mantra limitation",
+    "expected_facts": ["Om", "Kaal", "Satnam", "Sarnaam", "Satlok"],
+    "forbidden_facts": ["heaven"]
+  },
+  {
+    "id": 14,
+    "question": "How does the Supreme God descend to Earth, and where did Ramanand Swami first find Him?",
+    "covers_map_entry": "multihop: supreme god descent",
+    "expected_facts": ["descent", "infant", "lotus", "Ramanand"],
+    "forbidden_facts": ["womb"]
+  },
+  {
+    "id": 15,
+    "question": "Why are Heaven and Hell temporary, and how does reaching Sachkhand differ in terms of lifespan?",
+    "covers_map_entry": "multihop: heaven hell temporary",
+    "expected_facts": ["temporary", "Sachkhand", "immortal", "karma"],
+    "forbidden_facts": ["eternal hell"]
+  },
+  {
+    "id": 16,
+    "question": "How do the three Gunas correspond to the sons of Goddess Durga, and what are their specific spiritual roles?",
+    "covers_map_entry": "multihop: gunas trinity",
+    "expected_facts": ["Brahma", "Vishnu", "Shiva", "Rajguna", "Satguna", "Tamguna"],
+    "forbidden_facts": ["free"]
+  },
+  {
+    "id": 17,
+    "question": "What is the connection between continuous Ajapa Jaap and maintaining the Maryada of the Guru?",
+    "covers_map_entry": "multihop: ajapa jaap maryada",
+    "expected_facts": ["Ajapa Jaap", "Maryada", "mantras", "power"],
+    "forbidden_facts": ["book"]
+  },
+  {
+    "id": 18,
+    "question": "How does the lifespan of Lord Brahma relate to Yugas and his ultimate mortality?",
+    "covers_map_entry": "multihop: brahma yugas lifespan",
+    "expected_facts": ["lifespan", "Yugas", "mortality", "100"],
+    "forbidden_facts": ["eternal"]
+  },
+  {
+    "id": 19,
+    "question": "How do Gita 15:16-17 describe three separate Gods, and how do they correspond to Kaal and Akshar Purush?",
+    "covers_map_entry": "multihop: gita gods hierarchy",
+    "expected_facts": ["Gita", "three", "Kshar", "Akshar", "Param", "Purush"],
+    "forbidden_facts": ["one god"]
+  },
+  {
+    "id": 20,
+    "question": "Why is the mind considered an agent of Kaal, and where does Kaal reside to control it?",
+    "covers_map_entry": "multihop: mind kaal agent",
+    "expected_facts": ["mind", "agent", "Kaal", "Trikuti"],
+    "forbidden_facts": ["friend"]
+  }
+]

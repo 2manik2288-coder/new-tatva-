@@ -1,0 +1,1428 @@
+{
+  "timestamp": "2026-07-08T18:26:54.974Z",
+  "tag": "default",
+  "test_set": "eval_testset.json",
+  "summary": {
+    "total_questions": 35,
+    "passed": 8,
+    "failed": 27,
+    "grounded_accuracy": "22.86%",
+    "fact_recall": "46.03%",
+    "insufficient_kb_fallbacks": 4,
+    "failure_breakdown": {
+      "hallucination_failures": 2,
+      "missing_facts_failures": 27,
+      "leakage_failures": 0
+    }
+  },
+  "category_breakdown": {
+    "none": {
+      "total": 35,
+      "passed": 8,
+      "insufficient": 4
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What is Satnam?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Satnam",
+        "true name"
+      ],
+      "forbidden_facts": [
+        "temporary name"
+      ],
+      "response": "सतनाम (Satnam) एक उच्च संरक्षित, दो-अक्षर वाला मंत्र है। इसमें \"ओम\" को एक गुप्त \"तत\" मंत्र के साथ जोड़ा गया है। यह निम्नलिखित आध्यात्मिक द्वारों को खोलने की कुंजी है। \n\nसतनाम की पूरी व्याख्या में यह बताया गया है कि \"ओम\" ब्रह्मलोक के काल (Kaal) की बाधा को खोलने की कुंजी है। आपको काल को उसका सम्मान और ऊर्जा देना होता है ताकि आप उसकी सीमाओं को पार कर सकें; \"ओम\" इस प्रकार की एक ब्रह्मांड शुल्क की तरह काम करता है। \n\nसतनाम का संबंध अजपा जाप से भी है, जो तब होता है जब सतनाम आपकी सांसों में इतनी अच्छी तरह से ताला लग जाता है कि आप सोते समय, बात करते समय और काम करते समय भी इसका जाप कर रहे होते हैं। यह आपकी जैविक पृष्ठभूमि आवृत्ति बन जाती है। \n\nसतनाम को भवसागर की नाव (Ship of Satnam) के रूप में भी जाना जाता है, जो एक नाजुक मिट्टी के बर्तन की तरह है जो किसी भी समय टूट सकता है। इस नाव के माध्यम से आप काल के ब्रह्मांड के घातक महासागर को पार कर सकते हैं। सतगुरु इस नाव के कप्तान (Majhi) होते हैं। यदि आप इस नाव में मानव सांस लेते समय नहीं बैठते हैं, तो आप 8.4 मिलियन प्रजातियों के चक्र में डूब जाएंगे। \n\nसतनाम एक हाइपर-डाइमेंशनल, दिव्य प्रकाश की रक्षात्मक कैप्सूल है जो सतगुरु की ऊर्जा द्वारा बनाई जाती है, जो आपकी आत्मा को काल के टोल कलेक्टरों से पूरी तरह से अदृश्य बना देती है। \n\nसतनाम का स्मरण करने की विधि को \"सुमिरन का अंग\" कहा जाता है, जिसमें सूरत (ध्यान), निरती (विचार) और पवन (आने और जाने वाली सांस) का उपयोग करके आत्मा की चेतना को पूरी तरह से सतनाम में विलय किया जाता है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Satnam",
+            "found": true
+          },
+          {
+            "fact": "true name",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "question": "Who is Kabir Saheb?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Supreme God",
+        "Kashi"
+      ],
+      "forbidden_facts": [
+        "mortal"
+      ],
+      "response": "Kabir Saheb, also known as Kavir Dev, is identified as the Supreme God who appears in every Yuga to impart \"Tatvagyan\" (True Knowledge). He appeared in Kalyug by the name Kabir or KavirDev. According to the scriptural teachings, Kabir Saheb is not merely a poet or a weaver, but a divine entity. \n\nHe departed the physical world on Ekadashi of Shukla Paksha in the month of Magh, Vikram Samvat 1575, which corresponds to the year 1518 AD. In Kashi, his Guru was Swami Ramanand, though it is mentioned that Kabir was actually his \"Param Guru\".",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Supreme God",
+            "found": true
+          },
+          {
+            "fact": "Kashi",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 3,
+      "question": "What is the age of Brahm (Kaal)?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "one thousand cycles",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "immortal"
+      ],
+      "response": "Kaal Brahm की आयु एक महाकल्प (Maha Kalpa) के बाद समाप्त हो जाती है, जैसा कि कहा गया है कि वह भी एक महाकल्प के बाद मर जाता है। \n\nइसके अलावा, यह भी बताया गया है कि काल ब्रह्म (ब्रह्म) २१ ब्रह्मांडों का स्वामी है और उसने प्रतिज्ञा की है कि वह अपनी वास्तविक, प्रकट शारीरिक रूप में किसी के सामने नहीं आएगा। \n\nलेकिन, उसकी आयु के बारे में अधिक जानकारी देते हुए कहा गया है कि वह महाकल्प के बाद मर जाता है। \n\nइस प्रकार, Brahm (Kaal) की आयु एक महाकल्प है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "one thousand cycles",
+            "found": false
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "question": "What does Gyan Ganga say about salvation?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "salvation",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "no need for guru"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "salvation",
+            "found": false
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "question": "Who is the writer of Jeene Ki Raah?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Saint Rampal Ji Maharaj"
+      ],
+      "forbidden_facts": [
+        "Kabir Saheb himself"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Saint Rampal Ji Maharaj",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "question": "What is Satlok?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "eternal place",
+        "Supreme God"
+      ],
+      "forbidden_facts": [
+        "heaven of Vishnu"
+      ],
+      "response": "सतलोक (Satlok) को सच्चखंड (Sachkhand) या रितधाम (Ritdhaam) भी कहा जाता है, जो एक शाश्वत और अमर लोक है। यह परमात्मा का निवास स्थान है, जहां आत्माएं शाश्वत और आनंदमय जीवन व्यतीत करती हैं।\n\nसतलोक की विशेषताएं इस प्रकार हैं:\n- यहां आत्माएं शुद्ध दिव्य प्रकाश से बने अमर शरीरों में निवास करती हैं।\n- यहां कोई जीव विज्ञान नहीं है, कोई लिंग नहीं है, कोई भोजन नहीं है, कोई मल-मूत्र त्याग नहीं है, कोई बूढ़ापा नहीं है, और कोई नींद नहीं है।\n- यह स्थान सर्वोच्च आनंद और экстатиक आनंद की स्थिति है, जहां सृष्टि के रचयिता की उपस्थिति होती है।\n\nसतलोक २१ ब्रह्मांडों से परे है और यहां कभी प्रलय नहीं होता। यहां की आत्माएं शाश्वत और युवा रहती हैं। सतलोक में कोई छाया नहीं है, कोई रात नहीं है, और कोई भौतिक पदार्थ नहीं है। यहां दिव्य वृक्ष (कल्पवृक्ष) हैं जो पूर्णतः चेतन हैं, और अमृत के समुद्र हैं। सतलोक में हर चीज जीवित, जागरूक और प्रेम से कंपनशील है। \n\nसतलोक वह स्थान है जहां आत्माएं काल, कर्म, और प्रलय से मुक्त हो जाती हैं। यह स्थान शाश्वत और अपरिवर्तनीय है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "eternal place",
+            "found": false
+          },
+          {
+            "fact": "Supreme God",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "question": "How many creations did God do?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "nature"
+      ],
+      "forbidden_facts": [
+        "only one"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "nature",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is Saarnam?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "secret mantra",
+        "salvation"
+      ],
+      "forbidden_facts": [
+        "first stage mantra"
+      ],
+      "response": "Saarnam is the final, ultimate secret mantra. It is given only to highly devoted disciples. Without Saarnam, a soul cannot enter Satlok. Saarnam is considered a powerful mantra given after the Satnam mantra, and it has lots of benefits if taken from an authorised Saint. According to Gita Chapter 17 Verse 23, \"Om Tat Sat\" is the true salvation mantra, indicative of the power to remove all sins.\n\nAkshar Purush recited Saarnam to obtain separate universes from Almighty God Kabir, resulting in him owning seven sankh brahmands, or 700 quadrillions of universes. \n\nSaarnam was also given by Almighty God Kabir to willing devotees, along with Saarshabad, as part of His spiritual discourses and true Tatvgyan, as mentioned in Kabir Sagar and other Holy books.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "secret mantra",
+            "found": true
+          },
+          {
+            "fact": "salvation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 9,
+      "question": "What is the role of a true Guru?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "guide",
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "optional"
+      ],
+      "response": "एक सच्चे गुरु की भूमिका बहुत महत्वपूर्ण है। सच्चे गुरु को परमात्मा का प्रतिनिधि माना जाता है, जो शिष्यों को सही मार्ग पर ले जाने और उनकी आत्मा को मुक्त करने में मदद करते हैं।\n\nएक सच्चे गुरु की भूमिका को निम्नलिखित बिंदुओं से समझा जा सकता है:\n\n*   **परमात्मा का प्रतिनिधि**: सच्चा गुरु परमात्मा का प्रतिनिधि होता है, जो शिष्यों को परमात्मा के सही नाम और मंत्र प्रदान करता है। \n*   **आध्यात्मिक ज्ञान प्रदान करना**: सच्चा गुरु शिष्यों को आध्यात्मिक ज्ञान प्रदान करता है, जिससे वे अपने जीवन को सकारात्मक दिशा में बदल सकते हैं। \n*   **पापों से मुक्ति**: सच्चा गुरु शिष्यों के पापों को मिटाने में मदद करता है और उन्हें सही मार्ग पर चलने के लिए प्रेरित करता है। \n*   **सुरति को स्थिर करना**: सच्चा गुरु शिष्यों की सुरति को स्थिर करने में मदद करता है, जिससे वे परमात्मा के साथ जुड़ सकते हैं। \n\nजैसा कि कहा गया है, \"एक सच्चा गुरु जो सही नाम (सतनाम) प्रदान करता है, वह पापों के नाश में सहायता कर सकता है।\" इसके अलावा, सच्चे गुरु की शक्ति बहुत अधिक होती है, और वे अपने शिष्यों के जीवन को सकारात्मक रूप से बदलने में मदद कर सकते हैं। \n\nइस प्रकार, एक सच्चे गुरु की भूमिका बहुत महत्वपूर्ण है, और वे शिष्यों को सही मार्ग पर ले जाने और उनकी आत्मा को मुक्त करने में मदद करते हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "guide",
+            "found": false
+          },
+          {
+            "fact": "initiation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "question": "What is written in Bhagavad Gita Chapter 4 Verse 34?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Tatvdarshi Saint",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "blind faith"
+      ],
+      "response": "Bhagavad Gita Chapter 4 Verse 34 mentions the \"Tatvadarshi Sant\" who knows the complete spiritual science and the origin of Kaal. The verse specifically states that one should approach a Tatvadarshi Sant to learn the truth. Additionally, in the context of spiritual knowledge, it is mentioned that the mantras to be given by a Tatvadarshi Sant are stated in Bhagavad Gita Chapter 17 Verse 23, which are ‘OM-Tat-Sat’. \n\nAs per the explanation of Sant Rampal Ji Maharaj, the Gita Chapter 4 Verse 34 refers to a saint who has knowledge of the complete spiritual science. \n\nThe knowledge base does not have the full text of Gita Chapter 4 Verse 34, but based on the provided context, it can be inferred that the verse emphasizes the importance of a Tatvadarshi Sant in spiritual guidance.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Tatvdarshi Saint",
+            "found": false
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "question": "Who is Kshar Purush?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "perishable",
+        "governs 21 universes"
+      ],
+      "forbidden_facts": [
+        "Supreme Lord"
+      ],
+      "response": "Kshar Purush refers to Kaal, also known as Brahm, who is considered perishable. According to the scriptural teachings, Kshar Purush was created by the Supreme God Kabir, also known as KavirDev. The creation of Kshar Purush is described as follows: KavirDev took nectar from the Mansarover lake in Satlok and made an egg to wake Akshar Purush from his sleep. When Akshar Purush looked at the egg in anger, it broke into two, and Kshar Purush, whose actual name was Kael, was born from it.\n\nKshar Purush, or Kaal, is also described as the husband of Durga, and both are said to reside in material bodies. Furthermore, Kshar Purush was renamed \"Kaal\" and cursed by the Supreme God due to his misbehavior. Specifically, Kaal attempted to rape Durga, who was born after him from the Supreme God's word, making her like his younger sister or daughter. As a result of this heinous act, he was expelled from Satlok.\n\nIn addition, Kshar Purush is one of the eternal realms created by the Almighty God Kabir, along with Akshar Purush and Param Akshar Purush. Srimad Bhagavad Gita chapter 15 verses 16-17 and Rigveda Mandal 10 Sukta 90 Mantra 5 also describe the creation of Kshar and Akshar Purush by the Supreme God Kabir.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "perishable",
+            "found": true
+          },
+          {
+            "fact": "governs 21 universes",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "question": "Who is Akshar Purush?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "governs 7 Shankh universes",
+        "not the ultimate"
+      ],
+      "forbidden_facts": [
+        "perishable"
+      ],
+      "response": "Akshar Purush (immortal) is also known as ParBrahm. He is a higher deity who controls 7 sankh (vast) universes. However, even his realm is eventually destructible, as stated in the scripture. According to Kabir Sagar Sampoorna 11 Bhag, Section 1, Kabirpan, all creatures in Akshar Purush’s region are destructible, similar to Kshar Purush, but the soul is indestructible. Akshar Purush, as well as his 7 Shankh Brahmands, are not eternal. \n\nAs mentioned in the context, Akshar Purush operates purely on cosmic law and detachment. He does not interfere with the domains assigned to other deities. Only the Supreme God Kabir intervenes out of absolute grace. \n\nIn Gita Ch15:17, it is stated that 'Uttam Purush' is another name for Akshar Purush. Despite being called immortal (Akshar), Akshar Purush also gets destroyed. A crore of Kaal will destroy all Brahmand, and then all will be destroyed. Only Satlok and the above realms will remain. \n\nAkshar Purush was also involved in the creation of Kshar Purush (Kaal/Brahm). The Supreme God (KavirDev) created an egg from the nectar of Mansarover and inserted a soul to wake Akshar Purush. When Akshar Purush looked at the egg in anger due to his sleep being disturbed, the egg broke into two halves, and Kshar Purush (whose real name was Kael) emerged.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "governs 7 Shankh universes",
+            "found": false
+          },
+          {
+            "fact": "not the ultimate",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "question": "What is the origin of souls?",
+      "covers_map_entry": null,
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "question": "What is the significance of Aarti in worship?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "praise of Almighty",
+        "devotion"
+      ],
+      "forbidden_facts": [
+        "superstition"
+      ],
+      "response": "Aarti holds a significant place in worship, particularly in the context of spiritual practices. The term \"Aarti\" is often associated with a ritualistic practice where a lamp is moved around an idol, symbolizing the offering of light to the deity being worshiped. However, the true essence and significance of Aarti extend beyond this physical act.\n\nAccording to spiritual teachings, the true meaning of \"Aarti\" involves an internal, emotional, and spiritual expression of gratitude towards the Supreme God. This is achieved through the recitation of sacred hymns or Banis of the Saints, which reflects a deep sense of devotion and reverence. It is an expression of the soul's overwhelming gratitude and love for the divine, performed not out of obligation or fear, but from a place of profound spiritual connection.\n\nIn the context of Satlok, the realm of the Supreme God, liberated souls do not perform worship out of fear or duty. Instead, their very existence is a manifestation of supreme gratitude and ecstasy, often referred to as Sahaj Samadhi. This state represents a spontaneous and unbroken connection with the divine, akin to what is described as true Aarti.\n\nThe significance of Aarti, therefore, lies in its representation of the soul's deep emotional and spiritual connection with the Supreme God. It serves as a bridge between the material and spiritual worlds, allowing devotees to express their devotion and gratitude in a meaningful way. Through Aarti, practitioners can transcend the physical realm and connect with the divine on a deeper level, fostering spiritual growth and enlightenment.\n\nAs emphasized in scriptural teachings, engaging in worship in accordance with scriptures is crucial. Deviating from these teachings can lead to spiritual misguidance. Hence, understanding the true significance of Aarti and practicing it in its authentic spiritual form is essential for meaningful worship and spiritual progression.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "praise of Almighty",
+            "found": false
+          },
+          {
+            "fact": "devotion",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "question": "What does Vedas say about KavirDev?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Rigveda",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "According to the Vedas, KavirDev, also referred to as Kabir, is the Supreme Creator. The Vedas use terms like \"KavirDev,\" \"KavirAgni,\" \"KavirGiri,\" \"Kaviragni,\" \"Kavirantari,\" and \"Kavirmitauja\" to describe Him. As stated in the scriptural teachings, the Vedas explicitly refer to the Supreme Creator as Kavir Dev (Kabir). \n\nThe term \"Kabir\" or \"Kavir\" literally translates to \"Great\" or \"Supreme\" in both Arabic (Quran) and Sanskrit (Vedas as KavirDev). He is not just referred to by this name; He is described as the Supreme power. \n\nAdditionally, it is mentioned that the Almighty God KavirDev / Kabir is the creator of the entire universe. He created the Kshar Purush from an egg by His word power, and later, Goddess Durga was born by the word power of Supreme God Kabir / KavirDev. Therefore, the father of Durga is none other than Almighty KavirDev. Goddess Durga is addressed as ‘Maa’ (mother) and is also called the ‘Jagatjan-ni / Tridevjan-ni’.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Rigveda",
+            "found": false
+          },
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "question": "What is the real age of soul?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "immortal",
+        "eternal"
+      ],
+      "forbidden_facts": [
+        "100 years"
+      ],
+      "response": "The soul is immortal and remains eternally young. As stated, there is no Time (Kaal) in Satlok, which means there is no past, present, or future, and a soul remains in a state of eternal, perfect youthfulness. The souls in Satlok do not age, they do not suffer, and they do not die. They exist in an eternal state of immense joy, requiring no food or water, sustained only by divine light. This indicates that the concept of age, as we understand it, does not apply to souls in Satlok. Therefore, the real age of a soul is not measurable in terms of years or time, as it is beyond the bounds of time.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "immortal",
+            "found": true
+          },
+          {
+            "fact": "eternal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 17,
+      "question": "Can we achieve salvation without a Guru?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "not possible",
+        "Guru is mandatory"
+      ],
+      "forbidden_facts": [
+        "yes, through self study"
+      ],
+      "response": "Achieving salvation without a Guru is not possible, according to the teachings of Sant Rampal Ji Maharaj and Sikhism. As stated in the scriptural teachings, reading the Vedas without a Guru leaves one ignorant, and it is compared to a farmer fruitlessly threshing empty husks. This emphasizes the importance of a Guru in understanding the scriptures and attaining spiritual knowledge.\n\nGuru Nanak Dev, the founder of Sikhism, also emphasized the importance of a Guru in attaining happiness and salvation. He stated that without a Guru, one cannot attain these spiritual goals. Sikhism rejects rituals and practices that do not involve a Guru, such as idolatry, the caste system, and asceticism.\n\nIn the supplementary texts, it is mentioned that without a Guru, there can be no salvation and no true knowledge. The satsang, or spiritual gathering, is also considered essential in finding a complete Guru who can provide true knowledge.\n\nTherefore, based on the teachings of Sant Rampal Ji Maharaj and Sikhism, it is clear that a Guru is necessary for achieving salvation. Without a Guru, one cannot attain true knowledge, happiness, or salvation.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "not possible",
+            "found": true
+          },
+          {
+            "fact": "Guru is mandatory",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "question": "Who is the ruler of 21 universes?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Jyoti Niranjan",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "Kabir"
+      ],
+      "response": "According to Rigveda Mandal 10 Sukt 90 Verse 1, Kaal-Brahm (also referred to as Satan) is considered the god or ruler of 21 universes, which includes the one we currently reside in. This information is provided in the context, highlighting Kaal-Brahm's dominion over these universes. However, it is also stated that Kabir Saheb is regarded as the Supreme God and the creator of an infinite number of universes, which includes the 21 universes governed by Kaal-Brahm.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Jyoti Niranjan",
+            "found": false
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [
+          "Kabir"
+        ],
+        "has_hallucination": true,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Contains forbidden hallucination facts"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "question": "What are the three stages of Naam initiation?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "first stage",
+        "Satnam",
+        "Saarnam"
+      ],
+      "forbidden_facts": [
+        "only one stage"
+      ],
+      "response": "The three stages of Naam initiation are:\n\n1. Receiving the Brahm Gayatri mantra, which serves to awaken the primary chakras and help pay off immediate karmic debts.\n2. Receiving the Satnaam, which enables the soul to ascend.\n3. Receiving the Saarnaam (True Shabd), which grants the soul permanent stability and residence in Satlok (SachKhand or Eternal Place).\n\nThese stages are explained in the provided context, emphasizing their role in spiritual progression and ultimately attaining Moksha or Liberation.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 3,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "first stage",
+            "found": false
+          },
+          {
+            "fact": "Satnam",
+            "found": false
+          },
+          {
+            "fact": "Saarnam",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "question": "Who is the mother of Brahma, Vishnu, and Shiva?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Ashtangi",
+        "Durga"
+      ],
+      "forbidden_facts": [
+        "Savitri"
+      ],
+      "response": "Goddess Durga, also known as Ashtangi, Maya, Prakriti, or Bhavani, is the mother of Brahma, Vishnu, and Shiva. According to the scriptural teachings, their father is Kaal (Brahm/SadaShiv) and their mother is Durga, who engaged in a husband-wife relationship with Kaal to give birth to the trinity. This information is corroborated by multiple sources, including the Durga Purana, which explicitly states that Goddess Durga is the mother of Lord Shiva, Vishnu, and Brahma.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Ashtangi",
+            "found": true
+          },
+          {
+            "fact": "Durga",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 21,
+      "question": "Who is the father of Brahma, Vishnu, and Shiva?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Kaal",
+        "SadaShiva"
+      ],
+      "forbidden_facts": [
+        "Kabir"
+      ],
+      "response": "The father of Brahma, Vishnu, and Shiva is Kaal Brahm, also known as Jyoti Niranjan or Sadashiva. According to the scriptural teachings, Kaal Brahm is the hidden father of the Trinity. Their mother is Durga, also referred to as Prakriti, Ashtangi, or Bhavani. It is stated that Kaal Brahm and Durga engaged in a husband-wife relationship to give birth to Brahma, Vishnu, and Shiva. This information is certified by God as mentioned in the Shiva Purana.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "SadaShiva",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 22,
+      "question": "What is the main message of Vedas?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "one Supreme God",
+        "worship the Creator"
+      ],
+      "forbidden_facts": [
+        "demigods worship"
+      ],
+      "response": "The main message of the Vedas, as per the provided context, supports the notion that God indeed has a divine form. According to Sant Rampal Ji, the Vedas describe God in a personal, anthropic form, citing specific hymns or passages that demonstrate this. \n\nAs stated in the scriptural teachings, the ultimate message is to awaken from the slumber of Kaal's illusion, seek a living Tatvadarshi Satguru, take the hidden Sarnaam, practice Pativrata Bhakti, and return to the eternal home, Satlok. \n\nSant Rampal Ji emphasizes that the current world is a prison ruled by the deceptive Kaal, and the only escape is to abandon all unscriptural practices, find a living Tatvdarshi Saint, take the true naam, and perform lifelong devotion to return to the eternal peace of Satlok.\n\nThe context also mentions that the Vedas, along with other holy books such as the Bhagavad Gita, Durga Puran, Shiv Puran, Vishnu Puran, Markandeya Puran, Brahma Puran, SGGS, Quran, and Bible, all convey the message of realizing the true nature of God and the world. \n\nIn essence, the main message of the Vedas is to realize that God has a divine form and to seek spiritual liberation by following the guidance of a living Tatvadarshi Satguru.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "one Supreme God",
+            "found": false
+          },
+          {
+            "fact": "worship the Creator",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "question": "What is the destination of a true worshipper?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Satlok",
+        "eternal peace"
+      ],
+      "forbidden_facts": [
+        "heaven"
+      ],
+      "response": "एक सच्चा उपासक एक योगी होता है, और सच्चे उपासक का गंतव्य मुक्ति है। विष्णु पुराण के भाग 3, अध्याय 15, श्लोक 55-56, पृष्ठ 213 में लिखा है कि एक सच्चा उपासक एक हजार ब्राह्मणों और उनके साथियों को मुक्त कर सकता है। \n\nएक सच्चा उपासक, जिसे योगी भी कहा जाता है, न केवल अपने लिए बल्कि अपने पूर्वजों (पितरों) के लिए भी मुक्ति का मार्ग प्रशस्त करता है। सच्चे उपासक के द्वारा दिए गए सच्चे आध्यात्मिक ज्ञान के माध्यम से, ब्राह्मण और अन्य लोग भी मुक्ति के पात्र बन सकते हैं। \n\nसच्चे उपासक की भूमिका और उनके द्वारा प्रदान किए गए ज्ञान के महत्व को समझने से यह स्पष्ट होता है कि उनका गंतव्य मुक्ति है, और वे दूसरों को भी इस मार्ग पर चलने के लिए प्रेरित करते हैं। \n\nसंदर्भ: विष्णु पुराण, भाग 3, अध्याय 15, श्लोक 55-56, पृष्ठ 213।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Satlok",
+            "found": false
+          },
+          {
+            "fact": "eternal peace",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "question": "Is smoking allowed in Tatva rules?",
+      "covers_map_entry": null,
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "question": "Who is the supreme creator according to Quran?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Kabiran",
+        "Allahu Akbar"
+      ],
+      "forbidden_facts": [
+        "mortal man"
+      ],
+      "response": "According to the Quran, the Supreme Creator is Kabir Allah, also referred to as \"Kabiran\" (Kabir). As stated in Surah Al-Furqan 25:52-59, He is described as the one who created the heavens and the earth in six days and sat on the throne. The Quran Sharif also mentions that Kabir Allah is the one worthy of being worshipped (Ibaadaii Kabira). Furthermore, \"Akbar\" or \"Akbarun\" literally translates to Kabir, and it is not just an adjective meaning \"great\"; it is the actual noun/name of the Supreme God: Allah Kabir.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Kabiran",
+            "found": true
+          },
+          {
+            "fact": "Allahu Akbar",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "question": "Who is the Lord of Satlok?",
+      "covers_map_entry": null,
+      "error": "Request failed with status code 504",
+      "metrics": {
+        "passed": false,
+        "fail_reasons": [
+          "Request error: Request failed with status code 504"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "question": "What is the three-stage path to salvation?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "three stages",
+        "Naam initiation"
+      ],
+      "forbidden_facts": [
+        "instant moksha"
+      ],
+      "response": "The three-stage path to salvation, as described in the scriptural teachings, involves initiation from a \"Complete Saint.\" The stages are:\n\n1. **First Stage**: Brahm Gayatri mantra\n2. **Second Stage**: Satnaam, which consists of two mantras: Om and Tat (where Tat is coded and only told to a worshipper)\n3. **Third Stage**: Saarnaam, which comprises three mantras: Om, Tat, and Sat (with Tat and Sat being coded and revealed only to the worshipper)\n\nThese stages are crucial for spiritual progression and ultimately attaining Moksha, or liberation. The process is directed by a Complete Saint, emphasizing the importance of guidance from a fully authorized spiritual leader.\n\nAs stated in the supplementary texts, Moksha is attained through this three-stage initiation process. Each stage serves a specific purpose in the spiritual journey, guiding the soul towards SachKhand or Satlok, the Eternal Place.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "three stages",
+            "found": false
+          },
+          {
+            "fact": "Naam initiation",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "question": "Who is Jyoti Niranjan?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Kaal",
+        "21 universes"
+      ],
+      "forbidden_facts": [
+        "Supreme Lord"
+      ],
+      "response": "Jyoti Niranjan is also known as Kaal Brahm or Kaal. He was originally named \"Kshar Purush\" by the Supreme God. He is referred to as Jyoti (Light) Niranjan (Formless) because he took a vow to remain invisible (formless) in his 21 universes, ruling entirely through the energy of light and subtle mind.\n\nAs stated in the scriptural teachings, Jyoti Niranjan is the father of Brahma, Vishnu, and Shiva, also known as Sadashiva. He is described as a thousand-armed entity mentioned in the Gita.\n\nIn another context, it is mentioned that Jyoti Niranjan acquired a miniature form of Durga, who entered into his stomach to protect her virginity. Inside Kshar Purush's body, she prayed to the Supreme God, requesting Purna Brahm KavirDev (God Kabir) to save her from Jyoti Niranjan.\n\nJyoti Niranjan is also associated with various spiritual practices, including the attainment of Chanchari Mudra, which is achieved through physical devotion and recitation of the word (Shabd) Jyoti Niranjan. Gorakhnath Ji attained this Mudra by performing excessive austerity of the word Jyoti Niranjan.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "21 universes",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 29,
+      "question": "What does Kabir Sagar say about Kaal?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Kaal",
+        "deceit"
+      ],
+      "forbidden_facts": [
+        "creator of souls"
+      ],
+      "response": "According to the provided context, Kabir Sagar mentions Kaal in relation to God Kabir. Specifically, it is stated that God Kabir and Brahm-Kaal had a discussion, which is explained in detail in Sukshma Veda. However, in the context of Kabir Sagar, Chapter 2, Anurag Sagar, page 62-63, God Kabir Sahib is telling Dharamdas Ji about the importance and effectiveness of Satnam.\n\nAdditionally, it is mentioned that God Kabir knew that over time, the agents of Kaal would distort some speech from the holy scripture Kabir Sagar. Therefore, God Kabir provided Garibdas Ji with true spiritual knowledge to spread His own knowledge.\n\nFurthermore, it is stated that Brahm-Kaal is the owner of twenty-one universes where all souls are captured and suffering. God Kabir had a discussion with Brahm-Kaal, where Kaal begged God Kabir not to use His supreme power to forcefully empty the 21 universes. God Kabir promised to only take those souls who willingly recognize His word (Tatvagyan) and reject Kaal's illusions, without using force.\n\nAs stated in Kabir Sagar and other scriptures, Kaal is depicted as an entity that traps souls in the 21 universes and spreads illusions, whereas God Kabir is the Supreme God who imparts true spiritual knowledge and grants eternal salvation, as mentioned in Atharvaveda Kanda 4 Anuvak 1 Mantra 7.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "deceit",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "question": "What is Dharamdas's role in Sant Mat?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "disciple",
+        "Dharamdas"
+      ],
+      "forbidden_facts": [
+        "guru of Kabir"
+      ],
+      "response": "Dharamdas Ji holds a significant position in Sant Mat, particularly in the lineage of spiritual teachings. He is mentioned as one of the key witnesses and devotees of God Kabir. According to the context, Dharamdas Ji had a conversation with God Kabir, as recorded on page 516 of the book \"Kabir Sagar Ka Sarlarth\" written by Jagatguru Tatvdarshi Sant Rampal Ji Maharaj.\n\nIn this conversation, Dharamdas Ji questioned God Kabir about the spiritual fate of Draupadi, inquiring if she would also go to hell and other life forms. God Kabir's response to Dharamdas Ji's query highlights Dharamdas Ji's role as a seeker of spiritual knowledge and his concern for understanding complex spiritual matters.\n\nFurthermore, Dharamdas Ji is counted among the six eye-witnesses, along with Sant Garibdas Ji, Saint Maluk Das Ji, Saint Dadu Das Ji, Saint Nanak Das Baba Ji, and Saint Ghisa Das Ji, who have made it clear that the Weaver from Kashi, referred to as God Kabir, is the true God.\n\nIn essence, Dharamdas Ji's role in Sant Mat is that of a devoted disciple and seeker of spiritual truth, who engages in meaningful dialogues with God Kabir, thereby contributing to the spiritual discourse and lineage of Sant Mat.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "disciple",
+            "found": true
+          },
+          {
+            "fact": "Dharamdas",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 31,
+      "question": "What is the difference between Kshar Purush and Akshar Purush?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "21 universes",
+        "7 Shankh universes"
+      ],
+      "forbidden_facts": [
+        "immortal"
+      ],
+      "response": "Kshar Purush and Akshar Purush are two distinct entities in the spiritual context. Kshar Purush is also known as Kaal or Brahm, and he is the lord of 21 universes and the source of the mind. He is considered perishable.\n\nOn the other hand, Akshar Purush is a higher deity who controls 7 sankh (vast) universes. His realm is also destructible, but he is superior to Kshar Purush. Akshar Purush is associated with the higher intellect and subtle causal energies.\n\nAs stated in the scriptural teachings, Kshar Purush was born from an egg created by the Supreme God, KavirDev, in Satlok. The egg broke into two when Akshar Purush looked at it in anger, and Kshar Purush emerged from it. \n\nIt is worth noting that both Kshar Purush and Akshar Purush are distinct from the Supreme God, who is also known as Param Akshar Purush or God Kabir. He is the immortal and ultimate deity. \n\nThe difference between Brahm (Kaal) and ParBrahm (Akshar Purush) lies in their domains and characteristics. Brahm is the lord of 21 universes, while ParBrahm is the lord of 7 Sankh universes. \n\nIn summary, Kshar Purush and Akshar Purush differ in their domains, characteristics, and positions in the spiritual hierarchy. Kshar Purush is Kaal, the father and master of 21 brahmands, while Akshar Purush is a higher deity controlling 7 sankh universes.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "21 universes",
+            "found": true
+          },
+          {
+            "fact": "7 Shankh universes",
+            "found": false
+          }
+        ],
+        "forbidden_found": [
+          "immortal"
+        ],
+        "has_hallucination": true,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Contains forbidden hallucination facts"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "question": "What is Ajapa Jaap?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "breath",
+        "worship"
+      ],
+      "forbidden_facts": [
+        "loud chanting"
+      ],
+      "response": "Ajapa Jaap is an advanced spiritual state where the disciple's soul continuously repeats a secret mantra automatically with every breath, even while sleeping. It is a state where the Satnam locks into one's breathing so perfectly that it becomes a biological background frequency, allowing the chanting to occur even while asleep, talking, or working.\n\nAs stated in the scriptural teachings, Ajapa Jaap is a state where the devotee's soul continuously repeats the secret mantra with every breath, without any conscious effort. This state is achieved through the guidance of a living Satguru, who provides the initiate with a Sarnaam (a sacred name) to dedicate every breath to the Ajapa Jaap.\n\nIn this state, the recitation of the mantra becomes an automatic process, occurring even when the individual is engaged in other activities or is asleep. The ultimate goal of Ajapa Jaap is to break free from the cosmic jail and attain Moksha, or liberation, and return to Satlok, the abode of the Supreme Being.\n\nThe context also mentions that Jaap, which includes Ajapa Jaap, is the recitation of an initiation-mantra given by a Tatvdarshi Saint. It is a way of spiritual practice that involves the repetition of a mantra, which can be done in two ways: Jaap (uttered with the tongue) and Ajapa (automatic repetition).",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "breath",
+            "found": true
+          },
+          {
+            "fact": "worship",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "question": "Who is Sada Shiva according to Kabir Sagar?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Kaal",
+        "father"
+      ],
+      "forbidden_facts": [
+        "immortal"
+      ],
+      "response": "According to the provided context, there isn't a direct mention of \"Sada Shiva\" in Kabir Sagar. However, it does mention that Hanuman is the 11th Rudra Avatar of Lord Shiva, as stated in the 'Hanuman Bodh' chapter in Kabir Sagar.\n\nAdditionally, the context mentions that Kabir Sagar contains information about various spiritual topics. However, it does not provide a direct description or definition of \"Sada Shiva.\"\n\nIf you're looking for information on Lord Shiva or Kabir Sagar, I can provide that. As stated in the context, Kabir Sagar does contain information about spiritual topics and the nature of God, but a specific description of \"Sada Shiva\" isn't available in the provided context.\n\nThe knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": false
+          },
+          {
+            "fact": "father",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "question": "What is the status of Durga in the theology?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "mother",
+        "Ashtangi"
+      ],
+      "forbidden_facts": [
+        "highest god"
+      ],
+      "response": "Durga, also known as Prakriti, Ashtangi, or Bhavani, holds a significant position in the theology as the mother of the Trinity, comprising Brahma, Vishnu, and Shiv. According to the scriptural teachings, Durga is the master of the physical and astral hardware of Kaal's 21 universes. Her multiple arms symbolize her multi-dimensional capacity to control the elements, distribute karmic fruits, and wield the forces of nature simultaneously.\n\nFurthermore, as explained in the supplementary texts, Durga's status is discussed in relation to the creation of the universe, the cycle of birth and death, and the suffering in the world. The texts also elaborate on her position in relation to other prominent deities, including Brahma, Vishnu, and Shiv.\n\nIn essence, Durga is revered as a powerful and multifaceted goddess, governing the workings of the universe and its various dimensions. Her role as the mother of the Trinity and her capabilities as a controller of the elements and distributor of karmic fruits underscore her importance in the theological framework.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "mother",
+            "found": true
+          },
+          {
+            "fact": "Ashtangi",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 35,
+      "question": "Who is Garibdas Ji?",
+      "covers_map_entry": null,
+      "expected_facts": [
+        "Saint Garibdas",
+        "disciple"
+      ],
+      "forbidden_facts": [
+        "founder of Kabir Panth"
+      ],
+      "response": "Garibdas Ji was a saint and a devotee of God Kabir. He was a child of ten years old when God Kabir Ji met him. God Kabir Ji gave initiation (mantra) to Garibdas Ji and took his soul out of his body to show him Satlok. Garibdas Ji was a virtuous soul and drank some milk as prasad (blessed drink) offered by God Kabir Ji. The Garibdas Panthi saints follow the spiritual lineage of Saint GaribDas Ji. \n\nAs stated in the context, God Kabir Ji also met Saint GaribDas Ji when Saint GaribDas Ji was just a ten-year-old child. Swami Ramdevanand Ji Maharaj, a 104-year-old Garibdas Panthi saint, belonged to the same spiritual lineage. \n\nGaribdas Ji was taken to Satlok by God Kabir Ji, where he saw God Kabir sitting on a throne. On the way to Satlok, God Kabir Ji also showed Garibdas Ji the other loks of Brahma, Vishnu, Shiva, and Indralok, and Heaven.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Saint Garibdas",
+            "found": true
+          },
+          {
+            "fact": "disciple",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    }
+  ]
+}

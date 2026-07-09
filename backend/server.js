@@ -36,8 +36,10 @@ ABSOLUTE RESTRICTIONS — violating any of these is a failure:
 6. Answer Depth. Give comprehensive, detailed answers. When multiple chunks add related details, weave them into a full explanation with specific names, numbers, and mechanisms — but only ones present in the CONTEXT. Depth comes from thorough use of what's retrieved, not from padding.
 7. Non-Repetitive Synthesis. State the subject once and merge multiple reasons or aspects into one flowing narrative using transitions like "Furthermore" or "Additionally" — don't restate the subject each time.
 8. NO metadata in answers. Never mention "Verified Q&A Bank," document/file names, URLs, chunk numbers, tier labels, or database IDs — these are internal only, invisible to the user.
-9. Genuine Gaps Only. If, after reading all context chunks, the SPECIFIC fact or answer the user asked for is not stated in ANY chunk, reply exactly: "The knowledge base does not have sufficient information on this topic." This applies even when chunks discuss the same entity or topic but do NOT contain the particular fact being asked — do NOT substitute a topically-adjacent fact as if it answers the question. Rule 4 (synthesis) only applies when the answer IS present across chunks but requires connecting stated details — it does NOT apply when the specific requested fact simply isn't there.
+9. Genuine Gaps Only. If, after reading all context chunks, the SPECIFIC fact or answer the user asked for is not stated in ANY chunk, reply exactly: "The knowledge base does not have sufficient information on this topic." This applies even when chunks discuss the same entity or topic but do NOT contain the particular fact being asked — do NOT substitute a topically-adjacent fact as if it answers the question. Rule 4 (synthesis) only applies when the answer IS present across chunks but requires connecting stated details — it does NOT apply when the specific requested fact simply isn't there. Cross-reference with Rule 11 and 12.
 10. Source Hierarchy. Sant Rampal Ji Maharaj's explanations are the highest authority in this knowledge base. When you have chunks from both His explanation and an original scripture (Vedas, Gita, etc.), build the answer primarily from His explanation and use the original scripture as supporting pramaan. Never contradict His explanation using original scripture alone.
+11. Multi-Chunk Synthesis Discipline. When your answer draws on more than one chunk, every connection you make between them — every causal link, sequence of events, or relationship — must itself be explicitly stated in at least one chunk. If Chunk A says 'X happened' and Chunk B says 'Y happened,' you may NOT claim 'X caused Y' or 'X led to Y' unless a chunk explicitly states that causal link. Combining chunks means collecting their individual stated facts into one answer, not inferring unstated bridges between them.
+12. Grounding Safeguard for User Assertions. If the user's question asserts a claim or premise (e.g., 'Why did X do Y?', 'Since X did Y, how...?', 'I think it is stated that X did Y'), treat this assertion as unverified. Check the retrieved CONTEXT independently to confirm if the assertion (X did Y) is actually stated. Do NOT repeat or affirm the user's assertion as true or stated in the context unless it is explicitly present in the retrieved chunks. If it is not present, clarify that the context does not state this premise, and limit your answer to the verified facts.
 
 HOW TO ANSWER:
 - Read the question and decide: is this a direct-fact question, or an interpretive one (summary, moral, reasoning across events)?
@@ -55,12 +57,14 @@ const SYSTEM_PROMPT_8B = `You are Tatva, a spiritual knowledge assistant. Answer
 
 RULES:
 1. Every name, fact, event, or number in your answer must come from the CONTEXT. Never add anything that isn't stated there.
-2. For questions with no single direct answer — a story's moral, a summary, "why did this happen" — read the relevant chunks and connect the stated events and details into a clear answer. This connecting is allowed and expected. Do not add outside facts, and do not add a meaning or moral that isn't grounded in what's actually in the CONTEXT.
+2. For questions with no single direct answer — a story's moral, a summary, "why did this happen" — read the relevant chunks and connect the stated events and details into a clear answer. This connecting is allowed and expected. Do not add outside facts, and do not add a meaning or moral that isn't grounded in what's actually in the CONTEXT. Cross-reference with Rule 8 and 9.
 3. Never mention "Verified Q&A Bank," document IDs, URLs, or "according to context."
 4. Cite real scriptures (book, chapter, verse, page) only if present in the CONTEXT.
 5. If the CONTEXT has nothing relevant to the question at all, say exactly: "The knowledge base does not have sufficient information on this topic."
 6. Stay on topic — no tangents, no promotional language. Sound like a knowledgeable scholar, not a search engine.
 7. Match the user's language (Hindi, English, Hinglish).
+8. Multi-Chunk Synthesis Discipline: When combining details from multiple chunks, every causal connection, sequence, or relationship must be explicitly stated in the context. Do not invent links or bridges.
+9. Grounding Safeguard for User Assertions: Treat user assertions/premises within questions as unverified. Do not repeat or accept them unless explicitly found in the retrieved context. If absent, clarify that the context does not state this premise.
 
 RETRIEVED CONTEXT:
 {{CONTEXT_HERE}}`;
@@ -338,6 +342,76 @@ function getEmbedding(query) {
   }
 }
 
+async function callGroqJSON(prompt, maxTokens = 250, preferredModels = null) {
+  let lastError;
+  const models = preferredModels || ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile'];
+  for (const model of models) {
+    for (let i = 0; i < apiKeys.length; i++) {
+      try {
+        const groq = new Groq({ apiKey: apiKeys[i] });
+        const res = await groq.chat.completions.create({
+          model,
+          messages: [{ role: 'user', content: prompt }],
+          max_tokens: maxTokens,
+          temperature: 0.0,
+          response_format: { type: "json_object" }
+        });
+        const raw = res.choices[0]?.message?.content?.trim() || '{}';
+        return JSON.parse(raw);
+      } catch (err) {
+        lastError = err;
+        console.warn(`[GroqJSON] ${model} with key index ${i} failed: ${err.message?.substring(0, 80)}`);
+      }
+    }
+  }
+  throw lastError || new Error("All keys and models failed for JSON completion");
+}
+
+async function checkAnswerGrounding(answer, contextChunks, query) {
+  if (!answer || answer.length < 50 || !contextChunks || !contextChunks.length) {
+    return { grounded: true, ungrounded_claims: [] };
+  }
+
+  const lowerAnswer = answer.toLowerCase();
+  if (lowerAnswer.includes('does not have sufficient information') || 
+      lowerAnswer.includes('do not address') || 
+      lowerAnswer.includes('no relevant context') ||
+      lowerAnswer.includes('insufficient information')) {
+    return { grounded: true, ungrounded_claims: [] };
+  }
+
+  try {
+    const contextSnippet = contextChunks.map((c, i) => `[Chunk ${i+1}] ${(c.doc || '').substring(0, 400).replace(/\n/g, ' ')}`).join('\n---\n');
+    const prompt = `You are a strict spiritual fact-checker. Compare the generated ANSWER against the retrieved SOURCE CHUNKS.
+
+QUESTION: "${query}"
+
+SOURCE CHUNKS:
+${contextSnippet}
+
+ANSWER:
+${answer.substring(0, 1500)}
+
+Task: Identify if the ANSWER introduces any specific claims, events, names, numbers, or causal connections ("X was expelled because Y", "X got Y by Z") that are NOT explicitly stated in the SOURCE CHUNKS.
+- Minor word choice/paraphrasing is fine.
+- However, if the answer invents a detail, bridges separate chunks using unstated causal links, or asserts facts not found in any chunk, mark it as ungrounded.
+
+Return JSON only in this format:
+{
+  "grounded": true or false,
+  "ungrounded_claims": ["specific ungrounded claim or connection 1", ...]
+}
+
+JSON object only:`;
+
+    const parsed = await callGroqJSON(prompt, 250, ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile']);
+    return parsed;
+  } catch (err) {
+    console.warn(`[Grounding] Grounding check failed: ${err.message}`);
+    return { grounded: true, ungrounded_claims: [] };
+  }
+}
+
 
 // --- Middleware ---
 app.use(helmet({ contentSecurityPolicy: false }));
@@ -371,7 +445,7 @@ const MODELS = [
   'llama-3.1-8b-instant'
 ];
 
-async function callGroqWithFallback(messages, isVision = false, temperature = 0.1, top_p = 0.1) {
+async function callGroqWithFallback(messages, isVision = false, temperature = 0.1, top_p = 0.1, stream = true) {
   const visionModel = 'meta-llama/llama-4-scout-17b-16e-instruct'
 
   if (isVision) {
@@ -379,7 +453,7 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
     const response = await groq.chat.completions.create({
       model: visionModel,
       messages,
-      stream: true,
+      stream,
       max_tokens: 1024
     })
     return { response, model: visionModel }
@@ -397,8 +471,8 @@ async function callGroqWithFallback(messages, isVision = false, temperature = 0.
           const response = await groq.chat.completions.create({
             model,
             messages,
-            stream: true,
-            temperature: 0.1,
+            stream,
+            temperature,
             frequency_penalty: 1.0,
             presence_penalty: 0.5,
             max_tokens: 4096
@@ -1324,7 +1398,7 @@ async function searchKBChunks(originalQuery) {
 
     // Entity boosting using general fuzzy match (no corrections map needed)
     const queryEntities = extractQueryEntities(originalQuery);
-    const kbChunks = fused.slice(0, isBroadQuery(originalQuery) ? 12 : 8).map(item => {
+    const candidateChunks = fused.map(item => {
       const denseData = denseRanking.find(d => d.docKey === item.docKey);
       const vectorSim = denseData?.vectorSim || item.vectorSim || 0;
       // Entity boost: if chunk contains query entities (via fuzzy match), boost
@@ -1340,7 +1414,37 @@ async function searchKBChunks(originalQuery) {
         meta: item.meta || {}, sourceType: item.sourceType || 'pdf'
       };
     });
-    kbChunks.sort((a, b) => b.rrfScore - a.rrfScore);
+    candidateChunks.sort((a, b) => b.rrfScore - a.rrfScore);
+
+    // Source diversity enforcement: limit fraction from a single source file
+    const MAX_SOURCE_FRACTION = 0.6;
+    const targetLimit = isBroadQuery(originalQuery) ? 12 : 8;
+    const maxPerSource = Math.max(2, Math.ceil(targetLimit * MAX_SOURCE_FRACTION));
+    const diversified = [];
+    const sourceCounts = {};
+    const addedDocs = new Set();
+
+    for (const chunk of candidateChunks) {
+      if (diversified.length >= targetLimit) break;
+      const srcFile = (chunk.meta?.source || 'unknown').toLowerCase();
+      sourceCounts[srcFile] = (sourceCounts[srcFile] || 0) + 1;
+      if (sourceCounts[srcFile] <= maxPerSource) {
+        diversified.push(chunk);
+        addedDocs.add(chunk.doc);
+      }
+    }
+
+    // Backfill if diversified is too small
+    if (diversified.length < targetLimit) {
+      for (const chunk of candidateChunks) {
+        if (diversified.length >= targetLimit) break;
+        if (!addedDocs.has(chunk.doc)) {
+          diversified.push(chunk);
+          addedDocs.add(chunk.doc);
+        }
+      }
+    }
+    const kbChunks = diversified;
 
     const kbTopScore = kbChunks[0]?.vectorSim || 0;
     kbChunks.slice(0, 3).forEach((c, i) => {
@@ -1530,6 +1634,21 @@ async function searchDatabase(originalQuery) {
             kbChunks.push(chunk);
           }
         }
+      }
+
+      // Filter sub-query results using RRF_NOISE_FLOOR (0.012) to remove junk sub-query context
+      const RRF_NOISE_FLOOR = 0.012;
+      const beforeFilterCount = kbChunks.length;
+      const filteredKB = kbChunks.filter(c => (c.rrfScore || 0) >= RRF_NOISE_FLOOR);
+
+      if (filteredKB.length > 0) {
+        kbChunks = filteredKB;
+        console.log(`[RAG] Sub-query RRF noise filter: kept ${kbChunks.length}/${beforeFilterCount} chunks (floor: ${RRF_NOISE_FLOOR})`);
+      } else if (kbChunks.length > 0) {
+        // Safe fallback to top 2 chunks if all were below threshold to avoid false-NONE
+        kbChunks.sort((a, b) => (b.rrfScore || 0) - (a.rrfScore || 0));
+        kbChunks = kbChunks.slice(0, 2);
+        console.log(`[RAG] Sub-query RRF noise filter fallback: kept top ${kbChunks.length} chunks to prevent empty context`);
       }
     } else {
       // Normal retrieval
@@ -2166,25 +2285,120 @@ Label each section clearly.` : '';
       });
     }
 
-    const { response, model, is8B } = await callGroqWithFallback(finalMessages);
-    let activeResponse = response;
+    const isCached = !!(cached && sourceLabel === 'DB');
+    const isHighRisk = (dbIntent?.question_type === 'how_mechanism' || dbIntent?.question_type === 'relational') && dbIntent?.needs_decomposition === true && !isCached;
+    let finalAnswerText = '';
+    let finalModelUsed = '';
+    let isGrounded = true;
+
+    if (isHighRisk && sourceLabel === 'DB') {
+      console.log(`[Grounding] High-risk query detected (${dbIntent.question_type}). Performing blocking verification...`);
+      try {
+        const { response: initialResponse, model: initialModel } = await callGroqWithFallback(finalMessages, false, 0.1, 0.1, false);
+        finalModelUsed = initialModel;
+
+        if (initialModel === 'local-fallback') {
+          // Streaming fallback if API failed completely
+          activeResponse = initialResponse;
+        } else {
+          let answerText = initialResponse.choices[0]?.message?.content || '';
+          console.log(`[Grounding] Blocking check: validating generated answer (${answerText.length} chars)...`);
+          const groundingResult = await checkAnswerGrounding(answerText, dbChunks, message);
+          
+          if (!groundingResult.grounded) {
+            console.log(`[Grounding] UNGROUNDED claims found:`, groundingResult.ungrounded_claims);
+            isGrounded = false;
+
+            // Strip the ungrounded claims from the original draft answer
+            console.log(`[Grounding] Stripping ungrounded claims from the draft response...`);
+            const stripPrompt = `You are a precise fact-editor. Edit the following DRAFT ANSWER to remove ONLY these specific ungrounded claims or connections:
+${groundingResult.ungrounded_claims.map(c => `- ${c}`).join('\n')}
+
+DRAFT ANSWER:
+"${answerText}"
+
+Rules:
+1. Strip ONLY the sentences or clauses that assert or imply those ungrounded claims.
+2. Keep all other sentences and facts exactly as they are.
+3. Ensure the remaining text flows naturally, is grammatically correct, and maintains formatting.
+4. Do NOT add any new facts or claims.
+5. If removing the claims leaves the answer empty or completely ungrounded, reply exactly with: "The knowledge base does not have sufficient information on this topic."
+
+Edited Answer:`;
+
+            const { response: retryResponse, model: retryModel } = await callGroqWithFallback([
+              { role: 'user', content: stripPrompt }
+            ], false, 0.0, 0.0, false);
+            finalModelUsed = retryModel;
+            answerText = retryResponse.choices[0]?.message?.content || '';
+
+            // Run a quick second grounding check
+            const secondGroundingResult = await checkAnswerGrounding(answerText, dbChunks, message);
+            if (!secondGroundingResult.grounded) {
+              console.log(`[Grounding] Second check failed. Appending warning disclaimer.`);
+              answerText += '\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*';
+            } else {
+              isGrounded = true;
+            }
+          }
+          finalAnswerText = answerText;
+        }
+      } catch (err) {
+        console.warn(`[Grounding] Blocking check error: ${err.message}. Falling back to normal stream.`);
+        isHighRisk = false; // Fall back to streaming
+      }
+    }
 
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('X-Active-Model', model);
 
     let fullText = '';
-    for await (const chunk of activeResponse) {
-      const text = chunk.choices[0]?.delta?.content;
-      if (!text || typeof text !== 'string') continue;
-      fullText += text;
-      res.write(`data: ${JSON.stringify({
-        type: 'token', text
-      })}\n\n`);
+    let modelUsed = finalModelUsed;
+
+    if (finalAnswerText) {
+      res.setHeader('X-Active-Model', finalModelUsed);
+      // Simulate streaming to client for the pre-computed response
+      const chunkSize = 12;
+      for (let i = 0; i < finalAnswerText.length; i += chunkSize) {
+        if (res.writableEnded || res.finished) break;
+        const chunkStr = finalAnswerText.substring(i, i + chunkSize);
+        fullText += chunkStr;
+        res.write(`data: ${JSON.stringify({ type: 'token', text: chunkStr })}\n\n`);
+        await new Promise(r => setTimeout(r, 8)); // smooth streaming simulation
+      }
+    } else {
+      // Normal streaming path
+      const { response: normalResponse, model: normalModel, is8B } = await callGroqWithFallback(finalMessages, false, 0.1, 0.1, true);
+      modelUsed = normalModel;
+      res.setHeader('X-Active-Model', normalModel);
+
+      for await (const chunk of normalResponse) {
+        if (res.writableEnded || res.finished) break;
+        const text = chunk.choices[0]?.delta?.content;
+        if (!text || typeof text !== 'string') continue;
+        fullText += text;
+        res.write(`data: ${JSON.stringify({ type: 'token', text })}\n\n`);
+      }
+
+      // Post-hoc grounding check for normal path
+      if (!isCached && sourceLabel === 'DB' && fullText.length > 100) {
+        try {
+          const groundingResult = await checkAnswerGrounding(fullText, dbChunks, message);
+          if (!groundingResult.grounded) {
+            console.log(`[Grounding] UNGROUNDED claims found post-hoc:`, groundingResult.ungrounded_claims);
+            isGrounded = false;
+            const disclaimer = '\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*';
+            res.write(`data: ${JSON.stringify({ type: 'token', text: disclaimer })}\n\n`);
+            fullText += disclaimer;
+          }
+        } catch (err) {
+          console.warn(`[Grounding] Post-hoc grounding check failed:`, err.message);
+        }
+      }
     }
 
-    // Store in semantic cache for future identical questions
-    if (sourceLabel === 'DB' && fullText.length > 50) {
+    // Store in semantic cache for future identical questions ONLY if grounded
+    if (sourceLabel === 'DB' && fullText.length > 50 && isGrounded) {
       setCachedAnswer(message, fullText, sources);
     }
 
@@ -2210,7 +2424,7 @@ Label each section clearly.` : '';
       sourceLabel,
       sources: allSources,
       suggestions,
-      model,
+      model: modelUsed || 'unknown',
       chunksUsed: dbChunks.length,
       webResultsUsed: webResults.length
     })}\n\n`);
