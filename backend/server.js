@@ -1689,7 +1689,18 @@ async function searchDatabase(originalQuery) {
     let entityHitRatio = 1.0;
     if (queryEntities.length > 0 && reranked.length > 0) {
       const allChunkText = reranked.map(c => c.doc).join(' ');
-      const entityHits = queryEntities.filter(e => indicFuzzyMatch(e, allChunkText));
+      const top3ChunkText = reranked.slice(0, 3).map(c => c.doc).join(' ');
+
+      const entityHits = queryEntities.filter(e => {
+        const hasFuzzyMatch = indicFuzzyMatch(e, allChunkText);
+        if (!hasFuzzyMatch) return false;
+
+        const normRoot = normalizeIndic(transliterateToLatin(e) || e);
+        if (normRoot.length >= 4) return true;
+
+        // Requiring match to also appear in top-3 chunks if root < 4 chars
+        return indicFuzzyMatch(e, top3ChunkText);
+      });
       entityHitRatio = entityHits.length / queryEntities.length;
     }
 
@@ -1816,14 +1827,150 @@ function trimToTokenLimit(text, maxChars) {
 }
 
 
+// --- Temporary Test Thresholds ---
+app.get('/api/test-thresholds', async (req, res) => {
+  const queries = [
+    "who were sevu saman?",
+    "sevu saman?",
+    "what does Kabir Sagar say about Kaal",
+    "why does kaal hide himself",
+    "Tridev ka jaal kya hai",
+    "what is pralaya?",
+    "who was garib das ji?",
+    "who said geeta?",
+    "how kabir is true god where are proofs?",
+    "who was jeeva datta?"
+  ];
+
+  const results = [];
+
+  for (const q of queries) {
+    try {
+      const intent = await analyzeQueryIntent(q);
+      let qaChunks = [];
+      let kbChunks = [];
+      let qaTopScore = 0;
+      let kbTopScore = 0;
+
+      if (intent.needs_decomposition && intent.sub_queries && intent.sub_queries.length > 0) {
+        const subQueries = intent.sub_queries.slice(0, 3);
+        const qaResults = await Promise.all(subQueries.map(sq => searchQABank(sq)));
+        const kbResults = await Promise.all(subQueries.map(sq => searchKBChunks(sq)));
+        for (const r of qaResults) {
+          qaTopScore = Math.max(qaTopScore, r.qaTopScore);
+          qaChunks.push(...r.qaChunks);
+        }
+        for (const r of kbResults) {
+          kbTopScore = Math.max(kbTopScore, r.kbTopScore);
+          kbChunks.push(...r.kbChunks);
+        }
+        const RRF_NOISE_FLOOR = 0.012;
+        const filteredKB = kbChunks.filter(c => (c.rrfScore || 0) >= RRF_NOISE_FLOOR);
+        if (filteredKB.length > 0) {
+          kbChunks = filteredKB;
+        } else if (kbChunks.length > 0) {
+          kbChunks.sort((a, b) => (b.rrfScore || 0) - (a.rrfScore || 0));
+          kbChunks = kbChunks.slice(0, 2);
+        }
+      } else {
+        const qaRes = await searchQABank(q);
+        qaChunks = qaRes.qaChunks;
+        qaTopScore = qaRes.qaTopScore;
+
+        const kbRes = await searchKBChunks(q);
+        kbChunks = kbRes.kbChunks;
+        kbTopScore = kbRes.kbTopScore;
+      }
+
+      const QA_THRESHOLD = 0.40;
+      const validQA = qaChunks.filter(c => c.vectorSim >= QA_THRESHOLD);
+      const qaDocFingerprints = new Set(validQA.map(c => c.doc.substring(0, 100).toLowerCase()));
+      const dedupedKB = kbChunks.filter(c => !qaDocFingerprints.has(c.doc.substring(0, 100).toLowerCase()));
+
+      const allCandidates = [
+        ...validQA.map(c => ({ ...c, priority: 0, rrfScore: (c.rrfScore || 0) + 0.005 })),
+        ...dedupedKB.map(c => ({ ...c, priority: 1 }))
+      ];
+      allCandidates.sort((a, b) => (b.rrfScore || 0) - (a.rrfScore || 0));
+
+      let reranked = [];
+      let sufficiencyScore = 1.0;
+      if (allCandidates.length > 0) {
+        const rerankLimit = isBroadQuery(q) ? 6 : 5;
+        const rr = await rerankWithLLM(q, allCandidates, rerankLimit, intent);
+        reranked = rr.reranked;
+        sufficiencyScore = rr.sufficiencyScore;
+      }
+
+      const topScoreRaw = Math.max(qaTopScore, kbTopScore);
+      const baseConfidence = getConfidenceLevel(topScoreRaw);
+
+      // Match under standard fuzzy (no safeguard)
+      const queryEntities = extractQueryEntities(q);
+      let entityHitRatio = 1.0;
+      let entityHits = [];
+      if (queryEntities.length > 0 && reranked.length > 0) {
+        const allChunkText = reranked.map(c => c.doc).join(' ');
+        entityHits = queryEntities.filter(e => indicFuzzyMatch(e, allChunkText));
+        entityHitRatio = entityHits.length / queryEntities.length;
+      }
+
+      const isLowSufficiency = sufficiencyScore < 0.3;
+
+      // Old Logic gating (isNoEntityMatch: entityHitRatio === 0)
+      const isNoEntityMatchOld = (queryEntities.length >= 2 && entityHitRatio === 0);
+      let overallConfidenceOld = baseConfidence;
+      if (isLowSufficiency && isNoEntityMatchOld) {
+        overallConfidenceOld = "NONE";
+      } else if (isLowSufficiency || isNoEntityMatchOld) {
+        const downgrade = { HIGH: 'MEDIUM', MEDIUM: 'LOW', LOW: 'NONE', NONE: 'NONE' };
+        overallConfidenceOld = downgrade[baseConfidence] || baseConfidence;
+      } else if (entityHitRatio < 0.3 && baseConfidence === "HIGH") {
+        overallConfidenceOld = "MEDIUM";
+      }
+
+      // New Logic gating (isNoEntityMatch: entityHitRatio <= 0.5)
+      const isNoEntityMatchNew = (queryEntities.length >= 2 && entityHitRatio <= 0.5);
+      let overallConfidenceNew = baseConfidence;
+      if (isLowSufficiency && isNoEntityMatchNew) {
+        overallConfidenceNew = "NONE";
+      } else if (isLowSufficiency || isNoEntityMatchNew) {
+        const downgrade = { HIGH: 'MEDIUM', MEDIUM: 'LOW', LOW: 'NONE', NONE: 'NONE' };
+        overallConfidenceNew = downgrade[baseConfidence] || baseConfidence;
+      } else if (entityHitRatio < 0.3 && baseConfidence === "HIGH") {
+        overallConfidenceNew = "MEDIUM";
+      }
+
+      results.push({
+        query: q,
+        entities: queryEntities,
+        hits: entityHits,
+        ratio: entityHitRatio,
+        sufficiency: sufficiencyScore,
+        baseConfidence,
+        confidenceOld: overallConfidenceOld,
+        confidenceNew: overallConfidenceNew
+      });
+    } catch (err) {
+      results.push({
+        query: q,
+        error: err.message
+      });
+    }
+  }
+
+  res.json({ results });
+});
+
+
 // --- Chat ---
 app.post('/api/chat', async (req, res) => {
   const timeoutId = setTimeout(() => {
     if (!res.headersSent) {
-      console.error('❌ Request Timeout: Chat query handler took >45 seconds');
+      console.error('❌ Request Timeout: Chat query handler took >90 seconds');
       res.status(504).json({ error: 'Request Timeout: The query pipeline took too long to respond.' });
     }
-  }, 45000);
+  }, 90000);
 
   res.on('finish', () => clearTimeout(timeoutId));
   res.on('close', () => clearTimeout(timeoutId));

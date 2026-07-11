@@ -20,6 +20,15 @@ const STOPWORDS = new Set([
   'any', 'all', 'each', 'every', 'both', 'few', 'other', 'such', 'only',
   'own', 'same', 'then', 'there', 'here', 'now', 'up', 'out', 'on', 'off',
   'over', 'under', 'again', 'further', 'once', 'at', 'as',
+  // Audited filler verbs, pronouns, and words
+  'get', 'got', 'gets', 'getting', 'him', 'her', 'his', 'them', 'their', 
+  'they', 'our', 'your', 'you', 'say', 'says', 'said', 'saying', 'ask', 
+  'asks', 'asked', 'asking', 'go', 'goes', 'went', 'going', 'make', 
+  'makes', 'made', 'making', 'take', 'takes', 'took', 'taking', 'give', 
+  'gives', 'gave', 'giving', 'having', 'doing', 'done', 'put', 'puts', 
+  'putting', 'come', 'comes', 'came', 'coming', 'want', 'wants', 'wanted', 
+  'wanting', 'look', 'looks', 'looked', 'looking', 'find', 'finds', 'found', 
+  'finding',
   // Romanized Hindi particles/function words
   'kahani', 'kya', 'kaun', 'kaise', 'kyun', 'kab', 'kahan', 'batao', 'bolo',
   'ki', 'ke', 'ka', 'mein', 'hai', 'hain', 'se', 'ko', 'ne', 'par', 'jo',
