@@ -1,0 +1,2 @@
+curl "http://localhost:5001/api/test-rag?q=kamal%20chakra%20kitne%20hote%20h%20sharir%20m%20or%20konsa%20kamal%20kis%20devi%20devta%20ka%20h%20ya%20unme%20kon%20niwas%20krta%20h"
+
