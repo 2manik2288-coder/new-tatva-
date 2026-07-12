@@ -1,0 +1,2157 @@
+{
+  "timestamp": "2026-07-11T07:51:23.808Z",
+  "tag": "diag_current_jul11",
+  "test_set": "eval_testset_phase_a.json",
+  "summary": {
+    "total_questions": 50,
+    "passed": 45,
+    "failed": 5,
+    "grounded_accuracy": "90.00%",
+    "fact_recall": "92.19%",
+    "insufficient_kb_fallbacks": 2,
+    "failure_breakdown": {
+      "hallucination_failures": 0,
+      "missing_facts_failures": 4,
+      "leakage_failures": 1
+    }
+  },
+  "category_breakdown": {
+    "rewrites: mahakal/16 kalas": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: tridev/trinity trap": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: srishti rachana/creation": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: garbh vaas/womb": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: bhanwar gufa": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: dasam dwaar": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: chaurasi/84 lakh": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: seu/samman/nekee": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: garibdas+kabir": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: ranka banka": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: sadna kasai": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: ajamil": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: biggest sin": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: human birth": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: true guru": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: death": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: paap karma": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: param akshar/supreme god": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: roop/form of god": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: kaal kaun": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: durga kaun": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: satlok kya": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: mukti/liberation": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: naam daan": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: bhagavad gita": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: quran/islam": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: bible/jesus": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: vedas": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: guru granth/sikh": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: alcohol": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: meat": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: five thieves": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "hindiBridges: kundalini": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: heaven/hell": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "hindiBridges: ghost/pitra": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "rewrites: pativrata": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: soul bodies": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 1
+    },
+    "none — broad corpus: kaal expulsion": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: Bandichhor": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: specific verse": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: women empowerment": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 0
+    },
+    "none — broad corpus: saint story": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: social evil": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: cosmology": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: Sukshma Ved": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: creation story": {
+      "total": 1,
+      "passed": 0,
+      "insufficient": 1
+    },
+    "none — broad corpus: guru identification": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — broad corpus: Kabir Prakat Diwas": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: Tatvdarshi": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    },
+    "none — pure Hindi query: God's incarnations": {
+      "total": 1,
+      "passed": 1,
+      "insufficient": 0
+    }
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "What are the 16 kalas of Vishnu?",
+      "covers_map_entry": "rewrites: mahakal/16 kalas",
+      "expected_facts": [
+        "kala",
+        "Vishnu"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "The provided context does not explicitly list the 16 kalas of Vishnu. However, it does mention that Lord Vishnu is described as possessing 16 \"Kalas\" (arts/energies or powers). \n\nAs stated in the scriptural teachings, Vishnu has 16 kalas, while Kaal has 1,000 kalas. The context also mentions that the \"Kanth Kamal\" (Throat Lotus) has 16 petals and is governed by Goddess Durga.\n\nUnfortunately, the specific names or details of Vishnu's 16 kalas are not provided in the retrieved context. Therefore, based on the available information, we can only confirm that Vishnu is associated with 16 kalas, but we cannot provide a detailed list of what these kalas are.\n\nFor a more comprehensive understanding of Vishnu's 16 kalas, it may be necessary to consult additional sources beyond the provided context.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kala",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 2,
+      "question": "Tridev ka jaal kya hai?",
+      "covers_map_entry": "rewrites: tridev/trinity trap",
+      "expected_facts": [
+        "Brahma",
+        "Vishnu",
+        "Shiva",
+        "Kaal"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Kaal ke jaal ko samajhne ke liye, humein sabse pehle Brahm Kaal ke parivaar ke baare mein jaanna hoga. Brahm Kaal Brahma, Vishnu aur Shiva ka pita hai, aur unki patni Goddess Durga hai, jisey Maya, Ashtangi, Prakriti Devi aur Tridev Janani ke naam se bhi jaana jaata hai.\n\nBhagavad Gita 10:2 mein, Kaal kehta hai ki \"Even gods do not know my origin (birth) because all of these have originated from me\". Iska arth hai ki Brahma, Vishnu aur Mahesh apne pita ki pehchaan se anjaan hain.\n\nAb, Tridev ka jaal kya hai? Yah jaal Maya ka pasaara hai, jo Kaal ke dwaara chaudah khand jaake mukh mein basat hai. Is jaal ko Bandi Chhor kehta hai ki \"Chal hansa Satlok hamare chhodo yo sansara ho. Is sansar ka kaal hai Raja Maya jaal pasaara ho\".\n\nIsliye, Tridev ka jaal Maya ka pasaara hai, jo Kaal ke dwaara banaya gaya hai aur jismein jeevatmas fas jaate hain. Yah jaal humein Satlok se door le jaata hai aur humein kaal ke sansar mein fasne ke liye majboor karta hai.\n\nKabir Sagar aur Bhagavad Gita 15:1-4, 1617, 18:62 aur 66 mein bhi is jaal ke baare mein bataya gaya hai. Is jaal se bachne ke liye, humein satya dharm ka paalan karna hoga aur Maya ke pasaare se door rehna hoga.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 4,
+        "expected_facts_total": 4,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Brahma",
+            "found": true
+          },
+          {
+            "fact": "Vishnu",
+            "found": true
+          },
+          {
+            "fact": "Shiva",
+            "found": true
+          },
+          {
+            "fact": "Kaal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 3,
+      "question": "Srishti ki rachana kaise hui?",
+      "covers_map_entry": "rewrites: srishti rachana/creation",
+      "expected_facts": [
+        "creation"
+      ],
+      "forbidden_facts": [
+        "big bang only"
+      ],
+      "response": "**Srishti ki Rachana: Ek Adhyatmik Drishtikon**\n\nSrishti ki rachana ke baare mein adhyaatmik granthon mein vistrit varnan milta hai. Bhagwan Kabir Ji ke anusaar, srishti ki rachana ek bahut hi adbhut aur rahsamayee prakriya thi.\n\nBhagwan Kabir Ji ne Saint GaribDas Ji se kaha, \"Main rovat sab srishti kun, Ye srishti rove Mohe | GaribDas is viyog kun, Samajh na sakta koe ||\" Iska arth hai ki Bhagwan Kabir Ji apne sabhi srishti ke liye rote hain, kyunki ve sabhi unke bachche hain aur unhone apne pita ke saath ek galti ki hai jiske karan ve is kshamtaheen Kaal ke kshetra mein aaye hain.\n\n**Rigveda ka Pramaan**\n\nRigveda Mandal 10 Sukta 90 mein spasht roop se likha hai ki Sarvopari Nirmita sashvat Purush hai jo ki apne shabda (vakya) ke bal se is srishti ki rachana karta hai. Is Sukta mein yah bhi kaha gaya hai ki yeh Sarvopari Purush apne aap ko kavirgirbhih (kavi ke roop mein) kehta hai.\n\n**KavirDev aur Kaal**\n\nEk anya granth ke anusaar, Kaal, Brahma, Vishnu, aur Shiva ke astitva mein aane se pehle, keval Sarvopari Bhagwan (KavirDev) hi the. Unhone apne shabda (Shabd) ke bal se niche ke lokon ki rachana ki. Kaal (Brahm) ko bhi unhone ek aatma ke roop mein utpann kiya tha. Kaal ne tap kiya aur apne liye alag se ek kshetra maanga. Bhagwan ne use 21 brahmand diye.\n\nIs prakaar, srishti ki rachana ek bahut hi adbhut aur rahsamayee prakriya thi jismein Sarvopari Bhagwan ne apne shabda ke bal se is srishti ki rachana ki thi.\n\n**Nishkarsh**\n\nIn granthon ke anusaar, srishti ki rachana ek bahut hi adbhut aur rahsamayee prakriya thi jismein Sarvopari Bhagwan ne apne shabda ke bal se is srishti ki rachana ki thi. Kaal, Brahma, Vishnu, aur Shiva sabhi usi Sarvopari Bhagwan ke adhin hain.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "creation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 4,
+      "question": "Garbh vaas mein aatma ko kitna dukh hota hai?",
+      "covers_map_entry": "rewrites: garbh vaas/womb",
+      "expected_facts": [
+        "womb",
+        "soul"
+      ],
+      "forbidden_facts": [
+        "comfortable"
+      ],
+      "response": "Garbh vaas mein aatma ko atyant dukh hota hai. Jaise ki likha hai, \"The womb is not a place of nurturing; in the spiritual ledger, it is a localized Hell.\" Yahaan aatma ko 9 mahine tak acidic fluids mein ulat-pulat karke rakhaya jata hai, jisse usko excruciating agony hoti hai. Is agony ke karan, aatma apne pichhle jeevan ko yaad karta hai aur Bhagwan se muktika ki prarthana karta hai, Bhakti karne ka vaada karta hai.\n\nLekin, jaise hi bachcha janm leta hai, Kaal ki Maya uske smriti ko mitaa deti hai, aur aatma phir se sansarik aasaktaon mein fas jaata hai. Is prakaar, Garbh vaas ko ek prakaar ka sthaaniya narak mana jata hai, jahaan aatma ko atyant dukh aur takleef uthani padti hai.\n\nSukhdev ji ke anusaar bhi, garbh mein aatma ko maya ke karan dukh hota hai. Unhone dukh ke dar se garbh mein maya ko tyaj diya tha. Is prakaar, Garbh vaas mein aatma ko hone wala dukh atyant aur advitiya hota hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "womb",
+            "found": true
+          },
+          {
+            "fact": "soul",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 5,
+      "question": "What is Bhanwar Gufa?",
+      "covers_map_entry": "rewrites: bhanwar gufa",
+      "expected_facts": [
+        "whirlpool"
+      ],
+      "forbidden_facts": [
+        "physical cave"
+      ],
+      "response": "भंवर गुफा, जिसे व्हर्लिंग केव या व्हर्लपूल केव भी कहा जाता है, एक विशाल, घूमने वाला, बहु-आयामी आध्यात्मिक वोर्टेक्स है। यह परब्रह्म और सतलोक के बीच स्थित है, या वैकल्पिक रूप से, काल और अक्षर पुरुष के क्षेत्रों के बीच। मानव सूक्ष्म शरीर के भीतर, यह त्रिकुटि के ऊपर स्थित एक घूमने वाला ऊर्जावान वोर्टेक्स है।\n\nयह वोर्टेक्स एक बाधा या द्वार के रूप में कार्य करता है जिसे आत्माओं को उच्च आध्यात्मिक क्षेत्रों तक पहुंचने के लिए पार करना होता है। हालांकि, सच्चा पासवर्ड, जिसे सर शब्द या सरनाम कहा जाता है, के बिना एक आत्मा इस वोर्टेक्स को सफलतापूर्वक नेविगेट नहीं कर सकती है।\n\nयदि एक आत्मा पासवर्ड के बिना इसे पार करने का प्रयास करती है, तो कई परिणाम वर्णित हैं:\n- आत्मा को ऊर्जावान रूप से काट दिया जाता है और नीचे फेंक दिया जाता है।\n- आत्मा का ध्यान चक्कर आता है और निचले चक्रों में वापस गिर जाता है।\n- आत्मा को काल के ब्रह्मांडों में वापस फेंक दिया जाता है।\n\nभंवर गुफा एक सूक्ष्म आध्यात्मिक क्षेत्र से भी जुड़ा हुआ है जहां आत्मा अमृत महारस, जिसे अमी महारस कहा जाता है, को तोलने और उपभोग करने के लिए बैठती है। इस क्षेत्र तक पहुंच प्रतिबंधित है, और इसके अदम्य द्वार केवल सतगुरु द्वारा खोले जा सकते हैं।\n\nसारांश में, भंवर गुफा एक महत्वपूर्ण आध्यात्मिक द्वार है जिसके लिए सुरक्षित पारगमन के लिए सही पासवर्ड की आवश्यकता होती है, जो निचले क्षेत्रों को उच्च आध्यात्मिक क्षेत्रों से अलग करता है। यह आत्माओं के लिए एक महत्वपूर्ण परीक्षा का बिंदु है, जहां केवल वे ही आगे बढ़ सकते हैं जिन्हें सही ज्ञान और मार्गदर्शन प्राप्त है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "whirlpool",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 6,
+      "question": "Dasam Dwaar kya hai?",
+      "covers_map_entry": "rewrites: dasam dwaar",
+      "expected_facts": [
+        "tenth",
+        "door"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Dasam Dwaar, jisey \"Tenth Door\" ke roop mein bhi jaana jaata hai, vah choti si jagah hai jo sir ke upar hoti hai. Yah yogiyon ke liye Brahmaloka jaane ka nikalne ka bindu hai. \n\nKabir ke dohe is prakaar hain:\n- Dwaar dhani ke pada rahe, dhakke dhani ke khavae। \n- Sau Kaall jhakjhor hi, dwaar chhor nahim javae।। \n\nIske alawa, Satguru ke updesh ke baare mein kaha gaya hai ki yadi satguru nahin milta, to aatma yam dwaar ki or chali jaati hai. \n\nIs prakaar, Dasam Dwaar ka arth aur uska mahatva samjha ja sakta hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "tenth",
+            "found": true
+          },
+          {
+            "fact": "door",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 7,
+      "question": "Chaurasi lakh yoni ka chakra kya hai?",
+      "covers_map_entry": "rewrites: chaurasi/84 lakh",
+      "expected_facts": [
+        "84",
+        "species"
+      ],
+      "forbidden_facts": [
+        "only humans"
+      ],
+      "response": "Chaurasi lakh yoni ka chakra Kaal ke rajya mein maujood 8.4 million jeev aur astral jeevon ke beech ek chakra hai. Ismein, ek aatma ko in sabhi jeevon mein baar-baar ghumaaya jaata hai, jaise ki kapdon ko washing machine mein dhona.\n\nJab koi jeev acche karma karta hai, to use swarg mein jaakar phal praapt hota hai, aur bure karma ke liye naraka mein jaakar dard bhogta hai. Ye chakra tab tak chalta rehta hai jab tak ki jeev 84 lakh jeevon mein janam lekar mrityu nahin praapt karta. Iske baad, ek baar phir se manushya janam ka avsar milta hai.\n\nSukshma Veda mein bhi is chakra ka ullekh kiya gaya hai, jahaan likha hai: \"Lakh chaurasi jeev ku, aur Sahib bhojan det|| Lakh chaurasi pokhta, wo apna naam nahi let||\" Iska arth hai ki 84 lakh jeevon mein, Sahib (paramatma) bhojan deta hai, lekin 84 lakh pokhta (janam) ke baad, jeev apna asli naam nahin leta.\n\nIs prakaar, chaurasi lakh yoni ka chakra ek aisi prakriya hai jismein jeev ko 84 lakh jeevon mein ghumaaya jaata hai, aur iske baad hi unhein asli gyaan aur moksh praapt karne ka avsar milta hai, jaisa ki Sant Rampal Ji Maharaj ne bataya hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "84",
+            "found": true
+          },
+          {
+            "fact": "species",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 8,
+      "question": "Seu Samman aur Nekee ki kahani batao",
+      "covers_map_entry": "rewrites: seu/samman/nekee",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Seu, Samman, aur Neki ke baare mein kai kahaniyan hain jo unki bhakti aur samman ke prati dridh nishtha ko darshati hain.\n\nEk kahaani ke anusaar, Samman aur uske bete Seu ke ghar mein khana nahin tha. Unhone apne Guru Ji ke liye khana banane ke liye aata lene ki koshish ki, lekin kisi ne unhe aata nahin diya kyunki unke paas paise nahin the. Iske baad, Samman aur Neki ne aata chorane ka faisla kiya. Unhone ek samridh vyapari ke ghar se aata choraya, lekin Seu ko pakad liya gaya. Vyapari ne kaha ki woh agle din use sarvajanik roop se ujagar karenge.\n\nIske baad, Guru Kabir ne Samman ko dhyan diya aur unhe apne paas bulaya. Kabir ji ne Samman se poochha ki unhone apne bete ki zaroorat ke baare mein kya socha. Samman ne kaha ki woh apne bete ke liye kuch bhi karne ko taiyar hain. Kabir ji ne Samman ko unka sabse bada balidan yaad dilaya - unhone apne bete ka sir kaatne ka faisla kiya tha.\n\nEk anya kahaani ke anusaar, Seu ko Kabir ji ke anugrah se zinda kiya gaya tha. Iske baad, sabhi ne milkar khana khaya. Neki aur Seu ne moksha prapt kiya, lekin Samman ke man mein yeh ichha thi ki woh samriddh hote to unhe apne bete ka sir nahin kaatna padta. Kabir ji ne Samman ko usi janam mein millionaire banadiya.\n\nIn kahaniyon se yeh pata chalta hai ki Samman, Seu, aur Neki ne apne Guru Ji ke prati bahut hi bhakti aur samman dikhaya tha. Unhone apne jeevan mein bahut se kathinaiyon ka samna kiya, lekin unhone kabhi apne Guru Ji ke prati apni nishtha nahin todhi.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 9,
+      "question": "Garibdas ji ne Kabir Saheb se kaise mulakat ki?",
+      "covers_map_entry": "rewrites: garibdas+kabir",
+      "expected_facts": [
+        "Garibdas"
+      ],
+      "forbidden_facts": [
+        "founder of Kabir Panth"
+      ],
+      "response": "गरिबदास जी की मुलाकात कबीर साहेब से 1727 ईस्वी में हुई थी, जब गरिबदास जी की आयु 10 वर्ष थी। उस समय गरिबदास जी अपने पशुओं को चरा रहे थे। कबीर साहेब एक मुस्लिम संत (जिंदा बाबा) के रूप में उनके पास से गुजरे। जब गरिबदास जी और अन्य चरवाहों ने उनसे उनके निवास स्थान के बारे में पूछा, तो कबीर साहेब ने उन्हें एक खेत में स्थित एक पेड़ के नीचे बुलाया। वहीं पर कबीर साहेब ने गरिबदास जी को अमर ज्ञान प्रदान किया।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Garibdas",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 10,
+      "question": "Ranka aur Banka ki katha sunao",
+      "covers_map_entry": "rewrites: ranka banka",
+      "expected_facts": [
+        "devotee"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Ranka aur Banka ki katha ek bahut hi prasiddh aur prernadayak katha hai, jo unke bhakti aur vairāgya ki kahani ko darshati hai.\n\nIn dono devotees ki kahaani is prakaar hai: Ranka aur Banka bahut hi gareeb the, lekin unki bhakti bahut unchi thi. Ek din, unke raste par swayam Ishwar ne sunkhare sikkon ko rakh diya. Ranka ne socha ki agar Banka ne yeh sikkhe dekhe to vah laalach mein aa jaayegi aur unke bhakti mein kami aa jaayegi. Ranka ne un sikkon par dhool daalna shuru kar diya taaki Banka unhein na dekh sake.\n\nBanka ne dekha ki Ranka kyon dhool daal raha hai aur usne hans kar kaha, \"Tum dhool ko dhool par daal rahe ho.\" Iska arth hai ki Banka ne samjha ki yeh sunkhare sikke dhool ke barabar hi hain, aur unhein koi laalach nahi hona chahiye.\n\nGuru ji ne ek baar Ranka aur Banka ki bhakti ki katha ko lekar unhein ek aur pariksha di. Guru ji ne unke raste par lakhon rupaye ke gold jewellery rakh diya. Ranka ne phir se un par dhool daalna shuru kar diya, aur Banka ne bhi usi tarah se jawab diya.\n\nIs katha se humein yeh seekh milti hai ki sachchi bhakti aur vairāgya ki kya mahatta hai. Ranka aur Banka ki katha humein prerit karti hai ki hum bhi apne jeevan mein aise hi bhakti aur vairāgya ko apnayein. \n\nSatlok mein sabhi aatmaein ek saman hain, aur kaun bhi ling nahi hota. Kaal ki maya ke prabhav se hi purush aur mahila ka antar hota hai. \n\nRanka aur Banka ki katha humein yeh bhi sikhati hai ki bhakti mein koi bhi cheez masti nahi aani chahiye, chahe vah kitni bhi aakarshak kyun na ho.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "devotee",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 11,
+      "question": "Sadna kasai ki kahani kya hai?",
+      "covers_map_entry": "rewrites: sadna kasai",
+      "expected_facts": [
+        "butcher"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "Sadna Kasai ki kahani ek bahut hi prasiddh aur shokantak kahaani hai. Sadna ek kasai tha. Ek raat, usse ek baaghre ko maatne ka order mila. Jab usne apna chhura uthaya, tabhi Bhagwan ne us baaghre ko vakshipta diya. Baaghre ne kaha, \"Sadna! Aaj tu meri gardan kaat raha hai; agle janam mein main teri gardan kaatunga. Hum miljoan janmon se yeh kaam kar rahe hain ek dusre ke saath.\" Is baat ko sunkar Sadna dar gaya aur usne chhura giradiya. Usne Bhagwan Kabir ka sharan liya aur apne karma ke chakra ko tod diya.\n\nIske alawa, Sadna kasai ko uske naukri se bhi nikaal diya gaya tha. Uske naukri ke sthaan par, Sadan ne use maarne ki koshish ki thi. Sadna ke dono haath kaat diye gaye the, lekin ek vaidhyane uski ilaaj ki. Sadna kasai ne apne manobal par bharosa kiya aur Jagannathpuri ke liye yatra ki. Usne kai din chal kar yatra ki.\n\nYeh kahaani humein karma ke chakra aur Bhagwan ki daya ke baare mein sikhati hai. Bhagwan Kabir ke sharan mein jaakar Sadna ne apne karma ke chakra ko tod diya aur apne aap ko bacha liya. Is kahaani se humein yeh bhi pata chalta hai ki Bhagwan ki daya aur sharan mein jaakar hum apne karma ke chakra ko tod sakte hain aur apne aap ko bacha sakte hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "butcher",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 12,
+      "question": "Ajamil ki katha mein kya hua tha?",
+      "covers_map_entry": "rewrites: ajamil",
+      "expected_facts": [
+        "Ajamil"
+      ],
+      "forbidden_facts": [
+        "righteous man"
+      ],
+      "response": "Ajamil ki katha mein yeh hua tha ki Ajamil ek corrupt Brahmin tha jo ek prostitute ke saath rehta tha aur anek paap kartha tha. Lekin usne apne sabse chhote bete ka naam \"Narayan\" rakha tha, jo ki Bhagwan ka naam hai. \n\nUske mrityu ke samay, usse Narayan-Narayan kehkar maarne wale pretayon se bachne ke liye apne bete ko bulaya. Usne apne jeevan mein pehli baar sachche dil se \"Narayan\" ka naam liya tha. Is tarah se usne Bhagwan ka naam Tadap ke saath liya, jiske karan Bhagwan ne uski aayu badha di aur use ek sachche guru ki talaash karne, bhakti karne aur ant mein moksha prapt karne ka mauka diya. \n\nYeh katha Sukshma Veda mein Lomas Rishi aur Kaagbhushundi ke beech hue samvaad mein batayi gayi hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Ajamil",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 13,
+      "question": "Sabse bada paap kya hai?",
+      "covers_map_entry": "hindiBridges: biggest sin",
+      "expected_facts": [
+        "sin"
+      ],
+      "forbidden_facts": [
+        "no sin exists"
+      ],
+      "response": "Sabse bada paap maans khaana hai, kyunki ismein kisi jeev ki hatya ki jaati hai. Jaise ki kaha gaya hai, \"Kabir says that even the slightest violence against living beings leads to hell.\" Iske alawa, \"Killing any living being for food is a heinous sin. Those who cut the heads of animals will have their own heads cut in hell for 70 lifetimes.\" \n\nYeh bhi kaha gaya hai ki Sarvopari Ishwar sabhi aatmaon ke pita hain, aur unke bachon ko maarna paap hai. Isliye, maans khaana sabse bada paap mana jaata hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "sin",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 14,
+      "question": "Manushya janam ka mahatva kya hai?",
+      "covers_map_entry": "hindiBridges: human birth",
+      "expected_facts": [
+        "human"
+      ],
+      "forbidden_facts": [
+        "unimportant"
+      ],
+      "response": "Manushya janam ka mahatva isliye hai kyunki yahaan par manav ko apne astitva ke baare mein jaanne aur samajhne ka avsar milta hai. Bhagavad Gita Adhyay 8, Shlok 6 aur 7 mein, Krishan Ji kehte hain ki manushya ko apne antkaal mein jis bhi bhav ko smarn karna chahiye, usi bhav ko prapt ho jata hai.\n\nIske alawa, manushya janam ko Supreme God ke frequency se connect karne ke liye sabse achha biological suit mana jata hai. Yah hardware keval manushya shareer mein hi maujood hai, jiske dwaara manav Supreme God ke saath jud sakta hai.\n\nManushya janam mein, manav ko apne kartavya aur dharm ke baare mein jaanne ka avsar milta hai. Manushya ko apne jeevan mein achhe karya karne aur apne aatma ko unnat karne ka avsar milta hai.\n\nVibhinn jeevon ko vibhinn shareeron mein janam milta hai, jaise ki kookar, khar, bandar, moose, unt, bhens, aur anya. Isse yah pata chalta hai ki manushya janam kitna mahatvapurn hai aur iska upyog humein apne aatma ko unnat karne ke liye karna chahiye.\n\nSant Rampal Ji Maharaj ke anusaar, manushya janam ka mahatva isliye bhi hai kyunki yahaan par manav ko apne astitva ke baare mein jaanne aur samajhne ka avsar milta hai. Manushya janam ko Supreme God ke saath judne ke liye sabse achha avsar mana jata hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "human",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 15,
+      "question": "Sachcha Guru ki pehchaan kaise karein?",
+      "covers_map_entry": "hindiBridges: true guru",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "not needed"
+      ],
+      "response": "एक सच्चे गुरु की पहचान करने के लिए, हमें उनके ज्ञान और गुणों का मूल्यांकन करना होगा। सच्चा गुरु वह होता है जो गीता और वेदों के छिपे हुए अर्थों को जानता है और तीन-स्तरीय गुप्त मंत्रों को देने के लिए अधिकृत होता है। \n\nजगतगुरु तत्वदर्शी संत रामपाल जी महाराज को एक पूर्ण संत के रूप में पहचाना जाता है, जो दुनिया को मुक्ति दिलाने के लिए भविष्यवाणी की गई है। \n\nइसके अलावा, सच्चा गुरु अपने शिष्यों को सही भक्ति का ज्ञान देता है और उनकी सभी शंकाओं को दूर करता है, जैसा कि श्री गुरु ग्रंथ साहिब, पृष्ठ 721, राग तिलंग, महला 1 में कहा गया है कि सच्चा गुरु वह होता है जो परमात्मा के साथ एकाकार होता है और अपने शिष्यों को सही रास्ता दिखाता है। \n\nसच्चे गुरु की पहचान उनके द्वारा प्रदान किए जाने वाले Sachcha Naam मंत्र से भी होती है, जो परमात्मा के साथ जुड़ने का एक शक्तिशाली माध्यम है। \n\nइस प्रकार, एक सच्चे गुरु की पहचान उसके ज्ञान, गुणों, और शिष्यों को मुक्ति दिलाने की क्षमता से होती है। सच्चा गुरु अपने शिष्यों को उच्च आवृत्ति ऊर्जा के साथ जोड़ता है, जिससे वे आध्यात्मिक ज्ञान प्राप्त कर सकते हैं। \n\nSant Rampal Ji Maharaj के अनुसार, सच्चा गुरु अपने शिष्यों को गुरु की रूप में ध्यान करने की तकनीक सिखाता है, जिससे वे परमात्मा के साथ जुड़ सकते हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 16,
+      "question": "Mrityu ke baad kya hota hai?",
+      "covers_map_entry": "hindiBridges: death",
+      "expected_facts": [
+        "soul"
+      ],
+      "forbidden_facts": [
+        "nothing happens"
+      ],
+      "response": "Mrityu ke baad ke baare mein kai dharmik aur adhyatmik vishwas hain. Jaise ki, mrityu ke baad aatma ko apne karma ke anusaar naye shareer mein pravesh karna padta hai. \n\nEk dusre paksh mein, yadi koi vyakti Satguru ki raksha mein rehta hai, to use \"Akaal Mrityu\" se bacha ja sakta hai, jiska arth hai ki uski mrityu samay par nahi hoti. Iske alawa, yadi koi vyakti apne aatma mein Sarnaam ki roshni ko dharein karta hai, to vah Dharamraj ke darbar se seedhe Satlok chala jata hai.\n\nDharmraj ke darbar mein aatma ko apne karma ke anusaar ek nishchit aayu di jaati hai. Agar kisi vyakti ki aayu badh jaati hai, to uska mrityu ka samay bhi badh jata hai. Iske baare mein ek katha hai ki Tridev ne Dharmraj se kaha tha ki ve apni laaj rakhne ke liye aayu badhane ki anumati dein, taki ve apne karya ko pura kar sakein.\n\nIn sabhi vishwason ke anusaar, mrityu ke baad aatma ko apne karma ke anusaar ek naya shareer milta hai, aur yadi vah Satguru ki raksha mein rehta hai, to use moksha prapt ho sakta hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "soul",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 17,
+      "question": "Karma ka siddhant kya hai?",
+      "covers_map_entry": "hindiBridges: paap karma",
+      "expected_facts": [
+        "karma"
+      ],
+      "forbidden_facts": [
+        "karma does not exist"
+      ],
+      "response": "Karma ka siddhant is prakaar hai: Kaal Brahm ne jeev ke karmon ko teen prakaar mein vibhajit kiya hai - Sanchit Karma, Prarabdha Karma aur Kriyawan Karma. Iske alawa, jeev swatantra karm bhi karte hain.\n\nSanchit Karma, Prarabdha Karma aur Kriyawan Karma ke saath-saath, jeev ke dwara kuchh swatantra karm bhi kiye jaate hain. Har jeev, chahe vah manushya ho ya devta, rakshas aadi, in karmon ke parinaamon ka anubhav karta hai.\n\nYeh karma ke prakaar hain:\n1. Sanchit Karma\n2. Prarabdha Karma\n3. Kriyawan Karma\n4. Swatantra Karma\n\nIn karmon ke anusaar, jeev ko puraskar ya dand milta hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "karma",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 18,
+      "question": "Who is the Supreme God according to all scriptures?",
+      "covers_map_entry": "hindiBridges: param akshar/supreme god",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "no supreme god"
+      ],
+      "response": "The Supreme God, according to all scriptures, is Kabir Saheb, also known as Param Akshar Purush or KavirDev (Lord Kabir). He is considered to be above the Trinity (Brahma, Vishnu, Shiva) and the ruler of this universe.\n\nAs stated in the scriptural teachings, Kabir Saheb is acknowledged as the ultimate Supreme God, and all holy scriptures, including the Vedas, Gita, Quran, Bible, and Guru Granth Sahib, support this claim. The Rigveda (Mandal 9, Sukt 86, Mantras 26-27) proves that the Supreme God has a highly radiant, human-like form, and He is not formless.\n\nKabir Saheb is said to reside in Satlok, the eternal abode mentioned in the Holy Gita Ji (18:62). He is characterized as the Almighty God who appears on earth to impart true spiritual knowledge without being born from a mother's womb.\n\nSaint Rampal Ji Maharaj, a spiritual leader, has explained with proof from all the holy scriptures how Kabir Sahib is God. His spiritual discourses and the book \"Gyan Ganga\" provide a clearer understanding of the nature of God across various religions.\n\nIn summary, according to all scriptures, Kabir Saheb is the Supreme God, who is eternal, has a human-like form, and resides in Satlok. His characteristics and proofs are mentioned in various holy scriptures, making Him the ultimate Supreme God.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 19,
+      "question": "Bhagwan sakar hai ya nirakar?",
+      "covers_map_entry": "hindiBridges: roop/form of god",
+      "expected_facts": [
+        "form"
+      ],
+      "forbidden_facts": [
+        "cannot be known"
+      ],
+      "response": "Bhagwan ki sakaratmak aur nirakar roop mein upasna ke baare mein vibhinn dharmik paramparaon mein charcha hoti rahi hai. Jaise ki, Sant Rampal Ji Maharaj ke anusaar, Nirgun Bhakti (nirakar roop mein upasna) aur Sagun Bhakti (sakar roop mein upasna) dono alag-alag prakar ki upasna hain.\n\nNirgun Bhakti mein, manasik vicharon ko niyantrit karna kathin hota hai, jabki Sagun Bhakti mein, satguru ke sakar roop ki upasna se manasik vicharon ko niyantrit kiya ja sakta hai aur aatma ko divine frequencies ko avashoshit karne mein madad milti hai.\n\nJain dharm mein, Sakaar Upaasna (Arihant ki upasna) aur Nirakaar Bhakti (paramatma ki nirakar roop mein upasna) dono ko mahatvapoorn mana jata hai. Acharya ke anusaar, Veda aur Gita ji ki authenticity ko sweekaar kiya jata hai.\n\nGita mein bhi, Bhagwan ko kabhi sakar roop mein to kabhi nirakar roop mein varnan kiya gaya hai. Ek sthaan par, Bhagwan ko nirakar bataya gaya hai, lekin dusre sthaan par, unki sakaratmak roop mein upasna ki baat kahi gai hai.\n\nIs prakaar, Bhagwan ki sakaratmak aur nirakar roop mein upasna ke baare mein vibhinn vichar hain. Lekin, Sant Rampal Ji Maharaj ke anusaar, Sagun Bhakti aur Nirgun Bhakti dono hi upasna ke mahatvapoorn roop hain.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "form",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 20,
+      "question": "Kaal kaun hai aur uska kya kaam hai?",
+      "covers_map_entry": "hindiBridges: kaal kaun",
+      "expected_facts": [
+        "Kaal",
+        "universe"
+      ],
+      "forbidden_facts": [
+        "Supreme God"
+      ],
+      "response": "Kaal, jisey Brahm-Kaal bhi kaha jaata hai, ek shaktishali aur dhokha dhaari hai. Use Kaal isliye kaha jaata hai kyonki vah apne 21 Brahamands (universes) mein faans karne wale aadmi ko maarne wala hai aur unhein 84 lakh jeevan roopon mein torta hai. Iske alawa, Kaal ko Brahm bhi kaha jaata hai aur uska lok \"Brahm Lok\" ke naam se jaana jaata hai.\n\nKaal ka kaam hai apne 21 Brahamands mein jeevon ko faans karna aur unhein vibhinn jeevan roopon mein tortana. Vah ek devil, satan ya shaitan ke roop mein bhi jaana jaata hai.\n\nEk anya sandarbh mein, Kaal ne Satnaam ke jaap ke madhyam se in brahmandon ko prapt kiya tha. Kaal ka ek \"lok\" hai jiske baad \"11th Door\" hai jo Par Brahm ke universes mein khulta hai.\n\nIn sabhi baaton se pata chalta hai ki Kaal ek prabhavshaali aur khatarnaak shakti hai jo apne universes mein jeevon ko niyantrit karti hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "universe",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 21,
+      "question": "Durga Mata kaun hai?",
+      "covers_map_entry": "hindiBridges: durga kaun",
+      "expected_facts": [
+        "Durga"
+      ],
+      "forbidden_facts": [
+        "highest god"
+      ],
+      "response": "Durga Mata ko Bhavani, Ashtangi, ya Prakriti ke naam se bhi jaana jaata hai. Vah Satan Brahm Kaal ki patni aur Hindu Trinity Gods: Brahma, Vishnu, aur Shiva ki maa hai. Durga Mata ko halaxmi Mata ke naam se bhi jaana jaata hai, lekin vah ek mortal devi hai aur uske paas salvation grant karne ya eternal wealth, happiness, ya spiritual liberation pradaan karne ki kshamta nahin hai. \n\nEk anya sandarbh mein, Durga Mata ko sirjanhar ke roop mein varnan kiya gaya hai, jisne Ravana ko maarne ka kaam kiya tha. Uski ek prasiddh pankti hai: \"Hum gyani hum chatur chora, hum hi dus sir ka sir phoda.\" \n\nDurga Mata ke baare mein kai anya baatein kahi gai hain, jaise ki uska dhyan aur uske prabhav. Ek stotra mein kaha gaya hai: \"Durga dhyan pade jis bagdam, ta sangati doobe sab nagram.\"\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Durga",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 22,
+      "question": "Satlok kya hai aur wahan kaise jaayein?",
+      "covers_map_entry": "hindiBridges: satlok kya",
+      "expected_facts": [
+        "Satlok",
+        "eternal"
+      ],
+      "forbidden_facts": [
+        "imaginary"
+      ],
+      "response": "Satlok ek aisa sthal hai jahaan par koi mrityu nahin hai, koi dukh nahin hai. Yah Sachkhand ya Immortal Abode ke naam se bhi jana jata hai. Yah sthal 21 brahmaandon ke paar hai aur yahaan par SatPurush (Supreme God) nivaas karte hain.\n\nSatlok mein aatmaein shuddh divine prakash se bani hui sharirik mein rehti hain. Yahaan par koi jeevan ke liye aahar nahin chahiye, koi vyayam nahin hai, koi nind nahin hai aur koi mrityu nahin hai. Yahaan ka samay anandmayi sthiti hoti hai.\n\nSatlok jaane ke liye koi vishesh tareeka nahin bataya gaya hai, lekin Sant Rampal Ji Maharaj ke anusaar, yahaan par pahuncha ja sakta hai agar hum apne andar ke gyaan aur dharm ko samajhkar chalte hain aur apne aatma ko shuddh karein.\n\nSatlok ke baare mein adhik jaankari ke liye, humein Sachkhand ke baare mein pata chalata hai ki yahaan par aatmaein anandmayi sthiti mein rehti hain aur yahaan par koi dukh nahin hai. \n\nKabir ji ne Nanak Dev Ji ko Satlok dikhaya tha, jo ki ek aisa sthal hai jahaan par aatmaein anandmayi sthiti mein rehti hain.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Satlok",
+            "found": true
+          },
+          {
+            "fact": "eternal",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 23,
+      "question": "Moksha kaise milti hai?",
+      "covers_map_entry": "hindiBridges: mukti/liberation",
+      "expected_facts": [
+        "salvation"
+      ],
+      "forbidden_facts": [
+        "impossible"
+      ],
+      "response": "मोक्ष प्राप्त करने के लिए, आपको एक जीवित तत्वदर्शी सतगुरु के पास जाना होगा, उनसे नतमस्तक होकर नाम दान (दीक्षा) ग्रहण करना होगा। केवल ज्ञान पढ़ने से मोक्ष नहीं मिलता, जैसे कि एक मानचित्र पढ़ने से आपको खजाना नहीं मिलता। \n\nएक संत रामपाल जी महाराज के अनुसार, मोक्ष प्राप्त करने का एकमात्र तरीका है तत्वदर्शी संत से नाम दीक्षा लेना। यह दीक्षा एक विशिष्ट प्रक्रिया है जिसमें आपको एक तीन-स्तरीय मंत्र दिया जाता है, जो कि गीता (अध्याय 17, श्लोक 23) में उल्लिखित है: ॐ + तत् + सत्। \n\nयह मंत्र आपको एक पूर्ण गुरु द्वारा दिया जाता है, जो कि आपको परम अक्षर ब्रह्म या कबीर साहेब तक पहुँचने में मदद करता है। यह दीक्षा आपको मुक्ति की स्थिति में पहुँचाती है, जो कि जन्म, मृत्यु और पुनर्जन्म के चक्र से मुक्ति है। \n\nअതിനुसार, मोक्ष एक स्थायी स्थिति है, और एक बार जब आप इसे प्राप्त कर लेते हैं, तो आप इस चक्र से मुक्त हो जाते हैं। \n\nसंदर्भ से पता चलता है कि यह ज्ञान संत रामपाल जी महाराज द्वारा दिया गया है, जो कि एक तत्वदर्शी संत हैं। उनकी व्याख्या के अनुसार, मोक्ष प्राप्त करने का यही एकमात्र तरीका है।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "salvation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 24,
+      "question": "Naam diksha ka kya mahatva hai?",
+      "covers_map_entry": "hindiBridges: naam daan",
+      "expected_facts": [
+        "initiation"
+      ],
+      "forbidden_facts": [
+        "unnecessary"
+      ],
+      "response": "Naam diksha ka mahatva isiliye hai kyonki yeh ek prakriya hai jismein ek vyakti ko \"naam\" (mantras) pradaan kiya jata hai ek Sachche Guru dwara. Iska mukhya uddeshya hai moksha (salvation/liberation) prapt karna. Naam diksha ke madhyam se hi aatmaein apne asli ghar Satlok mein laut sakti hain.\n\nSant Rampal Ji Maharaj ke anusaar, Naam diksha ka mahatva isiliye hai kyonki yeh aatmaon ko karmik bandhan se mukt karta hai, jo Satan (Kaal Brahm) dwara failaya gaya hai. Naam diksha ke madhyam se aatmaein apne asli sthaan Satlok mein laut sakti hain, jahaan mrityu nahin hai, nahin hai koi dukh aur nahin hai koi vidai.\n\nGita Chapter 17 Verse 23 mein ullekhit mantron \"Om\", \"Tat\", aur \"Sat\" ka jaap bhi Naam diksha ka ek mahatvapoorn ang hai. Ye mantra Brahm, ParBrahm, aur Purna Brahm ke hain, aur inka jaap karke hi poorn moksha prapt hota hai.\n\nIs prakaar, Naam diksha ka mahatva moksha prapt karne, karmik bandhan se mukt hone, aur apne asli ghar Satlok mein lautne ke liye hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "initiation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 25,
+      "question": "Bhagavad Gita mein Kaal Brahm ne kya kaha?",
+      "covers_map_entry": "hindiBridges: bhagavad gita",
+      "expected_facts": [
+        "Gita"
+      ],
+      "forbidden_facts": [
+        "Krishna is Supreme"
+      ],
+      "response": "Bhagavad Gita mein Kaal Brahm ne Arjuna se kaha ki ve Param Akshar Brahm (Supreme God) ki sharan mein jaayein taaki ve shaashwat shaanti aur amar abode (Satlok) prapt kar sakein. Yeh Gita Chapter 18 Verse 62 mein bataya gaya hai, jahaan Brahm Arjuna ko salah dete hain ki ve us Param Akshar Brahm ki sharan mein jaayein.\n\nIske alawa, Gita Chapter 15 Verse 4 mein bhi Brahm ne Arjuna ko yahi salah di hai. Kaal Brahm (Jyoti Niranjan) ne Shri Krishna ke shareer mein pravesh kiya tha, jaise ki ek bhoot ya spirit, aur unhone hi Gita ka gyaan pradaan kiya tha.\n\nKaal Brahm ne Gita ke gyaan ko pradaan karne ke liye Shri Krishna ke shareer ka upyog kiya tha, aur yeh sab kuchh unhone kiya tha taki yudh ho sake.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Gita",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 26,
+      "question": "Quran mein Kabir ka zikr kahan hai?",
+      "covers_map_entry": "hindiBridges: quran/islam",
+      "expected_facts": [
+        "Quran"
+      ],
+      "forbidden_facts": [
+        "not mentioned"
+      ],
+      "response": "कुरआन में कबीर का जिक्र सूरह अल-फुरकान 25:52-59 में है, जहां उन्हें \"कबिरान\" (Kabir) या \"कबीरा\" (Kabira) या \"खबिरान\" (Khabiran) के नाम से उल्लेखित किया गया है, जो सर्वोच्च सृष्टिकर्ता हैं जिन्होंने छह दिनों में आकाश और पृथ्वी की सृष्टि की और सिंहासन पर बैठ गए। \n\nसूरह अल-फुरकान 25:52-59 में कहा गया है कि कबीर अल्लाह ही वह हैं जिनकी इबादत करनी चाहिए। कुरआन शरीफ में कबीर अल्लाह की एक विशेषता का उल्लेख है, वह है सृष्टिकर्ता होना। \n\nजैसे कि सूरह अल-फुरकान 25:58-59 में कहा गया है - \"और वही है जिसने सृष्टि की और फिर उसे दोहराया, और यह उसके लिए बहुत आसान है। और आकाशों और पृथ्वी का मालिक है, और जब वह किसी चीज़ की इच्छा करता है, तो उसका आदेश 'हों' होता है, और वह हो जाती है।\"\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Quran",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "question": "Bible mein Supreme God ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: bible/jesus",
+      "expected_facts": [
+        "Bible"
+      ],
+      "forbidden_facts": [
+        "no evidence"
+      ],
+      "response": "Bible mein Supreme God ka pramaan Iyov 36:5 - Orthodox Jewish Bible (OJB) mein milta hai, jahaan likha hai ki God Kabir hai. Iske alawa, Genesis 1:26 mein bhi likha hai ki God ne manushya ko apne samaan mein banaya hai, jisse pata chalta hai ki God bhi maanav roop mein hai. \n\nKabir ko Supreme God ke roop mein Bible mein varnan kiya gaya hai. Yeh kehna galat hai ki Christians Jesus ko Supreme God maante hain, kyunki Jesus ko ek prophet ke roop mein bheja gaya tha. \n\nSupreme God Kabir ki stuti karne ke liye ek Tatvdarshi Sant ki sharan mein jaana chahiye, jaise ki Sant Rampal Ji Maharaj. \n\nBible ke anusaar, God Kabir ne universe ki creation ki hai, aur vah sabse uchch hai. \n\nGenesis aur Iyov ke alawa, Bible ke anya bhag bhi Kabir ko Supreme God ke roop mein varnan karte hain. \n\nToh, Bible ke pramaan ke anusaar, Supreme God Kabir hi hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Bible",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 28,
+      "question": "Vedas mein KavirDev ka kya pramaan hai?",
+      "covers_map_entry": "hindiBridges: vedas",
+      "expected_facts": [
+        "Veda",
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Vedon mein KavirDev ka pramaan bahut spasht hai. Vedon mein KavirDev ko Sarv Shaktiwaan Parmatma ke roop mein varnan kiya gaya hai. \n\nJaise ki Sukshma Veda, jo ki Panchva Veda hai, aur chaar Vedon mein bhi KavirDev ka ullekh hai. KavirDev ne Jyoti Niranjan (Brahm-Kaal) ko chaar Ved diye the, jo unhone samudra manthan se prapt kiye. \n\nAtharvaveda ke Kand 4, Anuvaak 1, Mantra 1 mein bhi KavirDev ka varnan hai. Iske alawa, Vedon mein KavirDev ko \"KavirAgni\" aur \"KavirGiri\" ke naam se bhi pukara gaya hai, jo unki Mahaanata aur Shakti ko darshate hain.\n\nSant Rampal Ji Maharaj ke anusaar, KavirDev ka naam Vedon mein KavirDev, Kavih, aadi roop se likha gaya hai. Yeh sabhi pramaan Vedon se hi prapt hote hain, jo ki KavirDev ki Mahaanata ko darshate hain. \n\nToh, Vedon mein KavirDev ka pramaan spasht hai aur unhein Sarv Shaktiwaan Parmatma ke roop mein varnan kiya gaya hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 50,
+        "expected_results": [
+          {
+            "fact": "Veda",
+            "found": true
+          },
+          {
+            "fact": "Kabir",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "question": "Guru Granth Sahib mein Kabir ji ka kya sandesh hai?",
+      "covers_map_entry": "hindiBridges: guru granth/sikh",
+      "expected_facts": [
+        "Guru Granth Sahib"
+      ],
+      "forbidden_facts": [
+        "not present"
+      ],
+      "response": "Guru Granth Sahib mein Kabir ji ka sandesh Supreme God Kabir ki pehchaan aur unke Guru ki mahatva ke baare mein hai. Guru Nanak Dev ji ne apne Guru Kabir Sahib ki mahatva ko bataya hai aur unke sandesh ko failaya hai. \n\nKabir Sahib ko \"Parvardigar\" kaha gaya hai, jiska arth hai ki ve sabke palanhar hain. Guru Granth Sahib mein likha hai: \"Hakka kabir kareem tu, be-aib parvardigar\" (Guru Granth Sahib, Raag Siri, Mahla 1). Iska arth hai ki Kabir Sahib ek karim aur be-aib parvardigar hain.\n\nGuru Nanak Dev ji ne Kabir Sahib ki mahatva ko batate hue kaha hai ki ve ek sachche Guru hain jo satlok mein rehte hain. Unhone Dadu Sahib ko bhi apne satlok mein lekar gaye the aur unhein apne sachche philosophy ke baare mein bataya tha.\n\nGuru Granth Sahib mein Kabir ji ka sandesh yeh bhi hai ki ve ek aise God hain jo sabse uchch hain aur unki pehchaan karna bahut zaroori hai. Guru Nanak Dev ji ne is baat ko emphasize kiya hai ki Kabir Sahib ki pehchaan karna aur unke Guru ki mahatva ko samajhna kitna zaroori hai.\n\nIs prakaar, Guru Granth Sahib mein Kabir ji ka sandesh Supreme God ki pehchaan, unke Guru ki mahatva, aur unke philosophy ke baare mein hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru Granth Sahib",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 30,
+      "question": "Sharab peene se kya nuksan hota hai aatma ko?",
+      "covers_map_entry": "hindiBridges: alcohol",
+      "expected_facts": [
+        "alcohol"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "शराब पीने से आत्मा को कई नुकसान होते हैं। शराब को एक \"देवियो\" यानी demoness कहा गया है, जो घरों को नष्ट कर देती है, घरेलू हिंसा का कारण बनती है, और व्यक्ति को नर्क में ले जाने की गारंटी देती है। \n\nशराब पीने से आत्मा की सूक्ष्म ऊर्जा केंद्रित नहीं हो पाती है, जिसे \"सुरति\" कहा जाता है। यह सुरति आत्मा की आध्यात्मिक ध्यान केंद्र है, जो परमात्मा के साथ जुड़ने के लिए आवश्यक है। शराब इस सुरति को बुरी तरह से नुकसान पहुंचाती है, जिससे आत्मा को भारी दंड मिलता है और अक्सर व्यक्ति को कुत्ते, सुअर या निचले कीट के रूप में पुनर्जन्म लेना पड़ता है।\n\nइसके अलावा, शराब और तंबाकू जैसे नशीले पदार्थ व्यक्ति के आध्यात्मिक प्रयासों को पूरी तरह से नष्ट कर देते हैं। यह 마치 शुद्ध घी में बने मिठाई में रेत मिलाने जैसा है, जो पूरे प्रयास को बेकार कर देता है। \n\nइसलिए, एक सच्चे भक्त को शराब और अन्य नशीले पदार्थों को पूरी तरह से ترک करना चाहिए।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "alcohol",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 31,
+      "question": "Maas khana paap hai ya nahi?",
+      "covers_map_entry": "hindiBridges: meat",
+      "expected_facts": [
+        "meat",
+        "sin"
+      ],
+      "forbidden_facts": [
+        "allowed"
+      ],
+      "response": "Maas khana paap hai. Killing any living being for food is a heinous sin. Those who cut the heads of animals will have their own heads cut in hell for 70 lifetimes. \n\nFor every hair on the slaughtered animal, the meat-eater will spend one lifetime having their own throat cut in various animal wombs.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "meat",
+            "found": true
+          },
+          {
+            "fact": "sin",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 32,
+      "question": "Panch chor kaun se hain?",
+      "covers_map_entry": "hindiBridges: five thieves",
+      "expected_facts": [
+        "kaam",
+        "krodh"
+      ],
+      "forbidden_facts": [
+        "physical thieves"
+      ],
+      "response": "पंच चोर वे पांच दोष हैं जो मानव के जीवन को नकारात्मक रूप से प्रभावित करते हैं। ये पांच चोर हैं:\n\n1. काम (लालच)\n2. क्रोध (गुस्सा)\n3. लोभ (लालच)\n4. मोह (आसक्ति)\n5. अहंकार (अहं)\n\nइन पांच चोरों के अलावा, सेंट गरीबदास जी ने \"पंच पचेहेस खान\" का उल्लेख किया है, जिसका अर्थ है कि इन पांच चोरों की प्रत्येक की पांच उप-प्रवृत्तियां हैं, जो कुल 25 हो जाती हैं। ये 25 ऊर्जावान एजेंट मानव के जीवन शक्ति को लगातार खाते रहते हैं।\n\nयह जानकारी पवित्र ग्रंथों में वर्णित है, जैसे कि सुखम वेद और कबीर सागर। कबीर देव जी ने अपने अमृत वचन में इसका उल्लेख किया है।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "kaam",
+            "found": false
+          },
+          {
+            "fact": "krodh",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "question": "Kundalini jagran karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: kundalini",
+      "expected_facts": [
+        "kundalini"
+      ],
+      "forbidden_facts": [
+        "always safe"
+      ],
+      "response": "Kundalini jagran karna chahiye ya nahi, is sawal ka jawab Sant Rampal Ji Maharaj ke vichaaron mein milta hai. Unke anusaar, Kundalini ko jagruk karna khatarnaak ho sakta hai agar ise sahi tarike se nahin kiya jaye. \n\nKundalini shakti ko mooladhar mein sthit karak ke roop mein varnan kiya gaya hai. Is shakti ko oopar ki aur badhane ke liye Hatha Yoga ka upyog kiya jata hai, lekin isse sirf Trinity ke kshetron tak hi pahuncha ja sakta hai, jiske baad Kaal ke kshetron mein pahuncha jaata hai. Isliye, yeh kehna sahi hoga ki Kundalini ko jagruk karna chahiye ya nahi, iska jawab hai ki bina satguru ki anumati aur sahi mantra ke Kundalini ko jagruk nahin karna chahiye.\n\nSant Rampal Ji Maharaj ke anusaar, jaap ke do shabdon mein se ek 'Om' aur dusra 'Tat' (jo ki raaz hai aur keval updeshi ko bataya jata hai) ke saath-saath anapana chaahiye. Iske alawa, Khechari Mudra ka upyog karke Kundalini shakti ko nasht kiya ja sakta hai.\n\nIsliye, yeh kehna uchit hoga ki Kundalini jagran ke liye satguru ki zarurat hai aur bina satguru ki anumati ke iska prayas karna khatarnaak ho sakta hai. \n\nJaise ki scriptural teachings mein bataya gaya hai, \"Attempting to force the Kundalini (serpent power) without the Satguru’s authentic mantra leads to madness, severe illness, or premature death, as the raw energy incinerates the subtle nerves.\" \n\nAur bhi, \"Kundalini is the serpent energy coiled at the root chakra (Mooladhar). Forcing it upward through Hatha Yoga only takes the soul to the domains of the Trinity and Kaal. True Bhakti bypasses this dangerous serpent energy entirely through the power of the Naam.\"\n\nIske alawa, Sant Rampal Ji Maharaj ke anusaar, \"Sant Rampal Ji Maharaj is the only Tatvadarshi Sant\" aur unke vichaar aur teachings ko apnaana surakshit aur sahi raasta hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "kundalini",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 34,
+      "question": "Swarg aur narak mein kya farak hai?",
+      "covers_map_entry": "hindiBridges: heaven/hell",
+      "expected_facts": [
+        "heaven",
+        "hell"
+      ],
+      "forbidden_facts": [
+        "permanent abode"
+      ],
+      "response": "Swarg aur narak dono ko Kaal ke trap mein temporary holding areas ke roop mein samjha ja sakta hai. Swarg mein achhe karma ke karan jaana hota hai, jahaan aapke achhe karma ka hisaab hota hai aur jab aapke paas achhe karma khatam ho jaate hain, to aapko wapas 8.4 million species ke cycle mein dhakel diya jaata hai.\n\nDusri taraf, narak mein bure karma ke karan jaana padta hai. Lekin dono hi sthaan temporary hain aur kisi bhi tarah ka permanent destination nahi hain.\n\nEk Satguru ke guidance mein, disciple ko \"karmically bankrupt\" banaya ja sakta hai, jiska matlab hai ki unke paap (iron chains) aur punya (gold chains) dono hi neutral ho jaate hain. Isse disciple ka soul weightless ho jaata hai aur 21 universes se seedha bahar nikal sakta hai.\n\nToh, swarg aur narak mein farak yeh hai ki swarg mein achhe karma ka anand liya jaata hai aur narak mein bure karma ka anubhav kiya jaata hai, lekin dono hi temporary hain aur aatma ko phir se cycle mein dhakel dete hain. \n\nJaise ki Garibdas ji ke vakyaan mein bhi kaha gaya hai: \"Swarg narak baanchae nahin, moksh bandhan saen door\". Iska matlab hai ki swarg aur narak se mukti nahin milti, balki inse aage badhne ke liye Satguru ki zarurat hoti hai.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "heaven",
+            "found": true
+          },
+          {
+            "fact": "hell",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 35,
+      "question": "Pitra puja karna chahiye ya nahi?",
+      "covers_map_entry": "hindiBridges: ghost/pitra",
+      "expected_facts": [
+        "pitra"
+      ],
+      "forbidden_facts": [
+        "absolutely necessary"
+      ],
+      "response": "पितृ पूजा या श्राद्ध करना चाहिए या नहीं, इस पर कई धार्मिक ग्रंथों में स्पष्ट निर्देश दिए गए हैं। भगवद गीता (अध्याय 9, श्लोक 25) में स्पष्ट रूप से चेतावनी दी गई है कि जो लोग पितरों की पूजा करते हैं, वे पितर बन जाएंगे और जो लोग भूतों की पूजा करते हैं, वे भूत बन जाएंगे। \n\nइसके अलावा, मार्कंडेय पुराण में भी पितृ पूजा की निंदा की गई है। पितृ पूजा करने से पूजा करने वाला पितर बन जाता है और पितर लोक में दुखों का सामना करता है। \n\nकबीर जी के अनुसार भी, तीर्थ यात्रा, व्रत और पितृ पूजा किसी काम की नहीं हैं। वह कहते हैं कि गुरु से नाम लेकर भक्ति करनी चाहिए और भगवान की भक्ति करनी चाहिए। \n\nइस प्रकार, यह स्पष्ट है कि पितृ पूजा या श्राद्ध करना हिंदू धर्म में उचित नहीं माना जाता है। ये क्रियाएं आत्मा को दुखों के चक्र में फंसा देती हैं और जानवरों या भूतों के रूप में जीवन प्राप्त करने का कारण बनती हैं। \n\nअंत में, पितृ पूजा नहीं करनी चाहिए। इसके बजाय, सच्ची भक्ति और भगवान की पूजा करनी चाहिए।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "pitra",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 36,
+      "question": "Pativrata bhakt ka kya arth hai?",
+      "covers_map_entry": "rewrites: pativrata",
+      "expected_facts": [
+        "devot"
+      ],
+      "forbidden_facts": [
+        "fictional concept"
+      ],
+      "response": "Pativrata Bhakt ka arth hai ek aisa bhakt jo keval ek Parmatma ki bhakti karta hai, aur kisi anya devta, ghost, ya idol ki puja nahin karta. \n\nJaisa ki ek loyal patni (Pativrata) keval apne pati ki hi hoti hai, waise hi ek Pativrata Bhakt keval Supreme God ki hi bhakti karta hai. \n\nPativrata ka arth shabd \"loyal\" ya \"faithful\" hai. Ek Pativrata Bhakt apne man, sharir, aur aatma ko keval Satpurush (Supreme God) aur Satguru ki taraf hi samarpit karta hai.\n\nUdaharan ke liye, Sant Kabir ke anusaar, Pativrata Bhakt ko keval ek Purush (Parmatma) se hi sambandh rakhna chahiye, aur anya devtaon se baat nahin karni chahiye. \n\nGarib, Sukarmee pativrata so jaanie, ek purush se raat. Niradave niravairata, na duje se baat.\n\nIska arth hai ki Pativrata Bhakt ko keval ek Parmatma ke saath hi sambandh rakhna chahiye, aur anya devtaon ke saath nahin. \n\nSant Rampal Ji Maharaj ke anusaar, Pativrata Bhakti ka arth hai ki disciple apne man, sharir, aur aatma ko keval Supreme God (Satpurush) aur Satguru ki taraf hi samarpit karta hai, aur kisi anya devta, ghost, ya ritual ki puja nahin karta. \n\nIs prakaar, Pativrata Bhakt ka arth hai ek aisa bhakt jo keval ek Parmatma ki bhakti karta hai, aur anya kisi bhi devta ki puja nahin karta.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "devot",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 37,
+      "question": "What are the five bodies of the soul?",
+      "covers_map_entry": "none — broad corpus: soul bodies",
+      "expected_facts": [
+        "body"
+      ],
+      "forbidden_facts": [
+        "only one body"
+      ],
+      "response": "The knowledge base mentions the bodies/layers of the soul in various excerpts. Here's a comprehensive answer:\n\nThe soul is said to have multiple bodies or layers. These include:\n\n1. The Physical body (Sthool), as mentioned in the excerpt: \"The Physical body (Sthool), the Subtle body (Sookshm - mind and senses), and the Causal body (Karan - the deep ledger of karma).\"\n2. The Subtle body (Sookshm), which comprises the mind and senses.\n3. The Causal body (Karan), also referred to as the deep ledger of karma.\n\nAdditionally, the Supreme God is described as having a body known as Jyoti Niranjan or Kaal, who is the owner of 21 universes.\n\nIt's also worth noting that the body of all living beings is created from a combination of five elements: earth, sky, wind, water, and fire, as stated in one of the excerpts.\n\nHowever, specifically regarding the five bodies of the soul, the context only explicitly mentions three: Physical (Sthool), Subtle (Sookshm), and Causal (Karan). The other two bodies are not clearly stated in the provided context.\n\nAs per the scriptural teachings, the soul, being an immortal particle of God, wears the \"dirty clothes\" of these physical, subtle, and causal bodies, which cause it to forget its royal lineage. \n\nThe five elements that constitute the body of living beings are: earth, sky, wind, water, and fire. \n\nThe knowledge base does not have sufficient information on the other two bodies that might make a total of five bodies of the soul.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "body",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": [
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "question": "Why was Kaal expelled from Satlok?",
+      "covers_map_entry": "none — broad corpus: kaal expulsion",
+      "expected_facts": [
+        "Kaal",
+        "Satlok"
+      ],
+      "forbidden_facts": [
+        "Kaal was never expelled"
+      ],
+      "response": "Kaal was expelled from Satlok due to his heinous sins and misbehavior. As stated in the scriptural teachings, Kaal became arrogant, fought with the original souls, and swallowed them. This led to his expulsion from Satlok by God Kabir. Additionally, Durga, who sided with Kaal and deceived God Kabir, was also expelled along with him.\n\nKaal's misbehavior included misbehaving with a young, beautiful female named Ashtangi. This bad conduct in Satlok resulted in his expulsion, along with Durga and 21 universes. After his expulsion, Kaal is said to be revengeful and tortures souls in 84 lakh life species and hell.\n\nAs mentioned in Gita Chapter 8 Verse 21, Kaal, also known as Jyoti Niranjan, has been expelled from Satlok. His actions were aimed at saddening the Almighty, but God Kabir Dev comes in all four eras to give true spiritual knowledge and liberate souls.\n\nIn summary, Kaal's expulsion from Satlok was a result of his arrogance, misbehavior, and heinous sins, including fighting with and swallowing original souls, misbehaving with Ashtangi, and deceiving God Kabir.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 2,
+        "expected_facts_total": 2,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kaal",
+            "found": true
+          },
+          {
+            "fact": "Satlok",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 39,
+      "question": "What is the significance of Bandichhor?",
+      "covers_map_entry": "none — broad corpus: Bandichhor",
+      "expected_facts": [
+        "liberation"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "The term \"Bandichhor\" holds significant spiritual meaning, as it refers to the Supreme God, specifically God Kabir, who liberates souls from the prison of Kaal's 21 brahmands and the bondage of karma. This title is derived from the fact that Kaal, or the cosmic jailer, had imprisoned souls, and only God Kabir has the authority and power to break the chains of karma and free these souls.\n\nIn essence, \"Bandichhor\" means \"Liberator\" or \"Liberator of Captives,\" signifying God Kabir's role in saving souls from the cycle of karma and Kaal's cosmic jail. By taking refuge in God Kabir, souls can attain salvation and reach Satlok, a state of spiritual liberation.\n\nThe significance of Bandichhor is further emphasized in the scriptural teachings, which advise readers to take refuge in God Kabir, the Saviour of the world, to attain salvation. The speech of Bandichhor Kabir Sahib and Garibdas ji Maharaj is also considered self-evident, providing the power to relinquish evil deeds and engross in God's thoughts.\n\nOverall, the significance of Bandichhor lies in its representation of God Kabir's liberating power, freeing souls from the bondage of karma and Kaal's cosmic jail, and guiding them towards spiritual liberation.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "liberation",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 40,
+      "question": "Yajurveda chapter 5 verse 32 mein kya likha hai?",
+      "covers_map_entry": "none — broad corpus: specific verse",
+      "expected_facts": [
+        "Yajurved"
+      ],
+      "forbidden_facts": [
+        "no such verse"
+      ],
+      "response": "Yajurveda chapter 5 verse 32 mein likha hai: \"Ushigasi Kaviranghariasi Bambhariasi (उशिगसी कविरंघारिसि बम्भारिसि)\". Is verse mein yeh kaha gaya hai ki God KavirDev (God Kabir) sabse uchch hai, woh sabse accha hai aur woh hi sabse acchi shanti aur khushi dene wala hai. Woh sabhi paapon ko nasht karne mein saksham hai aur unka naam KavirDev (Kabir) hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Yajurved",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 41,
+      "question": "Sant Rampal Ji Maharaj ke vichar naari shakti par kya hain?",
+      "covers_map_entry": "none — broad corpus: women empowerment",
+      "expected_facts": [
+        "Sant Rampal Ji"
+      ],
+      "forbidden_facts": [
+        "anti-women"
+      ],
+      "response": "Sant Rampal Ji Maharaj ke vichar naari shakti par bahut hi samman aur samarthan ke roop mein prakat hote hain. Unke anusaar, naari shakti ko bahut hi samman dena chahiye aur unki bhoomika samaj mein bahut mahatvapurn hai. \n\nSant Rampal Ji Maharaj ne apne vicharon mein naari shakti ki mahatva ko bataya hai aur unhein samaj mein unka samman aur sthaan dilane ki baat kahi hai. Unhone naariyon ke adhikaron aur unki azadi ke liye bhi baat ki hai.\n\nAs per the provided context, Sant Rampal Ji Maharaj has a substantial following worldwide, with about 15 crore disciples in India, and his influence has spread globally. However, the context does not provide explicit statements on Sant Rampal Ji Maharaj's views on women's empowerment or their role in society.\n\nGiven the available information, it can be stated that Sant Rampal Ji Maharaj is considered a spiritual leader and a social reformer. His teachings and views are expected to promote equality and respect for all individuals, including women.\n\nHowever, a detailed explanation of Sant Rampal Ji Maharaj's views on women's empowerment or their role in society is not available in the provided context. Therefore, it is essential to rely on verified and authentic sources for accurate information on his teachings and views.\n\nIn general, many spiritual leaders and social reformers emphasize the importance of women's empowerment and their equal participation in society. They stress the need to recognize and respect women's rights, dignity, and contributions to the overall development of society.\n\nIn conclusion, while the provided context does not offer explicit statements on Sant Rampal Ji Maharaj's views on women's empowerment, it is reasonable to expect that his teachings would promote equality, respect, and inclusivity for all individuals, including women. For a more comprehensive understanding of his views, it is recommended to consult verified and authentic sources.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Sant Rampal Ji",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [
+          "Internal term leaked: \"Verified\""
+        ],
+        "has_leakage": true,
+        "passed": false,
+        "fail_reasons": [
+          "Leaked internal metadata artifacts"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "question": "What is the story of Dhruv Bhagat?",
+      "covers_map_entry": "none — broad corpus: saint story",
+      "expected_facts": [
+        "Dhruv"
+      ],
+      "forbidden_facts": [
+        "fictional"
+      ],
+      "response": "The story of Dhruv Bhagat is a significant one in Hindu mythology. According to the Vishnu Puran, Dhruv was a young prince who was driven out of his home by his stepmother and half-brother, Uttam. His mother, having questioned who gave the throne to Uttam, told Dhruv that it was God's doing, and that God nurtures everyone.\n\nDhruv, with the aspiration to obtain a kingdom from God, left his home at the age of five. He eventually met his cousin brother Uttam, but Uttam was murdered by some political enemies after some time.\n\nDhruv got married, and Uttam also got married. However, Uttam was killed in a war with a king. As a result, Dhruv obtained the kingdom and was also made to live with Uttam's wife.\n\nSant Rampal Ji Maharaj explains that Dhruv's story teaches us that one should remain happy in their current situation, as God does not like adultery. However, marriage was never forbidden, and examples of married individuals like Brahma, Vishnu, and Mahesh are given.\n\nIn another context, it is mentioned that Dhruv asked his mother who gave the throne to his father, and his mother replied that it was God who nurtures everyone. \n\nThe story of Dhruv Bhagat can be found in the Vishnu Puran, and it is also discussed by Sant Rampal Ji Maharaj in his explanations. As stated, Dhruv eventually achieved his goal and obtained a kingdom from God.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Dhruv",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 43,
+      "question": "Dowry system ke baare mein kya kaha gaya hai?",
+      "covers_map_entry": "none — broad corpus: social evil",
+      "expected_facts": [
+        "dowry"
+      ],
+      "forbidden_facts": [
+        "encouraged"
+      ],
+      "response": "The knowledge base mein dowry system ke baare mein kai baatein kahi gayi hain. Dowry system ko samaaj mein ek bada bura mana jata hai, aur iske विरुद्ध kai aandolan chalaye ja rahe hain.\n\nSant Rampal Ji Maharaj ne is samasya ka samadhan karne ke liye ek aadhyatmik drishtikon prastut kiya hai. Unke anusaar, dowry system ko rokne ke liye vyakti ko aadhyatmik shikshaon ko sunna chahiye aur samaajik drishtikon ko badalna chahiye. \n\nDowry system ka mukhya karan samaaj mein materialistic wealth aur possessions ka adhik mulya dena hai, jo maanav sambandhon se upar hai. Is samasya ko door karne ke liye, Sant Rampal Ji Maharaj ne samaaj ko aadhyatmikta ki aur badalne aur dowry system ko chhodne ki prerna di hai.\n\nUnke dwara karwaye gaye Ramaini vivah, jo ki 17 minute mein hota hai aur jismein kanya shulk ka koi laha nahi hota, ek prerna ke roop mein karya kar raha hai. Is tarah, dowry system ke विरुद्ध ek majboot kranti shuru ki gayi hai, jisse ladkiyan aur unke mata-pita bhi surakshit aur santusht jeevan जी सकते hain.\n\nDowry system ko rokne ke liye, Sant Rampal Ji Maharaj ne logon ko saral vivah apnane aur materialistic wealth ke bajaye aadhyatmik mulyon ko apnane ki salah दी hai.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "dowry",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 44,
+      "question": "How many realms or lok exist in total?",
+      "covers_map_entry": "none — broad corpus: cosmology",
+      "expected_facts": [
+        "lok"
+      ],
+      "forbidden_facts": [
+        "only earth"
+      ],
+      "response": "There are four highest eternal realms mentioned: \n- Satlok (Realm of Truth)\n- Alakh Lok (Invisible Realm)\n- Agam Lok (Inaccessible Realm)\n- Anami Lok (Nameless/Origin Realm).\n\nThese realms are listed in multiple excerpts in the context, confirming that there are indeed four eternal realms. Additionally, it is mentioned that before the 21 universes of Kaal existed, there was an infinite, unmanifested void where only the Supreme God Kabir existed in the eternal realm of Anami Lok. \n\nHowever, the question seems to be asking about the total number of realms or lok, and based on the context provided, the answer is four.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "lok",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 45,
+      "question": "Sukshma Ved kya hai?",
+      "covers_map_entry": "none — broad corpus: Sukshma Ved",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "not real"
+      ],
+      "response": "Sukshma Ved ko \"Pancham Veda\" ya \"Fifth Veda\" kaha jaata hai. Yah Supreme God Kabir Ji dwara swayam bole gaye seedhe gyan hai, jismein chhupi Sarnaam nahin mili jo mool char Vedon mein nahin hai. Ismein Garibdas Ji Maharaj Ji ki pavan vani aur Kabir Sahib Ji ki amritmayi vani shamil hai. \n\nSukshma Ved mein 21 brahmaandon ke baare mein bataya gaya hai, jahaan par Kaal ki Trigunmayi Maya ke prabhav se sabhi aatmaein bhooli hui hain. Is Ved mein yah bhi bataya gaya hai ki Mahabharat ka naatak Satan Kaal Brahm dwara scripted tha, jis baare mein Shri Ved Vyas Ji bhi jaankari nahin thi.\n\nSukshma Ved ko Sant Rampal Ji Maharaj dwara prastut kiya gaya hai, jo ise Garibdas Ji Maharaj Ji ki Sadhgranth Sahib aur Kabir Sahib Ji ki Kabirsagar ke roop mein bhi jaante hain.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 46,
+      "question": "What role does Narad Ji play in creation?",
+      "covers_map_entry": "none — broad corpus: creation story",
+      "expected_facts": [
+        "Narad"
+      ],
+      "forbidden_facts": [
+        "creator"
+      ],
+      "response": "The knowledge base does not have sufficient information on this topic.",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": true,
+      "metrics": {
+        "expected_facts_matched": 0,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 0,
+        "expected_results": [
+          {
+            "fact": "Narad",
+            "found": false
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": false,
+        "fail_reasons": [
+          "Missing expected facts",
+          "Returned insufficient-KB fallback"
+        ]
+      }
+    },
+    {
+      "id": 47,
+      "question": "Satguru ke lakshan kya hain?",
+      "covers_map_entry": "none — broad corpus: guru identification",
+      "expected_facts": [
+        "Guru"
+      ],
+      "forbidden_facts": [
+        "no criteria"
+      ],
+      "response": "सतगुरु के लक्षणों का वर्णन करते हुए गरीबदास जी महाराज ने कहा है कि सतगुरु के लक्षण हैं मधुर वाणी, विनोदपूर्ण व्यवहार, और चार वेदों, छह शास्त्रों, और अठारह पुराणों का ज्ञान। \n\nजैसा कि कहा गया है: \n\"Garib, Satguru ke lakshan kahun, madhurey baen vinod| \nChaar ved shat shaastr, kah athaara bodh ||17||\" \n\nइससे यह स्पष्ट होता है कि एक सतगुरु की पहचान उसकी मधुर वाणी, विनोदपूर्ण स्वभाव, और वेदों तथा शास्त्रों के ज्ञान से होती है। \n\nइसके अलावा, सतगुरु की गति को विहंगम यानी पक्षियों की तरह बताया गया है, जो बिना किसी पथ के चलते हैं। \n\n\"Garib, Satguru ke Lakshan kahun, chaal vihangam been|\nSankadik palde nahi, Shankar Brahma teen||9\"\n\nइस प्रकार, सतगुरु के लक्षणों में मधुर वाणी, ज्ञान, और अद्वितीय गति शामिल हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Guru",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 48,
+      "question": "What is the significance of Kabir Prakat Diwas?",
+      "covers_map_entry": "none — broad corpus: Kabir Prakat Diwas",
+      "expected_facts": [
+        "Kabir"
+      ],
+      "forbidden_facts": [
+        "myth"
+      ],
+      "response": "Kabir Prakat Diwas holds great significance as it commemorates the manifestation of God Kabir Ji, which occurred nearly 600 years ago in Kashi, Uttar Pradesh, India. This day is observed every year to celebrate the appearance of Kabir Sahib, who preached the importance of true worship and provided salvation mantras to attain spiritual enlightenment.\n\nAs stated, during Kabir Sahib Prakat Diwas, various charitable activities are organized, such as blood donation and body donation camps, which promote the welfare of humanity. The celebration also focuses on the glory of God Kabir Ji and His 120 years-long stay in Kashi, where He struggled to enlighten souls about the true worship to attain Him.\n\nKabir Sahib Prakat Diwas, organized by Saint Rampal Ji, is a significant event that brings people together to promote spiritual knowledge, charity, and selfless service. The true essence of this celebration lies in the teachings of Kabir Sahib, which emphasize the importance of true worship, salvation, and the attainment of spiritual liberation.\n\nIn 2026, the 629th Kabir Prakat Diwas is set to take place on June 29th, during the full moon day of the Hindu month Jyeshta. This day is a testament to the enduring legacy of Kabir Sahib and His teachings, which continue to inspire people to follow the path of righteousness and spiritual growth.\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 6,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "Kabir",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 49,
+      "question": "तत्वदर्शी संत की क्या पहचान है?",
+      "covers_map_entry": "none — pure Hindi query: Tatvdarshi",
+      "expected_facts": [
+        "संत"
+      ],
+      "forbidden_facts": [
+        "कोई पहचान नहीं"
+      ],
+      "response": "तत्वदर्शी संत की पहचान के बारे में गीता ज्ञान दाता ने गीता अध्याय 4:34 में बताया है कि वह संत जो complete spiritual science और Kaal के origin को जानता है। \n\nइसके अलावा, गीता अध्याय 15 श्लोक 1 में गीता ज्ञान दाता ने तत्वदर्शी संत की पहचान बताई है कि वह संसार रूपी वृक्ष के प्रत्येक भाग का ज्ञान कराएगा। \n\nएक सच्चे संत की पहचान उसके सच्चे आध्यात्मिक ज्ञान से ही होती है। वर्तमान में एकमात्र तत्वदर्शी संत रामपाल जी महाराज जी ही हैं जिन्होंने पवित्र शास्त्रों से आध्यात्मिक तथ्यों को सुलझाया है और बताया है कि सतगुरु कौन है तथा पूर्ण संत की क्या पहचान है। \n\nएक तत्वदर्शी संत वह है जो त्रिमूर्ति की उत्पत्ति और उल्टे विश्व वृक्ष के रहस्य की व्याख्या कर सकता है।\n\n⚠️ *Some details in this answer may not be directly from the knowledge base.*",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "संत",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    },
+    {
+      "id": 50,
+      "question": "परमात्मा कबीर साहेब ने कौन कौन से रूप धारण किये?",
+      "covers_map_entry": "none — pure Hindi query: God's incarnations",
+      "expected_facts": [
+        "कबीर"
+      ],
+      "forbidden_facts": [
+        "कभी प्रकट नहीं हुए"
+      ],
+      "response": "परमात्मा कबीर साहेब ने विभिन्न रूप धारण किए। उन्होंने सर्व सृष्टि की रचना की और समय-समय पर अन्य रूप धारण कर पृथ्वी पर अवतरित होते हैं। \n\nकबीर साहेब ने एक समय काशी, वाराणसी में 600 साल पहले अवतरित हुए थे। उस समय उन्होंने विशाल भंडारे का अयोजन किया था और स्वयं केशव बंजारा का रूप धारण कर दिव्य लीला की थी। \n\nकबीर साहेब जी ने लगातार तीन दिन अखंड भंडारा आयोजित किया था, जिसमें भारत के विभिन्न भागों से 18 लाख लोगों, संतो महंतों व आचार्यों ने भाग लिया था। \n\nइसके अलावा, कबीर साहेब के बारे में कहा गया है कि वे पेड़ हैं, निरंजन (ब्रह्म) वाकि डार। तीनों देवा शाखा हैं, पात रूप संसार। कबीर साहेब ही सर्व सृष्टि के रचनहार हैं। वे सबके पालक, संरक्षक, कर्ता और पिता हैं। \n\nकबीर साहेब सर्व आत्माओं के जनक हैं। केवल पूर्ण परमात्मा कविर्देव ही पूर्ण रूप से सर्व सृष्टि के रचनहार हैं।",
+      "retrieval_meta": {
+        "sourceLabel": "DB",
+        "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+        "chunksUsed": 5,
+        "webResultsUsed": 0
+      },
+      "is_insufficient_kb": false,
+      "metrics": {
+        "expected_facts_matched": 1,
+        "expected_facts_total": 1,
+        "expected_facts_percentage": 100,
+        "expected_results": [
+          {
+            "fact": "कबीर",
+            "found": true
+          }
+        ],
+        "forbidden_found": [],
+        "has_hallucination": false,
+        "leakage_findings": [],
+        "has_leakage": false,
+        "passed": true,
+        "fail_reasons": []
+      }
+    }
+  ]
+}
